@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum MatchStatus {
+  WAITING
+  ACTIVE
+  COMPLETED
+  ABORTED
+}
+
+enum MatchResultReason {
+  NORMAL
+  DISCONNECT
+  FORFEIT
+}
+
+enum Seat {
+  A
+  B
+}
+
+model GuestSession {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  participants MatchParticipant[]
+}
+
+model User {
+  id          String   @id @default(cuid())
+  displayName String
+  createdAt   DateTime @default(now())
+  participants MatchParticipant[]
+  presets     LoadoutPreset[]
+}
+
+model LoadoutPreset {
+  id                   String   @id @default(cuid())
+  userId               String
+  name                 String
+  playerDataId         String
+  bladeDataId          String
+  forehandRubberDataId String
+  backhandRubberDataId String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Match {
+  id                  String            @id @default(cuid())
+  roomCode            String?           @unique
+  status              MatchStatus
+  balanceVersion      String
+  bestOf              Int
+  winnerParticipantId String?
+  resultReason        MatchResultReason?
+  startedAt           DateTime?
+  endedAt             DateTime?
+  createdAt           DateTime          @default(now())
+  participants        MatchParticipant[]
+  events              MatchEvent[]
+
+  @@index([status, createdAt])
+}
+
+model MatchParticipant {
+  id                   String        @id @default(cuid())
+  matchId              String
+  seat                 Seat
+  userId               String?
+  guestSessionId       String?
+  playerDataId         String
+  bladeDataId          String
+  forehandRubberDataId String
+  backhandRubberDataId String
+  loadoutSnapshot      Json
+  gamesWon             Int           @default(0)
+  match                Match         @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  user                 User?         @relation(fields: [userId], references: [id])
+  guestSession         GuestSession? @relation(fields: [guestSessionId], references: [id])
+
+  @@unique([matchId, seat])
+  @@index([userId])
+  @@index([guestSessionId])
+}
+
+model MatchEvent {
+  id            String   @id @default(cuid())
+  matchId       String
+  seq           Int
+  type          String
+  publicPayload Json
+  createdAt     DateTime @default(now())
+  match         Match    @relation(fields: [matchId], references: [id], onDelete: Cascade)
+
+  @@unique([matchId, seq])
+  @@index([matchId, createdAt])
+}
