@@ -1,0 +1,562 @@
+[
+  {
+    "id": "hurricane-3",
+    "name": "狂飙 3",
+    "style": "高旋转、主动发力、弧圈",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_spin",
+        "role": "attack",
+        "skillName": "发球旋转",
+        "value": 2
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "attack",
+        "skillName": "拉冲",
+        "value": 2
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": 1
+      },
+      {
+        "pairId": "service_variation",
+        "role": "attack",
+        "skillName": "发球变化",
+        "value": 1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": -2
+      },
+      {
+        "pairId": "flick",
+        "role": "attack",
+        "skillName": "拧拉",
+        "value": -1
+      },
+      {
+        "pairId": "flip",
+        "role": "attack",
+        "skillName": "挑打",
+        "value": -1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "defense",
+        "skillName": "接发反应",
+        "value": -1
+      },
+      {
+        "pairId": "rally_exchange",
+        "role": "attack",
+        "skillName": "相持",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "hurricane-8",
+    "name": "狂飙 8",
+    "style": "黏性基础上更弹、更均衡",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_spin",
+        "role": "attack",
+        "skillName": "发球旋转",
+        "value": 1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": 1
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "attack",
+        "skillName": "拉冲",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": 1
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "defense",
+        "skillName": "抗拉冲",
+        "value": 1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": 1
+      },
+      {
+        "pairId": "service_deception",
+        "role": "attack",
+        "skillName": "发球欺骗",
+        "value": -1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "defense",
+        "skillName": "接发反应",
+        "value": -1
+      },
+      {
+        "pairId": "flip",
+        "role": "attack",
+        "skillName": "挑打",
+        "value": -1
+      },
+      {
+        "pairId": "line_change",
+        "role": "attack",
+        "skillName": "变线",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "defense",
+        "skillName": "连续防守",
+        "value": -1
+      },
+      {
+        "pairId": "deep_push",
+        "role": "defense",
+        "skillName": "长球启动",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "dignics-09c",
+    "name": "蝴蝶 Dignics 09C",
+    "style": "高旋转、台内与反拉",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_spin",
+        "role": "attack",
+        "skillName": "发球旋转",
+        "value": 2
+      },
+      {
+        "pairId": "flick",
+        "role": "attack",
+        "skillName": "拧拉",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": 1
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "defense",
+        "skillName": "抗拉冲",
+        "value": 1
+      },
+      {
+        "pairId": "counterattack",
+        "role": "attack",
+        "skillName": "防守反击",
+        "value": 1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": -1
+      },
+      {
+        "pairId": "deep_push",
+        "role": "attack",
+        "skillName": "劈长",
+        "value": -1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "defense",
+        "skillName": "接发反应",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": -1
+      },
+      {
+        "pairId": "line_change",
+        "role": "attack",
+        "skillName": "变线",
+        "value": -1
+      },
+      {
+        "pairId": "service_deception",
+        "role": "attack",
+        "skillName": "发球欺骗",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "tenergy-05",
+    "name": "蝴蝶 Tenergy 05",
+    "style": "弹性、相持、连续进攻",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": 1
+      },
+      {
+        "pairId": "flick",
+        "role": "attack",
+        "skillName": "拧拉",
+        "value": 1
+      },
+      {
+        "pairId": "rally_exchange",
+        "role": "attack",
+        "skillName": "相持",
+        "value": 1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": 1
+      },
+      {
+        "pairId": "counterattack",
+        "role": "defense",
+        "skillName": "二次压制",
+        "value": 1
+      },
+      {
+        "pairId": "service_speed",
+        "role": "defense",
+        "skillName": "接发反应",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": -1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": -1
+      },
+      {
+        "pairId": "service_spin",
+        "role": "defense",
+        "skillName": "旋转判断",
+        "value": -1
+      },
+      {
+        "pairId": "service_deception",
+        "role": "defense",
+        "skillName": "发球识别",
+        "value": -1
+      },
+      {
+        "pairId": "counterattack",
+        "role": "attack",
+        "skillName": "防守反击",
+        "value": -1
+      },
+      {
+        "pairId": "receive_variation",
+        "role": "attack",
+        "skillName": "接发变化",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "zyre-03",
+    "name": "蝴蝶 Zyre 03",
+    "style": "高速+高旋转、强弧线与终结",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": 2
+      },
+      {
+        "pairId": "service_spin",
+        "role": "attack",
+        "skillName": "发球旋转",
+        "value": 2
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "attack",
+        "skillName": "拉冲",
+        "value": 2
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": 1
+      },
+      {
+        "pairId": "rally_exchange",
+        "role": "attack",
+        "skillName": "相持",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": -1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": -1
+      },
+      {
+        "pairId": "service_variation",
+        "role": "defense",
+        "skillName": "接发适应",
+        "value": -1
+      },
+      {
+        "pairId": "service_spin",
+        "role": "defense",
+        "skillName": "旋转判断",
+        "value": -1
+      },
+      {
+        "pairId": "line_change",
+        "role": "defense",
+        "skillName": "线路预判",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "defense",
+        "skillName": "连续防守",
+        "value": -1
+      },
+      {
+        "pairId": "service_deception",
+        "role": "defense",
+        "skillName": "发球识别",
+        "value": -1
+      },
+      {
+        "pairId": "receive_variation",
+        "role": "defense",
+        "skillName": "二板应变",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "dna-platinum-m",
+    "name": "斯蒂卡 DNA Platinum M",
+    "style": "进攻均衡、弹射和线路",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": 1
+      },
+      {
+        "pairId": "service_spin",
+        "role": "attack",
+        "skillName": "发球旋转",
+        "value": 1
+      },
+      {
+        "pairId": "rally_exchange",
+        "role": "attack",
+        "skillName": "相持",
+        "value": 1
+      },
+      {
+        "pairId": "line_change",
+        "role": "attack",
+        "skillName": "变线",
+        "value": 1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": 1
+      },
+      {
+        "pairId": "receive_variation",
+        "role": "attack",
+        "skillName": "接发变化",
+        "value": 1
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": -1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": -1
+      },
+      {
+        "pairId": "service_deception",
+        "role": "defense",
+        "skillName": "发球识别",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "defense",
+        "skillName": "连续防守",
+        "value": -1
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "defense",
+        "skillName": "抗拉冲",
+        "value": -1
+      },
+      {
+        "pairId": "service_variation",
+        "role": "defense",
+        "skillName": "接发适应",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "id": "desto-f1",
+    "name": "多尼克 Desto F1",
+    "style": "高速快攻、直接出球",
+    "scope": "installed_side",
+    "modifiers": [
+      {
+        "pairId": "service_speed",
+        "role": "attack",
+        "skillName": "发球速度",
+        "value": 2
+      },
+      {
+        "pairId": "deep_push",
+        "role": "attack",
+        "skillName": "劈长",
+        "value": 1
+      },
+      {
+        "pairId": "flick",
+        "role": "attack",
+        "skillName": "拧拉",
+        "value": 1
+      },
+      {
+        "pairId": "rally_exchange",
+        "role": "attack",
+        "skillName": "相持",
+        "value": 1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "attack",
+        "skillName": "连续进攻",
+        "value": 1
+      },
+      {
+        "pairId": "line_change",
+        "role": "attack",
+        "skillName": "变线",
+        "value": 1
+      },
+      {
+        "pairId": "service_placement",
+        "role": "attack",
+        "skillName": "发球落点",
+        "value": -1
+      },
+      {
+        "pairId": "short_push",
+        "role": "attack",
+        "skillName": "摆短",
+        "value": -1
+      },
+      {
+        "pairId": "short_push",
+        "role": "defense",
+        "skillName": "短球控制",
+        "value": -1
+      },
+      {
+        "pairId": "service_spin",
+        "role": "defense",
+        "skillName": "旋转判断",
+        "value": -1
+      },
+      {
+        "pairId": "line_change",
+        "role": "defense",
+        "skillName": "线路预判",
+        "value": -1
+      },
+      {
+        "pairId": "continuous_attack",
+        "role": "defense",
+        "skillName": "连续防守",
+        "value": -1
+      },
+      {
+        "pairId": "loop_drive",
+        "role": "defense",
+        "skillName": "抗拉冲",
+        "value": -1
+      }
+    ]
+  }
+]

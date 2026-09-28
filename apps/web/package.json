@@ -1,0 +1,27 @@
+{
+  "name": "@paddle-tactics/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@paddle-tactics/game-core": "workspace:*",
+    "@vitejs/plugin-react": "^6.1.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "socket.io-client": "^4.8.1",
+    "vite": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/node": "^24.0.0",
+    "typescript": "workspace:*",
+    "vitest": "workspace:*"
+  }
+}

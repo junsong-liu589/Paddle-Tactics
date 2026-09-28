@@ -1,0 +1,50 @@
+[
+  {
+    "player": "马龙",
+    "declaredTotal": 480,
+    "computedTotal": 480,
+    "ok": true
+  },
+  {
+    "player": "樊振东",
+    "declaredTotal": 480,
+    "computedTotal": 480,
+    "ok": true
+  },
+  {
+    "player": "张继科",
+    "declaredTotal": 480,
+    "computedTotal": 480,
+    "ok": true
+  },
+  {
+    "player": "许昕",
+    "declaredTotal": 460,
+    "computedTotal": 460,
+    "ok": true
+  },
+  {
+    "player": "林高远",
+    "declaredTotal": 440,
+    "computedTotal": 440,
+    "ok": true
+  },
+  {
+    "player": "王楚钦",
+    "declaredTotal": 460,
+    "computedTotal": 460,
+    "ok": true
+  },
+  {
+    "player": "张本智和",
+    "declaredTotal": 440,
+    "computedTotal": 440,
+    "ok": true
+  },
+  {
+    "player": "莫雷加德",
+    "declaredTotal": 440,
+    "computedTotal": 440,
+    "ok": true
+  }
+]
