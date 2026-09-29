@@ -1,0 +1,111 @@
+mode,stage_pair,selection_count,allocation_points,comparisons,selection_rate,allocation_rate,sample_status
+Legacy,rally:continuous_attack,3867,0,27666,0.1398,0.0000,directional_only
+Legacy,rally:continuous_attack.attack,0,11572,27666,0.0000,0.4183,directional_only
+Legacy,rally:continuous_attack.defense,0,18678,27666,0.0000,0.6751,directional_only
+Legacy,rally:counterattack,2080,0,27666,0.0752,0.0000,directional_only
+Legacy,rally:counterattack.attack,0,11279,27666,0.0000,0.4077,directional_only
+Legacy,rally:counterattack.defense,0,18343,27666,0.0000,0.6630,directional_only
+Legacy,rally:line_change,6716,0,27666,0.2428,0.0000,directional_only
+Legacy,rally:line_change.attack,0,13143,27666,0.0000,0.4751,directional_only
+Legacy,rally:line_change.defense,0,17650,27666,0.0000,0.6380,directional_only
+Legacy,rally:loop_drive,7109,0,27666,0.2570,0.0000,directional_only
+Legacy,rally:loop_drive.attack,0,13490,27666,0.0000,0.4876,directional_only
+Legacy,rally:loop_drive.defense,0,19221,27666,0.0000,0.6948,directional_only
+Legacy,rally:rally_exchange,7894,0,27666,0.2853,0.0000,directional_only
+Legacy,rally:rally_exchange.attack,0,13430,27666,0.0000,0.4854,directional_only
+Legacy,rally:rally_exchange.defense,0,18579,27666,0.0000,0.6715,directional_only
+Legacy,receive:deep_push,1689,0,12150,0.1390,0.0000,directional_only
+Legacy,receive:deep_push.defense,0,26240,12150,0.0000,2.1597,directional_only
+Legacy,receive:flick,5060,0,12150,0.4165,0.0000,directional_only
+Legacy,receive:flick.defense,0,22453,12150,0.0000,1.8480,directional_only
+Legacy,receive:flip,798,0,12150,0.0657,0.0000,directional_only
+Legacy,receive:flip.defense,0,26750,12150,0.0000,2.2016,directional_only
+Legacy,receive:receive_variation,2008,0,12150,0.1653,0.0000,directional_only
+Legacy,receive:receive_variation.defense,0,22085,12150,0.0000,1.8177,directional_only
+Legacy,receive:short_push,2595,0,12150,0.2136,0.0000,directional_only
+Legacy,receive:short_push.defense,0,23972,12150,0.0000,1.9730,directional_only
+Legacy,service:service_deception,1343,0,16485,0.0815,0.0000,directional_only
+Legacy,service:service_deception.defense,0,31031,16485,0.0000,1.8824,directional_only
+Legacy,service:service_placement,1803,0,16485,0.1094,0.0000,directional_only
+Legacy,service:service_placement.defense,0,30304,16485,0.0000,1.8383,directional_only
+Legacy,service:service_speed,4915,0,16485,0.2981,0.0000,directional_only
+Legacy,service:service_speed.defense,0,35459,16485,0.0000,2.1510,directional_only
+Legacy,service:service_spin,4546,0,16485,0.2758,0.0000,directional_only
+Legacy,service:service_spin.defense,0,31286,16485,0.0000,1.8978,directional_only
+Legacy,service:service_variation,3878,0,16485,0.2352,0.0000,directional_only
+Legacy,service:service_variation.defense,0,36770,16485,0.0000,2.2305,directional_only
+Candidate,rally:continuous_attack,1283,0,8968,0.1431,0.0000,directional_only
+Candidate,rally:continuous_attack.defense,0,63195,8968,0.0000,7.0467,directional_only
+Candidate,rally:counterattack,802,0,8968,0.0894,0.0000,directional_only
+Candidate,rally:counterattack.defense,0,75086,8968,0.0000,8.3727,directional_only
+Candidate,rally:line_change,1975,0,8968,0.2202,0.0000,directional_only
+Candidate,rally:line_change.defense,0,72286,8968,0.0000,8.0604,directional_only
+Candidate,rally:loop_drive,2210,0,8968,0.2464,0.0000,directional_only
+Candidate,rally:loop_drive.defense,0,87519,8968,0.0000,9.7590,directional_only
+Candidate,rally:rally_exchange,2698,0,8968,0.3008,0.0000,directional_only
+Candidate,rally:rally_exchange.defense,0,99734,8968,0.0000,11.1211,directional_only
+Candidate,receive:deep_push,1248,0,9000,0.1387,0.0000,directional_only
+Candidate,receive:deep_push.defense,0,50011,9000,0.0000,5.5568,directional_only
+Candidate,receive:flick,3803,0,9000,0.4226,0.0000,directional_only
+Candidate,receive:flick.defense,0,37030,9000,0.0000,4.1144,directional_only
+Candidate,receive:flip,691,0,9000,0.0768,0.0000,directional_only
+Candidate,receive:flip.defense,0,37250,9000,0.0000,4.1389,directional_only
+Candidate,receive:receive_variation,1454,0,9000,0.1616,0.0000,directional_only
+Candidate,receive:receive_variation.defense,0,29687,9000,0.0000,3.2986,directional_only
+Candidate,receive:short_push,1804,0,9000,0.2004,0.0000,directional_only
+Candidate,receive:short_push.defense,0,44932,9000,0.0000,4.9924,directional_only
+Candidate,revealed:rally:continuous_attack,0,9295,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:counterattack,0,7189,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:line_change,0,19013,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:loop_drive,0,21601.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:rally_exchange,0,28841.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:deep_push,0,12483.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:flick,0,37264,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:flip,0,5918.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:receive_variation,0,14166.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:short_push,0,15944.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_deception,0,11154,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_placement,0,17569,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_speed,0,55123,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_spin,0,54899,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_variation,0,41689.5,0,0.0000,0.0000,INSUFFICIENT_SAMPLE
+Candidate,service:service_deception,1516,0,19891,0.0762,0.0000,directional_only
+Candidate,service:service_deception.defense,0,30367,19891,0.0000,1.5267,directional_only
+Candidate,service:service_placement,1865,0,19891,0.0938,0.0000,directional_only
+Candidate,service:service_placement.defense,0,42877,19891,0.0000,2.1556,directional_only
+Candidate,service:service_speed,5715,0,19891,0.2873,0.0000,directional_only
+Candidate,service:service_speed.defense,0,49818,19891,0.0000,2.5045,directional_only
+Candidate,service:service_spin,5896,0,19891,0.2964,0.0000,directional_only
+Candidate,service:service_spin.defense,0,37266,19891,0.0000,1.8735,directional_only
+Candidate,service:service_variation,4899,0,19891,0.2463,0.0000,directional_only
+Candidate,service:service_variation.defense,0,38582,19891,0.0000,1.9397,directional_only
+Candidate V3,rally:continuous_attack,1247,0,8396,0.1485,0.0000,directional_only
+Candidate V3,rally:continuous_attack.defense,0,7298,8396,0.0000,0.8692,directional_only
+Candidate V3,rally:counterattack,737,0,8396,0.0878,0.0000,directional_only
+Candidate V3,rally:counterattack.defense,0,9515,8396,0.0000,1.1333,directional_only
+Candidate V3,rally:line_change,1956,0,8396,0.2330,0.0000,directional_only
+Candidate V3,rally:line_change.defense,0,7573,8396,0.0000,0.9020,directional_only
+Candidate V3,rally:loop_drive,1946,0,8396,0.2318,0.0000,directional_only
+Candidate V3,rally:loop_drive.defense,0,7458,8396,0.0000,0.8883,directional_only
+Candidate V3,rally:rally_exchange,2510,0,8396,0.2990,0.0000,directional_only
+Candidate V3,rally:rally_exchange.defense,0,8892,8396,0.0000,1.0591,directional_only
+Candidate V3,receive:deep_push,1200,0,8326,0.1441,0.0000,directional_only
+Candidate V3,receive:deep_push.defense,0,16341,8326,0.0000,1.9626,directional_only
+Candidate V3,receive:flick,3337,0,8326,0.4008,0.0000,directional_only
+Candidate V3,receive:flick.defense,0,13278,8326,0.0000,1.5948,directional_only
+Candidate V3,receive:flip,619,0,8326,0.0743,0.0000,directional_only
+Candidate V3,receive:flip.defense,0,12356,8326,0.0000,1.4840,directional_only
+Candidate V3,receive:receive_variation,1420,0,8326,0.1706,0.0000,directional_only
+Candidate V3,receive:receive_variation.defense,0,11739,8326,0.0000,1.4099,directional_only
+Candidate V3,receive:short_push,1750,0,8326,0.2102,0.0000,directional_only
+Candidate V3,receive:short_push.defense,0,12894,8326,0.0000,1.5486,directional_only
+Candidate V3,service:service_deception,1781,0,18987,0.0938,0.0000,directional_only
+Candidate V3,service:service_deception.defense,0,23917,18987,0.0000,1.2597,directional_only
+Candidate V3,service:service_placement,2037,0,18987,0.1073,0.0000,directional_only
+Candidate V3,service:service_placement.defense,0,27864,18987,0.0000,1.4675,directional_only
+Candidate V3,service:service_speed,5554,0,18987,0.2925,0.0000,directional_only
+Candidate V3,service:service_speed.defense,0,38260,18987,0.0000,2.0151,directional_only
+Candidate V3,service:service_spin,5284,0,18987,0.2783,0.0000,directional_only
+Candidate V3,service:service_spin.defense,0,29098,18987,0.0000,1.5325,directional_only
+Candidate V3,service:service_variation,4331,0,18987,0.2281,0.0000,directional_only
+Candidate V3,service:service_variation.defense,0,32757,18987,0.0000,1.7252,directional_only

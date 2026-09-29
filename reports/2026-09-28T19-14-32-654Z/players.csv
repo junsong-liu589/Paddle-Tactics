@@ -1,0 +1,17 @@
+mode,player_id,player,tier,matches,wins,censored_draws,completed_matches,win_rate,ci95_low,ci95_high,sample_status
+Legacy,ma-long,马龙,480,27500,12488,947,26553,0.4703,0.4643,0.4763,ok
+Legacy,fan-zhendong,樊振东,480,22500,16014,460,22040,0.7266,0.7207,0.7324,ok
+Legacy,zhang-jike,张继科,480,25000,17895,538,24462,0.7315,0.7260,0.7371,ok
+Legacy,xu-xin,许昕,460,25000,10733,627,24373,0.4404,0.4341,0.4466,ok
+Legacy,lin-gaoyuan,林高远,440,27500,8781,562,26938,0.3260,0.3204,0.3316,ok
+Legacy,wang-chuqin,王楚钦,460,22500,11392,681,21819,0.5221,0.5155,0.5287,ok
+Legacy,tomokazu-harimoto,张本智和,440,25000,11835,1025,23975,0.4936,0.4873,0.5000,ok
+Legacy,truls-moregard,莫雷加德,440,25000,7974,936,24064,0.3314,0.3254,0.3373,ok
+Candidate,ma-long,马龙,480,27500,12551,3006,24494,0.5124,0.5062,0.5187,ok
+Candidate,fan-zhendong,樊振东,480,22500,14102,1895,20605,0.6844,0.6780,0.6907,ok
+Candidate,zhang-jike,张继科,480,25000,15792,2830,22170,0.7123,0.7063,0.7182,ok
+Candidate,xu-xin,许昕,460,25000,10700,2722,22278,0.4803,0.4737,0.4869,ok
+Candidate,lin-gaoyuan,林高远,440,27500,8257,2398,25102,0.3289,0.3232,0.3348,ok
+Candidate,wang-chuqin,王楚钦,460,22500,10305,2271,20229,0.5094,0.5025,0.5163,ok
+Candidate,tomokazu-harimoto,张本智和,440,25000,9256,3450,21550,0.4295,0.4229,0.4361,ok
+Candidate,truls-moregard,莫雷加德,440,25000,7972,3558,21442,0.3718,0.3653,0.3783,ok

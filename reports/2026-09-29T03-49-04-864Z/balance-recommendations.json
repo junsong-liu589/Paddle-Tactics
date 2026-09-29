@@ -1,0 +1,201 @@
+{
+  "generatedAt": "2026-09-29T03:49:04.864Z",
+  "seed": 20260928,
+  "sourceBalanceVersion": "balance_v1.1",
+  "recommendationsAreApplied": false,
+  "insufficientBaselineSample": false,
+  "items": [
+    {
+      "parameter": "attackBonus",
+      "candidateValue": 3,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.44,
+      "confidenceInterval95": [
+        0.37297819251185865,
+        0.5092832466534134
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "attackBonus",
+      "candidateValue": 5,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.355,
+      "confidenceInterval95": [
+        0.2919862754043116,
+        0.42347886924509565
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 8,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.415,
+      "confidenceInterval95": [
+        0.34894285449757567,
+        0.4842608509865596
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 9,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.465,
+      "confidenceInterval95": [
+        0.3971856415700402,
+        0.5341335312763685
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 11,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.395,
+      "confidenceInterval95": [
+        0.32984101013207967,
+        0.46411650840714636
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 12,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.485,
+      "confidenceInterval95": [
+        0.4166738517187752,
+        0.5538915080725428
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defenseCap",
+      "candidateValue": 3,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.46,
+      "confidenceInterval95": [
+        0.39233051799971463,
+        0.5291771081104667
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defenseCap",
+      "candidateValue": 5,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.455,
+      "confidenceInterval95": [
+        0.387482193098835,
+        0.524213886275119
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "serveThreshold",
+      "candidateValue": 4,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.39,
+      "confidenceInterval95": [
+        0.3250834313746962,
+        0.4590625404283025
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "serveThreshold",
+      "candidateValue": 6,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.44,
+      "confidenceInterval95": [
+        0.37297819251185865,
+        0.5092832466534134
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "counterThreshold",
+      "candidateValue": 4,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.46,
+      "confidenceInterval95": [
+        0.39233051799971463,
+        0.5291771081104667
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "counterThreshold",
+      "candidateValue": 6,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.395,
+      "confidenceInterval95": [
+        0.32984101013207967,
+        0.46411650840714636
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyThreshold",
+      "candidateValue": 3,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.425,
+      "confidenceInterval95": [
+        0.3585361254351385,
+        0.49429067352145145
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyThreshold",
+      "candidateValue": 5,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.445,
+      "confidenceInterval95": [
+        0.3778060100295335,
+        0.5142669758719658
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyMaxRounds",
+      "candidateValue": 4,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.425,
+      "confidenceInterval95": [
+        0.3585361254351385,
+        0.49429067352145145
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyMaxRounds",
+      "candidateValue": 6,
+      "sampleSize": 200,
+      "candidateASeatWinRate": 0.405,
+      "confidenceInterval95": [
+        0.3393777128250677,
+        0.47420289918661307
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+mode,bot_policy,matches,wins,win_rate,sample_status
+Legacy,BluffDefenseBot,1,1,1.0000,INSUFFICIENT_SAMPLE
+Legacy,BalancedBot,1,0,0.0000,INSUFFICIENT_SAMPLE
+Candidate,BluffDefenseBot,1,0,0.0000,INSUFFICIENT_SAMPLE
+Candidate,BalancedBot,1,0,0.0000,INSUFFICIENT_SAMPLE

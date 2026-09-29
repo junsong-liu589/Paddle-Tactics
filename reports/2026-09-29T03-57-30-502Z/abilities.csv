@@ -1,0 +1,111 @@
+mode,stage_pair,selection_count,allocation_points,comparisons,selection_rate,allocation_rate,attack_conversions,defense_holds,attack_conversion_rate,defense_hold_rate,avg_margin,avg_defense_allocation,marginal_defense_holds,attack_bonus_assisted_conversions,sample_status
+Legacy,rally:continuous_attack,376598,0,2792716,0.1349,0.0000,98498,272101,0.2615,0.7225,2.170,1.946,103297,0,directional_only
+Legacy,rally:continuous_attack.attack,0,1144032,2792716,0.0000,0.4096,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:continuous_attack.defense,0,1863944,2792716,0.0000,0.6674,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:counterattack,216856,0,2792716,0.0777,0.0000,15099,199943,0.0696,0.9220,0.896,1.874,49666,0,directional_only
+Legacy,rally:counterattack.attack,0,1127700,2792716,0.0000,0.4038,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:counterattack.defense,0,1813612,2792716,0.0000,0.6494,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:line_change,633210,0,2792716,0.2267,0.0000,141580,482215,0.2236,0.7615,1.932,1.799,173500,0,directional_only
+Legacy,rally:line_change.attack,0,1311831,2792716,0.0000,0.4697,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:line_change.defense,0,1739374,2792716,0.0000,0.6228,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:loop_drive,729998,0,2792716,0.2614,0.0000,290663,431978,0.3982,0.5918,3.382,2.015,230385,0,directional_only
+Legacy,rally:loop_drive.attack,0,1339568,2792716,0.0000,0.4797,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:loop_drive.defense,0,1907073,2792716,0.0000,0.6829,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:rally_exchange,836054,0,2792716,0.2994,0.0000,106334,728007,0.1272,0.8708,1.881,1.973,343416,0,directional_only
+Legacy,rally:rally_exchange.attack,0,1348595,2792716,0.0000,0.4829,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,rally:rally_exchange.defense,0,1850011,2792716,0.0000,0.6624,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,receive:deep_push,169365,0,1205601,0.1405,0.0000,7893,158580,0.0466,0.9363,0.896,2.245,32864,0,directional_only
+Legacy,receive:deep_push.defense,0,2613062,1205601,0.0000,2.1674,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,receive:flick,494067,0,1205601,0.4098,0.0000,116035,377361,0.2349,0.7638,3.069,1.912,170067,0,directional_only
+Legacy,receive:flick.defense,0,2242328,1205601,0.0000,1.8599,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,receive:flip,84331,0,1205601,0.0699,0.0000,198,81987,0.0023,0.9722,-0.726,2.169,1746,0,directional_only
+Legacy,receive:flip.defense,0,2671537,1205601,0.0000,2.2159,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,receive:receive_variation,217681,0,1205601,0.1806,0.0000,10536,206746,0.0484,0.9498,1.324,1.888,32790,0,directional_only
+Legacy,receive:receive_variation.defense,0,2191270,1205601,0.0000,1.8176,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,receive:short_push,240157,0,1205601,0.1992,0.0000,32792,205042,0.1365,0.8538,1.966,1.976,59003,0,directional_only
+Legacy,receive:short_push.defense,0,2337813,1205601,0.0000,1.9391,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,service:service_deception,130823,0,1637352,0.0799,0.0000,3240,125393,0.0248,0.9585,0.327,1.824,10317,0,directional_only
+Legacy,service:service_deception.defense,0,3088160,1637352,0.0000,1.8861,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,service:service_placement,180063,0,1637352,0.1100,0.0000,17863,161917,0.0992,0.8992,1.645,1.866,39633,0,directional_only
+Legacy,service:service_placement.defense,0,2996929,1637352,0.0000,1.8304,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,service:service_speed,484421,0,1637352,0.2959,0.0000,169704,305562,0.3503,0.6308,3.205,2.268,122486,0,directional_only
+Legacy,service:service_speed.defense,0,3561465,1637352,0.0000,2.1751,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,service:service_spin,446347,0,1637352,0.2726,0.0000,142227,303474,0.3186,0.6799,3.425,1.929,131729,0,directional_only
+Legacy,service:service_spin.defense,0,3058781,1637352,0.0000,1.8681,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Legacy,service:service_variation,395698,0,1637352,0.2417,0.0000,86137,309255,0.2177,0.7815,2.769,2.251,129619,0,directional_only
+Legacy,service:service_variation.defense,0,3668185,1637352,0.0000,2.2403,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:continuous_attack,128862,0,930096,0.1385,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:continuous_attack.defense,0,6369985,930096,0.0000,6.8487,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:counterattack,85661,0,930096,0.0921,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:counterattack.defense,0,7512390,930096,0.0000,8.0770,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:line_change,204880,0,930096,0.2203,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:line_change.defense,0,7151261,930096,0.0000,7.6887,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:loop_drive,230721,0,930096,0.2481,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:loop_drive.defense,0,8617036,930096,0.0000,9.2647,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:rally_exchange,279972,0,930096,0.3010,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,rally:rally_exchange.defense,0,9862728,930096,0.0000,10.6040,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:deep_push,126461,0,891941,0.1418,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:deep_push.defense,0,4986789,891941,0.0000,5.5909,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:flick,366376,0,891941,0.4108,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:flick.defense,0,3655445,891941,0.0000,4.0983,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:flip,72451,0,891941,0.0812,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:flip.defense,0,3761408,891941,0.0000,4.2171,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:receive_variation,157043,0,891941,0.1761,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:receive_variation.defense,0,2958732,891941,0.0000,3.3172,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:short_push,169610,0,891941,0.1902,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,receive:short_push.defense,0,4394326,891941,0.0000,4.9267,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,revealed:rally:continuous_attack,0,943664.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:counterattack,0,747461.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:line_change,0,1984198,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:loop_drive,0,2243475,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:rally:rally_exchange,0,3018807.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:deep_push,0,1266635,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:flick,0,3593846,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:flip,0,614942,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:receive_variation,0,1536164.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:receive:short_push,0,1501870.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_deception,0,1113230.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_placement,0,1816596.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_speed,0,5528912,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_spin,0,5206526.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,revealed:service:service_variation,0,4125654.5,0,0.0000,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,INSUFFICIENT_SAMPLE
+Candidate,service:service_deception,153159,0,1975670,0.0775,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_deception.defense,0,3052366,1975670,0.0000,1.5450,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_placement,193190,0,1975670,0.0978,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_placement.defense,0,4203244,1975670,0.0000,2.1275,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_speed,577939,0,1975670,0.2925,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_speed.defense,0,4959951,1975670,0.0000,2.5105,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_spin,563998,0,1975670,0.2855,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_spin.defense,0,3672116,1975670,0.0000,1.8587,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_variation,487384,0,1975670,0.2467,0.0000,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate,service:service_variation.defense,0,3869023,1975670,0.0000,1.9583,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,rally:continuous_attack,102189,0,705199,0.1449,0.0000,69771,32418,0.6828,0.3172,5.192,1.536,17748,49186,directional_only
+Candidate V3,rally:continuous_attack.defense,0,704846,705199,0.0000,0.9995,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,rally:counterattack,64883,0,705199,0.0920,0.0000,26574,38309,0.4096,0.5904,3.345,1.814,24360,25878,directional_only
+Candidate V3,rally:counterattack.defense,0,919925,705199,0.0000,1.3045,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,rally:line_change,153407,0,705199,0.2175,0.0000,94474,58933,0.6158,0.3842,4.759,1.763,36873,72563,directional_only
+Candidate V3,rally:line_change.defense,0,735716,705199,0.0000,1.0433,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,rally:loop_drive,173005,0,705199,0.2453,0.0000,137300,35705,0.7936,0.2064,6.431,1.760,20668,75027,directional_only
+Candidate V3,rally:loop_drive.defense,0,715440,705199,0.0000,1.0145,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,rally:rally_exchange,211715,0,705199,0.3002,0.0000,148476,63239,0.7013,0.2987,4.680,1.947,57646,142669,directional_only
+Candidate V3,rally:rally_exchange.defense,0,875689,705199,0.0000,1.2418,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,receive:deep_push,114693,0,813965,0.1409,0.0000,21092,93601,0.1839,0.8161,2.803,2.190,43602,21017,directional_only
+Candidate V3,receive:deep_push.defense,0,1598595,813965,0.0000,1.9640,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,receive:flick,330242,0,813965,0.4057,0.0000,196873,133369,0.5961,0.4039,5.148,1.711,95991,188195,directional_only
+Candidate V3,receive:flick.defense,0,1295189,813965,0.0000,1.5912,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,receive:flip,61115,0,813965,0.0751,0.0000,2029,59086,0.0332,0.9668,2.164,1.480,6443,2029,directional_only
+Candidate V3,receive:flip.defense,0,1222065,813965,0.0000,1.5014,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,receive:receive_variation,148575,0,813965,0.1825,0.0000,36455,112120,0.2454,0.7546,3.615,1.531,53989,36430,directional_only
+Candidate V3,receive:receive_variation.defense,0,1134278,813965,0.0000,1.3935,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,receive:short_push,159340,0,813965,0.1958,0.0000,63564,95776,0.3989,0.6011,4.220,1.695,54209,61024,directional_only
+Candidate V3,receive:short_push.defense,0,1261593,813965,0.0000,1.5499,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,service:service_deception,158726,0,1959253,0.0810,0.0000,45029,113697,0.2837,0.7163,3.371,1.144,33217,45029,directional_only
+Candidate V3,service:service_deception.defense,0,2419290,1959253,0.0000,1.2348,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,service:service_placement,194311,0,1959253,0.0992,0.0000,76235,118076,0.3923,0.6077,4.044,1.556,46446,76235,directional_only
+Candidate V3,service:service_placement.defense,0,2863836,1959253,0.0000,1.4617,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,service:service_speed,572191,0,1959253,0.2920,0.0000,353904,218287,0.6185,0.3815,5.395,2.243,120222,267869,directional_only
+Candidate V3,service:service_speed.defense,0,4002060,1959253,0.0000,2.0426,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,service:service_spin,567390,0,1959253,0.2896,0.0000,390007,177383,0.6874,0.3126,5.767,1.668,115186,335561,directional_only
+Candidate V3,service:service_spin.defense,0,3028226,1959253,0.0000,1.5456,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only
+Candidate V3,service:service_variation,466635,0,1959253,0.2382,0.0000,280113,186522,0.6003,0.3997,5.252,1.786,132485,257352,directional_only
+Candidate V3,service:service_variation.defense,0,3360612,1959253,0.0000,1.7153,0,0,0.0000,0.0000,0.000,0.000,0,0,directional_only

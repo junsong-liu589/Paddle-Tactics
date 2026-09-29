@@ -1,0 +1,29 @@
+mode,side,item_id,name,style,usage,matches,wins,censored_draws,completed_matches,raw_win_rate,ci95_low,ci95_high,sample_status
+Legacy,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,28574,28574,13625,827,27747,0.4910,0.4852,0.4969,raw_only
+Legacy,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,28572,28572,13930,695,27877,0.4997,0.4938,0.5056,raw_only
+Legacy,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,28572,28572,13625,800,27772,0.4906,0.4847,0.4965,raw_only
+Legacy,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,28574,28574,14494,726,27848,0.5205,0.5146,0.5263,raw_only
+Legacy,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,28568,28568,13985,951,27617,0.5064,0.5005,0.5123,raw_only
+Legacy,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,28569,28569,13667,849,27720,0.4930,0.4872,0.4989,raw_only
+Legacy,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,28571,28571,13786,928,27643,0.4987,0.4928,0.5046,raw_only
+Legacy,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,28588,28588,13532,947,27641,0.4896,0.4837,0.4955,raw_only
+Legacy,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,28570,28570,13826,750,27820,0.4970,0.4911,0.5029,raw_only
+Legacy,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,28570,28570,13633,713,27857,0.4894,0.4835,0.4953,raw_only
+Legacy,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,28569,28569,14218,727,27842,0.5107,0.5048,0.5165,raw_only
+Legacy,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,28567,28567,14008,932,27635,0.5069,0.5010,0.5128,raw_only
+Legacy,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,28567,28567,13964,873,27694,0.5042,0.4983,0.5101,raw_only
+Legacy,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,28569,28569,13931,834,27735,0.5023,0.4964,0.5082,raw_only
+Candidate,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,28574,28574,12906,3185,25389,0.5083,0.5022,0.5145,raw_only
+Candidate,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,28572,28572,12762,3056,25516,0.5002,0.4940,0.5063,raw_only
+Candidate,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,28572,28572,12906,3099,25473,0.5067,0.5005,0.5128,raw_only
+Candidate,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,28574,28574,12889,2941,25633,0.5028,0.4967,0.5089,raw_only
+Candidate,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,28568,28568,12420,3500,25068,0.4955,0.4893,0.5016,raw_only
+Candidate,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,28569,28569,12412,3373,25196,0.4926,0.4864,0.4988,raw_only
+Candidate,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,28571,28571,12640,2976,25595,0.4938,0.4877,0.5000,raw_only
+Candidate,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,28588,28588,12736,3407,25181,0.5058,0.4996,0.5120,raw_only
+Candidate,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,28570,28570,12612,3007,25563,0.4934,0.4872,0.4995,raw_only
+Candidate,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,28570,28570,12780,2988,25582,0.4996,0.4934,0.5057,raw_only
+Candidate,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,28569,28569,12895,2923,25646,0.5028,0.4967,0.5089,raw_only
+Candidate,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,28567,28567,12345,3474,25093,0.4920,0.4858,0.4982,raw_only
+Candidate,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,28567,28567,12813,3200,25367,0.5051,0.4990,0.5113,raw_only
+Candidate,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,28569,28569,12754,3131,25438,0.5014,0.4952,0.5075,raw_only

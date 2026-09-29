@@ -1,0 +1,7 @@
+mode,stage,comparisons,stage_ends,end_rate,sample_size
+Legacy,service,163262,40948,0.2508,163262
+Legacy,receive,122314,16735,0.1368,122314
+Legacy,rally,296786,67368,0.2270,296786
+Candidate,service,197621,105598,0.5343,197621
+Candidate,receive,92023,31284,0.3400,92023
+Candidate,rally,99474,56890,0.5719,99474

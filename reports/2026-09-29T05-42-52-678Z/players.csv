@@ -1,0 +1,33 @@
+mode,player_id,player,tier,matches,wins,censored_draws,completed_matches,win_rate,ci95_low,ci95_high,player_standardized_win_rate,adjusted_player_count,sample_status
+Legacy,ma-long,马龙,480,4,2,0,4,0.5000,0.1500,0.8500,INSUFFICIENT_SAMPLE
+Legacy,fan-zhendong,樊振东,480,3,1,0,3,0.3333,0.0615,0.7923,INSUFFICIENT_SAMPLE
+Legacy,zhang-jike,张继科,480,2,0,0,2,0.0000,0.0000,0.6576,INSUFFICIENT_SAMPLE
+Legacy,xu-xin,许昕,460,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Legacy,lin-gaoyuan,林高远,440,3,1,0,3,0.3333,0.0615,0.7923,INSUFFICIENT_SAMPLE
+Legacy,wang-chuqin,王楚钦,460,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Legacy,tomokazu-harimoto,张本智和,440,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Legacy,truls-moregard,莫雷加德,440,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate,ma-long,马龙,480,4,1,2,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate,fan-zhendong,樊振东,480,3,1,0,3,0.3333,0.0615,0.7923,INSUFFICIENT_SAMPLE
+Candidate,zhang-jike,张继科,480,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate,xu-xin,许昕,460,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate,lin-gaoyuan,林高远,440,3,1,0,3,0.3333,0.0615,0.7923,INSUFFICIENT_SAMPLE
+Candidate,wang-chuqin,王楚钦,460,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate,tomokazu-harimoto,张本智和,440,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate,truls-moregard,莫雷加德,440,2,0,0,2,0.0000,0.0000,0.6576,INSUFFICIENT_SAMPLE
+Candidate V3,ma-long,马龙,480,4,2,0,4,0.5000,0.1500,0.8500,INSUFFICIENT_SAMPLE
+Candidate V3,fan-zhendong,樊振东,480,3,2,0,3,0.6667,0.2077,0.9385,INSUFFICIENT_SAMPLE
+Candidate V3,zhang-jike,张继科,480,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate V3,xu-xin,许昕,460,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate V3,lin-gaoyuan,林高远,440,3,0,0,3,0.0000,0.0000,0.5615,INSUFFICIENT_SAMPLE
+Candidate V3,wang-chuqin,王楚钦,460,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate V3,tomokazu-harimoto,张本智和,440,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate V3,truls-moregard,莫雷加德,440,2,0,0,2,0.0000,0.0000,0.6576,INSUFFICIENT_SAMPLE
+Candidate V4,ma-long,马龙,480,4,2,0,4,0.5000,0.1500,0.8500,INSUFFICIENT_SAMPLE
+Candidate V4,fan-zhendong,樊振东,480,3,2,0,3,0.6667,0.2077,0.9385,INSUFFICIENT_SAMPLE
+Candidate V4,zhang-jike,张继科,480,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate V4,xu-xin,许昕,460,2,1,0,2,0.5000,0.0945,0.9055,INSUFFICIENT_SAMPLE
+Candidate V4,lin-gaoyuan,林高远,440,3,0,0,3,0.0000,0.0000,0.5615,INSUFFICIENT_SAMPLE
+Candidate V4,wang-chuqin,王楚钦,460,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate V4,tomokazu-harimoto,张本智和,440,2,2,0,2,1.0000,0.3424,1.0000,INSUFFICIENT_SAMPLE
+Candidate V4,truls-moregard,莫雷加德,440,2,0,0,2,0.0000,0.0000,0.6576,INSUFFICIENT_SAMPLE

@@ -1,0 +1,16 @@
+metric,value,count
+reserve_at_counter,0,102
+reserve_at_counter,2,80
+reserve_at_counter,3,7
+reserve_at_counter,4,24
+reserve_at_counter,10,21
+reserve_at_rally,0,84
+reserve_at_rally,2,55
+reserve_at_rally,4,4
+reserve_at_rally,5,8
+reserve_at_rally,14,35
+rally_total_budget,20,84
+rally_total_budget,22,55
+rally_total_budget,24,4
+rally_total_budget,25,8
+rally_total_budget,34,35

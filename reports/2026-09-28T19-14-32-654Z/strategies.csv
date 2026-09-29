@@ -1,0 +1,15 @@
+mode,bot_policy,matches,wins,win_rate,sample_status
+Legacy,BluffDefenseBot,28736,17693,0.6157,observed_only
+Legacy,BalancedBot,28757,16616,0.5778,observed_only
+Legacy,FortressBot,28687,15604,0.5439,observed_only
+Legacy,WeaknessHunterBot,28278,10734,0.3796,observed_only
+Legacy,RandomBot,28576,5170,0.1809,observed_only
+Legacy,GreedyAttackBot,28766,17840,0.6202,observed_only
+Legacy,AdaptiveBot,28200,13455,0.4771,observed_only
+Candidate,BluffDefenseBot,28736,19592,0.6818,observed_only
+Candidate,BalancedBot,28757,12588,0.4377,observed_only
+Candidate,FortressBot,28687,15163,0.5286,observed_only
+Candidate,WeaknessHunterBot,28278,9227,0.3263,observed_only
+Candidate,RandomBot,28576,4768,0.1669,observed_only
+Candidate,GreedyAttackBot,28766,16659,0.5791,observed_only
+Candidate,AdaptiveBot,28200,10938,0.3879,observed_only

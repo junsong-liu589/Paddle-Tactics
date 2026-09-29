@@ -1,0 +1,30 @@
+{
+  "name": "@paddle-tactics/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "db:check": "tsx src/db/check.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@paddle-tactics/game-core": "workspace:*",
+    "@paddle-tactics/game-data": "workspace:*",
+    "@prisma/adapter-pg": "^7.0.0",
+    "@prisma/client": "^7.0.0",
+    "dotenv": "^17.2.2",
+    "fastify": "^5.6.0",
+    "pg": "^8.16.3",
+    "socket.io": "^4.8.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@types/pg": "^8.15.5",
+    "prisma": "^7.0.0",
+    "tsx": "^4.20.5",
+    "typescript": "^6.0.3"
+  }
+}

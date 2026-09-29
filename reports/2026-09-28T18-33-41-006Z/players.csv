@@ -1,0 +1,17 @@
+mode,player_id,player,tier,matches,wins,win_rate,ci95_low,ci95_high,sample_status
+Legacy,ma-long,马龙,480,275,126,0.4582,0.4003,0.5172,ok
+Legacy,fan-zhendong,樊振东,480,225,159,0.7067,0.6441,0.7623,ok
+Legacy,zhang-jike,张继科,480,250,174,0.6960,0.6364,0.7497,ok
+Legacy,xu-xin,许昕,460,250,119,0.4760,0.4149,0.5378,ok
+Legacy,lin-gaoyuan,林高远,440,275,85,0.3091,0.2574,0.3660,ok
+Legacy,wang-chuqin,王楚钦,460,225,117,0.5200,0.4549,0.5844,ok
+Legacy,tomokazu-harimoto,张本智和,440,250,110,0.4400,0.3798,0.5020,ok
+Legacy,truls-moregard,莫雷加德,440,250,81,0.3240,0.2690,0.3843,ok
+Candidate,ma-long,马龙,480,275,122,0.4436,0.3861,0.5027,ok
+Candidate,fan-zhendong,樊振东,480,225,146,0.6489,0.5845,0.7083,ok
+Candidate,zhang-jike,张继科,480,250,155,0.6200,0.5584,0.6779,ok
+Candidate,xu-xin,许昕,460,250,108,0.4320,0.3721,0.4940,ok
+Candidate,lin-gaoyuan,林高远,440,275,76,0.2764,0.2269,0.3320,ok
+Candidate,wang-chuqin,王楚钦,460,225,101,0.4489,0.3853,0.5142,ok
+Candidate,tomokazu-harimoto,张本智和,440,250,84,0.3360,0.2803,0.3966,ok
+Candidate,truls-moregard,莫雷加德,440,250,82,0.3280,0.2728,0.3884,ok

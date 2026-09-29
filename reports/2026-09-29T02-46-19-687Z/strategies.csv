@@ -1,0 +1,25 @@
+mode,bot_policy,matches,wins,win_rate,sample_status
+Legacy,BluffDefenseBot,2493,1547,0.6205,observed_only
+Legacy,BalancedBot,2584,1427,0.5522,observed_only
+Legacy,FortressBot,2477,1332,0.5377,observed_only
+Legacy,Top3AwareDefenseBot,2524,1518,0.6014,observed_only
+Legacy,WeaknessHunterBot,2473,877,0.3546,observed_only
+Legacy,RandomBot,2546,437,0.1716,observed_only
+Legacy,GreedyAttackBot,2456,1446,0.5888,observed_only
+Legacy,AdaptiveBot,2447,1114,0.4553,observed_only
+Candidate,BluffDefenseBot,2493,1713,0.6871,observed_only
+Candidate,BalancedBot,2584,1092,0.4226,observed_only
+Candidate,FortressBot,2477,1297,0.5236,observed_only
+Candidate,Top3AwareDefenseBot,2524,1394,0.5523,observed_only
+Candidate,WeaknessHunterBot,2473,715,0.2891,observed_only
+Candidate,RandomBot,2546,383,0.1504,observed_only
+Candidate,GreedyAttackBot,2456,1365,0.5558,observed_only
+Candidate,AdaptiveBot,2447,912,0.3727,observed_only
+Candidate V3,BluffDefenseBot,2493,1763,0.7072,observed_only
+Candidate V3,BalancedBot,2584,1399,0.5414,observed_only
+Candidate V3,FortressBot,2477,1342,0.5418,observed_only
+Candidate V3,Top3AwareDefenseBot,2524,1444,0.5721,observed_only
+Candidate V3,WeaknessHunterBot,2473,794,0.3211,observed_only
+Candidate V3,RandomBot,2546,436,0.1712,observed_only
+Candidate V3,GreedyAttackBot,2456,1398,0.5692,observed_only
+Candidate V3,AdaptiveBot,2447,925,0.3780,observed_only

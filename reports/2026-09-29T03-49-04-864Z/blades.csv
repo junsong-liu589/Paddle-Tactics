@@ -1,0 +1,25 @@
+mode,side,item_id,name,style,usage,usage_share,matches,wins,censored_draws,completed_matches,raw_win_rate,ci95_low,ci95_high,player_standardized_win_rate,adjusted_player_count,sample_status
+Legacy,both,fan-zhendong-alc,樊振东 ALC,快速均衡、两面进攻; attack_mod=5; defense_mod=-5,2501,0.1250,2501,1152,54,2447,0.4708,0.4511,0.4906,0.4840,8,raw_only
+Legacy,both,w968,W968,持球、拉冲、旋转连续; attack_mod=2; defense_mod=-2,2500,0.1250,2500,1403,113,2387,0.5878,0.5679,0.6074,0.5959,8,raw_only
+Legacy,both,butterfly-viscaria,蝴蝶 Viscaria,外置ALC的速度与均衡; attack_mod=5; defense_mod=-5,2500,0.1250,2500,1163,66,2434,0.4778,0.4580,0.4977,0.4849,8,raw_only
+Legacy,both,xu-xin-blue-label,许昕蓝标,持球与弧圈、旋转和台内控制; attack_mod=4; defense_mod=-4,2499,0.1250,2499,1393,98,2401,0.5802,0.5603,0.5998,0.5854,8,raw_only
+Legacy,both,lin-gaoyuan-alc,林高远 ALC,近台快节奏、拧拉与线路控制; attack_mod=-2; defense_mod=2,2501,0.1250,2501,967,40,2461,0.3929,0.3738,0.4124,0.3940,8,raw_only
+Legacy,both,q968,Q968,高输出968系（暂定游戏定位）; attack_mod=10; defense_mod=-10,2501,0.1250,2501,1318,114,2387,0.5522,0.5321,0.5720,0.5587,8,raw_only
+Legacy,both,harimoto-alc,张本智和 ALC,内置持球、近台反击与稳定; attack_mod=-3; defense_mod=3,2498,0.1249,2498,1234,29,2469,0.4998,0.4801,0.5195,0.5002,8,raw_only
+Legacy,both,stiga-cybershape-carbon,斯蒂卡 Cybershape Carbon,大甜区、落点与线路变化; attack_mod=2; defense_mod=-2,2500,0.1250,2500,1070,86,2414,0.4432,0.4235,0.4631,0.4432,8,raw_only
+Candidate,both,fan-zhendong-alc,樊振东 ALC,快速均衡、两面进攻; attack_mod=5; defense_mod=-5,2501,0.1250,2501,1050,227,2274,0.4617,0.4413,0.4823,0.4761,8,raw_only
+Candidate,both,w968,W968,持球、拉冲、旋转连续; attack_mod=2; defense_mod=-2,2500,0.1250,2500,1006,423,2077,0.4844,0.4629,0.5059,0.4865,8,raw_only
+Candidate,both,butterfly-viscaria,蝴蝶 Viscaria,外置ALC的速度与均衡; attack_mod=5; defense_mod=-5,2500,0.1250,2500,1151,264,2236,0.5148,0.4940,0.5354,0.5230,8,raw_only
+Candidate,both,xu-xin-blue-label,许昕蓝标,持球与弧圈、旋转和台内控制; attack_mod=4; defense_mod=-4,2499,0.1250,2499,1138,440,2059,0.5527,0.5311,0.5741,0.5524,8,raw_only
+Candidate,both,lin-gaoyuan-alc,林高远 ALC,近台快节奏、拧拉与线路控制; attack_mod=-2; defense_mod=2,2501,0.1250,2501,1079,148,2353,0.4586,0.4385,0.4787,0.4580,8,raw_only
+Candidate,both,q968,Q968,高输出968系（暂定游戏定位）; attack_mod=10; defense_mod=-10,2501,0.1250,2501,968,415,2086,0.4640,0.4427,0.4855,0.4776,8,raw_only
+Candidate,both,harimoto-alc,张本智和 ALC,内置持球、近台反击与稳定; attack_mod=-3; defense_mod=3,2498,0.1249,2498,1297,149,2349,0.5521,0.5320,0.5722,0.5479,8,raw_only
+Candidate,both,stiga-cybershape-carbon,斯蒂卡 Cybershape Carbon,大甜区、落点与线路变化; attack_mod=2; defense_mod=-2,2500,0.1250,2500,1177,202,2298,0.5122,0.4917,0.5326,0.5152,8,raw_only
+Candidate V3,both,fan-zhendong-alc,樊振东 ALC,快速均衡、两面进攻; attack_mod=5; defense_mod=-5,2501,0.1250,2501,1085,223,2278,0.4763,0.4558,0.4968,0.4884,8,raw_only
+Candidate V3,both,w968,W968,持球、拉冲、旋转连续; attack_mod=2; defense_mod=-2,2500,0.1250,2500,978,438,2062,0.4743,0.4528,0.4959,0.4762,8,raw_only
+Candidate V3,both,butterfly-viscaria,蝴蝶 Viscaria,外置ALC的速度与均衡; attack_mod=5; defense_mod=-5,2500,0.1250,2500,1102,233,2267,0.4861,0.4656,0.5067,0.4938,8,raw_only
+Candidate V3,both,xu-xin-blue-label,许昕蓝标,持球与弧圈、旋转和台内控制; attack_mod=4; defense_mod=-4,2499,0.1250,2499,1167,396,2103,0.5549,0.5336,0.5760,0.5543,8,raw_only
+Candidate V3,both,lin-gaoyuan-alc,林高远 ALC,近台快节奏、拧拉与线路控制; attack_mod=-2; defense_mod=2,2501,0.1250,2501,1119,85,2416,0.4632,0.4434,0.4831,0.4671,8,raw_only
+Candidate V3,both,q968,Q968,高输出968系（暂定游戏定位）; attack_mod=10; defense_mod=-10,2501,0.1250,2501,907,358,2143,0.4232,0.4025,0.4443,0.4374,8,raw_only
+Candidate V3,both,harimoto-alc,张本智和 ALC,内置持球、近台反击与稳定; attack_mod=-3; defense_mod=3,2498,0.1249,2498,1356,119,2379,0.5700,0.5500,0.5898,0.5683,8,raw_only
+Candidate V3,both,stiga-cybershape-carbon,斯蒂卡 Cybershape Carbon,大甜区、落点与线路变化; attack_mod=2; defense_mod=-2,2500,0.1250,2500,1248,224,2276,0.5483,0.5278,0.5687,0.5490,8,raw_only

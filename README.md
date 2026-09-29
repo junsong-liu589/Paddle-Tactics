@@ -26,7 +26,7 @@
 ## 3. 推荐技术基线（2026-09）
 
 - Node.js 24 LTS
-- TypeScript 7.x
+- TypeScript 6.0.x（typescript-eslint 支持 TS 7 后升级）
 - React 19.x + Vite 8.x
 - React Router + Zustand + Tailwind CSS
 - Fastify 5.x
@@ -67,7 +67,52 @@ Codex 第一次进入仓库时按顺序读：
 5. `data/*.json`
 6. `CODEX_START_PROMPT.md`
 
-然后只执行 `Phase 0`，验收通过后再进入 `Phase 1`，不要一次性把所有阶段混在一个提交里。
+## 6. 本地开发
+
+工程骨架位于 `apps/` 与 `packages/`。在仓库根目录执行：
+
+```sh
+corepack pnpm install
+Copy-Item .env.example .env
+docker compose up -d db
+corepack pnpm dev
+```
+
+前端地址为 `http://localhost:5173`，后端地址为 `http://localhost:3002`。后端 `/health` 检查 PostgreSQL；Socket.IO 已挂载在 `/game` namespace，在线比赛协议尚未开放。
+
+Prisma ORM 使用 7.x 的 `prisma-client` generator 和 `prisma.config.ts`。`corepack pnpm db:generate` 生成 server 使用的客户端，`corepack pnpm db:check` 执行实际数据库连接检查。根级 `build` 和 `typecheck` 会先生成客户端。
+
+Phase 1 增加数据校验和纯规则引擎：`pnpm data:validate` 检查 `data/*.json` 及跨文件规则一致性，`pnpm simulate:match` 运行一场确定性的无 UI 比赛。`packages/game-core` 维护比赛状态，通过 `derivePublicView` 生成按玩家隔离的公开视图。
+
+Phase 2 提供模式选择、球员/器材配置与常驻值预览、本地双人沙盒、逐分比赛和战报。沙盒 `MatchState` 仅在服务端当前进程内保存；每次 API 请求只返回当前操作者的公开视图，屏幕交接后才显示另一位玩家的视图。沙盒不持久化比赛，不包含 AI 或在线房间。
+
+Balance Lab 是独立的命令行模拟包，读取正式 `game-data`，通过 `game-core` 计算攻防、计分和相持裁决，不经过 Web、Socket.IO、HTTP 或 PostgreSQL。它保留 Legacy V1、历史 Candidate V1、Candidate V3，并新增 reducer-backed Candidate V4：玩家级跨阶段 Carry、Serve/Counter 4 点攻击与 10 点防守、Rally 20 点混合资源池、最多 4 次相持比较。V4 的 Carry/预算只保存在规则状态中，公开视图只向本人返回 reserve；未揭晓项目仍保持隐藏。Candidate V3/V4 与实验参数只能在模拟器显式启用，不会改变默认正式规则或写入正式 `data/*.json`。默认固定 seed 为 `20260928`。
+
+```sh
+pnpm balance:quick     # 1,000 场/机制，快速验证
+pnpm balance:run       # Standard：10,000 场/机制及单变量参数实验
+pnpm balance:full      # Full：每种机制 100,000 场及单变量实验
+pnpm balance:rules     # 运行规则参数实验
+pnpm balance:equipment # 运行基准装备分析
+```
+
+报告写入 `reports/<timestamp>/`，包括汇总、球员/底板/胶皮/配装/能力/阶段/机制/策略 CSV，以及 V3/V4 专项报告、建议和参数实验 CSV。V4 另含 `resource-economy.csv` 与 `carry-distribution.csv`，记录支出、reserve 分布、Rally 预算、策略对战和布防集中度。低样本比较应按样本量解读；胜率区间使用 Wilson 95% CI。Candidate V3/V4 均保持候选状态，不自动提升正式规则；V4 的 Full 评估结果见 `docs/06_ROADMAP.md` 与对应报告目录。
+
+常用检查：
+
+```sh
+corepack pnpm format:check
+corepack pnpm lint
+corepack pnpm typecheck
+corepack pnpm test
+corepack pnpm build
+corepack pnpm exec playwright install chromium
+corepack pnpm e2e
+```
+
+Phase 0、Phase 1、Phase 2、Balance Lab 与 Candidate V3/V4 规则评估已完成。Phase 2 的浏览器验收使用 Playwright，完整一局从模式选择和配装开始，到赛果与逐分记录结束。Candidate V3/V4 均未成为默认比赛规则。V4 Full 结果显示 0.96% deuce 截断和 52.13% Rally 首进攻方胜率有所改善，但 8/10 个策略配对超过 65% 支配筛查线，因此不建议升级；详见 reports/2026-09-29T06-06-47-665Z/V4_BALANCE_REPORT.md。AI 与在线房间属于后续 Phase。进度与检查记录见 `docs/06_ROADMAP.md`。
+
+按 `docs/06_ROADMAP.md` 的顺序推进，每个 Phase 验收后再进入下一个，不要一次性把多个阶段混在一起。
 
 ## 6. 设计原则
 
