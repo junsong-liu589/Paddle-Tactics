@@ -1,0 +1,161 @@
+mode,player,blade,fh_rubber,bh_rubber,win_rate,matches,censored_draws,completed_matches,style,ci95_low,ci95_high,rank
+Legacy,张继科,w968,dignics-09c,zyre-03,1.0000,64,0,64,Spin Control,0.9434,1.0000,1
+Legacy,张继科,w968,tenergy-05,zyre-03,1.0000,64,0,64,Spin Control,0.9434,1.0000,2
+Legacy,王楚钦,q968,desto-f1,tenergy-05,1.0000,58,0,58,Rally,0.9379,1.0000,1
+Legacy,樊振东,w968,tenergy-05,hurricane-8,1.0000,58,0,58,Spin Control,0.9379,1.0000,1
+Legacy,张继科,w968,hurricane-8,desto-f1,1.0000,63,0,63,Spin Control,0.9425,1.0000,3
+Legacy,王楚钦,q968,hurricane-8,tenergy-05,1.0000,56,0,56,Rally,0.9358,1.0000,2
+Legacy,张继科,w968,tenergy-05,desto-f1,0.9844,64,0,64,Spin Control,0.9167,0.9972,4
+Legacy,张继科,w968,zyre-03,zyre-03,0.9844,64,0,64,Spin Control,0.9167,0.9972,5
+Legacy,张继科,harimoto-alc,hurricane-8,tenergy-05,0.9844,64,0,64,Rally,0.9167,0.9972,6
+Legacy,张继科,w968,tenergy-05,tenergy-05,0.9841,63,0,63,Spin Control,0.9154,0.9972,7
+Legacy,王楚钦,q968,dna-platinum-m,desto-f1,0.9828,58,0,58,Rally,0.9086,0.9969,3
+Legacy,樊振东,w968,tenergy-05,tenergy-05,0.9828,58,0,58,Spin Control,0.9086,0.9969,2
+Legacy,王楚钦,q968,hurricane-8,hurricane-8,0.9825,57,0,57,Rally,0.9071,0.9969,4
+Legacy,樊振东,w968,desto-f1,hurricane-8,0.9825,57,0,57,Spin Control,0.9071,0.9969,3
+Legacy,樊振东,fan-zhendong-alc,hurricane-8,tenergy-05,0.9825,58,1,57,Rally,0.9071,0.9969,4
+Legacy,樊振东,w968,tenergy-05,dignics-09c,0.9821,57,1,56,Spin Control,0.9055,0.9968,5
+Legacy,张继科,harimoto-alc,zyre-03,hurricane-3,0.9688,64,0,64,Spin Control,0.8930,0.9914,8
+Legacy,张继科,w968,zyre-03,hurricane-8,0.9688,64,0,64,Spin Control,0.8930,0.9914,9
+Legacy,张继科,w968,hurricane-3,zyre-03,0.9688,64,0,64,Spin Control,0.8930,0.9914,10
+Legacy,樊振东,w968,hurricane-8,dna-platinum-m,0.9655,58,0,58,Spin Control,0.8827,0.9905,6
+Legacy,王楚钦,q968,tenergy-05,desto-f1,0.9655,58,0,58,Rally,0.8827,0.9905,5
+Legacy,樊振东,fan-zhendong-alc,dna-platinum-m,hurricane-8,0.9655,58,0,58,Rally,0.8827,0.9905,7
+Legacy,王楚钦,q968,hurricane-8,zyre-03,0.9655,58,0,58,Spin Control,0.8827,0.9905,6
+Legacy,樊振东,w968,tenergy-05,desto-f1,0.9649,57,0,57,Spin Control,0.8808,0.9903,8
+Legacy,樊振东,w968,tenergy-05,dna-platinum-m,0.9649,57,0,57,Spin Control,0.8808,0.9903,9
+Legacy,樊振东,fan-zhendong-alc,hurricane-8,desto-f1,0.9649,57,0,57,Rally,0.8808,0.9903,10
+Legacy,王楚钦,q968,tenergy-05,zyre-03,0.9649,57,0,57,Spin Control,0.8808,0.9903,7
+Legacy,王楚钦,q968,desto-f1,desto-f1,0.9643,56,0,56,Forehand Attack,0.8788,0.9902,8
+Legacy,王楚钦,q968,desto-f1,dna-platinum-m,0.9483,58,0,58,Rally,0.8586,0.9823,9
+Legacy,王楚钦,q968,dna-platinum-m,zyre-03,0.9483,58,0,58,Spin Control,0.8586,0.9823,10
+Legacy,许昕,w968,tenergy-05,zyre-03,0.8730,64,1,63,Defense Counter,0.7689,0.9342,1
+Legacy,许昕,w968,hurricane-3,dna-platinum-m,0.8710,64,2,62,Defense Counter,0.7655,0.9331,2
+Legacy,许昕,stiga-cybershape-carbon,tenergy-05,zyre-03,0.8667,64,4,60,Defense Counter,0.7583,0.9309,3
+Legacy,马龙,q968,hurricane-3,zyre-03,0.8594,69,5,64,Defense Counter,0.7538,0.9242,1
+Legacy,马龙,q968,hurricane-3,dna-platinum-m,0.8571,70,0,70,Defense Counter,0.7566,0.9205,2
+Legacy,莫雷加德,xu-xin-blue-label,zyre-03,hurricane-3,0.8548,64,2,62,Defense Counter,0.7466,0.9217,1
+Legacy,马龙,q968,tenergy-05,tenergy-05,0.8507,71,4,67,Defense Counter,0.7466,0.9169,3
+Legacy,许昕,stiga-cybershape-carbon,dignics-09c,desto-f1,0.8421,64,7,57,Defense Counter,0.7264,0.9146,4
+Legacy,许昕,stiga-cybershape-carbon,hurricane-8,hurricane-8,0.8413,64,1,63,Defense Counter,0.7319,0.9114,5
+Legacy,马龙,q968,hurricane-3,tenergy-05,0.8406,71,2,69,Defense Counter,0.7367,0.9086,4
+Legacy,许昕,stiga-cybershape-carbon,tenergy-05,tenergy-05,0.8333,64,4,60,Defense Counter,0.7197,0.9069,6
+Legacy,马龙,q968,zyre-03,hurricane-3,0.8333,70,4,66,Defense Counter,0.7257,0.9043,5
+Legacy,马龙,q968,zyre-03,dna-platinum-m,0.8286,70,0,70,Defense Counter,0.7238,0.8991,6
+Legacy,张本智和,harimoto-alc,dignics-09c,zyre-03,0.8281,64,0,64,Spin Control,0.7179,0.9012,1
+Legacy,张本智和,harimoto-alc,dna-platinum-m,hurricane-8,0.8281,64,0,64,Rally,0.7179,0.9012,2
+Legacy,许昕,stiga-cybershape-carbon,hurricane-8,tenergy-05,0.8254,64,1,63,Defense Counter,0.7138,0.8996,7
+Legacy,马龙,q968,tenergy-05,dna-platinum-m,0.8235,70,2,68,Defense Counter,0.7164,0.8961,7
+Legacy,张本智和,harimoto-alc,dignics-09c,dna-platinum-m,0.8226,62,0,62,Spin Control,0.7096,0.8979,3
+Legacy,许昕,w968,dignics-09c,dna-platinum-m,0.8214,63,7,56,Defense Counter,0.7016,0.9000,8
+Legacy,许昕,w968,tenergy-05,dignics-09c,0.8197,64,3,61,Defense Counter,0.7053,0.8962,9
+Legacy,许昕,w968,hurricane-3,dignics-09c,0.8197,64,3,61,Defense Counter,0.7053,0.8962,10
+Legacy,马龙,q968,zyre-03,zyre-03,0.8182,70,4,66,Defense Counter,0.7085,0.8928,8
+Legacy,马龙,q968,tenergy-05,zyre-03,0.8143,70,0,70,Defense Counter,0.7077,0.8881,9
+Legacy,张本智和,harimoto-alc,dignics-09c,hurricane-8,0.8125,64,0,64,Spin Control,0.7003,0.8894,4
+Legacy,张本智和,xu-xin-blue-label,hurricane-3,hurricane-8,0.8125,64,0,64,Defense Counter,0.7003,0.8894,5
+Legacy,张本智和,harimoto-alc,dignics-09c,dignics-09c,0.8125,64,0,64,Spin Control,0.7003,0.8894,6
+Legacy,张本智和,harimoto-alc,hurricane-8,hurricane-8,0.8125,64,0,64,Rally,0.7003,0.8894,7
+Legacy,马龙,q968,dignics-09c,dignics-09c,0.8116,70,1,69,Defense Counter,0.7039,0.8865,10
+Legacy,张本智和,harimoto-alc,tenergy-05,dna-platinum-m,0.7969,64,0,64,Rally,0.6829,0.8773,8
+Legacy,张本智和,harimoto-alc,tenergy-05,zyre-03,0.7969,64,0,64,Spin Control,0.6829,0.8773,9
+Legacy,张本智和,butterfly-viscaria,hurricane-8,tenergy-05,0.7969,64,0,64,Rally,0.6829,0.8773,10
+Legacy,莫雷加德,xu-xin-blue-label,dignics-09c,dignics-09c,0.7966,64,5,59,Defense Counter,0.6773,0.8796,2
+Legacy,莫雷加德,xu-xin-blue-label,hurricane-8,hurricane-8,0.7258,63,1,62,Defense Counter,0.6041,0.8212,3
+Legacy,莫雷加德,xu-xin-blue-label,tenergy-05,hurricane-3,0.7143,64,1,63,Defense Counter,0.5930,0.8110,4
+Legacy,林高远,stiga-cybershape-carbon,dna-platinum-m,hurricane-3,0.7000,70,0,70,Spin Control,0.5846,0.7946,1
+Legacy,莫雷加德,stiga-cybershape-carbon,dna-platinum-m,zyre-03,0.6800,63,13,50,Defense Counter,0.5419,0.7924,5
+Legacy,莫雷加德,stiga-cybershape-carbon,hurricane-3,dna-platinum-m,0.6786,62,6,56,Defense Counter,0.5482,0.7860,6
+Legacy,林高远,stiga-cybershape-carbon,tenergy-05,tenergy-05,0.6571,70,0,70,Rally,0.5404,0.7575,2
+Legacy,莫雷加德,xu-xin-blue-label,tenergy-05,dignics-09c,0.6563,64,0,64,Defense Counter,0.5340,0.7608,7
+Legacy,莫雷加德,stiga-cybershape-carbon,hurricane-3,dignics-09c,0.6545,64,9,55,Defense Counter,0.5225,0.7664,8
+Legacy,莫雷加德,xu-xin-blue-label,dignics-09c,desto-f1,0.6508,63,0,63,Defense Counter,0.5275,0.7567,9
+Legacy,莫雷加德,xu-xin-blue-label,zyre-03,desto-f1,0.6500,64,4,60,Defense Counter,0.5236,0.7583,10
+Legacy,林高远,stiga-cybershape-carbon,hurricane-3,hurricane-3,0.6286,70,0,70,Spin Control,0.5115,0.7323,3
+Legacy,林高远,stiga-cybershape-carbon,tenergy-05,zyre-03,0.6286,70,0,70,Spin Control,0.5115,0.7323,4
+Legacy,林高远,stiga-cybershape-carbon,desto-f1,hurricane-3,0.6269,71,4,67,Spin Control,0.5072,0.7328,5
+Legacy,林高远,stiga-cybershape-carbon,hurricane-3,dna-platinum-m,0.6143,71,1,70,Spin Control,0.4972,0.7195,6
+Legacy,林高远,q968,zyre-03,hurricane-3,0.6094,71,7,64,Spin Control,0.4869,0.7194,7
+Legacy,林高远,stiga-cybershape-carbon,desto-f1,desto-f1,0.6087,71,2,69,Backhand Pressure,0.4907,0.7152,8
+Legacy,林高远,stiga-cybershape-carbon,hurricane-8,desto-f1,0.5942,70,1,69,Rally,0.4764,0.7021,9
+Legacy,林高远,stiga-cybershape-carbon,dna-platinum-m,zyre-03,0.5857,70,0,70,Spin Control,0.4688,0.6937,10
+Candidate,张继科,harimoto-alc,hurricane-8,dna-platinum-m,1.0000,62,0,62,Rally,0.9417,1.0000,1
+Candidate,樊振东,harimoto-alc,dignics-09c,tenergy-05,0.9818,56,1,55,Spin Control,0.9039,0.9968,1
+Candidate,张继科,harimoto-alc,hurricane-8,tenergy-05,0.9688,64,0,64,Rally,0.8930,0.9914,2
+Candidate,张继科,harimoto-alc,dna-platinum-m,tenergy-05,0.9683,64,1,63,Rally,0.8914,0.9913,3
+Candidate,张继科,harimoto-alc,dignics-09c,tenergy-05,0.9636,64,9,55,Spin Control,0.8768,0.9900,4
+Candidate,樊振东,fan-zhendong-alc,hurricane-3,dignics-09c,0.9600,57,7,50,Spin Control,0.8654,0.9890,2
+Candidate,张继科,harimoto-alc,zyre-03,hurricane-3,0.9531,64,0,64,Spin Control,0.8710,0.9839,5
+Candidate,张继科,harimoto-alc,hurricane-8,hurricane-8,0.9531,64,0,64,Rally,0.8710,0.9839,6
+Candidate,张继科,harimoto-alc,hurricane-8,hurricane-3,0.9531,64,0,64,Spin Control,0.8710,0.9839,7
+Candidate,张继科,harimoto-alc,tenergy-05,tenergy-05,0.9531,64,0,64,Rally,0.8710,0.9839,8
+Candidate,张继科,harimoto-alc,hurricane-3,dna-platinum-m,0.9524,64,1,63,Spin Control,0.8691,0.9837,9
+Candidate,张继科,harimoto-alc,zyre-03,zyre-03,0.9516,64,2,62,Spin Control,0.8671,0.9834,10
+Candidate,樊振东,harimoto-alc,dna-platinum-m,tenergy-05,0.9298,57,0,57,Rally,0.8330,0.9724,3
+Candidate,樊振东,w968,hurricane-8,zyre-03,0.9245,57,4,53,Spin Control,0.8214,0.9703,4
+Candidate,樊振东,stiga-cybershape-carbon,zyre-03,hurricane-3,0.9231,57,5,52,Spin Control,0.8183,0.9697,5
+Candidate,樊振东,fan-zhendong-alc,hurricane-8,hurricane-3,0.9184,57,8,49,Spin Control,0.8081,0.9678,6
+Candidate,樊振东,harimoto-alc,dna-platinum-m,dignics-09c,0.9123,58,1,57,Spin Control,0.8106,0.9619,7
+Candidate,樊振东,stiga-cybershape-carbon,zyre-03,hurricane-8,0.9123,57,0,57,Spin Control,0.8106,0.9619,8
+Candidate,樊振东,harimoto-alc,hurricane-3,desto-f1,0.9107,57,1,56,Spin Control,0.8074,0.9613,9
+Candidate,樊振东,fan-zhendong-alc,tenergy-05,hurricane-8,0.9107,57,1,56,Rally,0.8074,0.9613,10
+Candidate,王楚钦,q968,desto-f1,tenergy-05,0.9107,58,2,56,Rally,0.8074,0.9613,1
+Candidate,王楚钦,fan-zhendong-alc,hurricane-8,dna-platinum-m,0.8776,58,9,49,Rally,0.7576,0.9427,2
+Candidate,王楚钦,q968,desto-f1,desto-f1,0.8750,56,0,56,Forehand Attack,0.7637,0.9381,3
+Candidate,张本智和,butterfly-viscaria,hurricane-8,tenergy-05,0.8421,64,7,57,Rally,0.7264,0.9146,1
+Candidate,王楚钦,q968,hurricane-8,tenergy-05,0.8393,56,0,56,Rally,0.7219,0.9131,4
+Candidate,马龙,xu-xin-blue-label,hurricane-3,tenergy-05,0.8333,69,9,60,Defense Counter,0.7197,0.9069,1
+Candidate,马龙,xu-xin-blue-label,desto-f1,dna-platinum-m,0.8308,70,5,65,Defense Counter,0.7218,0.9028,2
+Candidate,王楚钦,q968,hurricane-8,hurricane-8,0.8148,57,3,54,Rally,0.6916,0.8962,5
+Candidate,张本智和,butterfly-viscaria,hurricane-8,zyre-03,0.8070,63,6,57,Spin Control,0.6866,0.8887,2
+Candidate,王楚钦,q968,desto-f1,dignics-09c,0.8039,57,6,51,Spin Control,0.6754,0.8898,6
+Candidate,王楚钦,lin-gaoyuan-alc,desto-f1,hurricane-3,0.8036,57,1,56,Defense Counter,0.6816,0.8866,7
+Candidate,马龙,harimoto-alc,tenergy-05,tenergy-05,0.8028,71,0,71,Defense Counter,0.6958,0.8787,3
+Candidate,王楚钦,butterfly-viscaria,dignics-09c,desto-f1,0.7959,58,9,49,Spin Control,0.6636,0.8852,8
+Candidate,王楚钦,fan-zhendong-alc,zyre-03,dna-platinum-m,0.7955,58,14,44,Spin Control,0.6550,0.8885,9
+Candidate,王楚钦,lin-gaoyuan-alc,dignics-09c,dignics-09c,0.7925,58,5,53,Defense Counter,0.6654,0.8800,10
+Candidate,马龙,xu-xin-blue-label,hurricane-3,desto-f1,0.7910,71,4,67,Defense Counter,0.6793,0.8712,4
+Candidate,马龙,xu-xin-blue-label,desto-f1,hurricane-3,0.7879,70,4,66,Defense Counter,0.6749,0.8692,5
+Candidate,许昕,stiga-cybershape-carbon,hurricane-8,hurricane-3,0.7869,64,3,61,Defense Counter,0.6688,0.8710,1
+Candidate,许昕,w968,hurricane-3,dna-platinum-m,0.7797,64,5,59,Defense Counter,0.6587,0.8665,2
+Candidate,马龙,harimoto-alc,desto-f1,desto-f1,0.7794,70,2,68,Defense Counter,0.6674,0.8615,6
+Candidate,马龙,harimoto-alc,dignics-09c,dna-platinum-m,0.7761,71,4,67,Defense Counter,0.6629,0.8594,7
+Candidate,张本智和,butterfly-viscaria,dna-platinum-m,dignics-09c,0.7679,64,8,56,Spin Control,0.6423,0.8590,3
+Candidate,马龙,xu-xin-blue-label,zyre-03,dna-platinum-m,0.7647,70,2,68,Defense Counter,0.6514,0.8497,8
+Candidate,许昕,stiga-cybershape-carbon,dna-platinum-m,dignics-09c,0.7619,64,1,63,Defense Counter,0.6436,0.8501,3
+Candidate,马龙,xu-xin-blue-label,hurricane-3,hurricane-8,0.7581,70,8,62,Defense Counter,0.6385,0.8475,9
+Candidate,马龙,harimoto-alc,dignics-09c,tenergy-05,0.7576,69,3,66,Defense Counter,0.6419,0.8449,10
+Candidate,张本智和,butterfly-viscaria,desto-f1,dna-platinum-m,0.7551,64,15,49,Rally,0.6191,0.8540,4
+Candidate,许昕,w968,dignics-09c,dna-platinum-m,0.7551,63,14,49,Defense Counter,0.6191,0.8540,4
+Candidate,张本智和,butterfly-viscaria,dna-platinum-m,desto-f1,0.7547,64,11,53,Rally,0.6243,0.8507,5
+Candidate,许昕,stiga-cybershape-carbon,tenergy-05,zyre-03,0.7541,64,3,61,Defense Counter,0.6332,0.8449,5
+Candidate,张本智和,harimoto-alc,dignics-09c,dignics-09c,0.7500,64,0,64,Spin Control,0.6318,0.8399,6
+Candidate,许昕,stiga-cybershape-carbon,desto-f1,hurricane-8,0.7500,64,4,60,Defense Counter,0.6277,0.8422,6
+Candidate,许昕,stiga-cybershape-carbon,hurricane-3,hurricane-8,0.7460,64,1,63,Defense Counter,0.6266,0.8372,7
+Candidate,张本智和,butterfly-viscaria,dna-platinum-m,tenergy-05,0.7458,63,4,59,Rally,0.6220,0.8394,7
+Candidate,莫雷加德,xu-xin-blue-label,hurricane-3,dna-platinum-m,0.7400,64,14,50,Defense Counter,0.6045,0.8413,1
+Candidate,莫雷加德,stiga-cybershape-carbon,hurricane-3,dna-platinum-m,0.7391,62,16,46,Defense Counter,0.5974,0.8440,2
+Candidate,莫雷加德,xu-xin-blue-label,tenergy-05,hurricane-3,0.7368,64,7,57,Defense Counter,0.6102,0.8335,3
+Candidate,许昕,stiga-cybershape-carbon,tenergy-05,hurricane-3,0.7368,64,7,57,Defense Counter,0.6102,0.8335,8
+Candidate,莫雷加德,xu-xin-blue-label,tenergy-05,hurricane-8,0.7347,63,14,49,Defense Counter,0.5974,0.8379,4
+Candidate,许昕,stiga-cybershape-carbon,hurricane-3,hurricane-3,0.7333,62,2,60,Defense Counter,0.6099,0.8287,9
+Candidate,许昕,stiga-cybershape-carbon,desto-f1,zyre-03,0.7302,63,0,63,Defense Counter,0.6097,0.8242,10
+Candidate,张本智和,harimoto-alc,dna-platinum-m,dignics-09c,0.7143,64,1,63,Spin Control,0.5930,0.8110,8
+Candidate,莫雷加德,stiga-cybershape-carbon,dna-platinum-m,zyre-03,0.7143,63,14,49,Defense Counter,0.5759,0.8215,5
+Candidate,张本智和,butterfly-viscaria,zyre-03,desto-f1,0.7069,63,5,58,Spin Control,0.5799,0.8082,9
+Candidate,莫雷加德,q968,hurricane-3,dna-platinum-m,0.7059,64,13,51,Defense Counter,0.5700,0.8129,6
+Candidate,莫雷加德,xu-xin-blue-label,hurricane-8,hurricane-8,0.7000,63,13,50,Defense Counter,0.5625,0.8090,7
+Candidate,张本智和,butterfly-viscaria,dna-platinum-m,dna-platinum-m,0.6964,64,8,56,Rally,0.5666,0.8010,10
+Candidate,莫雷加德,xu-xin-blue-label,hurricane-3,tenergy-05,0.6964,64,8,56,Defense Counter,0.5666,0.8010,8
+Candidate,莫雷加德,stiga-cybershape-carbon,tenergy-05,zyre-03,0.6939,64,15,49,Defense Counter,0.5547,0.8048,9
+Candidate,莫雷加德,xu-xin-blue-label,desto-f1,hurricane-3,0.6939,64,15,49,Defense Counter,0.5547,0.8048,10
+Candidate,林高远,stiga-cybershape-carbon,desto-f1,zyre-03,0.6269,70,3,67,Spin Control,0.5072,0.7328,1
+Candidate,林高远,xu-xin-blue-label,hurricane-8,zyre-03,0.6250,71,7,64,Defense Counter,0.5025,0.7333,2
+Candidate,林高远,stiga-cybershape-carbon,hurricane-3,hurricane-3,0.6232,70,1,69,Spin Control,0.5052,0.7282,3
+Candidate,林高远,stiga-cybershape-carbon,dna-platinum-m,hurricane-3,0.6176,70,2,68,Spin Control,0.4988,0.7239,4
+Candidate,林高远,stiga-cybershape-carbon,desto-f1,desto-f1,0.6029,71,3,68,Backhand Pressure,0.4842,0.7107,5
+Candidate,林高远,stiga-cybershape-carbon,hurricane-3,desto-f1,0.5797,71,2,69,Spin Control,0.4621,0.6889,6
+Candidate,林高远,stiga-cybershape-carbon,hurricane-8,tenergy-05,0.5714,71,1,70,Rally,0.4548,0.6806,7
+Candidate,林高远,xu-xin-blue-label,zyre-03,dignics-09c,0.5690,70,12,58,Defense Counter,0.4412,0.6882,8
+Candidate,林高远,stiga-cybershape-carbon,hurricane-8,desto-f1,0.5606,70,4,66,Rally,0.4408,0.6737,9
+Candidate,林高远,xu-xin-blue-label,hurricane-8,hurricane-3,0.5574,70,9,61,Defense Counter,0.4330,0.6749,10

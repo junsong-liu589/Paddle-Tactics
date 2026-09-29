@@ -1,0 +1,43 @@
+mode,analysis_type,policy_or_allocation,observations,wins,win_rate,allocation_share,sample_status
+Legacy,bot_policy,BluffDefenseBot,25120,15256,0.6073,,observed_only
+Legacy,bot_policy,BalancedBot,25162,14278,0.5674,,observed_only
+Legacy,bot_policy,FortressBot,25167,13399,0.5324,,observed_only
+Legacy,bot_policy,Top3AwareDefenseBot,24618,14817,0.6019,,observed_only
+Legacy,bot_policy,WeaknessHunterBot,24898,8846,0.3553,,observed_only
+Legacy,bot_policy,RandomBot,25011,4280,0.1711,,observed_only
+Legacy,bot_policy,GreedyAttackBot,25240,15197,0.6021,,observed_only
+Legacy,bot_policy,AdaptiveBot,24784,11213,0.4524,,observed_only
+Candidate,bot_policy,BluffDefenseBot,25120,16877,0.6719,,observed_only
+Candidate,bot_policy,BalancedBot,25162,10767,0.4279,,observed_only
+Candidate,bot_policy,FortressBot,25167,12935,0.5140,,observed_only
+Candidate,bot_policy,Top3AwareDefenseBot,24618,13796,0.5604,,observed_only
+Candidate,bot_policy,WeaknessHunterBot,24898,7393,0.2969,,observed_only
+Candidate,bot_policy,RandomBot,25011,3900,0.1559,,observed_only
+Candidate,bot_policy,GreedyAttackBot,25240,14151,0.5607,,observed_only
+Candidate,bot_policy,AdaptiveBot,24784,9023,0.3641,,observed_only
+Candidate V3,bot_policy,BluffDefenseBot,25120,16189,0.6445,,observed_only
+Candidate V3,bot_policy,BalancedBot,25162,11621,0.4618,,observed_only
+Candidate V3,bot_policy,FortressBot,25167,12351,0.4908,,observed_only
+Candidate V3,bot_policy,Top3AwareDefenseBot,24618,16467,0.6689,,observed_only
+Candidate V3,bot_policy,WeaknessHunterBot,24898,7141,0.2868,,observed_only
+Candidate V3,bot_policy,RandomBot,25011,3587,0.1434,,observed_only
+Candidate V3,bot_policy,GreedyAttackBot,25240,13659,0.5412,,observed_only
+Candidate V3,bot_policy,AdaptiveBot,24784,8741,0.3527,,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:4/2/1/1/0,43552,,,0.1675,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:4/4/0/0/0,43433,,,0.1670,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:8/0/0/0/0,43392,,,0.1669,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:6/2/0/0/0,43336,,,0.1667,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:2/2/2/1/1,43185,,,0.1661,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:5/3/0/0/0,43133,,,0.1659,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:6/2/0/0/0,14297,,,0.1699,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:4/4/0/0/0,14089,,,0.1674,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:8/0/0/0/0,14043,,,0.1669,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:4/2/1/1/0,13997,,,0.1663,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:5/3/0/0/0,13895,,,0.1651,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:2/2/2/1/1,13830,,,0.1643,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:6/2/0/0/0,8503,,,0.1681,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:4/4/0/0/0,8462,,,0.1673,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:8/0/0/0/0,8455,,,0.1672,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:4/2/1/1/0,8391,,,0.1659,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:2/2/2/1/1,8388,,,0.1659,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:5/3/0/0/0,8374,,,0.1656,observed_only

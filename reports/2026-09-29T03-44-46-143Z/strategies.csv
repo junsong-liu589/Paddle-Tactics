@@ -1,0 +1,43 @@
+mode,analysis_type,policy_or_allocation,observations,wins,win_rate,allocation_share,sample_status
+Legacy,bot_policy,BluffDefenseBot,265,159,0.6000,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,BalancedBot,243,138,0.5679,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,FortressBot,251,143,0.5697,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,Top3AwareDefenseBot,248,146,0.5887,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,WeaknessHunterBot,253,87,0.3439,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,RandomBot,244,48,0.1967,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,GreedyAttackBot,267,160,0.5993,,INSUFFICIENT_SAMPLE
+Legacy,bot_policy,AdaptiveBot,229,88,0.3843,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,BluffDefenseBot,265,170,0.6415,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,BalancedBot,243,98,0.4033,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,FortressBot,251,142,0.5657,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,Top3AwareDefenseBot,248,141,0.5685,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,WeaknessHunterBot,253,75,0.2964,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,RandomBot,244,39,0.1598,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,GreedyAttackBot,267,138,0.5169,,INSUFFICIENT_SAMPLE
+Candidate,bot_policy,AdaptiveBot,229,78,0.3406,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,BluffDefenseBot,265,161,0.6075,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,BalancedBot,243,106,0.4362,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,FortressBot,251,130,0.5179,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,Top3AwareDefenseBot,248,169,0.6815,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,WeaknessHunterBot,253,77,0.3043,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,RandomBot,244,38,0.1557,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,GreedyAttackBot,267,137,0.5131,,INSUFFICIENT_SAMPLE
+Candidate V3,bot_policy,AdaptiveBot,229,78,0.3406,,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:service:2/2/2/1/1,465,,,0.1787,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:5/3/0/0/0,453,,,0.1741,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:4/4/0/0/0,437,,,0.1679,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:4/2/1/1/0,424,,,0.1630,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:8/0/0/0/0,414,,,0.1591,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:service:6/2/0/0/0,409,,,0.1572,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:5/3/0/0/0,149,,,0.1886,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:6/2/0/0/0,138,,,0.1747,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:2/2/2/1/1,133,,,0.1684,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:4/2/1/1/0,128,,,0.1620,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:4/4/0/0/0,121,,,0.1532,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:receive:8/0/0/0/0,121,,,0.1532,observed_only
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:2/2/2/1/1,94,,,0.1891,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:4/4/0/0/0,87,,,0.1751,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:6/2/0/0/0,87,,,0.1751,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:8/0/0/0/0,81,,,0.1630,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:5/3/0/0/0,75,,,0.1509,INSUFFICIENT_SAMPLE
+Candidate V3,Fortress_defense_pattern,FortressBot:rally:4/2/1/1/0,73,,,0.1469,INSUFFICIENT_SAMPLE

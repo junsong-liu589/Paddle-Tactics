@@ -1,0 +1,77 @@
+mode,player,blade,fh_rubber,bh_rubber,win_rate,matches,censored_draws,completed_matches,style,ci95_low,ci95_high,rank
+Legacy,樊振东,butterfly-viscaria,hurricane-3,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,1
+Legacy,莫雷加德,butterfly-viscaria,zyre-03,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Legacy,许昕,harimoto-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Legacy,王楚钦,q968,hurricane-8,hurricane-8,1.0000,1,0,1,Rally,0.2065,1.0000,1
+Legacy,王楚钦,butterfly-viscaria,hurricane-8,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Legacy,张本智和,lin-gaoyuan-alc,hurricane-8,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Legacy,张本智和,w968,hurricane-8,dignics-09c,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Legacy,马龙,w968,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Legacy,林高远,lin-gaoyuan-alc,dna-platinum-m,dignics-09c,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Legacy,马龙,fan-zhendong-alc,hurricane-3,hurricane-3,0.5000,2,0,2,Defense Counter,0.0945,0.9055,2
+Legacy,林高远,w968,dignics-09c,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,2
+Legacy,张继科,lin-gaoyuan-alc,hurricane-3,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,1
+Legacy,张继科,lin-gaoyuan-alc,desto-f1,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Legacy,林高远,fan-zhendong-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,3
+Legacy,马龙,stiga-cybershape-carbon,tenergy-05,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Legacy,许昕,fan-zhendong-alc,desto-f1,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Legacy,莫雷加德,harimoto-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Legacy,樊振东,xu-xin-blue-label,tenergy-05,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Legacy,樊振东,xu-xin-blue-label,dignics-09c,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate,樊振东,butterfly-viscaria,hurricane-3,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,1
+Candidate,张继科,lin-gaoyuan-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate,许昕,harimoto-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate,王楚钦,q968,hurricane-8,hurricane-8,1.0000,1,0,1,Rally,0.2065,1.0000,1
+Candidate,王楚钦,butterfly-viscaria,hurricane-8,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate,张本智和,lin-gaoyuan-alc,hurricane-8,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate,张本智和,w968,hurricane-8,dignics-09c,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate,马龙,w968,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate,林高远,lin-gaoyuan-alc,dna-platinum-m,dignics-09c,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate,马龙,fan-zhendong-alc,hurricane-3,hurricane-3,0.0000,2,2,0,Defense Counter,0.0000,1.0000,2
+Candidate,林高远,w968,dignics-09c,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,2
+Candidate,莫雷加德,butterfly-viscaria,zyre-03,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,1
+Candidate,张继科,lin-gaoyuan-alc,desto-f1,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate,林高远,fan-zhendong-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,3
+Candidate,马龙,stiga-cybershape-carbon,tenergy-05,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate,许昕,fan-zhendong-alc,desto-f1,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate,莫雷加德,harimoto-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate,樊振东,xu-xin-blue-label,tenergy-05,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate,樊振东,xu-xin-blue-label,dignics-09c,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V3,樊振东,butterfly-viscaria,hurricane-3,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,1
+Candidate V3,张继科,lin-gaoyuan-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V3,许昕,harimoto-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V3,王楚钦,q968,hurricane-8,hurricane-8,1.0000,1,0,1,Rally,0.2065,1.0000,1
+Candidate V3,王楚钦,butterfly-viscaria,hurricane-8,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate V3,张本智和,lin-gaoyuan-alc,hurricane-8,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V3,张本智和,w968,hurricane-8,dignics-09c,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate V3,马龙,w968,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V3,樊振东,xu-xin-blue-label,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,2
+Candidate V3,马龙,fan-zhendong-alc,hurricane-3,hurricane-3,0.5000,2,0,2,Defense Counter,0.0945,0.9055,2
+Candidate V3,林高远,w968,dignics-09c,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,1
+Candidate V3,莫雷加德,butterfly-viscaria,zyre-03,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,1
+Candidate V3,张继科,lin-gaoyuan-alc,desto-f1,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V3,林高远,fan-zhendong-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,2
+Candidate V3,马龙,stiga-cybershape-carbon,tenergy-05,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V3,许昕,fan-zhendong-alc,desto-f1,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V3,莫雷加德,harimoto-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V3,樊振东,xu-xin-blue-label,tenergy-05,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V3,林高远,lin-gaoyuan-alc,dna-platinum-m,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V4,樊振东,butterfly-viscaria,hurricane-3,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,1
+Candidate V4,张继科,lin-gaoyuan-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V4,许昕,harimoto-alc,hurricane-3,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V4,王楚钦,q968,hurricane-8,hurricane-8,1.0000,1,0,1,Rally,0.2065,1.0000,1
+Candidate V4,王楚钦,butterfly-viscaria,hurricane-8,hurricane-3,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate V4,张本智和,lin-gaoyuan-alc,hurricane-8,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V4,张本智和,w968,hurricane-8,dignics-09c,1.0000,1,0,1,Spin Control,0.2065,1.0000,2
+Candidate V4,马龙,w968,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,1
+Candidate V4,樊振东,xu-xin-blue-label,dignics-09c,hurricane-3,1.0000,1,0,1,Defense Counter,0.2065,1.0000,2
+Candidate V4,马龙,fan-zhendong-alc,hurricane-3,hurricane-3,0.5000,2,0,2,Defense Counter,0.0945,0.9055,2
+Candidate V4,林高远,w968,dignics-09c,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,1
+Candidate V4,莫雷加德,butterfly-viscaria,zyre-03,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,1
+Candidate V4,张继科,lin-gaoyuan-alc,desto-f1,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V4,林高远,fan-zhendong-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Spin Control,0.0000,0.7935,2
+Candidate V4,马龙,stiga-cybershape-carbon,tenergy-05,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V4,许昕,fan-zhendong-alc,desto-f1,hurricane-8,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V4,莫雷加德,harimoto-alc,hurricane-8,hurricane-3,0.0000,1,0,1,Defense Counter,0.0000,0.7935,2
+Candidate V4,樊振东,xu-xin-blue-label,tenergy-05,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3
+Candidate V4,林高远,lin-gaoyuan-alc,dna-platinum-m,dignics-09c,0.0000,1,0,1,Defense Counter,0.0000,0.7935,3

@@ -1,0 +1,201 @@
+{
+  "generatedAt": "2026-09-29T02:43:12.131Z",
+  "seed": 20260928,
+  "sourceBalanceVersion": "balance_v1.1",
+  "recommendationsAreApplied": false,
+  "insufficientBaselineSample": true,
+  "items": [
+    {
+      "parameter": "attackBonus",
+      "candidateValue": 3,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.36666666666666664,
+      "confidenceInterval95": [
+        0.21873920806100708,
+        0.5448643634520511
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "attackBonus",
+      "candidateValue": 5,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.5666666666666667,
+      "confidenceInterval95": [
+        0.3919730700081361,
+        0.7262251442353347
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 8,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.36666666666666664,
+      "confidenceInterval95": [
+        0.21873920806100708,
+        0.5448643634520511
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 9,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4666666666666667,
+      "confidenceInterval95": [
+        0.30232388907699753,
+        0.638577003801267
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 11,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.5,
+      "confidenceInterval95": [
+        0.33154125640533766,
+        0.6684587435946623
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defensePool",
+      "candidateValue": 12,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4,
+      "confidenceInterval95": [
+        0.24590628116801852,
+        0.5767963974667752
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defenseCap",
+      "candidateValue": 3,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4666666666666667,
+      "confidenceInterval95": [
+        0.30232388907699753,
+        0.638577003801267
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "defenseCap",
+      "candidateValue": 5,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.3333333333333333,
+      "confidenceInterval95": [
+        0.19230498083676134,
+        0.5121994835545616
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "serveThreshold",
+      "candidateValue": 4,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4666666666666667,
+      "confidenceInterval95": [
+        0.30232388907699753,
+        0.638577003801267
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "serveThreshold",
+      "candidateValue": 6,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.6,
+      "confidenceInterval95": [
+        0.42320360253322475,
+        0.7540937188319815
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "counterThreshold",
+      "candidateValue": 4,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.5,
+      "confidenceInterval95": [
+        0.33154125640533766,
+        0.6684587435946623
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "counterThreshold",
+      "candidateValue": 6,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4,
+      "confidenceInterval95": [
+        0.24590628116801852,
+        0.5767963974667752
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyThreshold",
+      "candidateValue": 3,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4,
+      "confidenceInterval95": [
+        0.24590628116801852,
+        0.5767963974667752
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyThreshold",
+      "candidateValue": 5,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.4,
+      "confidenceInterval95": [
+        0.24590628116801852,
+        0.5767963974667752
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyMaxRounds",
+      "candidateValue": 4,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.5,
+      "confidenceInterval95": [
+        0.33154125640533766,
+        0.6684587435946623
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    },
+    {
+      "parameter": "rallyMaxRounds",
+      "candidateValue": 6,
+      "sampleSize": 30,
+      "candidateASeatWinRate": 0.5,
+      "confidenceInterval95": [
+        0.33154125640533766,
+        0.6684587435946623
+      ],
+      "status": "INSUFFICIENT_SAMPLE",
+      "note": "One-variable simulation observation only; not an applied change."
+    }
+  ]
+}

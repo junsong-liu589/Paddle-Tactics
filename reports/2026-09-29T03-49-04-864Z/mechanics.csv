@@ -1,0 +1,4 @@
+mode,baseline_matches,avg_points,avg_rally_rounds,rallies_started,fifth_round_rate_per_rally,tie_break_rate_per_rally,deuce_match_rate,deuce_cycle_censored,legacy_reference
+Legacy,10000,16.424,27.760,103307,0.3463,0.3352,0.0839,300,production 10/10/15
+Candidate,10000,19.734,9.346,57759,0.0724,0.0635,0.1713,1134,experimental only
+Candidate V3,10000,19.618,7.005,49268,0.0404,0.0343,0.1739,1038,experimental reducer ruleset

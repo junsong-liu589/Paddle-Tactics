@@ -1,0 +1,39 @@
+{
+  "name": "paddle-tactics",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --parallel --filter @paddle-tactics/web --filter @paddle-tactics/server dev",
+    "build": "pnpm db:generate && pnpm -r build",
+    "lint": "eslint .",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md",
+    "typecheck": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm -r typecheck",
+    "test": "pnpm --filter @paddle-tactics/game-data build && vitest run",
+    "e2e": "playwright test",
+    "data:validate": "pnpm --filter @paddle-tactics/game-data validate",
+    "simulate:match": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core simulate",
+    "balance:run": "pnpm --filter @paddle-tactics/balance-simulator standard",
+    "balance:quick": "pnpm --filter @paddle-tactics/balance-simulator quick",
+    "balance:full": "pnpm --filter @paddle-tactics/balance-simulator full",
+    "balance:rules": "pnpm --filter @paddle-tactics/balance-simulator rules",
+    "balance:equipment": "pnpm --filter @paddle-tactics/balance-simulator equipment",
+    "db:generate": "prisma generate",
+    "db:check": "pnpm db:generate && pnpm --filter @paddle-tactics/server db:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "prettier": "^3.6.2",
+    "prisma": "^7.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^3.2.4"
+  }
+}

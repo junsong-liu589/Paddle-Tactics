@@ -1,0 +1,57 @@
+mode,side,item_id,name,style,usage,usage_share,matches,wins,censored_draws,completed_matches,raw_win_rate,ci95_low,ci95_high,sample_status
+Legacy,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,5,0.2500,5,3,0,5,0.6000,0.2307,0.8824,0.6250,4,INSUFFICIENT_SAMPLE
+Legacy,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,6,0.3000,6,4,0,6,0.6667,0.3000,0.9032,0.5000,4,INSUFFICIENT_SAMPLE
+Legacy,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Legacy,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Legacy,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,1,0.0500,1,1,0,1,1.0000,0.2065,1.0000,1.0000,1,INSUFFICIENT_SAMPLE
+Legacy,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,1,0.0500,1,1,0,1,1.0000,0.2065,1.0000,1.0000,1,INSUFFICIENT_SAMPLE
+Legacy,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Legacy,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,14,0.7000,14,7,0,14,0.5000,0.2680,0.7320,0.5833,8,INSUFFICIENT_SAMPLE
+Legacy,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Legacy,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,2,0,3,0.6667,0.2077,0.9385,0.6667,3,INSUFFICIENT_SAMPLE
+Legacy,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Legacy,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Legacy,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Legacy,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,5,0.2500,5,3,2,3,1.0000,0.4385,1.0000,1.0000,3,INSUFFICIENT_SAMPLE
+Candidate,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,6,0.3000,6,4,0,6,0.6667,0.3000,0.9032,0.5000,4,INSUFFICIENT_SAMPLE
+Candidate,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,1,0.0500,1,0,0,1,0.0000,0.0000,0.7935,0.0000,1,INSUFFICIENT_SAMPLE
+Candidate,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,1,0.0500,1,1,0,1,1.0000,0.2065,1.0000,1.0000,1,INSUFFICIENT_SAMPLE
+Candidate,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,14,0.7000,14,6,2,12,0.5000,0.2538,0.7462,0.6250,8,INSUFFICIENT_SAMPLE
+Candidate,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,2,0,3,0.6667,0.2077,0.9385,0.6667,3,INSUFFICIENT_SAMPLE
+Candidate,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,5,0.2500,5,4,0,5,0.8000,0.3755,0.9638,0.8750,4,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,6,0.3000,6,4,0,6,0.6667,0.3000,0.9032,0.5000,4,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,2,0,3,0.6667,0.2077,0.9385,0.6667,3,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,1,0.0500,1,0,0,1,0.0000,0.0000,0.7935,0.0000,1,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,1,0.0500,1,0,0,1,0.0000,0.0000,0.7935,0.0000,1,INSUFFICIENT_SAMPLE
+Candidate V3,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,14,0.7000,14,8,0,14,0.5714,0.3259,0.7862,0.6458,8,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V3,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,5,0.2500,5,4,0,5,0.8000,0.3755,0.9638,0.8750,4,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,6,0.3000,6,4,0,6,0.6667,0.3000,0.9032,0.5000,4,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,2,0,3,0.6667,0.2077,0.9385,0.6667,3,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,1,0.0500,1,0,0,1,0.0000,0.0000,0.7935,0.0000,1,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,1,0.0500,1,0,0,1,0.0000,0.0000,0.7935,0.0000,1,INSUFFICIENT_SAMPLE
+Candidate V4,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,2,0.1000,2,0,0,2,0.0000,0.0000,0.6576,0.0000,2,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,14,0.7000,14,8,0,14,0.5714,0.3259,0.7862,0.6458,8,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,3,0.1500,3,1,0,3,0.3333,0.0615,0.7923,0.3333,3,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE
+Candidate V4,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,0,0.0000,0,0,0,0,0.0000,0.0000,1.0000,0.0000,0,INSUFFICIENT_SAMPLE

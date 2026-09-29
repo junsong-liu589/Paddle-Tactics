@@ -1,0 +1,2131 @@
+{
+  "seed": 20260928,
+  "preset": "quick",
+  "startedAt": "2026-09-29T05:42:52.678Z",
+  "elapsedMs": 212,
+  "requestedMatchesPerMode": 10,
+  "modes": {
+    "legacy": {
+      "matches": 10,
+      "winsTotal": 10,
+      "draws": 0,
+      "wins": {
+        "ma-long": 2,
+        "fan-zhendong": 1,
+        "truls-moregard": 1,
+        "xu-xin": 1,
+        "wang-chuqin": 2,
+        "tomokazu-harimoto": 2,
+        "lin-gaoyuan": 1
+      },
+      "policyWins": {
+        "BalancedBot": 2,
+        "Top3AwareDefenseBot": 2,
+        "WeaknessHunterBot": 1,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 2,
+        "FortressBot": 2
+      },
+      "policyMatches": {
+        "BluffDefenseBot": 2,
+        "BalancedBot": 2,
+        "FortressBot": 3,
+        "Top3AwareDefenseBot": 3,
+        "WeaknessHunterBot": 2,
+        "RandomBot": 4,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 3
+      },
+      "initiative": {
+        "service": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "receive": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "rally": {
+          "eligible": 0,
+          "attackerWins": 0
+        }
+      },
+      "stageComparisons": {
+        "service": 156,
+        "receive": 128,
+        "rally": 404
+      },
+      "stageEnds": {
+        "service": 28,
+        "receive": 19,
+        "rally": 42
+      },
+      "attackChoices": {
+        "service:service_variation": 40,
+        "receive:flick": 43,
+        "rally:loop_drive": 217,
+        "service:service_speed": 40,
+        "receive:receive_variation": 16,
+        "service:service_spin": 48,
+        "service:service_placement": 12,
+        "receive:flip": 10,
+        "rally:continuous_attack": 55,
+        "receive:short_push": 43,
+        "rally:counterattack": 22,
+        "rally:line_change": 51,
+        "receive:deep_push": 16,
+        "service:service_deception": 16,
+        "rally:rally_exchange": 59
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 280,
+        "service:service_speed.defense": 333,
+        "service:service_spin.defense": 286,
+        "service:service_variation.defense": 359,
+        "service:service_deception.defense": 302,
+        "receive:short_push.defense": 257,
+        "receive:deep_push.defense": 288,
+        "receive:flick.defense": 215,
+        "receive:flip.defense": 283,
+        "receive:receive_variation.defense": 237,
+        "rally:loop_drive.attack": 123,
+        "rally:loop_drive.defense": 208,
+        "rally:rally_exchange.attack": 131,
+        "rally:rally_exchange.defense": 189,
+        "rally:line_change.attack": 135,
+        "rally:line_change.defense": 189,
+        "rally:counterattack.attack": 121,
+        "rally:counterattack.defense": 216,
+        "rally:continuous_attack.attack": 122,
+        "rally:continuous_attack.defense": 201
+      },
+      "topAttackChoices": {},
+      "topAttackConversions": {},
+      "pairMetrics": {
+        "service:service_variation": {
+          "comparisons": 40,
+          "attackerConversions": 5,
+          "defenseHolds": 35,
+          "marginTotal": 73.5,
+          "defenseAllocationTotal": 89,
+          "marginalDefenseHolds": 6,
+          "bonusAssistedConversions": 0
+        },
+        "receive:flick": {
+          "comparisons": 43,
+          "attackerConversions": 13,
+          "defenseHolds": 30,
+          "marginTotal": 106.5,
+          "defenseAllocationTotal": 76,
+          "marginalDefenseHolds": 3,
+          "bonusAssistedConversions": 0
+        },
+        "rally:loop_drive": {
+          "comparisons": 217,
+          "attackerConversions": 17,
+          "defenseHolds": 198,
+          "marginTotal": 396,
+          "defenseAllocationTotal": 475,
+          "marginalDefenseHolds": 95,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_speed": {
+          "comparisons": 40,
+          "attackerConversions": 7,
+          "defenseHolds": 30,
+          "marginTotal": 57,
+          "defenseAllocationTotal": 92,
+          "marginalDefenseHolds": 12,
+          "bonusAssistedConversions": 0
+        },
+        "receive:receive_variation": {
+          "comparisons": 16,
+          "attackerConversions": 0,
+          "defenseHolds": 16,
+          "marginTotal": 8,
+          "defenseAllocationTotal": 24,
+          "marginalDefenseHolds": 1,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_spin": {
+          "comparisons": 48,
+          "attackerConversions": 11,
+          "defenseHolds": 37,
+          "marginTotal": 149,
+          "defenseAllocationTotal": 104,
+          "marginalDefenseHolds": 17,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_placement": {
+          "comparisons": 12,
+          "attackerConversions": 1,
+          "defenseHolds": 11,
+          "marginTotal": 4.5,
+          "defenseAllocationTotal": 31,
+          "marginalDefenseHolds": 1,
+          "bonusAssistedConversions": 0
+        },
+        "receive:flip": {
+          "comparisons": 10,
+          "attackerConversions": 0,
+          "defenseHolds": 10,
+          "marginTotal": 0,
+          "defenseAllocationTotal": 20,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 0
+        },
+        "rally:continuous_attack": {
+          "comparisons": 55,
+          "attackerConversions": 7,
+          "defenseHolds": 48,
+          "marginTotal": 61,
+          "defenseAllocationTotal": 108,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 0
+        },
+        "receive:short_push": {
+          "comparisons": 43,
+          "attackerConversions": 3,
+          "defenseHolds": 39,
+          "marginTotal": 35.5,
+          "defenseAllocationTotal": 103,
+          "marginalDefenseHolds": 11,
+          "bonusAssistedConversions": 0
+        },
+        "rally:counterattack": {
+          "comparisons": 22,
+          "attackerConversions": 2,
+          "defenseHolds": 20,
+          "marginTotal": 31,
+          "defenseAllocationTotal": 46,
+          "marginalDefenseHolds": 8,
+          "bonusAssistedConversions": 0
+        },
+        "rally:line_change": {
+          "comparisons": 51,
+          "attackerConversions": 7,
+          "defenseHolds": 43,
+          "marginTotal": 104,
+          "defenseAllocationTotal": 89,
+          "marginalDefenseHolds": 29,
+          "bonusAssistedConversions": 0
+        },
+        "receive:deep_push": {
+          "comparisons": 16,
+          "attackerConversions": 1,
+          "defenseHolds": 14,
+          "marginTotal": -13,
+          "defenseAllocationTotal": 42,
+          "marginalDefenseHolds": 2,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_deception": {
+          "comparisons": 16,
+          "attackerConversions": 1,
+          "defenseHolds": 15,
+          "marginTotal": 5.5,
+          "defenseAllocationTotal": 24,
+          "marginalDefenseHolds": 1,
+          "bonusAssistedConversions": 0
+        },
+        "rally:rally_exchange": {
+          "comparisons": 59,
+          "attackerConversions": 6,
+          "defenseHolds": 53,
+          "marginTotal": 69,
+          "defenseAllocationTotal": 104,
+          "marginalDefenseHolds": 5,
+          "bonusAssistedConversions": 0
+        }
+      },
+      "defensePatterns": {},
+      "points": 156,
+      "deuceMatches": 0,
+      "deuceCycleMatches": 0,
+      "rallyRounds": 404,
+      "rallyFifthRound": 67,
+      "rallyTieBreaks": 67,
+      "firstServerCompleted": 10,
+      "firstServerWins": 5,
+      "completedMatches": 10,
+      "seatAWins": 4,
+      "firstRallyAttackerEntries": 109,
+      "firstRallyAttackerPointWins": 69,
+      "tieBreakStarterEntries": 67,
+      "tieBreakStarterWins": 43,
+      "attackTop1Choices": 0,
+      "attackTop3Choices": 0,
+      "attackOffTop3Choices": 0,
+      "defenseTop3Points": 0,
+      "defenseOffTop3Points": 0,
+      "directPoints": 89,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|w968|dignics-09c|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "fan-zhendong|butterfly-viscaria|hurricane-3|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "zhang-jike|lin-gaoyuan-alc|hurricane-3|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "truls-moregard|butterfly-viscaria|zyre-03|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "zyre-03",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "zhang-jike|lin-gaoyuan-alc|desto-f1|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|harimoto-alc|hurricane-3|hurricane-3": {
+          "playerId": "xu-xin",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|fan-zhendong-alc|hurricane-8|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "wang-chuqin|q968|hurricane-8|hurricane-8": {
+          "playerId": "wang-chuqin",
+          "bladeId": "q968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Rally"
+        },
+        "ma-long|stiga-cybershape-carbon|tenergy-05|hurricane-8": {
+          "playerId": "ma-long",
+          "bladeId": "stiga-cybershape-carbon",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "wang-chuqin|butterfly-viscaria|hurricane-8|hurricane-3": {
+          "playerId": "wang-chuqin",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "tomokazu-harimoto|lin-gaoyuan-alc|hurricane-8|hurricane-3": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|fan-zhendong-alc|desto-f1|hurricane-8": {
+          "playerId": "xu-xin",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "tomokazu-harimoto|w968|hurricane-8|dignics-09c": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "w968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "truls-moregard|harimoto-alc|hurricane-8|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "ma-long|w968|dignics-09c|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|tenergy-05|dignics-09c": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|lin-gaoyuan-alc|dna-platinum-m|dignics-09c": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "dna-platinum-m",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|dignics-09c|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Legacy 10/10/15": {
+          "parameters": {
+            "attackBonus": 4,
+            "defensePool": 10,
+            "defenseCap": 4,
+            "serveThreshold": 5,
+            "counterThreshold": 5,
+            "rallyThreshold": 4,
+            "rallyMaxRounds": 5
+          },
+          "matches": 10,
+          "wins": 4,
+          "draws": 0,
+          "points": 156,
+          "rallyRounds": 404,
+          "rallyTieBreaks": 67
+        }
+      },
+      "resources": {
+        "attackSpendHistogram": {
+          "service": {},
+          "receive": {}
+        },
+        "defenseSpend": {
+          "service": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          },
+          "receive": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          }
+        },
+        "reserveAtCounter": {},
+        "reserveAtRally": {},
+        "rallyBudget": {},
+        "defenseHhi": {
+          "sum": 0,
+          "count": 0,
+          "max": 0
+        },
+        "rallyAttackPoints": {},
+        "policyHeadToHead": {
+          "BluffDefenseBot|BalancedBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "FortressBot|Top3AwareDefenseBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "WeaknessHunterBot|WeaknessHunterBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|GreedyAttackBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|FortressBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "FortressBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "BalancedBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|BluffDefenseBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "AdaptiveBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          }
+        }
+      }
+    },
+    "candidate": {
+      "matches": 10,
+      "winsTotal": 9,
+      "draws": 1,
+      "wins": {
+        "fan-zhendong": 1,
+        "zhang-jike": 1,
+        "xu-xin": 1,
+        "wang-chuqin": 2,
+        "tomokazu-harimoto": 2,
+        "ma-long": 1,
+        "lin-gaoyuan": 1
+      },
+      "policyWins": {
+        "Top3AwareDefenseBot": 2,
+        "WeaknessHunterBot": 1,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 2,
+        "FortressBot": 2,
+        "BalancedBot": 1
+      },
+      "policyMatches": {
+        "BluffDefenseBot": 2,
+        "BalancedBot": 2,
+        "FortressBot": 3,
+        "Top3AwareDefenseBot": 3,
+        "WeaknessHunterBot": 2,
+        "RandomBot": 4,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 3
+      },
+      "initiative": {
+        "service": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "receive": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "rally": {
+          "eligible": 3,
+          "attackerWins": 3
+        }
+      },
+      "stageComparisons": {
+        "service": 207,
+        "receive": 119,
+        "rally": 194
+      },
+      "stageEnds": {
+        "service": 88,
+        "receive": 30,
+        "rally": 70
+      },
+      "attackChoices": {
+        "service:service_variation": 73,
+        "receive:flick": 46,
+        "rally:loop_drive": 107,
+        "service:service_speed": 45,
+        "receive:receive_variation": 16,
+        "service:service_spin": 57,
+        "receive:flip": 11,
+        "rally:continuous_attack": 27,
+        "service:service_placement": 17,
+        "receive:short_push": 33,
+        "rally:line_change": 28,
+        "service:service_deception": 15,
+        "receive:deep_push": 13,
+        "rally:counterattack": 9,
+        "rally:rally_exchange": 23
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 461,
+        "service:service_speed.defense": 492,
+        "service:service_spin.defense": 404,
+        "service:service_variation.defense": 409,
+        "service:service_deception.defense": 304,
+        "receive:short_push.defense": 480,
+        "receive:deep_push.defense": 535,
+        "receive:flick.defense": 348,
+        "receive:flip.defense": 386,
+        "receive:receive_variation.defense": 321,
+        "rally:loop_drive.defense": 975,
+        "rally:rally_exchange.defense": 1010,
+        "rally:line_change.defense": 679,
+        "rally:counterattack.defense": 797,
+        "rally:continuous_attack.defense": 679,
+        "revealed:service:service_variation": 653.5,
+        "revealed:receive:flick": 441,
+        "revealed:rally:loop_drive": 1205.5,
+        "revealed:service:service_speed": 419.5,
+        "revealed:receive:receive_variation": 156,
+        "revealed:service:service_spin": 554.5,
+        "revealed:receive:flip": 100,
+        "revealed:rally:continuous_attack": 187,
+        "revealed:service:service_placement": 150,
+        "revealed:receive:short_push": 341.5,
+        "revealed:rally:line_change": 281.5,
+        "revealed:service:service_deception": 127,
+        "revealed:receive:deep_push": 129.5,
+        "revealed:rally:counterattack": 73.5,
+        "revealed:rally:rally_exchange": 234
+      },
+      "topAttackChoices": {},
+      "topAttackConversions": {},
+      "pairMetrics": {},
+      "defensePatterns": {},
+      "points": 207,
+      "deuceMatches": 1,
+      "deuceCycleMatches": 1,
+      "rallyRounds": 194,
+      "rallyFifthRound": 19,
+      "rallyTieBreaks": 19,
+      "firstServerCompleted": 9,
+      "firstServerWins": 6,
+      "completedMatches": 9,
+      "seatAWins": 5,
+      "firstRallyAttackerEntries": 0,
+      "firstRallyAttackerPointWins": 0,
+      "tieBreakStarterEntries": 0,
+      "tieBreakStarterWins": 0,
+      "attackTop1Choices": 0,
+      "attackTop3Choices": 0,
+      "attackOffTop3Choices": 0,
+      "defenseTop3Points": 0,
+      "defenseOffTop3Points": 0,
+      "directPoints": 188,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 0,
+          "draws": 2,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|w968|dignics-09c|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "fan-zhendong|butterfly-viscaria|hurricane-3|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "zhang-jike|lin-gaoyuan-alc|hurricane-3|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "truls-moregard|butterfly-viscaria|zyre-03|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "zyre-03",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "zhang-jike|lin-gaoyuan-alc|desto-f1|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|harimoto-alc|hurricane-3|hurricane-3": {
+          "playerId": "xu-xin",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|fan-zhendong-alc|hurricane-8|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "wang-chuqin|q968|hurricane-8|hurricane-8": {
+          "playerId": "wang-chuqin",
+          "bladeId": "q968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Rally"
+        },
+        "ma-long|stiga-cybershape-carbon|tenergy-05|hurricane-8": {
+          "playerId": "ma-long",
+          "bladeId": "stiga-cybershape-carbon",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "wang-chuqin|butterfly-viscaria|hurricane-8|hurricane-3": {
+          "playerId": "wang-chuqin",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "tomokazu-harimoto|lin-gaoyuan-alc|hurricane-8|hurricane-3": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|fan-zhendong-alc|desto-f1|hurricane-8": {
+          "playerId": "xu-xin",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "tomokazu-harimoto|w968|hurricane-8|dignics-09c": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "w968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "truls-moregard|harimoto-alc|hurricane-8|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "ma-long|w968|dignics-09c|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|tenergy-05|dignics-09c": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|lin-gaoyuan-alc|dna-platinum-m|dignics-09c": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "dna-platinum-m",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|dignics-09c|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Candidate baseline": {
+          "parameters": {
+            "attackBonus": 4,
+            "defensePool": 10,
+            "defenseCap": 4,
+            "serveThreshold": 5,
+            "counterThreshold": 5,
+            "rallyThreshold": 4,
+            "rallyMaxRounds": 5
+          },
+          "matches": 10,
+          "wins": 5,
+          "draws": 1,
+          "points": 207,
+          "rallyRounds": 194,
+          "rallyTieBreaks": 19
+        }
+      },
+      "resources": {
+        "attackSpendHistogram": {
+          "service": {},
+          "receive": {}
+        },
+        "defenseSpend": {
+          "service": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          },
+          "receive": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          }
+        },
+        "reserveAtCounter": {},
+        "reserveAtRally": {},
+        "rallyBudget": {},
+        "defenseHhi": {
+          "sum": 0,
+          "count": 0,
+          "max": 0
+        },
+        "rallyAttackPoints": {},
+        "policyHeadToHead": {
+          "BluffDefenseBot|BalancedBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 1
+          },
+          "FortressBot|Top3AwareDefenseBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "WeaknessHunterBot|WeaknessHunterBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "RandomBot|GreedyAttackBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|FortressBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "FortressBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "BalancedBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|BluffDefenseBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "AdaptiveBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          }
+        }
+      }
+    },
+    "candidateV3": {
+      "matches": 10,
+      "winsTotal": 10,
+      "draws": 0,
+      "wins": {
+        "ma-long": 2,
+        "fan-zhendong": 2,
+        "zhang-jike": 1,
+        "xu-xin": 1,
+        "wang-chuqin": 2,
+        "tomokazu-harimoto": 2
+      },
+      "policyWins": {
+        "BluffDefenseBot": 1,
+        "Top3AwareDefenseBot": 2,
+        "WeaknessHunterBot": 1,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 1,
+        "FortressBot": 2,
+        "BalancedBot": 1,
+        "RandomBot": 1
+      },
+      "policyMatches": {
+        "BluffDefenseBot": 2,
+        "BalancedBot": 2,
+        "FortressBot": 3,
+        "Top3AwareDefenseBot": 3,
+        "WeaknessHunterBot": 2,
+        "RandomBot": 4,
+        "GreedyAttackBot": 1,
+        "AdaptiveBot": 3
+      },
+      "initiative": {
+        "service": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "receive": {
+          "eligible": 3,
+          "attackerWins": 3
+        },
+        "rally": {
+          "eligible": 0,
+          "attackerWins": 0
+        }
+      },
+      "stageComparisons": {
+        "service": 160,
+        "receive": 95,
+        "rally": 92
+      },
+      "stageEnds": {
+        "service": 65,
+        "receive": 35,
+        "rally": 59
+      },
+      "attackChoices": {
+        "service:service_variation": 43,
+        "receive:flick": 36,
+        "rally:loop_drive": 43,
+        "service:service_speed": 43,
+        "receive:receive_variation": 11,
+        "service:service_spin": 46,
+        "receive:flip": 8,
+        "rally:continuous_attack": 16,
+        "service:service_placement": 10,
+        "service:service_deception": 18,
+        "receive:deep_push": 8,
+        "rally:line_change": 11,
+        "rally:counterattack": 6,
+        "receive:short_push": 32,
+        "rally:rally_exchange": 16
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 247,
+        "service:service_speed.defense": 299,
+        "service:service_spin.defense": 256,
+        "service:service_variation.defense": 301,
+        "service:service_deception.defense": 177,
+        "receive:short_push.defense": 146,
+        "receive:deep_push.defense": 225,
+        "receive:flick.defense": 117,
+        "receive:flip.defense": 140,
+        "receive:receive_variation.defense": 132,
+        "rally:loop_drive.defense": 103,
+        "rally:rally_exchange.defense": 119,
+        "rally:line_change.defense": 62,
+        "rally:counterattack.defense": 112,
+        "rally:continuous_attack.defense": 84
+      },
+      "topAttackChoices": {
+        "top1": 215,
+        "top2": 30,
+        "top3": 28,
+        "offTopK": 74
+      },
+      "topAttackConversions": {
+        "top1": 126,
+        "offTopK": 16,
+        "top2": 17
+      },
+      "pairMetrics": {
+        "service:service_variation": {
+          "comparisons": 43,
+          "attackerConversions": 18,
+          "defenseHolds": 25,
+          "marginTotal": 197,
+          "defenseAllocationTotal": 71,
+          "marginalDefenseHolds": 13,
+          "bonusAssistedConversions": 18
+        },
+        "receive:flick": {
+          "comparisons": 36,
+          "attackerConversions": 20,
+          "defenseHolds": 16,
+          "marginTotal": 176.5,
+          "defenseAllocationTotal": 42,
+          "marginalDefenseHolds": 10,
+          "bonusAssistedConversions": 20
+        },
+        "rally:loop_drive": {
+          "comparisons": 43,
+          "attackerConversions": 31,
+          "defenseHolds": 12,
+          "marginTotal": 231.5,
+          "defenseAllocationTotal": 84,
+          "marginalDefenseHolds": 11,
+          "bonusAssistedConversions": 26
+        },
+        "service:service_speed": {
+          "comparisons": 43,
+          "attackerConversions": 19,
+          "defenseHolds": 24,
+          "marginTotal": 171,
+          "defenseAllocationTotal": 94,
+          "marginalDefenseHolds": 12,
+          "bonusAssistedConversions": 16
+        },
+        "receive:receive_variation": {
+          "comparisons": 11,
+          "attackerConversions": 0,
+          "defenseHolds": 11,
+          "marginTotal": 20,
+          "defenseAllocationTotal": 31,
+          "marginalDefenseHolds": 7,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_spin": {
+          "comparisons": 46,
+          "attackerConversions": 25,
+          "defenseHolds": 21,
+          "marginTotal": 247.5,
+          "defenseAllocationTotal": 86,
+          "marginalDefenseHolds": 18,
+          "bonusAssistedConversions": 20
+        },
+        "receive:flip": {
+          "comparisons": 8,
+          "attackerConversions": 0,
+          "defenseHolds": 8,
+          "marginTotal": 12,
+          "defenseAllocationTotal": 22,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 0
+        },
+        "rally:continuous_attack": {
+          "comparisons": 16,
+          "attackerConversions": 3,
+          "defenseHolds": 13,
+          "marginTotal": 46.5,
+          "defenseAllocationTotal": 36,
+          "marginalDefenseHolds": 9,
+          "bonusAssistedConversions": 2
+        },
+        "service:service_placement": {
+          "comparisons": 10,
+          "attackerConversions": 1,
+          "defenseHolds": 9,
+          "marginTotal": 22.5,
+          "defenseAllocationTotal": 23,
+          "marginalDefenseHolds": 4,
+          "bonusAssistedConversions": 1
+        },
+        "service:service_deception": {
+          "comparisons": 18,
+          "attackerConversions": 2,
+          "defenseHolds": 16,
+          "marginTotal": 45.5,
+          "defenseAllocationTotal": 22,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 2
+        },
+        "receive:deep_push": {
+          "comparisons": 8,
+          "attackerConversions": 1,
+          "defenseHolds": 7,
+          "marginTotal": 13,
+          "defenseAllocationTotal": 18,
+          "marginalDefenseHolds": 1,
+          "bonusAssistedConversions": 1
+        },
+        "rally:line_change": {
+          "comparisons": 11,
+          "attackerConversions": 9,
+          "defenseHolds": 2,
+          "marginTotal": 49,
+          "defenseAllocationTotal": 19,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 9
+        },
+        "rally:counterattack": {
+          "comparisons": 6,
+          "attackerConversions": 3,
+          "defenseHolds": 3,
+          "marginTotal": 20.5,
+          "defenseAllocationTotal": 16,
+          "marginalDefenseHolds": 3,
+          "bonusAssistedConversions": 3
+        },
+        "receive:short_push": {
+          "comparisons": 32,
+          "attackerConversions": 14,
+          "defenseHolds": 18,
+          "marginTotal": 118,
+          "defenseAllocationTotal": 65,
+          "marginalDefenseHolds": 7,
+          "bonusAssistedConversions": 14
+        },
+        "rally:rally_exchange": {
+          "comparisons": 16,
+          "attackerConversions": 13,
+          "defenseHolds": 3,
+          "marginTotal": 72.5,
+          "defenseAllocationTotal": 25,
+          "marginalDefenseHolds": 2,
+          "bonusAssistedConversions": 13
+        }
+      },
+      "defensePatterns": {
+        "FortressBot:service:4/4/0/0/0": 8,
+        "FortressBot:rally:4/4/0/0/0": 3,
+        "FortressBot:receive:4/2/1/1/0": 2,
+        "FortressBot:receive:6/2/0/0/0": 2,
+        "FortressBot:service:6/2/0/0/0": 4,
+        "FortressBot:rally:2/2/2/1/1": 3,
+        "FortressBot:service:5/3/0/0/0": 5,
+        "FortressBot:rally:6/2/0/0/0": 2,
+        "FortressBot:receive:5/3/0/0/0": 5,
+        "FortressBot:receive:2/2/2/1/1": 2,
+        "FortressBot:service:2/2/2/1/1": 2,
+        "FortressBot:service:8/0/0/0/0": 1,
+        "FortressBot:receive:4/4/0/0/0": 3,
+        "FortressBot:service:4/2/1/1/0": 2
+      },
+      "points": 160,
+      "deuceMatches": 0,
+      "deuceCycleMatches": 0,
+      "rallyRounds": 92,
+      "rallyFifthRound": 1,
+      "rallyTieBreaks": 1,
+      "firstServerCompleted": 10,
+      "firstServerWins": 8,
+      "completedMatches": 10,
+      "seatAWins": 5,
+      "firstRallyAttackerEntries": 60,
+      "firstRallyAttackerPointWins": 42,
+      "tieBreakStarterEntries": 1,
+      "tieBreakStarterWins": 1,
+      "attackTop1Choices": 215,
+      "attackTop3Choices": 58,
+      "attackOffTop3Choices": 74,
+      "defenseTop3Points": 1743,
+      "defenseOffTop3Points": 777,
+      "directPoints": 159,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|w968|dignics-09c|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "fan-zhendong|butterfly-viscaria|hurricane-3|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "zhang-jike|lin-gaoyuan-alc|hurricane-3|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "truls-moregard|butterfly-viscaria|zyre-03|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "zyre-03",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "zhang-jike|lin-gaoyuan-alc|desto-f1|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|harimoto-alc|hurricane-3|hurricane-3": {
+          "playerId": "xu-xin",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|fan-zhendong-alc|hurricane-8|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "wang-chuqin|q968|hurricane-8|hurricane-8": {
+          "playerId": "wang-chuqin",
+          "bladeId": "q968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Rally"
+        },
+        "ma-long|stiga-cybershape-carbon|tenergy-05|hurricane-8": {
+          "playerId": "ma-long",
+          "bladeId": "stiga-cybershape-carbon",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "wang-chuqin|butterfly-viscaria|hurricane-8|hurricane-3": {
+          "playerId": "wang-chuqin",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "tomokazu-harimoto|lin-gaoyuan-alc|hurricane-8|hurricane-3": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|fan-zhendong-alc|desto-f1|hurricane-8": {
+          "playerId": "xu-xin",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "tomokazu-harimoto|w968|hurricane-8|dignics-09c": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "w968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "truls-moregard|harimoto-alc|hurricane-8|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "ma-long|w968|dignics-09c|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|tenergy-05|dignics-09c": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|lin-gaoyuan-alc|dna-platinum-m|dignics-09c": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "dna-platinum-m",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|dignics-09c|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Candidate V3 baseline": {
+          "parameters": {
+            "attackBonus": 4,
+            "defensePool": 8,
+            "defenderVisibleTopK": 3,
+            "serviceThreshold": 5,
+            "counterThreshold": 5,
+            "rallyThreshold": 4,
+            "rallyMaxComparisons": 5,
+            "explorationEpsilon": 0.05
+          },
+          "matches": 10,
+          "wins": 5,
+          "draws": 0,
+          "points": 160,
+          "rallyRounds": 92,
+          "rallyTieBreaks": 1
+        }
+      },
+      "resources": {
+        "attackSpendHistogram": {
+          "service": {},
+          "receive": {}
+        },
+        "defenseSpend": {
+          "service": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          },
+          "receive": {
+            "points": 0,
+            "unspent": 0,
+            "decisions": 0
+          }
+        },
+        "reserveAtCounter": {},
+        "reserveAtRally": {},
+        "rallyBudget": {},
+        "defenseHhi": {
+          "sum": 0,
+          "count": 0,
+          "max": 0
+        },
+        "rallyAttackPoints": {},
+        "policyHeadToHead": {
+          "BluffDefenseBot|BalancedBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "FortressBot|Top3AwareDefenseBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "WeaknessHunterBot|WeaknessHunterBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "RandomBot|GreedyAttackBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|FortressBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "FortressBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "BalancedBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "Top3AwareDefenseBot|BluffDefenseBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "AdaptiveBot|RandomBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          }
+        }
+      }
+    },
+    "candidateV4": {
+      "matches": 10,
+      "winsTotal": 10,
+      "draws": 0,
+      "wins": {
+        "ma-long": 2,
+        "fan-zhendong": 2,
+        "zhang-jike": 1,
+        "xu-xin": 1,
+        "wang-chuqin": 2,
+        "tomokazu-harimoto": 2
+      },
+      "policyWins": {
+        "SaveForRallyBot": 2,
+        "AllInEarlyBot": 2,
+        "RandomBot": 1,
+        "Top3AwareDefenseBot": 1,
+        "MinimumNeededBot": 1,
+        "WeaknessHunterBot": 1,
+        "SpendAllBot": 1,
+        "FortressBot": 1
+      },
+      "policyMatches": {
+        "SaveForRallyBot": 3,
+        "WeaknessHunterBot": 2,
+        "BalancedReserveBot": 1,
+        "AllInEarlyBot": 2,
+        "RandomBot": 3,
+        "FortressBot": 2,
+        "Top3AwareDefenseBot": 1,
+        "MinimumNeededBot": 1,
+        "SpendAllBot": 1,
+        "BalancedBot": 1,
+        "AdaptiveBot": 2,
+        "BluffDefenseBot": 1
+      },
+      "initiative": {
+        "service": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "receive": {
+          "eligible": 0,
+          "attackerWins": 0
+        },
+        "rally": {
+          "eligible": 1,
+          "attackerWins": 1
+        }
+      },
+      "stageComparisons": {
+        "service": 146,
+        "receive": 117,
+        "rally": 240
+      },
+      "stageEnds": {
+        "service": 29,
+        "receive": 24,
+        "rally": 52
+      },
+      "attackChoices": {
+        "service:service_variation": 57,
+        "receive:flick": 65,
+        "rally:loop_drive": 45,
+        "rally:continuous_attack": 46,
+        "rally:line_change": 59,
+        "rally:counterattack": 65,
+        "rally:rally_exchange": 25,
+        "service:service_speed": 21,
+        "service:service_spin": 60,
+        "receive:flip": 3,
+        "receive:short_push": 23,
+        "receive:deep_push": 26,
+        "service:service_placement": 8
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 202,
+        "service:service_speed.defense": 261,
+        "service:service_spin.defense": 238,
+        "service:service_variation.defense": 281,
+        "service:service_deception.defense": 220,
+        "receive:short_push.defense": 218,
+        "receive:deep_push.defense": 255,
+        "receive:flick.defense": 198,
+        "receive:flip.defense": 243,
+        "receive:receive_variation.defense": 191,
+        "rally:loop_drive.attack": 200,
+        "rally:loop_drive.defense": 256,
+        "rally:rally_exchange.attack": 203,
+        "rally:rally_exchange.defense": 302,
+        "rally:line_change.attack": 189,
+        "rally:line_change.defense": 209,
+        "rally:counterattack.attack": 185,
+        "rally:counterattack.defense": 284,
+        "rally:continuous_attack.attack": 186,
+        "rally:continuous_attack.defense": 257
+      },
+      "topAttackChoices": {},
+      "topAttackConversions": {},
+      "pairMetrics": {
+        "service:service_variation": {
+          "comparisons": 57,
+          "attackerConversions": 1,
+          "defenseHolds": 56,
+          "marginTotal": 123.5,
+          "defenseAllocationTotal": 106,
+          "marginalDefenseHolds": 21,
+          "bonusAssistedConversions": 0
+        },
+        "receive:flick": {
+          "comparisons": 65,
+          "attackerConversions": 17,
+          "defenseHolds": 48,
+          "marginTotal": 195.5,
+          "defenseAllocationTotal": 104,
+          "marginalDefenseHolds": 10,
+          "bonusAssistedConversions": 0
+        },
+        "rally:loop_drive": {
+          "comparisons": 45,
+          "attackerConversions": 14,
+          "defenseHolds": 31,
+          "marginTotal": 105,
+          "defenseAllocationTotal": 123,
+          "marginalDefenseHolds": 14,
+          "bonusAssistedConversions": 0
+        },
+        "rally:continuous_attack": {
+          "comparisons": 46,
+          "attackerConversions": 17,
+          "defenseHolds": 29,
+          "marginTotal": 106.5,
+          "defenseAllocationTotal": 131,
+          "marginalDefenseHolds": 14,
+          "bonusAssistedConversions": 0
+        },
+        "rally:line_change": {
+          "comparisons": 59,
+          "attackerConversions": 8,
+          "defenseHolds": 51,
+          "marginTotal": 63,
+          "defenseAllocationTotal": 120,
+          "marginalDefenseHolds": 10,
+          "bonusAssistedConversions": 0
+        },
+        "rally:counterattack": {
+          "comparisons": 65,
+          "attackerConversions": 11,
+          "defenseHolds": 54,
+          "marginTotal": 131.5,
+          "defenseAllocationTotal": 164,
+          "marginalDefenseHolds": 32,
+          "bonusAssistedConversions": 0
+        },
+        "rally:rally_exchange": {
+          "comparisons": 25,
+          "attackerConversions": 2,
+          "defenseHolds": 23,
+          "marginTotal": 25.5,
+          "defenseAllocationTotal": 74,
+          "marginalDefenseHolds": 16,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_speed": {
+          "comparisons": 21,
+          "attackerConversions": 14,
+          "defenseHolds": 7,
+          "marginTotal": 119,
+          "defenseAllocationTotal": 34,
+          "marginalDefenseHolds": 7,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_spin": {
+          "comparisons": 60,
+          "attackerConversions": 12,
+          "defenseHolds": 48,
+          "marginTotal": 220,
+          "defenseAllocationTotal": 117,
+          "marginalDefenseHolds": 24,
+          "bonusAssistedConversions": 0
+        },
+        "receive:flip": {
+          "comparisons": 3,
+          "attackerConversions": 0,
+          "defenseHolds": 3,
+          "marginTotal": -3.5,
+          "defenseAllocationTotal": 11,
+          "marginalDefenseHolds": 0,
+          "bonusAssistedConversions": 0
+        },
+        "receive:short_push": {
+          "comparisons": 23,
+          "attackerConversions": 7,
+          "defenseHolds": 16,
+          "marginTotal": 65.5,
+          "defenseAllocationTotal": 58,
+          "marginalDefenseHolds": 10,
+          "bonusAssistedConversions": 0
+        },
+        "receive:deep_push": {
+          "comparisons": 26,
+          "attackerConversions": 0,
+          "defenseHolds": 26,
+          "marginTotal": 9,
+          "defenseAllocationTotal": 81,
+          "marginalDefenseHolds": 7,
+          "bonusAssistedConversions": 0
+        },
+        "service:service_placement": {
+          "comparisons": 8,
+          "attackerConversions": 2,
+          "defenseHolds": 6,
+          "marginTotal": 30,
+          "defenseAllocationTotal": 18,
+          "marginalDefenseHolds": 6,
+          "bonusAssistedConversions": 0
+        }
+      },
+      "defensePatterns": {},
+      "points": 146,
+      "deuceMatches": 0,
+      "deuceCycleMatches": 0,
+      "rallyRounds": 240,
+      "rallyFifthRound": 0,
+      "rallyTieBreaks": 41,
+      "firstServerCompleted": 10,
+      "firstServerWins": 8,
+      "completedMatches": 10,
+      "seatAWins": 5,
+      "firstRallyAttackerEntries": 93,
+      "firstRallyAttackerPointWins": 47,
+      "tieBreakStarterEntries": 41,
+      "tieBreakStarterWins": 22,
+      "attackTop1Choices": 0,
+      "attackTop3Choices": 0,
+      "attackOffTop3Choices": 0,
+      "defenseTop3Points": 0,
+      "defenseOffTop3Points": 0,
+      "directPoints": 105,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|w968|dignics-09c|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "fan-zhendong|butterfly-viscaria|hurricane-3|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "zhang-jike|lin-gaoyuan-alc|hurricane-3|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "truls-moregard|butterfly-viscaria|zyre-03|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "zyre-03",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "zhang-jike|lin-gaoyuan-alc|desto-f1|hurricane-3": {
+          "playerId": "zhang-jike",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|harimoto-alc|hurricane-3|hurricane-3": {
+          "playerId": "xu-xin",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|fan-zhendong-alc|hurricane-8|hurricane-3": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "wang-chuqin|q968|hurricane-8|hurricane-8": {
+          "playerId": "wang-chuqin",
+          "bladeId": "q968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Rally"
+        },
+        "ma-long|stiga-cybershape-carbon|tenergy-05|hurricane-8": {
+          "playerId": "ma-long",
+          "bladeId": "stiga-cybershape-carbon",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "wang-chuqin|butterfly-viscaria|hurricane-8|hurricane-3": {
+          "playerId": "wang-chuqin",
+          "bladeId": "butterfly-viscaria",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "tomokazu-harimoto|lin-gaoyuan-alc|hurricane-8|hurricane-3": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "xu-xin|fan-zhendong-alc|desto-f1|hurricane-8": {
+          "playerId": "xu-xin",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "desto-f1",
+          "backhandRubberId": "hurricane-8",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "tomokazu-harimoto|w968|hurricane-8|dignics-09c": {
+          "playerId": "tomokazu-harimoto",
+          "bladeId": "w968",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Spin Control"
+        },
+        "truls-moregard|harimoto-alc|hurricane-8|hurricane-3": {
+          "playerId": "truls-moregard",
+          "bladeId": "harimoto-alc",
+          "forehandRubberId": "hurricane-8",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "ma-long|w968|dignics-09c|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "w968",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|tenergy-05|dignics-09c": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "tenergy-05",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "lin-gaoyuan|lin-gaoyuan-alc|dna-platinum-m|dignics-09c": {
+          "playerId": "lin-gaoyuan",
+          "bladeId": "lin-gaoyuan-alc",
+          "forehandRubberId": "dna-platinum-m",
+          "backhandRubberId": "dignics-09c",
+          "matches": 1,
+          "wins": 0,
+          "draws": 0,
+          "style": "Defense Counter"
+        },
+        "fan-zhendong|xu-xin-blue-label|dignics-09c|hurricane-3": {
+          "playerId": "fan-zhendong",
+          "bladeId": "xu-xin-blue-label",
+          "forehandRubberId": "dignics-09c",
+          "backhandRubberId": "hurricane-3",
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Candidate V4 baseline": {
+          "parameters": {
+            "serviceAttackBudget": 4,
+            "serviceDefenseBudget": 10,
+            "counterAttackBudget": 4,
+            "counterDefenseBudget": 10,
+            "rallyBudget": 20,
+            "attackCap": 4,
+            "defenderVisibleTopK": 3,
+            "rallyThreshold": 4,
+            "rallyMaxComparisons": 4,
+            "carryRatePercent": 100,
+            "explorationEpsilon": 0.05
+          },
+          "matches": 10,
+          "wins": 5,
+          "draws": 0,
+          "points": 146,
+          "rallyRounds": 240,
+          "rallyTieBreaks": 41
+        }
+      },
+      "resources": {
+        "attackSpendHistogram": {
+          "service": {
+            "0": 26,
+            "2": 97,
+            "4": 23
+          },
+          "receive": {
+            "0": 21,
+            "2": 75,
+            "4": 21
+          }
+        },
+        "defenseSpend": {
+          "service": {
+            "points": 1202,
+            "unspent": 258,
+            "decisions": 146
+          },
+          "receive": {
+            "points": 1105,
+            "unspent": 321,
+            "decisions": 117
+          }
+        },
+        "reserveAtCounter": {
+          "0": 102,
+          "2": 80,
+          "3": 7,
+          "4": 24,
+          "10": 21
+        },
+        "reserveAtRally": {
+          "0": 84,
+          "2": 55,
+          "4": 4,
+          "5": 8,
+          "14": 35
+        },
+        "rallyBudget": {
+          "20": 84,
+          "22": 55,
+          "24": 4,
+          "25": 8,
+          "34": 35
+        },
+        "defenseHhi": {
+          "sum": 66.95886621315196,
+          "count": 263,
+          "max": 0.7222222222222223
+        },
+        "rallyAttackPoints": {
+          "loop_drive.attack": 421,
+          "rally_exchange.attack": 375,
+          "line_change.attack": 373,
+          "counterattack.attack": 371,
+          "continuous_attack.attack": 343
+        },
+        "policyHeadToHead": {
+          "SaveForRallyBot|WeaknessHunterBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "BalancedReserveBot|AllInEarlyBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|FortressBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "SaveForRallyBot|Top3AwareDefenseBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|MinimumNeededBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "RandomBot|WeaknessHunterBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          },
+          "SpendAllBot|BalancedBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "FortressBot|AdaptiveBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "AllInEarlyBot|BluffDefenseBot": {
+            "matches": 1,
+            "seatAWins": 1,
+            "draws": 0
+          },
+          "AdaptiveBot|SaveForRallyBot": {
+            "matches": 1,
+            "seatAWins": 0,
+            "draws": 0
+          }
+        }
+      }
+    }
+  },
+  "experiments": [],
+  "v3Experiments": [],
+  "v3Validation": [],
+  "v4Experiments": [],
+  "v4Validation": [],
+  "policies": [
+    "RandomBot",
+    "BalancedBot",
+    "FortressBot",
+    "GreedyAttackBot",
+    "WeaknessHunterBot",
+    "Top3AwareDefenseBot",
+    "AdaptiveBot",
+    "BluffDefenseBot",
+    "SaveForRallyBot",
+    "AllInEarlyBot",
+    "MinimumNeededBot",
+    "BalancedReserveBot",
+    "SpendAllBot"
+  ],
+  "catalogDimensions": {
+    "players": 8,
+    "blades": 8,
+    "rubbers": 7,
+    "theoreticalLoadouts": 3136
+  }
+}

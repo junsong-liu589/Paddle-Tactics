@@ -1,0 +1,17 @@
+mode,side,item_id,name,style,usage,matches,wins,censored_draws,completed_matches,raw_win_rate,ci95_low,ci95_high,sample_status
+Legacy,both,fan-zhendong-alc,樊振东 ALC,快速均衡、两面进攻; attack_mod=5; defense_mod=-5,2501,2501,1148,55,2446,0.4693,0.4496,0.4891,raw_only
+Legacy,both,w968,W968,持球、拉冲、旋转连续; attack_mod=2; defense_mod=-2,2500,2500,1403,130,2370,0.5920,0.5721,0.6116,raw_only
+Legacy,both,butterfly-viscaria,蝴蝶 Viscaria,外置ALC的速度与均衡; attack_mod=5; defense_mod=-5,2500,2500,1151,66,2434,0.4729,0.4531,0.4927,raw_only
+Legacy,both,xu-xin-blue-label,许昕蓝标,持球与弧圈、旋转和台内控制; attack_mod=4; defense_mod=-4,2499,2499,1394,95,2404,0.5799,0.5600,0.5995,raw_only
+Legacy,both,lin-gaoyuan-alc,林高远 ALC,近台快节奏、拧拉与线路控制; attack_mod=-2; defense_mod=2,2501,2501,979,42,2459,0.3981,0.3790,0.4176,raw_only
+Legacy,both,q968,Q968,高输出968系（暂定游戏定位）; attack_mod=10; defense_mod=-10,2501,2501,1356,118,2383,0.5690,0.5491,0.5888,raw_only
+Legacy,both,harimoto-alc,张本智和 ALC,内置持球、近台反击与稳定; attack_mod=-3; defense_mod=3,2498,2498,1198,30,2468,0.4854,0.4657,0.5051,raw_only
+Legacy,both,stiga-cybershape-carbon,斯蒂卡 Cybershape Carbon,大甜区、落点与线路变化; attack_mod=2; defense_mod=-2,2500,2500,1060,86,2414,0.4391,0.4194,0.4590,raw_only
+Candidate,both,fan-zhendong-alc,樊振东 ALC,快速均衡、两面进攻; attack_mod=5; defense_mod=-5,2501,2501,1036,224,2277,0.4550,0.4346,0.4755,raw_only
+Candidate,both,w968,W968,持球、拉冲、旋转连续; attack_mod=2; defense_mod=-2,2500,2500,1028,416,2084,0.4933,0.4718,0.5147,raw_only
+Candidate,both,butterfly-viscaria,蝴蝶 Viscaria,外置ALC的速度与均衡; attack_mod=5; defense_mod=-5,2500,2500,1128,263,2237,0.5042,0.4835,0.5249,raw_only
+Candidate,both,xu-xin-blue-label,许昕蓝标,持球与弧圈、旋转和台内控制; attack_mod=4; defense_mod=-4,2499,2499,1131,433,2066,0.5474,0.5259,0.5688,raw_only
+Candidate,both,lin-gaoyuan-alc,林高远 ALC,近台快节奏、拧拉与线路控制; attack_mod=-2; defense_mod=2,2501,2501,1059,200,2301,0.4602,0.4400,0.4806,raw_only
+Candidate,both,q968,Q968,高输出968系（暂定游戏定位）; attack_mod=10; defense_mod=-10,2501,2501,1041,384,2117,0.4917,0.4705,0.5130,raw_only
+Candidate,both,harimoto-alc,张本智和 ALC,内置持球、近台反击与稳定; attack_mod=-3; defense_mod=3,2498,2498,1258,149,2349,0.5355,0.5153,0.5556,raw_only
+Candidate,both,stiga-cybershape-carbon,斯蒂卡 Cybershape Carbon,大甜区、落点与线路变化; attack_mod=2; defense_mod=-2,2500,2500,1181,207,2293,0.5150,0.4946,0.5355,raw_only

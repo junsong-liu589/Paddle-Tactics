@@ -1,0 +1,193 @@
+{
+  "seed": 20260928,
+  "preset": "quick",
+  "startedAt": "2026-09-28T18:16:03.731Z",
+  "elapsedMs": 25,
+  "requestedMatchesPerMode": 1,
+  "modes": {
+    "legacy": {
+      "matches": 1,
+      "winsTotal": 1,
+      "draws": 0,
+      "wins": {
+        "ma-long": 1
+      },
+      "policyWins": {
+        "BluffDefenseBot": 1
+      },
+      "policyMatches": {
+        "BluffDefenseBot": 1,
+        "BalancedBot": 1
+      },
+      "stageComparisons": {
+        "service": 18,
+        "receive": 18,
+        "rally": 90
+      },
+      "stageEnds": {
+        "service": 0,
+        "receive": 0,
+        "rally": 0
+      },
+      "attackChoices": {
+        "service:service_variation": 18,
+        "receive:flick": 18,
+        "rally:loop_drive": 90
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 37,
+        "service:service_speed.defense": 36,
+        "service:service_spin.defense": 35,
+        "service:service_variation.defense": 45,
+        "service:service_deception.defense": 27,
+        "receive:short_push.defense": 30,
+        "receive:deep_push.defense": 26,
+        "receive:flick.defense": 50,
+        "receive:flip.defense": 33,
+        "receive:receive_variation.defense": 41,
+        "rally:loop_drive.attack": 38,
+        "rally:loop_drive.defense": 37,
+        "rally:rally_exchange.attack": 35,
+        "rally:rally_exchange.defense": 34,
+        "rally:line_change.attack": 26,
+        "rally:line_change.defense": 15,
+        "rally:counterattack.attack": 18,
+        "rally:counterattack.defense": 24,
+        "rally:continuous_attack.attack": 20,
+        "rally:continuous_attack.defense": 23
+      },
+      "points": 18,
+      "rallyRounds": 0,
+      "rallyFifthRound": 0,
+      "rallyTieBreaks": 0,
+      "directPoints": 0,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 1,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Legacy 10/10/15": {
+          "parameters": {
+            "attackBonus": 4,
+            "defensePool": 10,
+            "defenseCap": 4,
+            "serveThreshold": 5,
+            "counterThreshold": 5,
+            "rallyThreshold": 4,
+            "rallyMaxRounds": 5
+          },
+          "matches": 1,
+          "wins": 1,
+          "draws": 0,
+          "points": 18,
+          "rallyRounds": 0,
+          "rallyTieBreaks": 0
+        }
+      }
+    },
+    "candidate": {
+      "matches": 1,
+      "winsTotal": 0,
+      "draws": 1,
+      "wins": {},
+      "policyWins": {},
+      "policyMatches": {
+        "BluffDefenseBot": 1,
+        "BalancedBot": 1
+      },
+      "stageComparisons": {
+        "service": 48,
+        "receive": 18,
+        "rally": 58
+      },
+      "stageEnds": {
+        "service": 30,
+        "receive": 0,
+        "rally": 8
+      },
+      "attackChoices": {
+        "service:service_variation": 48,
+        "receive:flick": 18,
+        "rally:loop_drive": 58
+      },
+      "defenseAllocations": {
+        "service:service_placement.defense": 149,
+        "service:service_speed.defense": 142,
+        "service:service_spin.defense": 107,
+        "service:service_variation.defense": 56,
+        "service:service_deception.defense": 26,
+        "receive:short_push.defense": 135,
+        "receive:deep_push.defense": 133,
+        "receive:flick.defense": 118,
+        "receive:flip.defense": 39,
+        "receive:receive_variation.defense": 55,
+        "rally:loop_drive.defense": 322,
+        "rally:rally_exchange.defense": 312,
+        "rally:line_change.defense": 175,
+        "rally:counterattack.defense": 60,
+        "rally:continuous_attack.defense": 91,
+        "revealed:service:service_variation": 440,
+        "revealed:receive:flick": 180,
+        "revealed:rally:loop_drive": 699
+      },
+      "points": 48,
+      "rallyRounds": 58,
+      "rallyFifthRound": 10,
+      "rallyTieBreaks": 10,
+      "directPoints": 38,
+      "observedLoadouts": {
+        "ma-long|fan-zhendong-alc|hurricane-3|hurricane-3": {
+          "playerId": "ma-long",
+          "bladeId": "fan-zhendong-alc",
+          "forehandRubberId": "hurricane-3",
+          "backhandRubberId": "hurricane-3",
+          "matches": 2,
+          "wins": 0,
+          "style": "Defense Counter"
+        }
+      },
+      "configs": {
+        "Candidate baseline": {
+          "parameters": {
+            "attackBonus": 4,
+            "defensePool": 10,
+            "defenseCap": 4,
+            "serveThreshold": 5,
+            "counterThreshold": 5,
+            "rallyThreshold": 4,
+            "rallyMaxRounds": 5
+          },
+          "matches": 1,
+          "wins": 0,
+          "draws": 1,
+          "points": 48,
+          "rallyRounds": 58,
+          "rallyTieBreaks": 10
+        }
+      }
+    }
+  },
+  "experiments": [],
+  "policies": [
+    "RandomBot",
+    "BalancedBot",
+    "FortressBot",
+    "GreedyAttackBot",
+    "WeaknessHunterBot",
+    "AdaptiveBot",
+    "BluffDefenseBot"
+  ],
+  "catalogDimensions": {
+    "players": 8,
+    "blades": 8,
+    "rubbers": 7,
+    "theoreticalLoadouts": 3136
+  }
+}

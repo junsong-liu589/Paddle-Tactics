@@ -1,0 +1,43 @@
+mode,side,item_id,name,style,usage,matches,wins,censored_draws,completed_matches,raw_win_rate,ci95_low,ci95_high,sample_status
+Legacy,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,286,286,146,10,276,0.5290,0.4701,0.5871,raw_only
+Legacy,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,285,285,138,6,279,0.4946,0.4364,0.5530,raw_only
+Legacy,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,287,287,147,8,279,0.5269,0.4683,0.5847,raw_only
+Legacy,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,287,287,128,6,281,0.4555,0.3983,0.5140,raw_only
+Legacy,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,283,283,136,15,268,0.5075,0.4479,0.5668,raw_only
+Legacy,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,285,285,134,4,281,0.4769,0.4192,0.5352,raw_only
+Legacy,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,287,287,140,13,274,0.5109,0.4520,0.5696,raw_only
+Legacy,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,304,304,150,7,297,0.5051,0.4485,0.5615,raw_only
+Legacy,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,307,307,152,9,298,0.5101,0.4535,0.5663,raw_only
+Legacy,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,298,298,141,9,289,0.4879,0.4308,0.5453,raw_only
+Legacy,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,273,273,137,8,265,0.5170,0.4570,0.5765,raw_only
+Legacy,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,273,273,137,6,267,0.5131,0.4534,0.5724,raw_only
+Legacy,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,272,272,126,9,263,0.4791,0.4194,0.5393,raw_only
+Legacy,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,273,273,126,14,259,0.4865,0.4263,0.5471,raw_only
+Candidate,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,286,286,129,33,253,0.5099,0.4486,0.5709,raw_only
+Candidate,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,285,285,129,34,251,0.5139,0.4524,0.5751,raw_only
+Candidate,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,287,287,142,35,252,0.5635,0.5018,0.6233,raw_only
+Candidate,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,287,287,112,26,261,0.4291,0.3705,0.4898,raw_only
+Candidate,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,283,283,116,45,238,0.4874,0.4246,0.5506,raw_only
+Candidate,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,285,285,126,38,247,0.5101,0.4481,0.5718,raw_only
+Candidate,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,287,287,127,27,260,0.4885,0.4283,0.5489,raw_only
+Candidate,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,304,304,141,32,272,0.5184,0.4592,0.5771,raw_only
+Candidate,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,307,307,135,34,273,0.4945,0.4357,0.5535,raw_only
+Candidate,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,298,298,141,37,261,0.5402,0.4796,0.5997,raw_only
+Candidate,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,273,273,133,35,238,0.5588,0.4953,0.6205,raw_only
+Candidate,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,273,273,103,34,239,0.4310,0.3698,0.4943,raw_only
+Candidate,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,272,272,123,27,245,0.5020,0.4399,0.5641,raw_only
+Candidate,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,273,273,105,39,234,0.4487,0.3863,0.5128,raw_only
+Candidate V3,forehand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,286,286,134,21,265,0.5057,0.4458,0.5653,raw_only
+Candidate V3,forehand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,285,285,147,13,272,0.5404,0.4811,0.5987,raw_only
+Candidate V3,forehand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,287,287,149,18,269,0.5539,0.4942,0.6121,raw_only
+Candidate V3,forehand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,287,287,116,17,270,0.4296,0.3720,0.4893,raw_only
+Candidate V3,forehand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,283,283,125,28,255,0.4902,0.4294,0.5512,raw_only
+Candidate V3,forehand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,285,285,129,14,271,0.4760,0.4173,0.5354,raw_only
+Candidate V3,forehand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,287,287,138,13,274,0.5036,0.4448,0.5624,raw_only
+Candidate V3,backhand,hurricane-3,狂飙 3,高旋转、主动发力、弧圈; attack_mod=0; defense_mod=0,304,304,156,13,291,0.5361,0.4787,0.5925,raw_only
+Candidate V3,backhand,hurricane-8,狂飙 8,黏性基础上更弹、更均衡; attack_mod=2; defense_mod=-2,307,307,139,19,288,0.4826,0.4255,0.5402,raw_only
+Candidate V3,backhand,dignics-09c,蝴蝶 Dignics 09C,高旋转、台内与反拉; attack_mod=-1; defense_mod=1,298,298,150,21,277,0.5415,0.4827,0.5992,raw_only
+Candidate V3,backhand,tenergy-05,蝴蝶 Tenergy 05,弹性、相持、连续进攻; attack_mod=1; defense_mod=-1,273,273,139,18,255,0.5451,0.4838,0.6051,raw_only
+Candidate V3,backhand,zyre-03,蝴蝶 Zyre 03,高速+高旋转、强弧线与终结; attack_mod=7; defense_mod=-7,273,273,111,21,252,0.4405,0.3805,0.5022,raw_only
+Candidate V3,backhand,dna-platinum-m,斯蒂卡 DNA Platinum M,进攻均衡、弹射和线路; attack_mod=5; defense_mod=-5,272,272,128,13,259,0.4942,0.4339,0.5547,raw_only
+Candidate V3,backhand,desto-f1,多尼克 Desto F1,高速快攻、直接出球; attack_mod=5; defense_mod=-5,273,273,115,19,254,0.4528,0.3927,0.5142,raw_only

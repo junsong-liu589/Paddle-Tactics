@@ -1,0 +1,25 @@
+{
+  "name": "@paddle-tactics/balance-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "cd ../.. && vitest run packages/balance-simulator/src/simulator.test.ts",
+    "run": "tsx src/cli.ts",
+    "quick": "tsx src/cli.ts --preset quick",
+    "standard": "tsx src/cli.ts --preset standard",
+    "full": "tsx src/cli.ts --preset full",
+    "rules": "tsx src/cli.ts --mode rules",
+    "equipment": "tsx src/cli.ts --mode equipment"
+  },
+  "dependencies": {
+    "@paddle-tactics/game-core": "workspace:*",
+    "@paddle-tactics/game-data": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^6.0.3"
+  }
+}

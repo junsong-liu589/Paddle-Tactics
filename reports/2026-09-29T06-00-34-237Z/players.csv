@@ -1,0 +1,33 @@
+mode,player_id,player,tier,matches,wins,censored_draws,completed_matches,win_rate,ci95_low,ci95_high,player_standardized_win_rate,adjusted_player_count,sample_status
+Legacy,ma-long,马龙,480,2750,1263,88,2662,0.4745,0.4555,0.4934,ok
+Legacy,fan-zhendong,樊振东,480,2250,1607,51,2199,0.7308,0.7119,0.7489,ok
+Legacy,zhang-jike,张继科,480,2500,1775,62,2438,0.7281,0.7100,0.7453,ok
+Legacy,xu-xin,许昕,460,2500,1101,58,2442,0.4509,0.4312,0.4707,ok
+Legacy,lin-gaoyuan,林高远,440,2750,885,64,2686,0.3295,0.3120,0.3475,ok
+Legacy,wang-chuqin,王楚钦,460,2250,1112,63,2187,0.5085,0.4875,0.5294,ok
+Legacy,tomokazu-harimoto,张本智和,440,2500,1155,105,2395,0.4823,0.4623,0.5023,ok
+Legacy,truls-moregard,莫雷加德,440,2500,802,109,2391,0.3354,0.3168,0.3546,ok
+Candidate,ma-long,马龙,480,2750,1278,294,2456,0.5204,0.5006,0.5401,ok
+Candidate,fan-zhendong,樊振东,480,2250,1420,184,2066,0.6873,0.6670,0.7069,ok
+Candidate,zhang-jike,张继科,480,2500,1570,284,2216,0.7085,0.6892,0.7270,ok
+Candidate,xu-xin,许昕,460,2500,1070,276,2224,0.4811,0.4604,0.5019,ok
+Candidate,lin-gaoyuan,林高远,440,2750,838,255,2495,0.3359,0.3176,0.3546,ok
+Candidate,wang-chuqin,王楚钦,460,2250,981,233,2017,0.4864,0.4646,0.5082,ok
+Candidate,tomokazu-harimoto,张本智和,440,2500,925,367,2133,0.4337,0.4128,0.4548,ok
+Candidate,truls-moregard,莫雷加德,440,2500,784,375,2125,0.3689,0.3487,0.3897,ok
+Candidate V3,ma-long,马龙,480,2750,1243,302,2448,0.5078,0.4880,0.5275,ok
+Candidate V3,fan-zhendong,樊振东,480,2250,1431,174,2076,0.6893,0.6691,0.7088,ok
+Candidate V3,zhang-jike,张继科,480,2500,1553,261,2239,0.6936,0.6742,0.7124,ok
+Candidate V3,xu-xin,许昕,460,2500,1144,228,2272,0.5035,0.4830,0.5241,ok
+Candidate V3,lin-gaoyuan,林高远,440,2750,840,227,2523,0.3329,0.3148,0.3516,ok
+Candidate V3,wang-chuqin,王楚钦,460,2250,1027,215,2035,0.5047,0.4830,0.5264,ok
+Candidate V3,tomokazu-harimoto,张本智和,440,2500,959,318,2182,0.4395,0.4188,0.4604,ok
+Candidate V3,truls-moregard,莫雷加德,440,2500,765,351,2149,0.3560,0.3360,0.3765,ok
+Candidate V4,ma-long,马龙,480,2750,1357,22,2728,0.4974,0.4787,0.5162,ok
+Candidate V4,fan-zhendong,樊振东,480,2250,1624,3,2247,0.7227,0.7039,0.7409,ok
+Candidate V4,zhang-jike,张继科,480,2500,1855,21,2479,0.7483,0.7308,0.7650,ok
+Candidate V4,xu-xin,许昕,460,2500,1224,30,2470,0.4955,0.4759,0.5153,ok
+Candidate V4,lin-gaoyuan,林高远,440,2750,663,3,2747,0.2414,0.2257,0.2577,ok
+Candidate V4,wang-chuqin,王楚钦,460,2250,1331,22,2228,0.5974,0.5769,0.6176,ok
+Candidate V4,tomokazu-harimoto,张本智和,440,2500,1026,34,2466,0.4161,0.3967,0.4356,ok
+Candidate V4,truls-moregard,莫雷加德,440,2500,840,25,2475,0.3394,0.3210,0.3583,ok
