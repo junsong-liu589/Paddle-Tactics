@@ -246,6 +246,7 @@ export type MatchPublicView = {
   dataVersion: string;
   attackBonus: number;
   defensePool: number;
+  rallyMaxComparisons: number;
   defenderVisibleTopK: number;
   explorationEpsilon: number;
   reservePoints: number;

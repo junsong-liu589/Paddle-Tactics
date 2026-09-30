@@ -6,6 +6,10 @@
   "exports": {
     ".": "./dist/index.js"
   },
+  "dependencies": {
+    "@paddle-tactics/game-core": "workspace:*",
+    "@paddle-tactics/game-data": "workspace:*"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json"

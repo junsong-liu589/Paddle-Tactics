@@ -1,25 +1,54 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { allocationSkillKey } from "@paddle-tactics/game-core";
 import type {
   Allocation,
+  DomainEvent,
   GameCommand,
   MatchPublicView,
   Stage,
 } from "@paddle-tactics/game-core";
-import {
-  fetchCatalog,
-  getSandboxView,
-  sendSandboxCommand,
-} from "../lib/api.js";
+import { fetchCatalog } from "../lib/api.js";
 import type { PublicCatalog } from "../lib/api.js";
+import { getLocalMatchView, sendLocalMatchCommand } from "../lib/local-game.js";
+import { BATTLE_FEEDBACK_TIMING_MS } from "../lib/animation-timing.js";
+import { PlayerAvatar } from "../components/PlayerAvatar.js";
 
 type Seat = "A" | "B";
-type Props = { matchId: string; navigate: (path: string) => void };
+type Props = {
+  matchId: string;
+  navigate: (path: string) => void;
+  isAi: boolean;
+};
+type ComparisonEvent = Extract<DomainEvent, { type: "COMPARISON_REVEALED" }>;
+type FeedbackState = {
+  event: ComparisonEvent;
+  queuedEvents: ComparisonEvent[];
+  step: "announce" | "comparison" | "outcome";
+  actor: Seat;
+  nextView: MatchPublicView;
+};
 
 function playerName(catalog: PublicCatalog, playerId: string): string {
   return (
     catalog.players.find((player) => player.id === playerId)?.name ?? playerId
   );
+}
+
+function battleStateLabel(state: string): string {
+  switch (state) {
+    case "attacking":
+      return "Attacking · 进攻";
+    case "defending":
+      return "Defending · 防守";
+    case "success":
+      return "Success · 防守成功";
+    case "broken":
+      return "Miss · 防线被突破";
+    case "celebrate":
+      return "Celebrate · 得分";
+    default:
+      return "Ready · 准备";
+  }
 }
 
 function legalKeys(view: MatchPublicView, catalog: PublicCatalog): string[] {
@@ -48,7 +77,7 @@ function skillLabel(key: string, stage: Stage, catalog: PublicCatalog): string {
 function distributeEvenly(
   keys: string[],
   budget: number,
-  cap: number,
+  cap: number | ((key: string) => number),
 ): Allocation {
   const allocation: Allocation = Object.fromEntries(
     keys.map((key) => [key, 0]),
@@ -58,7 +87,7 @@ function distributeEvenly(
     let placed = false;
     for (const key of keys) {
       if (remaining === 0) break;
-      if (allocation[key]! < cap) {
+      if (allocation[key]! < (typeof cap === "number" ? cap : cap(key))) {
         allocation[key] = allocation[key]! + 1;
         remaining -= 1;
         placed = true;
@@ -72,14 +101,17 @@ function distributeEvenly(
 function distributeInOrder(
   keys: string[],
   budget: number,
-  cap: number,
+  cap: number | ((key: string) => number),
 ): Allocation {
   const allocation: Allocation = Object.fromEntries(
     keys.map((key) => [key, 0]),
   );
   let remaining = budget;
   for (const key of keys) {
-    const points = Math.min(cap, remaining);
+    const points = Math.min(
+      typeof cap === "number" ? cap : cap(key),
+      remaining,
+    );
     allocation[key] = points;
     remaining -= points;
     if (remaining === 0) return allocation;
@@ -99,25 +131,27 @@ function nextActor(view: MatchPublicView, actor: Seat): Seat {
   return actor;
 }
 
-export function MatchPage({ matchId, navigate }: Props) {
+export function MatchPage({ matchId, navigate, isAi }: Props) {
   const [catalog, setCatalog] = useState<PublicCatalog | null>(null);
   const [viewerId, setViewerId] = useState<Seat>("A");
   const [view, setView] = useState<MatchPublicView | null>(null);
   const [handoffTo, setHandoffTo] = useState<Seat | null>(null);
   const [draft, setDraft] = useState<Allocation>({});
+  const [feedback, setFeedback] = useState<FeedbackState | null>(null);
+  const [fastFeedback, setFastFeedback] = useState(false);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
-    void Promise.all([fetchCatalog(), getSandboxView(matchId, "A")])
-      .then(([loadedCatalog, initialView]) => {
+    void Promise.all([fetchCatalog(), getLocalMatchView(matchId, "A")])
+      .then(([loadedCatalog, match]) => {
         if (!active) return;
         setCatalog(loadedCatalog);
         setViewerId("A");
-        setView(initialView);
-        setDraft(initialView.self.allocation ?? {});
+        setView(match.view);
+        setDraft(match.view.self.allocation ?? {});
       })
       .catch((cause: unknown) =>
         setError(cause instanceof Error ? cause.message : "无法载入比赛"),
@@ -132,13 +166,11 @@ export function MatchPage({ matchId, navigate }: Props) {
     catalog && view ? catalog.skills.stages[view.point.stage] : null;
   const keys = catalog && view ? legalKeys(view, catalog) : [];
   const spent = keys.reduce((sum, key) => sum + (draft[key] ?? 0), 0);
-  const lastReveal = useMemo(
-    () =>
-      view?.events
-        .filter((event) => event.type === "COMPARISON_REVEALED")
-        .at(-1),
-    [view?.events],
-  );
+  const budget = view?.availableBudget ?? 0;
+  const isV4 = view?.rulesetId === "candidate_v4";
+  const attackSpent = keys
+    .filter((key) => key.endsWith(".attack"))
+    .reduce((sum, key) => sum + (draft[key] ?? 0), 0);
   const selfName =
     catalog && view ? playerName(catalog, view.self.loadout.playerId) : "选手";
   const opponentName =
@@ -150,26 +182,90 @@ export function MatchPage({ matchId, navigate }: Props) {
     if (view && view.self.id === viewerId) setDraft(view.self.allocation ?? {});
   }, [view?.version, view?.point.number, view?.point.stage, viewerId]);
 
-  const showNextActor = (nextView: MatchPublicView, actor: Seat) => {
-    const next = nextActor(nextView, actor);
-    if (next !== actor) {
-      setView(null);
-      setHandoffTo(next);
-      setViewerId(next);
-      setDraft({});
-    } else {
-      setHandoffTo(null);
-      setView(nextView);
-    }
+  const showNextActor = useCallback(
+    (nextView: MatchPublicView, actor: Seat) => {
+      if (isAi) {
+        setView(nextView);
+        setViewerId("A");
+        setHandoffTo(null);
+        setDraft(nextView.self.allocation ?? {});
+        return;
+      }
+      const next = nextActor(nextView, actor);
+      if (next !== actor) {
+        setView(null);
+        setHandoffTo(next);
+        setViewerId(next);
+        setDraft({});
+      } else {
+        setHandoffTo(null);
+        setView(nextView);
+      }
+    },
+    [isAi],
+  );
+
+  const executeCommand = async (command: GameCommand) => {
+    if (!view) throw new Error("比赛视图尚未载入");
+    return sendLocalMatchCommand(matchId, view.self.id, command);
   };
+
+  useEffect(() => {
+    if (!feedback) return;
+    const timer = window.setTimeout(
+      () => {
+        if (feedback.step === "announce") {
+          setFeedback({ ...feedback, step: "comparison" });
+        } else if (feedback.step === "comparison") {
+          setFeedback({ ...feedback, step: "outcome" });
+        } else {
+          const [nextEvent, ...queuedEvents] = feedback.queuedEvents;
+          if (nextEvent) {
+            setFeedback({
+              ...feedback,
+              event: nextEvent,
+              queuedEvents,
+              step: "announce",
+            });
+          } else {
+            setFeedback(null);
+            showNextActor(feedback.nextView, feedback.actor);
+          }
+        }
+      },
+      fastFeedback
+        ? BATTLE_FEEDBACK_TIMING_MS.quick
+        : BATTLE_FEEDBACK_TIMING_MS[feedback.step],
+    );
+    return () => window.clearTimeout(timer);
+  }, [feedback, fastFeedback, showNextActor]);
 
   const sendCommand = async (command: GameCommand) => {
     if (!view) return;
     setBusy(true);
     setError(null);
     try {
-      const nextView = await sendSandboxCommand(matchId, view.self.id, command);
-      showNextActor(nextView, view.self.id as Seat);
+      const nextView = await executeCommand(command);
+      if (command.type === "CHOOSE_ATTACK") {
+        const previousSeq = view.events.at(-1)?.seq ?? 0;
+        const comparisons = nextView.events.filter(
+          (event): event is ComparisonEvent =>
+            event.type === "COMPARISON_REVEALED" && event.seq > previousSeq,
+        );
+        const comparison = comparisons[0];
+        if (comparison) {
+          setView(nextView);
+          setViewerId(view.self.id as Seat);
+          setHandoffTo(null);
+          setFeedback({
+            event: comparison,
+            queuedEvents: comparisons.slice(1),
+            step: "announce",
+            actor: view.self.id as Seat,
+            nextView,
+          });
+        } else showNextActor(nextView, view.self.id as Seat);
+      } else showNextActor(nextView, view.self.id as Seat);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "命令未能执行");
     } finally {
@@ -182,7 +278,7 @@ export function MatchPage({ matchId, navigate }: Props) {
     setBusy(true);
     setError(null);
     try {
-      const allocated = await sendSandboxCommand(matchId, view.self.id, {
+      const allocated = await executeCommand({
         type: "ALLOCATE",
         expectedVersion: view.version,
         stage: view.point.stage,
@@ -190,7 +286,7 @@ export function MatchPage({ matchId, navigate }: Props) {
           keys.map((key) => [key, draft[key] ?? 0]),
         ),
       });
-      const locked = await sendSandboxCommand(matchId, view.self.id, {
+      const locked = await executeCommand({
         type: "LOCK_ALLOCATION",
         expectedVersion: allocated.version,
         stage: view.point.stage,
@@ -208,7 +304,7 @@ export function MatchPage({ matchId, navigate }: Props) {
     setLoading(true);
     setError(null);
     try {
-      setView(await getSandboxView(matchId, handoffTo));
+      setView((await getLocalMatchView(matchId, handoffTo)).view);
       setHandoffTo(null);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "无法载入当前回合");
@@ -218,36 +314,73 @@ export function MatchPage({ matchId, navigate }: Props) {
   };
 
   const adjustDraft = (key: string, amount: number) => {
-    if (!stageRules || !view || view.self.allocationLocked) return;
+    if (!stageRules || !view || view.self.allocationLocked || feedback) return;
     setDraft((current) => {
       const nextValue = (current[key] ?? 0) + amount;
       const total = keys.reduce(
         (sum, activeKey) => sum + (current[activeKey] ?? 0),
         0,
       );
-      if (nextValue < 0 || nextValue > stageRules.perItemCap) return current;
-      if (amount > 0 && total >= stageRules.budget) return current;
+      if (nextValue < 0) return current;
+      const v4Cap = isV4 && key.endsWith(".attack") ? 4 : budget;
+      if (nextValue > (isV4 ? v4Cap : (stageRules.perItemCap ?? budget)))
+        return current;
+      if (amount > 0 && total >= budget) return current;
+      if (
+        amount > 0 &&
+        isV4 &&
+        view.point.stage !== "rally" &&
+        key.endsWith(".attack") &&
+        attackSpent >= 4
+      )
+        return current;
       return { ...current, [key]: nextValue };
     });
   };
 
   const setEvenDraft = () => {
-    if (!stageRules) return;
+    if (!stageRules || !view) return;
     try {
-      setDraft(
-        distributeEvenly(keys, stageRules.budget, stageRules.perItemCap),
-      );
+      const isLimitedAttack =
+        isV4 &&
+        view.point.stage !== "rally" &&
+        view.point.attackerPlayerId === view.self.id;
+      const limit = isLimitedAttack
+        ? Math.min(budget, 4)
+        : isV4
+          ? budget
+          : stageRules.budget;
+      const perKeyCap = (key: string) =>
+        isV4
+          ? key.endsWith(".attack")
+            ? 4
+            : budget
+          : (stageRules.perItemCap ?? budget);
+      setDraft(distributeEvenly(keys, limit, perKeyCap));
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "自动分配失败");
     }
   };
 
   const setOrderedDraft = () => {
-    if (!stageRules) return;
+    if (!stageRules || !view) return;
     try {
-      setDraft(
-        distributeInOrder(keys, stageRules.budget, stageRules.perItemCap),
-      );
+      const isLimitedAttack =
+        isV4 &&
+        view.point.stage !== "rally" &&
+        view.point.attackerPlayerId === view.self.id;
+      const limit = isLimitedAttack
+        ? Math.min(budget, 4)
+        : isV4
+          ? budget
+          : stageRules.budget;
+      const perKeyCap = (key: string) =>
+        isV4
+          ? key.endsWith(".attack")
+            ? 4
+            : budget
+          : (stageRules.perItemCap ?? budget);
+      setDraft(distributeInOrder(keys, limit, perKeyCap));
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "默认分配失败");
     }
@@ -312,12 +445,52 @@ export function MatchPage({ matchId, navigate }: Props) {
     view.point.attackerPlayerId === view.self.id ? selfName : opponentName;
   const defensePlayerName =
     view.point.attackerPlayerId === view.self.id ? opponentName : selfName;
-  const selectedPair =
-    lastReveal?.type === "COMPARISON_REVEALED"
-      ? catalog.skills.stages[lastReveal.stage].pairs.find(
-          (pair) => pair.id === lastReveal.pairId,
-        )
-      : undefined;
+  const selectedPair = feedback
+    ? catalog.skills.stages[feedback.event.stage].pairs.find(
+        (pair) => pair.id === feedback.event.pairId,
+      )
+    : undefined;
+  const seatPlayer = (seat: Seat) => {
+    const playerId = view.playerOrder[seat === "A" ? 0 : 1]!;
+    const isSelf = view.self.id === playerId;
+    const loadout = isSelf ? view.self.loadout : view.opponent.loadout;
+    const player = catalog.players.find(
+      (candidate) => candidate.id === loadout.playerId,
+    );
+    const event = feedback?.event;
+    const state = event
+      ? feedback.step !== "outcome"
+        ? event.attackerPlayerId === playerId
+          ? "attacking"
+          : "defending"
+        : event.outcome === "attacker_wins"
+          ? event.attackerPlayerId === playerId
+            ? "celebrate"
+            : "broken"
+          : event.defenderPlayerId === playerId
+            ? "success"
+            : "ready"
+      : view.phase.endsWith("_SELECTING")
+        ? view.point.attackerPlayerId === playerId
+          ? "attacking"
+          : "defending"
+        : "ready";
+    return {
+      playerId: loadout.playerId,
+      name: player?.name ?? playerId,
+      bladeName:
+        catalog.blades.find((gear) => gear.id === loadout.bladeId)?.name ?? "",
+      state,
+    };
+  };
+  const playerAView = seatPlayer("A");
+  const playerBView = seatPlayer("B");
+  const feedbackAttackerName = feedback
+    ? seatPlayer(feedback.event.attackerPlayerId as Seat).name
+    : "";
+  const feedbackDefenderName = feedback
+    ? seatPlayer(feedback.event.defenderPlayerId as Seat).name
+    : "";
 
   return (
     <main
@@ -329,14 +502,22 @@ export function MatchPage({ matchId, navigate }: Props) {
     >
       <div className="match-topbar">
         <button className="back-link" onClick={() => navigate("/play")}>
-          ← 退出本地对局
+          {isAi ? "← 退出 AI 对局" : "← 退出本地对局"}
         </button>
         <span className="version-badge">
-          BO{view.bestOf} · {catalog.version}
+          BO{view.bestOf} ·{" "}
+          {view.rulesetId === "candidate_v4" ? "Candidate V4" : catalog.version}
         </span>
         <span className="local-status">
-          <i /> 本地沙盒
+          <i /> {isAi ? "AI 单人对战" : "本地双人对战"}
         </span>
+        <button
+          className={`feedback-speed ${fastFeedback ? "is-fast" : ""}`}
+          aria-pressed={fastFeedback}
+          onClick={() => setFastFeedback((value) => !value)}
+        >
+          {fastFeedback ? "快速反馈已开" : "快速反馈"}
+        </button>
       </div>
       <section className="scoreboard" aria-label="当前比分">
         <div className="score-player">
@@ -363,24 +544,17 @@ export function MatchPage({ matchId, navigate }: Props) {
       </section>
 
       <section className="match-context">
-        <div className="context-player">
-          <div className="avatar avatar-a">
-            <span />
-          </div>
+        <div className={`context-player ${playerAView.state}`}>
+          <PlayerAvatar
+            className="battle-avatar"
+            playerId={playerAView.playerId}
+            name={playerAView.name}
+          />
           <div>
             <small>PLAYER A</small>
-            <strong>{view.self.id === "A" ? selfName : opponentName}</strong>
-            <span>
-              {
-                catalog.blades.find(
-                  (gear) =>
-                    gear.id ===
-                    (view.self.id === "A"
-                      ? view.self.loadout.bladeId
-                      : view.opponent.loadout.bladeId),
-                )?.name
-              }
-            </span>
+            <strong>{playerAView.name}</strong>
+            <span>{playerAView.bladeName}</span>
+            <em>{battleStateLabel(playerAView.state)}</em>
           </div>
         </div>
         <div className="phase-pill">
@@ -404,24 +578,19 @@ export function MatchPage({ matchId, navigate }: Props) {
                   : "比分更新"}
           </small>
         </div>
-        <div className="context-player context-player-right">
-          <div className="avatar avatar-b">
-            <span />
-          </div>
+        <div
+          className={`context-player context-player-right ${playerBView.state}`}
+        >
+          <PlayerAvatar
+            className="battle-avatar"
+            playerId={playerBView.playerId}
+            name={playerBView.name}
+          />
           <div>
             <small>PLAYER B</small>
-            <strong>{view.self.id === "B" ? selfName : opponentName}</strong>
-            <span>
-              {
-                catalog.blades.find(
-                  (gear) =>
-                    gear.id ===
-                    (view.self.id === "B"
-                      ? view.self.loadout.bladeId
-                      : view.opponent.loadout.bladeId),
-                )?.name
-              }
-            </span>
+            <strong>{playerBView.name}</strong>
+            <span>{playerBView.bladeName}</span>
+            <em>{battleStateLabel(playerBView.state)}</em>
           </div>
         </div>
       </section>
@@ -443,9 +612,11 @@ export function MatchPage({ matchId, navigate }: Props) {
             <div className="budget-counter">
               <strong>
                 {spent}
-                <small> / {stageRules.budget}</small>
+                <small> / {budget}</small>
               </strong>
-              <span>已分配点数</span>
+              <span>
+                {isV4 ? `可用点数 · Carry ${view.reservePoints}` : "已分配点数"}
+              </span>
             </div>
           </div>
           <div className="opponent-lock">
@@ -459,6 +630,22 @@ export function MatchPage({ matchId, navigate }: Props) {
             {view.opponent.allocationLocked ? "对手已锁定" : "等待对手锁定"}
             <span className="private-hint">你的分配仅自己可见</span>
           </div>
+          {isV4 && view.visibleAttackTop && (
+            <p className="form-hint">
+              对手基础攻击 Top 3：
+              {view.visibleAttackTop
+                .map((item) => {
+                  const pair = stageRules.pairs.find(
+                    (candidate) => candidate.id === item.pairId,
+                  );
+                  return pair
+                    ? `${pair.attackName} ${item.base.toFixed(1)}`
+                    : "";
+                })
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+          )}
           <div
             className={`allocation-grid ${view.point.stage === "rally" ? "allocation-grid-rally" : ""}`}
           >
@@ -467,6 +654,13 @@ export function MatchPage({ matchId, navigate }: Props) {
               const pairId = key.split(".")[0]!;
               const pair = stageRules.pairs.find((item) => item.id === pairId)!;
               const role = key.split(".")[1];
+              const isAttack = role === "attack";
+              const perItemLimit = isV4
+                ? isAttack
+                  ? 4
+                  : budget
+                : (stageRules.perItemCap ?? budget);
+              const rallyMixedAttack = view.point.stage === "rally" && isAttack;
               const base =
                 view.self.projectBattleValues[pairId]?.[
                   role as "attack" | "defense"
@@ -501,8 +695,13 @@ export function MatchPage({ matchId, navigate }: Props) {
                       aria-label={`增加${skillLabel(key, view.point.stage, catalog)}点数`}
                       disabled={
                         view.self.allocationLocked ||
-                        value >= stageRules.perItemCap ||
-                        spent >= stageRules.budget ||
+                        value >= perItemLimit ||
+                        spent >= budget ||
+                        (isV4 &&
+                          view.point.stage !== "rally" &&
+                          isAttack &&
+                          attackSpent >= 4) ||
+                        Boolean(feedback) ||
                         busy
                       }
                       onClick={() => adjustDraft(key, 1)}
@@ -511,7 +710,13 @@ export function MatchPage({ matchId, navigate }: Props) {
                     </button>
                   </div>
                   <small className="cap-note">
-                    上限 +{stageRules.perItemCap}
+                    {rallyMixedAttack
+                      ? "单项最多 +4"
+                      : isV4 && role === "attack"
+                        ? "单项最多 +4"
+                        : isV4
+                          ? "单项不限 · 共用预算"
+                          : `单项最多 +${stageRules.perItemCap}`}
                   </small>
                 </article>
               );
@@ -544,7 +749,7 @@ export function MatchPage({ matchId, navigate }: Props) {
               disabled={
                 view.self.allocationLocked ||
                 busy ||
-                spent !== stageRules.budget
+                (!isV4 && spent !== stageRules.budget)
               }
               onClick={() => void lockAllocation()}
             >
@@ -552,10 +757,12 @@ export function MatchPage({ matchId, navigate }: Props) {
                 ? "已锁定"
                 : busy
                   ? "正在锁定…"
-                  : `锁定 ${stageRules.budget} 点并交接`}
+                  : isV4
+                    ? `${isAi ? "锁定本阶段" : "锁定并交接"}（花费 ${spent} / ${budget}）`
+                    : `锁定 ${stageRules.budget} 点并交接`}
             </button>
           </div>
-          {spent !== stageRules.budget && (
+          {!isV4 && spent !== stageRules.budget && (
             <p className="form-hint">
               还需分配 {stageRules.budget - spent} 点才可以锁定。
             </p>
@@ -573,14 +780,18 @@ export function MatchPage({ matchId, navigate }: Props) {
               <h1>
                 {view.point.attackerPlayerId === view.self.id
                   ? "选择进攻项目"
-                  : "等待选择"}
+                  : isAi
+                    ? "AI 正在选择…"
+                    : `等待选手 ${view.point.attackerPlayerId} 选择…`}
               </h1>
               <p>基础战斗值公开；尚未比较的加点仍保持隐藏。</p>
             </div>
             <div className="budget-counter">
               <strong>
                 {view.point.rallyRound}
-                <small> / {view.point.stage === "rally" ? "5" : "1"}</small>
+                <small>
+                  {` / ${view.point.stage === "rally" ? view.rallyMaxComparisons : 1}`}
+                </small>
               </strong>
               <span>当前轮次</span>
             </div>
@@ -614,27 +825,39 @@ export function MatchPage({ matchId, navigate }: Props) {
           </div>
           {view.point.attackerPlayerId === view.self.id ? (
             <div className="attack-options">
-              {stageRules.pairs.map((pair) => (
-                <button
-                  key={pair.id}
-                  className="attack-option"
-                  aria-label={`选择：${pair.attackName}`}
-                  disabled={busy}
-                  onClick={() =>
-                    void sendCommand({
-                      type: "CHOOSE_ATTACK",
-                      expectedVersion: view.version,
-                      pairId: pair.id,
-                    })
-                  }
-                >
-                  <span>
-                    <strong>{pair.attackName}</strong>
-                    <small>对位防守：{pair.defenseName}</small>
-                  </span>
-                  <b>选择 ↗</b>
-                </button>
-              ))}
+              {stageRules.pairs.map((pair) => {
+                const spentOnPair = Object.entries(view.self.allocation ?? {})
+                  .filter(
+                    ([key, points]) => key.endsWith(".attack") && points > 0,
+                  )
+                  .map(([key]) => key.split(".")[0]);
+                const unavailable =
+                  isV4 &&
+                  view.point.stage !== "rally" &&
+                  spentOnPair.length > 0 &&
+                  !spentOnPair.includes(pair.id);
+                return (
+                  <button
+                    key={pair.id}
+                    className="attack-option"
+                    aria-label={`选择：${pair.attackName}`}
+                    disabled={busy || Boolean(feedback) || unavailable}
+                    onClick={() =>
+                      void sendCommand({
+                        type: "CHOOSE_ATTACK",
+                        expectedVersion: view.version,
+                        pairId: pair.id,
+                      })
+                    }
+                  >
+                    <span>
+                      <strong>{pair.attackName}</strong>
+                      <small>对位防守：{pair.defenseName}</small>
+                    </span>
+                    <b>选择 ↗</b>
+                  </button>
+                );
+              })}
             </div>
           ) : (
             <div className="waiting-panel">
@@ -645,52 +868,71 @@ export function MatchPage({ matchId, navigate }: Props) {
         </section>
       )}
 
-      {lastReveal?.type === "COMPARISON_REVEALED" && selectedPair && (
-        <section className="reveal-panel" aria-live="polite">
+      {feedback && selectedPair && (
+        <section
+          className={`battle-feedback feedback-${feedback.step} ${feedback.event.outcome === "attacker_wins" ? "feedback-score" : "feedback-hold"}`}
+          role="status"
+          aria-live="polite"
+        >
           <span className="eyebrow">
-            JUST REVEALED · {selectedPair.attackName} VS{" "}
-            {selectedPair.defenseName}
+            {feedback.event.stage === "rally"
+              ? `相持第 ${feedback.event.round} 轮`
+              : catalog.skills.stages[feedback.event.stage].label}
           </span>
-          <div className="reveal-values">
-            <div>
-              <small>
-                {lastReveal.attackerPlayerId === view.self.id
-                  ? selfName
-                  : opponentName}{" "}
-                · {selectedPair.attackName}
-              </small>
-              <strong>
-                {lastReveal.attack.base.toFixed(1)}{" "}
-                <i>+ {lastReveal.attack.temporary}</i> ={" "}
-                {lastReveal.attack.actual.toFixed(1)}
-              </strong>
+          <h2>
+            {feedback.step === "announce"
+              ? `${selectedPair.attackName}！`
+              : feedback.step === "comparison"
+                ? "攻防对决"
+                : feedback.event.outcome === "attacker_wins"
+                  ? `突破！${feedbackAttackerName} 得分`
+                  : `防守成功！${feedbackDefenderName} 守住了`}
+          </h2>
+          {feedback.step !== "announce" && (
+            <div className="battle-feedback-values">
+              <div>
+                <small>
+                  {feedbackAttackerName} · {selectedPair.attackName}
+                </small>
+                <strong>
+                  攻击 {feedback.event.attack.actual.toFixed(1)}
+                  <i> +{feedback.event.attack.temporary}</i>
+                </strong>
+              </div>
+              <span>VS</span>
+              <div>
+                <small>
+                  {feedbackDefenderName} · {selectedPair.defenseName}
+                </small>
+                <strong>
+                  抗{selectedPair.attackName}{" "}
+                  {feedback.event.defense.actual.toFixed(1)}
+                  <i> +{feedback.event.defense.temporary}</i>
+                </strong>
+              </div>
             </div>
-            <span className="versus-mark">VS</span>
-            <div>
-              <small>
-                {lastReveal.defenderPlayerId === view.self.id
-                  ? selfName
-                  : opponentName}{" "}
-                · {selectedPair.defenseName}
-              </small>
-              <strong>
-                {lastReveal.defense.base.toFixed(1)}{" "}
-                <i>+ {lastReveal.defense.temporary}</i> ={" "}
-                {lastReveal.defense.actual.toFixed(1)}
-              </strong>
-            </div>
-          </div>
-          <div className="reveal-outcome">
-            <span>
-              差值 {lastReveal.delta > 0 ? "+" : ""}
-              {lastReveal.delta.toFixed(1)}
-            </span>
-            <b>
-              {lastReveal.outcome === "continue"
-                ? "未达决胜阈值，继续下一阶段"
-                : "直接得分"}
-            </b>
-          </div>
+          )}
+          {feedback.step === "outcome" && (
+            <p>
+              {feedback.event.outcome === "attacker_wins"
+                ? "进攻超过决胜阈值，本分立即结束。"
+                : feedback.event.stage === "rally"
+                  ? "未达到决胜阈值，双方交换攻守。"
+                  : "未达到决胜阈值，比赛进入下一阶段。"}
+              {feedback.event.stage === "rally" && (
+                <span> 本阶段最多 {view.rallyMaxComparisons} 次比较。</span>
+              )}
+            </p>
+          )}
+          <button
+            className="feedback-skip"
+            onClick={() => {
+              setFeedback(null);
+              showNextActor(feedback.nextView, feedback.actor);
+            }}
+          >
+            跳过动画 →
+          </button>
         </section>
       )}
 
@@ -735,18 +977,146 @@ export function MatchPage({ matchId, navigate }: Props) {
           <h2>
             {view.winnerPlayerId === "A" ? "选手 A" : "选手 B"} 赢得本场比赛
           </h2>
-          <p>所有比分和已揭晓的攻防对比已记录在本地比赛战报中。</p>
+          <p>"所有比分和已揭晓的攻防对比已记录在本地比赛战报中。"</p>
           <button
             className="button button-primary"
-            onClick={() => navigate(`/result/${matchId}`)}
+            onClick={() => navigate(`/result/${matchId}${isAi ? "/ai" : ""}`)}
           >
             查看赛果与逐分记录 ↗
           </button>
         </section>
       )}
 
+      <section className="match-live-feed" aria-labelledby="live-feed-heading">
+        <div className="live-feed-heading">
+          <div>
+            <span className="eyebrow">PUBLIC MATCH LOG</span>
+            <h2 id="live-feed-heading">比赛信息</h2>
+          </div>
+          <span>双方同步可见 · 未揭晓的加点不会显示</span>
+        </div>
+        <ol aria-live="polite">
+          {view.events.map((event) => {
+            if (event.type === "POINT_STARTED")
+              return (
+                <li key={event.seq}>
+                  <span>第 {event.pointNumber} 分开始</span>
+                  <small>
+                    {playerName(catalog, event.serverPlayerId)} 发球
+                  </small>
+                </li>
+              );
+            if (event.type === "STAGE_CHANGED")
+              return (
+                <li key={event.seq}>
+                  <span>
+                    进入
+                    {event.stage === "service"
+                      ? "发球"
+                      : event.stage === "receive"
+                        ? "反制"
+                        : "相持"}
+                    阶段
+                  </span>
+                  <small>
+                    {playerName(catalog, event.attackerPlayerId)} 获得进攻选择权
+                  </small>
+                </li>
+              );
+            if (event.type === "COMPARISON_REVEALED") {
+              const pair = catalog.skills.stages[event.stage].pairs.find(
+                (item) => item.id === event.pairId,
+              );
+              const threshold =
+                event.stage === "rally"
+                  ? catalog.balance.rally.threshold
+                  : event.stage === "receive"
+                    ? catalog.balance.receive.threshold
+                    : catalog.balance.service.threshold;
+              const resultText =
+                event.outcome === "attacker_wins"
+                  ? `${playerName(catalog, event.attackerPlayerId)} 突破得分`
+                  : event.outcome === "defender_wins"
+                    ? `${playerName(catalog, event.defenderPlayerId)} 防守得分`
+                    : `差值未达 ${threshold} 点阈值，继续比赛`;
+              return (
+                <li className="live-feed-comparison" key={event.seq}>
+                  <span>
+                    {event.stage === "rally"
+                      ? `相持第 ${event.round} 轮`
+                      : catalog.skills.stages[event.stage].label}
+                    {" · "}
+                    {pair?.attackName ?? event.pairId}
+                  </span>
+                  <small>
+                    {playerName(catalog, event.attackerPlayerId)} 攻击{" "}
+                    {event.attack.actual.toFixed(1)} （基础{" "}
+                    {event.attack.base.toFixed(1)} + 加点{" "}
+                    {event.attack.temporary}）{"　vs　"}
+                    {playerName(catalog, event.defenderPlayerId)} 防守{" "}
+                    {event.defense.actual.toFixed(1)} （基础{" "}
+                    {event.defense.base.toFixed(1)} + 加点{" "}
+                    {event.defense.temporary}）
+                  </small>
+                  <b>{resultText}</b>
+                </li>
+              );
+            }
+            if (event.type === "RALLY_ROUND_CONTINUES")
+              return (
+                <li key={event.seq}>
+                  <span>相持第 {event.round} 轮结束，攻守交换</span>
+                  <small>
+                    本轮优势：
+                    {event.advantageFromA > 0
+                      ? `选手 A +${event.advantageFromA}`
+                      : event.advantageFromA < 0
+                        ? `选手 B +${Math.abs(event.advantageFromA)}`
+                        : "双方相同"}
+                  </small>
+                </li>
+              );
+            if (event.type === "POINT_ENDED")
+              return (
+                <li className="live-feed-point" key={event.seq}>
+                  <span>
+                    {playerName(catalog, event.winnerPlayerId)} 赢下这一分
+                  </span>
+                  <small>
+                    比分 {event.score.A ?? 0}:{event.score.B ?? 0} ·{" "}
+                    {reasonLabel(event.reason)}
+                  </small>
+                </li>
+              );
+            if (event.type === "GAME_ENDED")
+              return (
+                <li key={event.seq}>
+                  <span>
+                    {playerName(catalog, event.winnerPlayerId)} 赢下第{" "}
+                    {event.gameNumber} 局
+                  </span>
+                </li>
+              );
+            if (event.type === "MATCH_ENDED")
+              return (
+                <li className="live-feed-point" key={event.seq}>
+                  <span>
+                    {playerName(catalog, event.winnerPlayerId)} 赢得本场比赛
+                  </span>
+                </li>
+              );
+            return null;
+          })}
+        </ol>
+        {view.events.length === 0 && (
+          <p>比赛开始后，公开的攻防比较与比分会显示在这里。</p>
+        )}
+      </section>
+
       <footer className="match-footnote">
-        本地双人沙盒 · 对手未揭晓的临时点数由本地服务端保管
+        {isAi
+          ? "单人 AI 对战 · AI 根据公开比赛信息和自身状态决策，不读取你的隐藏加点"
+          : "同屏本地双人 · 双方轮流分配并交接设备"}
       </footer>
     </main>
   );
@@ -767,7 +1137,7 @@ function reasonLabel(reason: string): string {
     service_direct: "发球阶段直接得分",
     receive_direct: "反制阶段直接得分",
     rally_direct: "相持阶段直接得分",
-    rally_tie_break: "五轮相持后按累计优势决胜",
+    rally_tie_break: "六轮相持后按累计优势决胜",
   };
   return labels[reason] ?? reason;
 }

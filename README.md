@@ -2,7 +2,7 @@
 
 一个以真实乒乓球战术为题材的 **回合制、隐藏加点、数值构筑** 对战游戏。
 
-> 当前权威规则版本：`GDD v1.1 / balance_v1.1`。本仓库开发必须以 `docs/01_GAME_RULES.md` 与 `data/*.json` 为准。
+> 当前可玩原型使用 `Candidate V4`（Carry 资源规则）；旧版 `balance_v1.1` 与 Candidate V3 作为历史/模拟规则保留。V4 runtime 参数由 `packages/game-core` 提供，实验数据不会自动成为新正式平衡版本。
 
 ## 1. 核心玩法
 
@@ -10,9 +10,9 @@
 
 每一分依次经历：
 
-1. **发球阶段**：发球方 10 点进攻加点，接球方 10 点防守加点；差值绝对值达到 5 直接得分。
-2. **反制阶段**：原接球方 10 点进攻加点，原发球方 10 点防守加点；差值绝对值达到 5 直接得分。
-3. **相持阶段**：双方各 15 点，在 5 个相持进攻 + 5 个相持防守项目中秘密分配；轮流选择进攻项目，差值绝对值达到 4 直接得分，最多 5 轮，否则按累计优势决胜。
+1. **发球阶段**：进攻方有 4 点攻击预算，防守方有 10 点防守预算；未花点数可 Carry。攻击差值达到 V4 阈值直接得分。
+2. **反制阶段**：双方分别有 4 点攻击预算和 10 点防守预算，并带入各自 reserve；未花点数继续 Carry。
+3. **相持阶段**：每人获得 20 点加自身 reserve，可在 5 个进攻与 5 个防守项目间秘密分配；每项进攻单独最多 +4，防守单项不限，总支出不超过共享资源池。最多比较 6 次（双方各进攻 3 次），仍未直接决胜则按 Candidate V4 Tie Break 判定。
 
 隐藏规则：对手只看到 **加点前项目战斗值**；临时加点在分配和锁定后仍保持隐藏，只有能力实际发生比较时才揭晓该项最终值。
 
@@ -78,15 +78,39 @@ docker compose up -d db
 corepack pnpm dev
 ```
 
-前端地址为 `http://localhost:5173`，后端地址为 `http://localhost:3002`。后端 `/health` 检查 PostgreSQL；Socket.IO 已挂载在 `/game` namespace，在线比赛协议尚未开放。
+全栈开发地址为 `http://localhost:5173`（web）和 `http://localhost:3002`（server）。后端 `/health` 检查 PostgreSQL；Socket.IO `/game` namespace 和权威在线房间服务仍保留在 server 中，供后续桌面房主联机复用。
+
+网页试玩版可单独运行，不需要 Docker、后端或 PostgreSQL：`corepack pnpm web:dev`。它只提供本地 AI 与同屏双人，对局和 AI 决策均在浏览器内运行；静态构建用 `corepack pnpm web:build`，输出目录为 `apps/web/dist`；浏览器验收用 `corepack pnpm web:e2e`。
+
+首次开发/运行服务端在线房间时执行 `pnpm db:migrate:deploy` 创建访客会话表。当前免费网页试玩版不提供在线房间入口；前端只开放本地 AI 与同屏双人，避免依赖常驻服务。在线房间服务端仍保留在 `apps/server`，未来桌面联机阶段可复用权威规则、Socket.IO 协议与 `game-core`。
 
 Prisma ORM 使用 7.x 的 `prisma-client` generator 和 `prisma.config.ts`。`corepack pnpm db:generate` 生成 server 使用的客户端，`corepack pnpm db:check` 执行实际数据库连接检查。根级 `build` 和 `typecheck` 会先生成客户端。
 
 Phase 1 增加数据校验和纯规则引擎：`pnpm data:validate` 检查 `data/*.json` 及跨文件规则一致性，`pnpm simulate:match` 运行一场确定性的无 UI 比赛。`packages/game-core` 维护比赛状态，通过 `derivePublicView` 生成按玩家隔离的公开视图。
 
-Phase 2 提供模式选择、球员/器材配置与常驻值预览、本地双人沙盒、逐分比赛和战报。沙盒 `MatchState` 仅在服务端当前进程内保存；每次 API 请求只返回当前操作者的公开视图，屏幕交接后才显示另一位玩家的视图。沙盒不持久化比赛，不包含 AI 或在线房间。
+Phase 2 提供模式选择、球员/器材配置与常驻值预览、本地双人沙盒、逐分比赛和战报。Phase 3 原型默认使用 Candidate V4。Phase 4 增加服务器本地运行的分级策略 AI，不调用付费模型 API；AI 和真人都使用相同的服务器权威规则与 viewer-specific 视图。在线房间和进行中的 MatchState 保存在单个 server 进程内存中，GuestSession 令牌摘要存于 PostgreSQL；单实例重启会中断进行中的房间。
 
-Balance Lab 是独立的命令行模拟包，读取正式 `game-data`，通过 `game-core` 计算攻防、计分和相持裁决，不经过 Web、Socket.IO、HTTP 或 PostgreSQL。它保留 Legacy V1、历史 Candidate V1、Candidate V3，并新增 reducer-backed Candidate V4：玩家级跨阶段 Carry、Serve/Counter 4 点攻击与 10 点防守、Rally 20 点混合资源池、最多 4 次相持比较。V4 的 Carry/预算只保存在规则状态中，公开视图只向本人返回 reserve；未揭晓项目仍保持隐藏。Candidate V3/V4 与实验参数只能在模拟器显式启用，不会改变默认正式规则或写入正式 `data/*.json`。默认固定 seed 为 `20260928`。
+### Phase 5 在线对战与部署
+
+服务器在线房间原型使用 `.env`、PostgreSQL、`pnpm db:migrate:deploy` 与 `pnpm dev`。浏览器免费试玩版不会调用该联机服务；桌面联机开发可复用现有房间与比赛服务端实现。常驻 WebSocket 公网部署模板仍需 HTTPS 与服务器，详见 `docs/08_DEPLOYMENT.md`。
+
+生产部署模板：复制 `.env.production.example` 为 `.env.production`，设置指向本机公网地址的 `PUBLIC_DOMAIN` / `WEB_ORIGIN` 和随机 URL-safe `POSTGRES_PASSWORD`，确认服务器防火墙开放 TCP 80/443 及域名 A/AAAA 记录后运行：
+
+```sh
+docker compose --env-file .env.production -f docker-compose.production.yml up -d --build
+```
+
+Caddy 自动申请和续期 HTTPS 证书；Nginx 提供静态前端并代理 REST 与 Socket.IO WebSocket。数据库不暴露公网端口。房间状态采用单服务器内存 actor；目前不支持多实例水平扩展，也不持久化中途比赛或完整战报（赛后持久化属于 Phase 6）。详见 `docs/08_DEPLOYMENT.md`。
+
+### 免费网页试玩版
+
+网页版本地 AI 与同屏双人可纯静态托管。Cloudflare Pages 等静态站点平台可提供平台子域名，不需要自有域名、常驻 Fastify、Socket.IO 或 PostgreSQL。Cloudflare Pages 的纯静态资源当前免费且不限请求；若以后加入动态 Functions，请重新评估其免费额度与限制。发布目录为 `apps/web/dist`，构建命令为 `corepack pnpm web:build`。网页对局运行在玩家浏览器中，刷新页面会结束尚未完成的本地对局；它不提供远程房间。
+
+后续桌面版可让开房玩家的电脑担任该局权威服务端，避免你维护常驻游戏主机；朋友跨互联网加入仍取决于房主网络是否允许入站连接，无法直连时才需要中转服务。
+
+Balance Lab 是独立命令行模拟包，读取 `game-data` 并复用 `game-core`。它保留 Legacy V1、Candidate V3、Candidate V4。V4 的 Carry/预算只保存在规则状态中，公开视图只向本人返回 reserve；未揭晓项目仍保持隐藏。当前本地可玩原型显式启用 Candidate V4；模拟器里的其他规则和参数仍须显式启用，且不会自动晋升为正式版本。
+
+球员头像来源于 `photos/`，原图保持不变。用 `python -m pip install -r scripts/requirements-player-photos.txt` 安装图像处理依赖，再运行 `python scripts/process-player-photos.py` 可按映射及可调焦点生成 512×512 WebP 到 `apps/web/public/assets/players/`。前端头像组件带有缺图回退。
 
 ```sh
 pnpm balance:quick     # 1,000 场/机制，快速验证
@@ -110,7 +134,7 @@ corepack pnpm exec playwright install chromium
 corepack pnpm e2e
 ```
 
-Phase 0、Phase 1、Phase 2、Balance Lab 与 Candidate V3/V4 规则评估已完成。Phase 2 的浏览器验收使用 Playwright，完整一局从模式选择和配装开始，到赛果与逐分记录结束。Candidate V3/V4 均未成为默认比赛规则。V4 Full 结果显示 0.96% deuce 截断和 52.13% Rally 首进攻方胜率有所改善，但 8/10 个策略配对超过 65% 支配筛查线，因此不建议升级；详见 reports/2026-09-29T06-06-47-665Z/V4_BALANCE_REPORT.md。AI 与在线房间属于后续 Phase。进度与检查记录见 `docs/06_ROADMAP.md`。
+Phase 0、Phase 1、Phase 2、Balance Lab、Candidate V3/V4 规则评估、Phase 2.5 球员能力设计、Phase 3 可玩原型、Phase 4 AI 单人模式及 Phase 5 在线双人功能已完成。当前原型保留 8 名球员指定总分，更新 30 项攻防能力并用 20,000 场固定种子 matchup 模拟检查；结果详见 `reports/candidate-v4-player-refresh/CANDIDATE_V4_PLAYER_REPORT.md`。Phase 5 的在线服务端和生产部署模板仍保留；免费网页试玩端仅开放浏览器内 AI 与同屏双人，静态发布不依赖常驻游戏服务器。免费网页试玩版已发布到 Cloudflare Pages：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。该网址是当前开发分支的预览部署；在线房间服务器尚未部署。进度与检查记录见 `docs/06_ROADMAP.md`。
 
 按 `docs/06_ROADMAP.md` 的顺序推进，每个 Phase 验收后再进入下一个，不要一次性把多个阶段混在一起。
 

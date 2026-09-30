@@ -5,7 +5,7 @@ export function HomePage({ navigate }: Props) {
     <main className="home-page">
       <section className="hero-panel">
         <div className="hero-copy">
-          <span className="eyebrow">PINGPONG TACTICS · BALANCE V1.1</span>
+          <span className="eyebrow">PINGPONG TACTICS · CANDIDATE V4</span>
           <h1>
             每一分，
             <br />
@@ -22,18 +22,13 @@ export function HomePage({ navigate }: Props) {
             >
               开始一场对决 <span aria-hidden="true">↗</span>
             </button>
-            <a
-              className="text-link"
-              href="/docs/01_GAME_RULES.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              查看比赛规则 <span aria-hidden="true">↗</span>
-            </a>
+            <button className="text-link" onClick={() => navigate("/rules")}>
+              查看比赛规则 <span aria-hidden="true">→</span>
+            </button>
           </div>
           <div className="hero-meta">
-            <span className="online-dot" /> 本地沙盒现已开放
-            <span className="meta-divider" /> GDD v1.1
+            <span className="online-dot" /> 免费网页试玩版
+            <span className="meta-divider" /> AI 与同屏双人
           </div>
         </div>
         <div className="hero-art" aria-label="几何风格乒乓球桌插画">

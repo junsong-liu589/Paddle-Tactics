@@ -4,7 +4,13 @@ import { GAME_CORE_PACKAGE, GameRuleError } from "@paddle-tactics/game-core";
 import { loadCatalog } from "@paddle-tactics/game-data";
 import { z } from "zod";
 import { prisma } from "./db/client.js";
-import { SandboxNotFoundError, SandboxService } from "./sandbox.js";
+import {
+  SandboxAccessError,
+  SandboxNotFoundError,
+  SandboxService,
+} from "./sandbox.js";
+import { OnlineRoomService } from "./online.js";
+import type { GuestSessionService } from "./online.js";
 
 const StageSchema = z.enum(["service", "receive", "rally"]);
 const GameCommandSchema = z.discriminatedUnion("type", [
@@ -41,6 +47,9 @@ const CreateSandboxSchema = z.object({
   playerA: z.object({ id: z.literal("A"), loadout: LoadoutSchema }),
   playerB: z.object({ id: z.literal("B"), loadout: LoadoutSchema }),
 });
+const CreateAiMatchSchema = CreateSandboxSchema.extend({
+  difficulty: z.enum(["easy", "normal", "hard"]),
+});
 const MatchParamsSchema = z.object({ matchId: z.string().uuid() });
 const ViewerQuerySchema = z.object({ viewerId: z.enum(["A", "B"]) });
 const CommandBodySchema = z.object({
@@ -48,13 +57,48 @@ const CommandBodySchema = z.object({
   command: GameCommandSchema,
 });
 
-export async function buildApp(options: { sandbox?: SandboxService } = {}) {
-  const app = Fastify({ logger: true });
+export async function buildApp(
+  options: {
+    sandbox?: SandboxService;
+    logger?: boolean;
+    guestSessions?: GuestSessionService;
+    onlineRooms?: OnlineRoomService;
+  } = {},
+) {
+  const app = Fastify({ logger: options.logger ?? true });
   const catalog = loadCatalog();
   const sandbox = options.sandbox ?? new SandboxService(catalog);
+  const guestSessions = options.guestSessions;
+  const onlineRooms = options.onlineRooms ?? new OnlineRoomService(catalog);
+  const rateLimits = new Map<string, { startedAt: number; count: number }>();
   await app.register(cors, {
     origin: process.env.WEB_ORIGIN ?? "http://localhost:5173",
   });
+  app.addHook("onSend", async (_request, reply, payload) => {
+    reply.header("X-Content-Type-Options", "nosniff");
+    reply.header("X-Frame-Options", "DENY");
+    reply.header("Referrer-Policy", "strict-origin-when-cross-origin");
+    reply.header(
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=()",
+    );
+    return payload;
+  });
+
+  const withinRateLimit = (key: string, limit: number, windowMs: number) => {
+    const now = Date.now();
+    if (rateLimits.size > 5000) {
+      for (const [existingKey, bucket] of rateLimits)
+        if (now - bucket.startedAt >= windowMs) rateLimits.delete(existingKey);
+    }
+    const bucket = rateLimits.get(key);
+    if (!bucket || now - bucket.startedAt >= windowMs) {
+      rateLimits.set(key, { startedAt: now, count: 1 });
+      return true;
+    }
+    bucket.count += 1;
+    return bucket.count <= limit;
+  };
 
   app.get("/health", async (_request, reply) => {
     try {
@@ -83,6 +127,30 @@ export async function buildApp(options: { sandbox?: SandboxService } = {}) {
     balance: catalog.balance,
   }));
 
+  app.post("/api/guest-session", async (_request, reply) => {
+    if (!withinRateLimit(`guest:${_request.ip}`, 15, 60_000))
+      return reply.code(429).send({ error: "RATE_LIMITED" });
+    if (!guestSessions)
+      return reply.code(503).send({ error: "SESSION_SERVICE_UNAVAILABLE" });
+    const identity = await guestSessions.create();
+    return reply.code(201).send(identity);
+  });
+
+  app.get<{ Params: { roomCode: string } }>(
+    "/api/rooms/:roomCode",
+    async (request, reply) => {
+      if (!withinRateLimit(`room:${request.ip}`, 90, 60_000))
+        return reply.code(429).send({ error: "RATE_LIMITED" });
+      try {
+        return onlineRooms.snapshotByCode(request.params.roomCode);
+      } catch (error) {
+        if (error instanceof Error && "code" in error)
+          return reply.code(404).send({ error: error.code });
+        throw error;
+      }
+    },
+  );
+
   app.post("/api/sandbox/matches", async (request, reply) => {
     const parsed = CreateSandboxSchema.safeParse(request.body);
     if (!parsed.success) {
@@ -93,6 +161,27 @@ export async function buildApp(options: { sandbox?: SandboxService } = {}) {
     }
     try {
       return sandbox.create(parsed.data);
+    } catch (error) {
+      if (error instanceof Error) {
+        return reply.code(400).send({
+          error: "INVALID_MATCH_CONFIGURATION",
+          message: error.message,
+        });
+      }
+      throw error;
+    }
+  });
+
+  app.post("/api/ai/matches", async (request, reply) => {
+    const parsed = CreateAiMatchSchema.safeParse(request.body);
+    if (!parsed.success) {
+      return reply.code(400).send({
+        error: "INVALID_REQUEST",
+        message: parsed.error.issues[0]?.message,
+      });
+    }
+    try {
+      return sandbox.createAi(parsed.data);
     } catch (error) {
       if (error instanceof Error) {
         return reply.code(400).send({
@@ -118,6 +207,9 @@ export async function buildApp(options: { sandbox?: SandboxService } = {}) {
     } catch (error) {
       if (error instanceof SandboxNotFoundError) {
         return reply.code(404).send({ error: "MATCH_NOT_FOUND" });
+      }
+      if (error instanceof SandboxAccessError) {
+        return reply.code(403).send({ error: "VIEWER_FORBIDDEN" });
       }
       if (error instanceof Error) {
         return reply
@@ -148,6 +240,9 @@ export async function buildApp(options: { sandbox?: SandboxService } = {}) {
     } catch (error) {
       if (error instanceof SandboxNotFoundError) {
         return reply.code(404).send({ error: "MATCH_NOT_FOUND" });
+      }
+      if (error instanceof SandboxAccessError) {
+        return reply.code(403).send({ error: "ACTOR_FORBIDDEN" });
       }
       if (error instanceof GameRuleError) {
         return reply

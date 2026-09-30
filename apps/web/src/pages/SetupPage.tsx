@@ -1,70 +1,73 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  calculateLoadoutStats,
-  calculateProjectBattleValues,
-} from "@paddle-tactics/game-core";
 import type { Loadout } from "@paddle-tactics/game-core";
-import { createSandboxMatch, fetchCatalog } from "../lib/api.js";
+import { fetchCatalog } from "../lib/api.js";
 import type { PublicCatalog, SandboxSetup } from "../lib/api.js";
+import { createLocalAiMatch, createLocalMatch } from "../lib/local-game.js";
+import { PlayerAvatar } from "../components/PlayerAvatar.js";
 
 type Seat = "A" | "B";
 type GearChoice = Omit<Loadout, "playerId">;
 type SetupState = Record<Seat, { playerId: string } & GearChoice>;
-type Props = { navigate: (path: string) => void };
+type Props = { navigate: (path: string) => void; isAi: boolean };
 
 function PlayerSetupCard({
   seat,
   setup,
   catalog,
   onChange,
+  title,
 }: {
   seat: Seat;
   setup: SetupState[Seat];
   catalog: PublicCatalog;
   onChange: (seat: Seat, key: keyof SetupState[Seat], value: string) => void;
+  title: string;
 }) {
   const player = catalog.players.find((item) => item.id === setup.playerId)!;
-  const loadout: Loadout = { ...setup };
-  const stats = calculateLoadoutStats(loadout, catalog);
-  const projectValues = calculateProjectBattleValues(stats);
-  const baseline = calculateLoadoutStats(
-    {
-      playerId: setup.playerId,
-      bladeId: catalog.blades[0]!.id,
-      forehandRubberId: catalog.rubbers[0]!.id,
-      backhandRubberId: catalog.rubbers[0]!.id,
-    },
-    catalog,
-  );
-  const changedValues = Object.entries(stats).flatMap(([pairId, roles]) =>
-    (Object.keys(roles) as (keyof typeof roles)[]).flatMap((role) =>
-      (Object.keys(roles[role]) as (keyof (typeof roles)[typeof role])[])
-        .map((side) => ({
-          pairId,
-          role,
-          side,
-          before: baseline[pairId]![role][side],
-          after: roles[role][side],
-        }))
-        .filter((row) => row.before !== row.after),
-    ),
-  );
+  const blade = catalog.blades.find((item) => item.id === setup.bladeId)!;
+  const rubbers = {
+    forehand: catalog.rubbers.find(
+      (item) => item.id === setup.forehandRubberId,
+    )!,
+    backhand: catalog.rubbers.find(
+      (item) => item.id === setup.backhandRubberId,
+    )!,
+  };
+  const statBreakdown = (pairId: string, role: "attack" | "defense") => {
+    const sideValue = (side: "forehand" | "backhand") => {
+      const base = player.stats[pairId]![role][side];
+      const bladeModifier = blade.modifiers
+        .filter((item) => item.pairId === pairId && item.role === role)
+        .reduce((sum, item) => sum + item.value, 0);
+      const rubberModifier = rubbers[side].modifiers
+        .filter((item) => item.pairId === pairId && item.role === role)
+        .reduce((sum, item) => sum + item.value, 0);
+      const value = Math.min(
+        catalog.balance.constantStatMax,
+        Math.max(
+          catalog.balance.constantStatMin,
+          base + bladeModifier + rubberModifier,
+        ),
+      );
+      return { base, bladeModifier, rubberModifier, value };
+    };
+    return { forehand: sideValue("forehand"), backhand: sideValue("backhand") };
+  };
+  const signed = (value: number) => (value >= 0 ? `+${value}` : String(value));
 
   return (
     <section className="setup-card" aria-labelledby={`seat-${seat}`}>
       <div className="seat-heading">
-        <div
-          className={`avatar avatar-${seat.toLowerCase()}`}
-          aria-hidden="true"
-        >
-          <span />
-        </div>
+        <PlayerAvatar
+          className="setup-player-avatar"
+          playerId={player.id}
+          name={player.name}
+        />
         <div>
-          <span className="eyebrow">PLAYER {seat}</span>
+          <span className="eyebrow">{title}</span>
           <h2 id={`seat-${seat}`}>{player.name}</h2>
           <p>{player.style}</p>
         </div>
-        <span className="total-pill">基础 {player.baseTotal}</span>
       </div>
       <div className="select-grid">
         <label className="field field-wide">
@@ -75,7 +78,7 @@ function PlayerSetupCard({
           >
             {catalog.players.map((item) => (
               <option key={item.id} value={item.id}>
-                {item.name} · {item.baseTotal}
+                {item.name}
               </option>
             ))}
           </select>
@@ -124,75 +127,67 @@ function PlayerSetupCard({
           </select>
         </label>
       </div>
-      <div className="preview-summary">
-        <div>
-          <span className="preview-label">配置变化</span>
-          <strong>
-            {changedValues.length
-              ? `${changedValues.length} 项能力变化`
-              : "默认配置"}
-          </strong>
-        </div>
-        <span className="preview-note">相对首个底板与胶皮的常驻值</span>
-      </div>
-      {changedValues.length > 0 && (
-        <details className="change-details">
-          <summary>查看器材带来的数值变化</summary>
-          <div className="change-list">
-            {changedValues.slice(0, 8).map((row) => {
-              const pair = Object.values(catalog.skills.stages)
-                .flatMap((stage) => stage.pairs)
-                .find((item) => item.id === row.pairId)!;
-              const ability =
-                row.role === "attack" ? pair.attackName : pair.defenseName;
-              return (
-                <span key={`${row.pairId}-${row.role}-${row.side}`}>
-                  {row.side === "forehand" ? "正手" : "反手"}·{ability}{" "}
-                  <b>
-                    {row.before} → {row.after} (
-                    {row.after > row.before ? "+" : ""}
-                    {row.after - row.before})
-                  </b>
-                </span>
-              );
-            })}
-            {changedValues.length > 8 && (
-              <small>另有 {changedValues.length - 8} 项变化</small>
-            )}
-          </div>
-        </details>
-      )}
-      <details className="stats-details">
-        <summary>查看 15 项平均战斗值</summary>
+      <details className="stats-details" open>
+        <summary>球员 + 球拍 + 胶皮 · 15 组攻防能力明细</summary>
         <div className="stats-table-wrap">
           {Object.entries(catalog.skills.stages).map(([stageId, stage]) => (
             <section className="stats-stage" key={stageId}>
               <h3>{stage.label}</h3>
               {stage.pairs.map((pair) => (
-                <div className="stats-row" key={pair.id}>
-                  <span>
-                    {pair.attackName}
-                    <small> ↔ {pair.defenseName}</small>
-                  </span>
-                  <b>
-                    {projectValues[pair.id]?.attack.toFixed(1)} /{" "}
-                    {projectValues[pair.id]?.defense.toFixed(1)}
-                  </b>
+                <div className="setup-stat-pair" key={pair.id}>
+                  {(["attack", "defense"] as const).map((role) => {
+                    const breakdown = statBreakdown(pair.id, role);
+                    const ability =
+                      role === "attack" ? pair.attackName : pair.defenseName;
+                    return (
+                      <div className="setup-stat-row" key={role}>
+                        <strong>{ability}</strong>
+                        <span>
+                          正手 {breakdown.forehand.base}
+                          {signed(breakdown.forehand.bladeModifier)}
+                          {signed(breakdown.forehand.rubberModifier)} ={" "}
+                          <b>{breakdown.forehand.value}</b>
+                        </span>
+                        <span>
+                          反手 {breakdown.backhand.base}
+                          {signed(breakdown.backhand.bladeModifier)}
+                          {signed(breakdown.backhand.rubberModifier)} ={" "}
+                          <b>{breakdown.backhand.value}</b>
+                        </span>
+                        <small>
+                          项目战斗值{" "}
+                          {(
+                            (breakdown.forehand.value +
+                              breakdown.backhand.value) /
+                            2
+                          ).toFixed(1)}
+                        </small>
+                      </div>
+                    );
+                  })}
                 </div>
               ))}
             </section>
           ))}
         </div>
+        <p className="stat-formula-note">
+          单侧常驻值 = 球员 + 底板 + 对应侧胶皮（范围{" "}
+          {catalog.balance.constantStatMin}–{catalog.balance.constantStatMax}
+          ）；项目战斗值为正手与反手的平均值。
+        </p>
       </details>
     </section>
   );
 }
 
-export function SetupPage({ navigate }: Props) {
+export function SetupPage({ navigate, isAi }: Props) {
   const [catalog, setCatalog] = useState<PublicCatalog | null>(null);
   const [setups, setSetups] = useState<SetupState | null>(null);
   const [bestOf, setBestOf] = useState<1 | 3 | 5>(3);
   const [firstServerPlayerId, setFirstServer] = useState<Seat>("A");
+  const [difficulty, setDifficulty] = useState<"easy" | "normal" | "hard">(
+    "normal",
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -240,8 +235,10 @@ export function SetupPage({ navigate }: Props) {
         playerA: { id: "A", loadout: { ...setups.A } },
         playerB: { id: "B", loadout: { ...setups.B } },
       };
-      const result = await createSandboxMatch(setup);
-      navigate(`/match/${result.matchId}`);
+      const result = isAi
+        ? createLocalAiMatch({ ...setup, difficulty })
+        : createLocalMatch(setup);
+      navigate(`/match/${result.matchId}${isAi ? "/ai" : ""}`);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "无法创建比赛");
       setLoading(false);
@@ -256,9 +253,13 @@ export function SetupPage({ navigate }: Props) {
       <div className="page-heading-row">
         <div>
           <span className="eyebrow">BUILD YOUR RACKET</span>
-          <h1 className="page-title">配置本地对局</h1>
+          <h1 className="page-title">
+            {isAi ? "配置 AI 对局" : "配置本地对局"}
+          </h1>
           <p className="page-lede">
-            每位选手选择球员、底板与两面胶皮。数值会根据当前配装即时更新。
+            {isAi
+              ? "选择你和 AI 的球员与装备，再设定 AI 难度。难度只影响策略，不会改变规则或数值。"
+              : "每位选手选择球员、底板与两面胶皮。数值会根据当前配装即时更新。"}
           </p>
         </div>
         <span className="version-badge">
@@ -282,6 +283,13 @@ export function SetupPage({ navigate }: Props) {
                 setup={setups[seat]}
                 catalog={catalog}
                 onChange={updateSetup}
+                title={
+                  isAi
+                    ? seat === "A"
+                      ? "YOU"
+                      : "AI OPPONENT"
+                    : `PLAYER ${seat}`
+                }
               />
             ))}
           </div>
@@ -290,6 +298,27 @@ export function SetupPage({ navigate }: Props) {
               <span className="eyebrow">MATCH FORMAT</span>
               <h2>比赛设置</h2>
             </div>
+            {isAi && (
+              <div className="option-group">
+                <span>AI 难度</span>
+                <div className="segmented-control">
+                  {(["easy", "normal", "hard"] as const).map((value) => (
+                    <button
+                      key={value}
+                      className={difficulty === value ? "is-selected" : ""}
+                      onClick={() => setDifficulty(value)}
+                    >
+                      {value === "easy"
+                        ? "简单"
+                        : value === "normal"
+                          ? "普通"
+                          : "困难"}
+                    </button>
+                  ))}
+                </div>
+                <small>纯本地策略计算，不调用付费 AI API。</small>
+              </div>
+            )}
             <div className="option-group">
               <span>赛制</span>
               <div className="segmented-control">
@@ -325,7 +354,11 @@ export function SetupPage({ navigate }: Props) {
               disabled={!canStart || loading}
               onClick={() => void startMatch()}
             >
-              {loading ? "正在开赛…" : "确认配装并开始比赛　↗"}
+              {loading
+                ? "正在开赛…"
+                : isAi
+                  ? "开始 AI 对局　↗"
+                  : "确认配装并开始比赛　↗"}
             </button>
           </section>
         </>

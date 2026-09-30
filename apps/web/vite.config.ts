@@ -7,11 +7,12 @@ export default defineConfig(({ mode }) => {
     process.env.VITE_SERVER_ORIGIN ??
     env.VITE_SERVER_ORIGIN ??
     "http://localhost:3002";
+  const port = Number(process.env.VITE_PORT ?? 5173);
 
   return {
     plugins: [react()],
     server: {
-      port: 5173,
+      port,
       proxy: {
         "/api": serverOrigin,
         "/health": serverOrigin,

@@ -84,6 +84,7 @@ export function derivePublicView(
     dataVersion: state.rules.version,
     attackBonus: state.rules.attackBonus,
     defensePool: state.rules.stages[stage].budget,
+    rallyMaxComparisons: state.rules.stages.rally.maxRounds ?? 5,
     defenderVisibleTopK: state.rules.defenderVisibleTopK,
     explorationEpsilon: state.rules.explorationEpsilon,
     reservePoints:

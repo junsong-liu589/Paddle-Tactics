@@ -8,6 +8,7 @@
     "typecheck": "tsc -b --pretty false"
   },
   "dependencies": {
+    "@paddle-tactics/ai": "workspace:*",
     "@paddle-tactics/game-core": "workspace:*",
     "@paddle-tactics/game-data": "workspace:*",
     "@vitejs/plugin-react": "^6.1.1",

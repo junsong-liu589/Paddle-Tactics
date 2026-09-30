@@ -6,9 +6,11 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json",
-    "db:check": "tsx src/db/check.ts"
+    "db:check": "tsx src/db/check.ts",
+    "start": "node dist/server.js"
   },
   "dependencies": {
+    "@paddle-tactics/ai": "workspace:*",
     "@fastify/cors": "^11.1.0",
     "@paddle-tactics/game-core": "workspace:*",
     "@paddle-tactics/game-data": "workspace:*",

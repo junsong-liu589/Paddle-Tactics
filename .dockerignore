@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+**/dist
+**/.env
+.git
+.github
+reports
+photos
+e2e
+coverage

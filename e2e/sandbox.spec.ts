@@ -15,6 +15,7 @@ test("local two-player BO1 completes from setup through match report", async ({
   page,
 }) => {
   test.setTimeout(120_000);
+  page.on("console", (message) => console.log(`[browser] ${message.text()}`));
   await page.goto("/");
   await expect(page.getByRole("heading", { name: /每一分/ })).toBeVisible();
   await page.getByRole("button", { name: /开始一场对决/ }).click();
@@ -30,14 +31,14 @@ test("local two-player BO1 completes from setup through match report", async ({
 
   // Exercise the actual hot-seat boundary and both player's first lock in UI.
   await page.getByRole("button", { name: "按项目顺序分配" }).click();
-  await page.getByRole("button", { name: /锁定 \d+ 点并交接/ }).click();
+  await page.getByRole("button", { name: /锁定并交接/ }).click();
   await waitForMatchIdle(page);
   await expect(page.locator(".handoff-screen")).toBeVisible();
   await expect(page.locator(".allocation-grid")).toHaveCount(0);
   await page.getByRole("button", { name: /显示选手/ }).click();
   await expect(page.locator(".allocation-panel")).toBeVisible();
   await page.getByRole("button", { name: "按项目顺序分配" }).click();
-  await page.getByRole("button", { name: /锁定 \d+ 点并交接/ }).click();
+  await page.getByRole("button", { name: /锁定并交接/ }).click();
   await waitForMatchIdle(page);
 
   const matchId = page.url().match(/\/match\/([0-9a-f-]+)/i)?.[1];
@@ -50,7 +51,9 @@ test("local two-player BO1 completes from setup through match report", async ({
       });
       const body = (await response.json()) as T;
       if (!response.ok)
-        throw new Error(`Sandbox request failed: ${response.status}`);
+        throw new Error(
+          `Sandbox request failed: ${response.status} ${JSON.stringify(body)}`,
+        );
       return body;
     };
     const catalog = await request<{
@@ -65,6 +68,8 @@ test("local two-player BO1 completes from setup through match report", async ({
       version: number;
       status: "ACTIVE" | "COMPLETED";
       phase: string;
+      rulesetId: "legacy_v1" | "candidate_v4";
+      availableBudget: number;
       bestOf: number;
       playerOrder: ["A" | "B", "A" | "B"];
       point: {
@@ -73,6 +78,7 @@ test("local two-player BO1 completes from setup through match report", async ({
         stage: string;
         attackerPlayerId: "A" | "B";
       };
+      self: { allocation: Record<string, number> | null };
     };
     const readView = async (viewerId: "A" | "B") => {
       const result = await request<{ view: SimulationView }>(
@@ -88,6 +94,8 @@ test("local two-player BO1 completes from setup through match report", async ({
 
     let commands = 0;
     for (; commands < 1_000; commands += 1) {
+      if (commands > 0 && commands % 25 === 0)
+        console.log(`Simulating sandbox command ${commands}`);
       const view = await readView("A");
       if (view.status === "COMPLETED") break;
       if (view.phase.endsWith("_ALLOCATING")) {
@@ -107,12 +115,42 @@ test("local two-player BO1 completes from setup through match report", async ({
           const allocations: Record<string, number> = Object.fromEntries(
             keys.map((key) => [key, 0]),
           );
-          let remaining = rules.budget;
-          for (const key of keys) {
-            const amount = Math.min(remaining, rules.perItemCap);
-            allocations[key] = amount;
-            remaining -= amount;
-            if (remaining === 0) break;
+          const selectedPair =
+            rules.pairs[
+              (actorView.point.number + actorView.point.rallyRound - 1) %
+                rules.pairs.length
+            ]!;
+          if (actorView.rulesetId === "candidate_v4") {
+            let remaining = actorView.availableBudget;
+            if (role === "attack" && stage !== "rally") {
+              allocations[`${selectedPair.id}.attack`] = Math.min(4, remaining);
+            } else if (stage === "rally") {
+              allocations[`${selectedPair.id}.attack`] = 4;
+              remaining -= 4;
+              for (const key of keys.filter((item) =>
+                item.endsWith(".defense"),
+              )) {
+                const amount = Math.min(remaining, 20);
+                allocations[key] = amount;
+                remaining -= amount;
+                if (remaining === 0) break;
+              }
+            } else {
+              for (const key of keys) {
+                const amount = Math.min(remaining, 20);
+                allocations[key] = amount;
+                remaining -= amount;
+                if (remaining === 0) break;
+              }
+            }
+          } else {
+            let remaining = rules.budget;
+            for (const key of keys) {
+              const amount = Math.min(remaining, rules.perItemCap);
+              allocations[key] = amount;
+              remaining -= amount;
+              if (remaining === 0) break;
+            }
           }
           const allocated = (await send(actorId, {
             type: "ALLOCATE",
@@ -128,11 +166,15 @@ test("local two-player BO1 completes from setup through match report", async ({
         }
       } else if (view.phase.endsWith("_SELECTING")) {
         const choices = catalog.skills.stages[view.point.stage]!.pairs;
+        const actorView = await readView(view.point.attackerPlayerId);
+        const fundedPairId = Object.entries(actorView.self.allocation ?? {})
+          .find(([key, points]) => key.endsWith(".attack") && points > 0)?.[0]
+          .split(".")[0];
         const pair =
+          choices.find((candidate) => candidate.id === fundedPairId) ??
           choices[
             (view.point.number + view.point.rallyRound - 1) % choices.length
           ]!;
-        const actorView = await readView(view.point.attackerPlayerId);
         await send(view.point.attackerPlayerId, {
           type: "CHOOSE_ATTACK",
           expectedVersion: actorView.version,
