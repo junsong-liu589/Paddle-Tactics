@@ -234,7 +234,7 @@ Phase 5 验收边界：本地双浏览器在线对局、私有分配、重连策
 - [x] 配置静态 SPA 路由回退并记录免费发布说明
 - [x] 发布到 Cloudflare Pages，并在浏览器中验证公开试玩页可加载
 
-当前分支预览网址：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。该静态网页只支持本地 AI 与同屏双人；Cloudflare Pages 预览部署不包含在线房间服务端。
+当前正式网址：https://paddle-tactics.pages.dev/；原 Preview 网址：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。v4.3 已手动发布到两处，均为纯静态网页；Cloudflare Pages 项目没有 Git 连接，不会随 main 自动部署，且不包含在线房间服务端。
 
 该网页试玩版本地比赛只保存在标签页内存；刷新即丢失。桌面远程联机与房主网络穿透安排在真人试玩反馈之后。
 
@@ -285,4 +285,4 @@ Phase 5 验收边界：本地双浏览器在线对局、私有分配、重连策
 - [x] 固定种子、交换站位与首发的针对性模拟及回归检查，见 `reports/world-cup-v4.3/V4_3_BALANCE_REPORT.md`。
 - [x] 历次产品问题、规则和数值演变归档于 `docs/13_PROJECT_EVOLUTION_V1_TO_V4_3.md`。
 
-本项是赛事产品更新，不代表 Candidate V4 规则正式定稿，也不代表奥运会全部同档平衡目标已达成。用户试玩验收和静态网页重新发布仍待进行。
+本项是赛事产品更新，不代表 Candidate V4 规则正式定稿，也不代表奥运会全部同档平衡目标已达成。v4.3 静态网页已发布到正式与原 Preview 地址；用户试玩复验仍待进行。
