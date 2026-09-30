@@ -4,6 +4,12 @@
 
 > 当前可玩原型使用 `Candidate V4`（Carry 资源规则）；旧版 `balance_v1.1` 与 Candidate V3 作为历史/模拟规则保留。V4 runtime 参数由 `packages/game-core` 提供，实验数据不会自动成为新正式平衡版本。
 
+## 当前发布状态
+
+- 免费网页试玩版已部署到 [Cloudflare Pages](https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/)，可玩浏览器内 AI 和同设备双人。
+- 当前网址是开发分支的预览部署；在线房间服务端尚未部署到公网，因此该网页不支持远程玩家互联。
+- 计划将 GitHub 仓库设为 Public 前，先完成 [`docs/10_LEGAL_ASSETS.md`](docs/10_LEGAL_ASSETS.md) 中的许可证和肖像素材检查。仓库目前没有 `LICENSE`，球员照片授权记录也不完整。
+
 ## 1. 核心玩法
 
 赛前：`球员 + 底板 + 正手胶皮 + 反手胶皮` 形成常驻数值。
@@ -23,20 +29,18 @@
 - 实际比较值 = `项目基础战斗值 + 本阶段该项目临时点`
 - 临时值允许超过 15。
 
-## 3. 推荐技术基线（2026-09）
+## 3. 当前技术栈
 
-- Node.js 24 LTS
-- TypeScript 6.0.x（typescript-eslint 支持 TS 7 后升级）
-- React 19.x + Vite 8.x
-- React Router + Zustand + Tailwind CSS
+- Node.js 24+
+- pnpm 11.19 workspace + TypeScript 6.x
+- React 19.1 + Vite 8.3
 - Fastify 5.x
 - Socket.IO 4.8.x
 - PostgreSQL + Prisma ORM 7.x（锁定 7.x；不要误装 Prisma 8 RC）
-- Zod：网络命令/事件/环境变量/JSON 数据校验
-- Vitest + Playwright
-- pnpm workspace
-- Docker Compose
-- GitHub Actions
+- Zod 4：数据与命令校验
+- Vitest 3 + Playwright 1.63
+- ESLint 10 + Prettier 3
+- Docker Compose + GitHub Actions
 
 ## 4. Monorepo 目标结构
 
@@ -49,6 +53,7 @@ packages/
   game-data/           data/*.json 的类型化加载与校验
   shared-types/        命令/事件/API DTO 与 Zod schema
   ai/                  AI 决策策略
+  balance-simulator/   确定性规则与策略平衡模拟
 
 data/                  当前平衡数据源
 prisma/                 数据库 schema
@@ -134,7 +139,7 @@ corepack pnpm exec playwright install chromium
 corepack pnpm e2e
 ```
 
-Phase 0、Phase 1、Phase 2、Balance Lab、Candidate V3/V4 规则评估、Phase 2.5 球员能力设计、Phase 3 可玩原型、Phase 4 AI 单人模式及 Phase 5 在线双人功能已完成。当前原型保留 8 名球员指定总分，更新 30 项攻防能力并用 20,000 场固定种子 matchup 模拟检查；结果详见 `reports/candidate-v4-player-refresh/CANDIDATE_V4_PLAYER_REPORT.md`。Phase 5 的在线服务端和生产部署模板仍保留；免费网页试玩端仅开放浏览器内 AI 与同屏双人，静态发布不依赖常驻游戏服务器。免费网页试玩版已发布到 Cloudflare Pages：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。该网址是当前开发分支的预览部署；在线房间服务器尚未部署。进度与检查记录见 `docs/06_ROADMAP.md`。
+阶段状态与验收记录见 [`docs/06_ROADMAP.md`](docs/06_ROADMAP.md)。当前球员能力数据及 V4 模拟报告见 `reports/candidate-v4-player-refresh/`；网页试玩与公网发布边界见 [`docs/08_DEPLOYMENT.md`](docs/08_DEPLOYMENT.md)。
 
 按 `docs/06_ROADMAP.md` 的顺序推进，每个 Phase 验收后再进入下一个，不要一次性把多个阶段混在一起。
 
@@ -145,4 +150,4 @@ Phase 0、Phase 1、Phase 2、Balance Lab、Candidate V3/V4 规则评估、Phase
 - 所有比赛结果必须由 `game-core` 计算。
 - 同一套 `game-core` 同时服务 AI、本地沙盒、在线双人和自动平衡模拟。
 - 每一次规则修改都必须同步：文档、测试、数据版本。
-- 公开发布前，真实球员姓名/肖像、品牌图片与商标素材必须单独处理授权；开发期使用自制占位素材。
+- 公开发布前，真实球员姓名/肖像、品牌图片与商标素材必须先完成授权核查；当前清单和未解决事项见 [`docs/10_LEGAL_ASSETS.md`](docs/10_LEGAL_ASSETS.md)。
