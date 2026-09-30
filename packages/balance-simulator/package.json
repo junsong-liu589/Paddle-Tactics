@@ -12,7 +12,9 @@
     "standard": "tsx src/cli.ts --preset standard",
     "full": "tsx src/cli.ts --preset full",
     "rules": "tsx src/cli.ts --mode rules",
-    "equipment": "tsx src/cli.ts --mode equipment"
+    "equipment": "tsx src/cli.ts --mode equipment",
+    "carry:cde": "tsx src/carry-focused-cli.ts",
+    "player:matrix": "tsx src/player-matrix.ts"
   },
   "dependencies": {
     "@paddle-tactics/game-core": "workspace:*",

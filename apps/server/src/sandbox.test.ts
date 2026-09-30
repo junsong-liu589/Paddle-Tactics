@@ -42,15 +42,19 @@ describe("local sandbox HTTP API", () => {
     expect(created.statusCode).toBe(200);
     const { matchId } = created.json<{ matchId: string }>();
     const initialView = created.json<{
-      view: { version: number; point: { stage: "service" } };
+      view: {
+        version: number;
+        rulesetId: string;
+        availableBudget: number;
+        point: { stage: "service" };
+      };
     }>().view;
+    expect(initialView.rulesetId).toBe("candidate_v4");
     const keys = catalog.skills.stages.service.pairs.map(
       (pair) => `${pair.id}.attack`,
     );
     const allocation = Object.fromEntries(keys.map((key) => [key, 0]));
-    allocation[keys[0]!] = 4;
-    allocation[keys[1]!] = 4;
-    allocation[keys[2]!] = 2;
+    allocation[keys[0]!] = 3;
 
     const allocated = await app.inject({
       method: "POST",
@@ -98,11 +102,14 @@ describe("local sandbox HTTP API", () => {
       method: "GET",
       url: `/api/sandbox/matches/${matchId}?viewerId=A`,
     });
-    expect(
-      aView.json<{
-        view: { self: { allocation: Record<string, number> | null } };
-      }>().view.self.allocation,
-    ).toEqual(allocation);
+    const aPublic = aView.json<{
+      view: {
+        self: { allocation: Record<string, number> | null };
+        reservePoints: number;
+      };
+    }>().view;
+    expect(aPublic.self.allocation).toEqual(allocation);
+    expect(aPublic.reservePoints).toBe(0);
     await app.close();
   });
 
@@ -148,7 +155,7 @@ describe("local sandbox HTTP API", () => {
     ).toHaveLength(8);
     expect(
       response.json<{ balance: { version: string } }>().balance.version,
-    ).toBe("balance_v1.1");
+    ).toBe("candidate_v4.1");
     await app.close();
   });
 });

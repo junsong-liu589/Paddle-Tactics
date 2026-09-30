@@ -194,7 +194,7 @@ describe("Candidate V4 resource carry", () => {
     expect(derivePublicView(state, defender).availableBudget).toBe(24);
   });
 
-  it("allows exactly four V4 Rally comparisons and no reallocation after locking", () => {
+  it("allows six V4 Rally comparisons with three attacks per player", () => {
     let state = createMatch(v4Input());
     const pairs = state.rules.stages.rally.pairs;
     state.phase = "RALLY_SELECTING";
@@ -207,7 +207,7 @@ describe("Candidate V4 resource carry", () => {
     for (const player of Object.values(state.players))
       for (const pair of pairs)
         player.projectBattleValues[pair.id] = { attack: 10, defense: 10 };
-    for (let index = 0; index < 4; index += 1) {
+    for (let index = 0; index < 6; index += 1) {
       const attacker = state.currentPoint.attackerPlayerId;
       state = command(state, attacker, {
         type: "CHOOSE_ATTACK",
@@ -220,25 +220,30 @@ describe("Candidate V4 resource carry", () => {
         (event) =>
           event.type === "COMPARISON_REVEALED" && event.stage === "rally",
       ),
-    ).toHaveLength(4);
+    ).toHaveLength(6);
+    const rallyAttackers = state.history
+      .filter((event) => event.type === "COMPARISON_REVEALED")
+      .filter((event) => event.stage === "rally")
+      .map((event) => event.attackerPlayerId);
+    expect(rallyAttackers.filter((id) => id === "A")).toHaveLength(3);
+    expect(rallyAttackers.filter((id) => id === "B")).toHaveLength(3);
+    expect(state.history.at(-1)).toMatchObject({
+      type: "POINT_ENDED",
+      reason: "rally_tie_break",
+    });
     expect(state.reservePoints).toEqual({ A: 0, B: 0 });
   });
 
-  it("validates the one-time Rally mixed pool with separate attack caps", () => {
+  it("allows five independent Rally attack allocations of four points", () => {
     let state = createMatch(v4Input());
     state.phase = "RALLY_ALLOCATING";
     state.currentPoint.stage = "rally";
     state.currentPoint.allocations = { A: null, B: null };
     state.currentPoint.lockedByPlayerIds = [];
-    state.reservePoints.A = 3;
     const pairs = state.rules.stages.rally.pairs;
-    const legal = Object.fromEntries([
-      ...pairs.map((pair) => [allocationSkillKey(pair.id, "attack"), 4]),
-      ...pairs.map((pair, index) => [
-        allocationSkillKey(pair.id, "defense"),
-        index === 0 ? 3 : 0,
-      ]),
-    ]);
+    const legal = Object.fromEntries(
+      pairs.map((pair) => [allocationSkillKey(pair.id, "attack"), 4]),
+    );
     state = command(state, "A", {
       type: "ALLOCATE",
       stage: "rally",
@@ -249,25 +254,66 @@ describe("Candidate V4 resource carry", () => {
         (sum, value) => sum + value,
         0,
       ),
-    ).toBe(23);
-    state = command(state, "A", { type: "LOCK_ALLOCATION", stage: "rally" });
+    ).toBe(20);
+    expect(derivePublicView(state, "A").rallyMaxComparisons).toBe(6);
+  });
+
+  it("rejects a Rally attack ability above four points", () => {
+    const state = createMatch(v4Input());
+    const pairs = state.rules.stages.rally.pairs;
+    const allocations = Object.fromEntries([
+      ...pairs.map((pair) => [allocationSkillKey(pair.id, "attack"), 4]),
+      [allocationSkillKey(pairs[0]!.id, "attack"), 5],
+      ...pairs.map((pair) => [allocationSkillKey(pair.id, "defense"), 0]),
+    ]);
+    const rallyState = {
+      ...state,
+      phase: "RALLY_ALLOCATING" as const,
+      currentPoint: {
+        ...state.currentPoint,
+        stage: "rally" as const,
+        allocations: { A: null, B: null },
+        lockedByPlayerIds: [],
+      },
+    };
     expect(() =>
-      command(state, "B", {
+      applyCommand(rallyState, "A", {
         type: "ALLOCATE",
         stage: "rally",
-        allocations: {
-          ...legal,
-          [allocationSkillKey(pairs[0]!.id, "defense")]: 4,
-        },
+        allocations,
+        expectedVersion: rallyState.version,
       }),
-    ).toThrow(/available budget/);
+    ).toThrow(/to 4 \(attack cap\)/);
+  });
+
+  it("rejects Rally attack plus defense allocation above the current budget", () => {
+    const state = createMatch(v4Input());
+    const pairs = state.rules.stages.rally.pairs;
+    const allocations = Object.fromEntries([
+      ...pairs.map((pair) => [allocationSkillKey(pair.id, "attack"), 4]),
+      ...pairs.map((pair, index) => [
+        allocationSkillKey(pair.id, "defense"),
+        index === 0 ? 1 : 0,
+      ]),
+    ]);
+    const rallyState = {
+      ...state,
+      phase: "RALLY_ALLOCATING" as const,
+      currentPoint: {
+        ...state.currentPoint,
+        stage: "rally" as const,
+        allocations: { A: null, B: null },
+        lockedByPlayerIds: [],
+      },
+    };
     expect(() =>
-      command(state, "A", {
+      applyCommand(rallyState, "A", {
         type: "ALLOCATE",
         stage: "rally",
-        allocations: legal,
+        allocations,
+        expectedVersion: rallyState.version,
       }),
-    ).toThrow(/locked|already/i);
+    ).toThrow(/exceeds available budget 20/);
   });
 
   it("resolves exact four-round ties with an alternating point fallback", () => {

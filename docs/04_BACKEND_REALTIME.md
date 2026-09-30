@@ -1,28 +1,35 @@
 # 04 — 后端、实时协议与状态机
 
 ## 1. REST API（MVP）
+
 - `GET /health`：健康检查
 - `GET /api/catalog`：返回 balanceVersion、球员、底板、胶皮、skill definitions（无私密信息）
 - `POST /api/guest-session`：创建匿名会话，返回短期 session token
 - `GET /api/matches/:id/summary`：完赛公开摘要
 
+Phase 5 已实现 `POST /api/guest-session`（7 天访客令牌；数据库只存 SHA-256 摘要）及 `GET /api/rooms/:roomCode`（房间公开快照）。访客会话创建和房间查询都有 IP 级基础限流与通用安全响应头。
+
 账户、预设配装、排行榜放在后续 Phase，不阻塞核心游戏。
 
 ## 2. Socket.IO 命名空间
+
 使用 `/game`。
 
 ### 客户端 → 服务端命令
+
 建议统一封装：
+
 ```ts
 type CommandEnvelope<T> = {
   clientCommandId: string;
   expectedVersion: number;
   matchId?: string;
   payload: T;
-}
+};
 ```
 
 事件：
+
 - `room:create` `{ bestOf }`
 - `room:join` `{ roomCode }`
 - `room:set-loadout` `{ playerId, bladeId, forehandRubberId, backhandRubberId }`
@@ -34,7 +41,10 @@ type CommandEnvelope<T> = {
 
 `allocations` 的 key 只允许当前阶段合法的 attack/defense 项，服务端校验总预算与单项上限。
 
+所有 `/game` socket 都须通过 `handshake.auth.token` 认证。客户端发出的 `match:command` 信封包含 `clientCommandId`、`expectedVersion` 和 `command`；服务端把身份映射到房间座位，不接受客户端指定 `actorId`。同时秘密分配期间，允许另一位玩家的分配/锁定推进版本后仍在本阶段提交自己的命令；跨阶段或非分配命令仍必须匹配当前版本。重复命令返回原操作者已隔离的缓存视图。
+
 ### 服务端 → 客户端事件
+
 - `room:snapshot`
 - `room:player-joined`
 - `room:player-ready`
@@ -49,23 +59,30 @@ type CommandEnvelope<T> = {
 - `match:opponent-disconnected`
 - `match:opponent-reconnected`
 - `command:rejected`
+- `room:seat`、`match:snapshot`、`match:forfeit`
+
+Phase 5 的每次状态广播都分别调用 `derivePublicView(state, viewerId)` 并单播到对应 socket；不向 Socket.IO 房间广播完整 `MatchState` 或 DomainEvent。房间快照只带双方配装、准备状态和连接状态，不含会话 ID、访客令牌或加点。
 
 ## 3. match:comparison-revealed 示例
+
 ```json
 {
   "pairId": "service_spin",
   "attackerId": "p1",
   "defenderId": "p2",
-  "attack": {"base": 9.5, "temporary": 4, "actual": 13.5},
-  "defense": {"base": 10, "temporary": 1, "actual": 11},
+  "attack": { "base": 9.5, "temporary": 4, "actual": 13.5 },
+  "defense": { "base": 10, "temporary": 1, "actual": 11 },
   "delta": 2.5,
   "outcome": "continue"
 }
 ```
+
 只包含本次发生比较的项目。
 
 ## 4. 状态机
+
 推荐：
+
 ```text
 ROOM_SETUP
   -> SERVICE_ALLOCATING
@@ -73,7 +90,7 @@ ROOM_SETUP
   -> [POINT_END | RECEIVE_ALLOCATING]
   -> RECEIVE_SELECTING
   -> [POINT_END | RALLY_ALLOCATING]
-  -> RALLY_SELECTING (round 1..5)
+  -> RALLY_SELECTING (current Candidate V4 round 1..6; historical rulesets retain their configured limits)
   -> POINT_END
   -> [NEXT_POINT | GAME_END]
   -> [NEXT_GAME | MATCH_END]
@@ -82,7 +99,9 @@ ROOM_SETUP
 两个玩家都锁定 allocation 后，才允许当前有选择权的玩家选择进攻项。
 
 ## 5. 校验规则
+
 服务端必须拒绝：
+
 - 非房间成员命令
 - 非本人命令
 - wrong expectedVersion
@@ -95,6 +114,7 @@ ROOM_SETUP
 - 重复 ready/lock 导致非法状态跳转
 
 ## 6. 重连
+
 - guest session 与 socket 分离。
 - 断线后保留 player slot 60 秒。
 - 重连校验 sessionToken + room/match membership。
@@ -102,7 +122,9 @@ ROOM_SETUP
 - 超过 60 秒：MVP 判负/房间关闭策略由 server config 控制；默认在线比赛判对手获胜并记录 disconnect result。
 
 ## 7. 持久化
+
 完赛保存：
+
 - 规则/平衡版本
 - 双方配置快照
 - 局分和总比分

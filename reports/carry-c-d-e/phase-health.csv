@@ -1,0 +1,4 @@
+plan,serve_comparisons,serve_direct_ends,serve_direct_pct,counter_comparisons,counter_direct_ends,counter_direct_pct,rally_entries,rally_entry_pct_of_serve,rally_direct_ends,rally_direct_pct,rally_tie_breaks,rally_tie_break_pct,average_rally_comparisons
+C,310113,160876,51.877,149237,73019,48.928,76218,24.577,42866,56.241,33352,43.759,2.554
+D,311629,161668,51.878,149961,73274,48.862,76687,24.608,42085,54.879,34602,45.121,2.592
+E,310880,161652,51.998,149228,72608,48.656,76620,24.646,43151,56.318,33469,43.682,2.556

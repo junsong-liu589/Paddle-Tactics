@@ -1,5 +1,5 @@
 {
-  "version": "balance_v1.1",
+  "version": "candidate_v4.1",
   "stages": {
     "service": {
       "label": "发球阶段",

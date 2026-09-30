@@ -7,14 +7,17 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --parallel --filter @paddle-tactics/web --filter @paddle-tactics/server dev",
+    "dev": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --filter @paddle-tactics/ai build && pnpm --parallel --filter @paddle-tactics/web --filter @paddle-tactics/server dev",
+    "web:dev": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --filter @paddle-tactics/ai build && pnpm --filter @paddle-tactics/web dev",
+    "web:build": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --filter @paddle-tactics/ai build && pnpm --filter @paddle-tactics/web build",
+    "web:e2e": "pnpm web:build && playwright test --config playwright.web.config.ts",
     "build": "pnpm db:generate && pnpm -r build",
     "lint": "eslint .",
-    "format": "prettier --write \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md",
-    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"e2e-web/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md docs/08_DEPLOYMENT.md",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"e2e-web/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md docs/08_DEPLOYMENT.md",
     "typecheck": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm -r typecheck",
-    "test": "pnpm --filter @paddle-tactics/game-data build && vitest run",
-    "e2e": "playwright test",
+    "test": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --filter @paddle-tactics/ai build && vitest run",
+    "e2e": "pnpm web:build && playwright test --config playwright.config.ts",
     "data:validate": "pnpm --filter @paddle-tactics/game-data validate",
     "simulate:match": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core simulate",
     "balance:run": "pnpm --filter @paddle-tactics/balance-simulator standard",
@@ -22,8 +25,11 @@
     "balance:full": "pnpm --filter @paddle-tactics/balance-simulator full",
     "balance:rules": "pnpm --filter @paddle-tactics/balance-simulator rules",
     "balance:equipment": "pnpm --filter @paddle-tactics/balance-simulator equipment",
+    "balance:players:v4": "pnpm --filter @paddle-tactics/balance-simulator player:matrix",
+    "balance:carry-cde": "pnpm --filter @paddle-tactics/balance-simulator carry:cde",
     "db:generate": "prisma generate",
-    "db:check": "pnpm db:generate && pnpm --filter @paddle-tactics/server db:check"
+    "db:check": "pnpm db:generate && pnpm --filter @paddle-tactics/server db:check",
+    "db:migrate:deploy": "prisma migrate deploy"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

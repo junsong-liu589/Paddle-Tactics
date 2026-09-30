@@ -87,7 +87,7 @@ Phase 2 开发说明：
 - 沙盒记录只存在于服务端当前进程内，不包含账号、持久化或在线房间功能。
 - 启动：`pnpm dev`；完整检查：`pnpm format:check`、`pnpm lint`、`pnpm typecheck`、`pnpm test`、`pnpm build`、`pnpm e2e`。首次浏览器验收需 `pnpm exec playwright install chromium`。
 
-Phase 2 开发完成，准备进入 Phase 3；未实现 AI、在线对战或持久化。
+Phase 2 本地双人流程完成；之后新增 Candidate V4 和 Phase 3 可玩原型，不含 AI、在线对战或持久化。
 
 ## Balance Simulator & Rules Validation [DONE]
 
@@ -133,13 +133,13 @@ V3 最终输出目录：Quick `reports/2026-09-29T03-44-46-143Z/`，Standard `re
 
 正式球员/器材/技能数据与 `balance_v1.1` 配置未修改。V3 仅作为评估用 ruleset；本任务未进入数据调平或后续产品 Phase。
 
-## Candidate V4 — Carryover resource economy [DONE / REVIEW]
+## Candidate V4 — Carryover resource economy [DONE / APP PROTOTYPE]
 
-- [x] 保留 Legacy V1、历史 Candidate V1 与 Candidate V3；V4 通过 `candidateV4` 显式创建，不切换默认规则。
+- [x] 保留 Legacy V1、历史 Candidate V1 与 Candidate V3；本地原型显式启用 V4，模拟器仍可分别选择 ruleset。
 - [x] 玩家私有 `reservePoints`；Serve/Counter 按本阶段基础预算 + 自身 reserve 结算未使用点，角色变化时仍归原玩家。
 - [x] Serve/Counter 攻击基础 4、攻击单项最多 +4；防守基础 10、无单项上限；可不花满并 Carry。
 - [x] Rally 使用 `20 + reservePoints` 一次性混合分配到 5 攻击 + 5 防守能力；攻击单项最多 +4；点末清零。
-- [x] Rally 最多 4 次比较；对手 reserve 和隐藏 allocation 不出现在 viewer public view；攻击只可通过阈值直接得分。
+- [x] V4 Full 模拟基线使用 Rally 最多 4 次比较（历史实验设置）；对手 reserve 和隐藏 allocation 不出现在 viewer public view；攻击只可通过阈值直接得分。当前可玩 V4 已按下方 Gameplay & UI 修正更新为 6 次。
 - [x] 增加 SaveForRally / AllInEarly / MinimumNeeded / BalancedReserve / SpendAll 资源策略，seeded epsilon 可配置；V1/V3 继续使用原八种策略抽样。
 - [x] 增加资源费用、Carry、Rally 预算分位、布防 HHI、能力使用、paired policy head-to-head 及参数实验报告。
 - [x] Quick 与 Standard：seed `20260928`；Quick 每规则 1,000 场，Standard 每规则 10,000 场；V4 各包含 5 项 one-factor 筛选、3 组聚焦样本和 10 组策略对战。
@@ -154,30 +154,91 @@ Candidate V4 完成记录（seed 20260928）：
 - 10 组策略对战中有 8 组越过 65% 胜率筛查线；例如 AllInEarly 对 MinimumNeeded 胜率 95.73%，SpendAll 对 SaveForRally 为 99.80%。因此不建议把 V4 提升为正式规则。它显著缓解 V3 先手偏差与截断问题，但目前仍有明显资源策略支配性，参数筛选的 carry 率与 Rally 池规模调整也没有解决该问题。
 - V4_BALANCE_REPORT.md、V4_RECOMMENDATIONS.md、resource-economy.csv、carry-distribution.csv、v4-parameter-experiments.csv 是 V4 复核入口。建议下一轮只实验性比较攻击 cap 3/2 和 Serve/Counter 阈值 6，再做策略配对验证；尚未运行这些方案。
 
-本阶段完成，但 V4 不晋升默认规则。本阶段候选参数不写入 data/*.json，正式默认规则继续是 Legacy V1。未开始 Phase 3.
+V4 是当前本地可玩原型采用的规则配置，尚未宣告为最终平衡版本；参数仍由 game-core 的 Candidate V4 runtime defaults 提供。旧版 Legacy V1 数据和规则保留为对照历史。
 
-## Phase 3 — AI 单人模式 [TODO]
+## Phase 2.5 — Candidate V4 球员能力设计 [DONE]
 
-- packages/ai
-- easy / normal / hard
-- AI 只能读 public view
-- AI 加点与选项策略测试
-- 禁止 AI 作弊测试
-- AI 完整 BO3
+- [x] 保持八名球员总分：480 / 460 / 440 档位原值，设计不同正反手、阶段和攻防专长与短板。
+- [x] 更新球员风格描述及 30 个攻防能力常驻值；每阶段、每只手最多一个 10 和一个 9，其余不超过 8。
+- [x] 将原 `balance_v1.1` 球员、技能、平衡配置和校验报告快照保存在 `data/*-balance-v1.1.json`。
+- [x] 固定装备和五种 V4 资源策略，用相同可复现 seed 对 8×8 球员组合模拟 20,000 场。
+- [x] 输出逐项能力高低、球员总体胜率和完整 8×8 matchup 矩阵及 Wilson 95% CI。
 
-## Phase 4 — 在线双人 [TODO]
+报告：`reports/candidate-v4-player-refresh/CANDIDATE_V4_PLAYER_REPORT.md`。固定 seed `20260929` 完成 20,000 场，4 场因 simulator deuce guard 截断；玩家总体胜率区间为 18.71%–82.56%。这是固定规则、装备与 Bot 组合下的强度 sanity check，不以所有球员胜率相等为目标，也不代表最终装备平衡报告。结果呈现显著强弱差异，因此本数据适合作为可玩原型迭代基线，尚不能视为球员平衡验收通过。
 
-- guest session
-- 6位房间码
-- room create/join/ready
-- Socket.IO 命令协议
-- 服务器权威 MatchState
-- version + command id 幂等
-- 60秒断线重连
-- 两个真实浏览器完成 BO3 E2E
-- 隐藏状态泄露测试
+## Phase 3 — 可玩原型 [DONE]
 
-## Phase 5 — PostgreSQL 战报与产品化 [TODO]
+- [x] 赛前选择球员、底板、正手胶皮、反手胶皮，并展示常驻能力预览。
+- [x] 默认完整运行 Candidate V4 规则；`game-core` 是唯一规则计算来源。
+- [x] 阶段预算按本人私有 reserve 展示；允许少花点并 Carry，攻击支出限制符合 V4 cap。
+- [x] 保留双方秘密分配、按当前玩家切换视图、攻防揭晓、比分和完整赛果页。
+- [x] 更新 HTTP 和 Playwright 流程测试，覆盖一场完整 BO1。
+- [x] 不实现 AI、在线对战、排行榜或复杂决策系统。
+
+### Gameplay & UI Feedback Update [DONE]
+
+- [x] Rally 分配修正为 5 项攻击各自最多 +4、5 项防守无单项上限，共享总支出不超过 `20 + Carry`；移除前端错误的 Rally 攻击总计 4 点限制，保留 Serve/Counter 单一攻击能力最多 4 点。
+- [x] 当前 V4 最多比较 6 次，按 A/B/A/B/A/B 轮流进攻；第 6 次未直接决胜时进入既有 V4 Tie Break。Legacy V1、Candidate V3 和历史模拟数据仍保留原轮数。
+- [x] 加入对抗状态人物卡、头像、阶段事件与分步能力揭晓；全局动画时长配置并提供快速显示和跳过。
+- [x] 照片映射到八名球员 ID，原图保存在 `photos/`；Pillow 流程输出 512×512 WebP，头像加载失败时显示首字 fallback。
+- [x] Game-core 回归测试覆盖五项攻击各 +4、单项 +5 拒绝、攻击与防守合计超预算拒绝、六次比较/双方各三次攻击/第六次 Tie Break。
+- [x] Playwright 覆盖头像缺图 fallback 与对局事件动画跳过；完整格式、lint、typecheck、unit test、build、E2E 验收记录在本次变更报告。
+
+头像生成：`python -m pip install -r scripts/requirements-player-photos.txt` 后执行 `python scripts/process-player-photos.py`。头像裁切焦点集中配置于该脚本，不修改原图。
+
+### Gameplay & UI Feedback Follow-up [DONE]
+
+- [x] 首页规则入口导航到站内整理后的 Candidate V4 规则页。
+- [x] 选人页去掉球员总分展示，完整列出 15 组攻防能力的正反手 `球员 + 底板 + 胶皮 = 常驻值` 公式和项目平均战斗值。
+- [x] 加入六首原创程序化循环配乐，按菜单、选手配置、比赛切换；设置页支持持久化静音和音量调整。配乐方向参考及许可核查记录在 `docs/AUDIO_ATTRIBUTION.md`。
+- [x] Tie Break 文案更正为六轮；赛后逐轮列出双方实际加点与攻防值。
+- [x] 每分胜负展示节奏延长一倍；对局页底部增加双方同步可见的公开比赛信息与逐次攻防日志。
+
+## Phase 4 — AI 单人模式 [DONE]
+
+- [x] `packages/ai` 实现 Easy / Normal / Hard 三档纯 TypeScript 策略，seeded 决策可复现；不接入外部模型或付费 AI API。
+- [x] AI 接收自己的 `derivePublicView` 视图和公开技能目录；不接收完整 `MatchState`，不能读取真人未揭晓分配。
+- [x] 服务端 `/api/ai/matches` 创建单人对局，并在玩家操作后自动执行 AI 的分配、锁定和进攻命令；所有命令继续经过 `game-core`。
+- [x] AI 对局只允许真人使用 A 视图和提交 A 命令；B 视图和 B 命令返回 403。AI 加点在真人 DTO 中不包含。
+- [x] 前端可配置双方球员/器材、BO1/3/5 与 AI 难度；单人对局不出现本地双人屏幕交接。
+- [x] AI 单元测试覆盖合法分配、固定 seed 可复现、攻方约束和 viewer-specific 数据边界。
+- [x] 难度 sanity check 以不同球员、镜像座位和轮换首发进行 60 场/策略配对；Hard > Normal、Normal > Easy、Hard > Easy，均高于 50%。这是策略级回归检查，不代表全面平衡报告。
+- [x] 后端 API 测试验证三种难度均完成 BO1，并验证禁止读取或冒充 AI 玩家。
+- [x] Playwright Edge happy path：从选择 AI 难度开始，实际操作发球阶段，再完成 BO1 并查看赛果。
+
+开发边界：AI 仅在服务器内用本地 CPU 运行，没有 LLM 推理或 API 调用。对局仍保存在当前服务进程内存；本阶段不实现在线房间、持久化或公网部署。Candidate V4 和 `data/` 基准数据未因 AI 阶段调整。
+
+验收命令：`pnpm format:check`、`pnpm lint`、`pnpm typecheck`、`pnpm test`、`pnpm build`、`pnpm e2e`。其中 E2E 使用系统 Microsoft Edge。
+
+## Phase 5 — 在线双人 [DONE · 免费网页试玩版已发布]
+
+- [x] guest session（7 天令牌；数据库只保留 token SHA-256 摘要）
+- [x] 6 位房间码、创建/加入/准备
+- [x] Socket.IO `/game` namespace 认证和命令协议
+- [x] 单进程 Room service 保存完整权威 MatchState，按 viewer 单播 `derivePublicView`
+- [x] expectedVersion 检查、同步隐藏分配并发处理、clientCommandId 幂等
+- [x] 60 秒断线重连；超时后告知对手获胜
+- [x] 隐藏分配隔离、重放和版本冲突单元测试
+- [x] 两个真实浏览器创建/加入房间、完成在线 BO1，并确认双方收到相同的最终比分
+- [x] 生产 Docker Compose、静态前端、Fastify/Socket.IO、PostgreSQL、Caddy 自动 HTTPS 与 WebSocket 反代配置
+- [x] PostgreSQL 访客会话迁移、服务健康检查与连接验证
+- [ ] 在线房间服务端公网部署（需配置公网主机、域名 DNS、HTTPS 与数据库；免费静态试玩版不包含在线房间）
+
+Phase 5 验收边界：本地双浏览器在线对局、私有分配、重连策略、数据库会话和单实例生产部署模板均已实现并验收。在线房间服务端仍需部署到公网主机，并配置域名 DNS 与 HTTPS；房间与对局状态仍在单进程内存，server 重启会丢失未完成房间。完整战报持久化、自动备份配置与多节点扩展留待后续 Phase。
+
+### 免费网页试玩版部署状态
+
+- [x] 网页目录页只暴露本地 AI 与同屏双人，不依赖游戏后端入口
+- [x] 浏览器直接打包校验后的 `data/*.json`，复用 `game-core` 与 `ai`
+- [x] 独立 `web:dev` / `web:build`，静态构建不生成 Prisma Client、不连接 PostgreSQL
+- [x] 配置静态 SPA 路由回退并记录免费发布说明
+- [x] 发布到 Cloudflare Pages，并在浏览器中验证公开试玩页可加载
+
+当前分支预览网址：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。该静态网页只支持本地 AI 与同屏双人；Cloudflare Pages 预览部署不包含在线房间服务端。
+
+该网页试玩版本地比赛只保存在标签页内存；刷新即丢失。桌面远程联机与房主网络穿透安排在真人试玩反馈之后。
+
+## Phase 6 — PostgreSQL 战报与产品化 [TODO]
 
 - Prisma Match / Participant / Event
 - 完赛持久化
@@ -186,7 +247,7 @@ Candidate V4 完成记录（seed 20260928）：
 - 错误处理/日志/基础限流
 - Docker production build
 
-## Phase 6 — 平衡、表现与部署 [TODO]
+## Phase 7 — 平衡、表现与部署 [TODO]
 
 - 3136 配装枚举分析
 - 策略机器人批量模拟

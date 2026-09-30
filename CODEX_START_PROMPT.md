@@ -1,39 +1,25 @@
-# CODEX 启动提示词
+# 项目继续开发提示词
 
-你现在接手一个新项目：**乒乓对决（PingPong Duel）**。
+你正在继续开发 **乒乓对决（Paddle Tactics）**。这是一个乒乓球题材的回合制策略游戏。开始工作前，请先检查当前 Git 分支与工作区状态，并阅读 `AGENTS.md`、`README.md`、`docs/` 中相关设计文档、`data/` 当前基准数据、Prisma schema 和部署配置。
 
-这是一个乒乓球题材的回合制隐藏信息策略游戏，不是 3D 物理游戏。项目的完整 GDD、数值数据、技术架构和 ROADMAP 已经放在当前目录。
+## 当前项目状态
 
-请严格执行以下步骤：
+- Phase 0–5 的开发阶段已完成；Phase 6（赛果持久化与产品化）及 Phase 7（完整平衡、表现与正式部署）仍在 `docs/06_ROADMAP.md` 中待办。不要因为使用本提示词就自动开始下一阶段，按用户本轮目标执行。
+- 当前可玩规则使用 Candidate V4。未经用户明确要求，不要改变已确认规则、V4 Carry 核心机制或 `data/` 中的已定数值。
+- 免费网页试玩版已部署：[Cloudflare Pages 预览](https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/)。它只支持浏览器本地 AI 和同设备双人，不需要后端或付费 AI API。
+- Fastify、Socket.IO、PostgreSQL 在线房间实现与生产 Docker/Caddy 模板已在仓库；在线房间服务端尚未部署到公网。不要把静态网页试玩链接描述成远程联机服务。
+- 当前分支/PR 与 Git 状态可能变化；每次开始任务都重新检查，不要依赖这段提示词中的旧分支名或 PR 编号。
 
-1. 先完整阅读 `AGENTS.md`。
-2. 再阅读：
-   - `README.md`
-   - `docs/01_GAME_RULES.md`
-   - `docs/02_ARCHITECTURE.md`
-   - `docs/03_FRONTEND_UX.md`
-   - `docs/04_BACKEND_REALTIME.md`
-   - `docs/06_ROADMAP.md`
-   - `data/skills.json`
-   - `data/players.json`
-   - `data/blades.json`
-   - `data/rubbers.json`
-   - `data/balance-config.json`
-3. 检查当前仓库现状，不假设任何工程文件已经存在。
-4. **本次只完成 ROADMAP 的 Phase 0 — 工程骨架。不要提前实现 Phase 1~6。**
-5. 使用 pnpm workspace 建立 monorepo：
-   - `apps/web`: React + TypeScript + Vite
-   - `apps/server`: Node + TypeScript + Fastify
-   - `packages/game-core`
-   - `packages/game-data`
-   - `packages/shared-types`
-   - `packages/ai`
-6. 技术基线：Node 24 LTS、TypeScript 7.x、React 19.x、Vite 8.x、Fastify 5.x、Socket.IO 4.8.x、PostgreSQL、Prisma ORM **锁定 7.x**、Zod、Vitest、Playwright、Zustand。Prisma 8 目前不要使用。
-7. 配置 TypeScript strict、ESLint、Prettier、Vitest、根级 scripts、`.env.example`、Docker Compose PostgreSQL、Prisma schema、GitHub Actions。
-8. server 实现 `GET /health`；web 首页显示项目名并能够请求/展示 server health。
-9. 不要把 game rules 写进 UI 组件；Phase 0 只做包骨架和接口边界。
-10. 完成后必须实际运行：lint、typecheck、test、build；能运行 Docker 时再验证 PostgreSQL health。修复所有你能够修复的问题。
-11. 更新 `docs/06_ROADMAP.md`，只把实际验收通过的 Phase 0 项标记完成。
-12. 最终向我汇报：新增/修改文件、命令结果、工程结构、未解决问题、是否满足 Phase 0 验收标准。不要自动开始 Phase 1，等我确认。
+## 关键架构与规则边界
 
-额外硬约束：未来在线模式必须由服务端保存隐藏 allocation；客户端永远不能收到对方未揭晓的加点。`packages/game-core` 必须保持纯 TypeScript、无框架/IO 依赖。
+- `packages/game-core` 是纯 TypeScript 规则引擎，不得依赖 React、Fastify、Socket.IO、Prisma 或浏览器 API。
+- 在线模式由服务端保存完整状态；客户端只可收到 viewer-specific public view，不能获得对手未揭晓的加点。
+- 本地 AI 是纯 TypeScript 策略，不调用外部 LLM 或付费 API。
+- 球员、底板、胶皮与规则数值以 `data/` 和其版本化文件为准，不在 React 组件中硬编码。
+- 规则修改必须同步文档、测试和数据版本；具体规则以 `docs/01_GAME_RULES.md` 与当前 V4 实现为准。
+
+## 公开仓库前注意
+
+仓库目前没有 `LICENSE`；`photos/` 和网页 WebP 头像包含真实球员照片，授权来源尚未完整记录。用户准备将仓库设为 Public 前，先按 `docs/10_LEGAL_ASSETS.md` 解决许可证选择和图片授权；不要擅自替用户选择代码许可证，也不要自行删除或替换已接入的素材。
+
+所有改动遵循 `AGENTS.md`。先检查现状，再按本轮用户要求修改；运行相应的 format、lint、typecheck、tests、build 和 UI 验收；修复可确认的代码问题，并如实报告环境阻塞。

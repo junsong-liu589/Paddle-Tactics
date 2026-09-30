@@ -8,6 +8,22 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: pingpong
+          POSTGRES_PASSWORD: pingpong_ci
+          POSTGRES_DB: pingpong_duel
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U pingpong -d pingpong_duel"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://pingpong:pingpong_ci@localhost:5432/pingpong_duel?schema=public
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -24,6 +40,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
+      - run: pnpm db:migrate:deploy
       - run: pnpm simulate:match
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm e2e

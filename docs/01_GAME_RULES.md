@@ -1,7 +1,15 @@
 # 01 — 游戏规则（实现级规范）
 
+> **当前可玩原型规则：Candidate V4。** `apps/server` 创建本地对局时显式启用 `DEFAULT_CANDIDATE_V4_SETTINGS`；资源预算、Carry、攻击上限和阶段阈值以 `packages/game-core/src/match.ts` 为准。下方原有章节记录 `balance_v1.1` 历史规则，供历史测试和模拟对照使用，不代表当前原型流程。
+
+Candidate V4 当前可玩参数：发球/反制分别使用攻击预算 4、防守预算 10；未花点数以 100% Carry 进入本人后续阶段；相持共享预算为 20 + 本人 reserve，5 项进攻能力各自最多 +4，5 项防守能力不设单项上限，总支出不超过共享预算；阶段阈值 5 / 5 / 4；最多进行 6 次相持比较，双方各有最多 3 次进攻；防守方分配前可见对手基础攻击 Top 3。Carry 和未揭晓分配只在服务器完整状态中保存；公开视图仅返回本人的 reserve 和分配。V4 runtime 设置由 `DEFAULT_CANDIDATE_V4_SETTINGS` 提供。
+
+`data/players.json` 是 Candidate V4 当前玩家能力配置；各球员总分仍保持原档位值。`data/players-balance-v1.1.json`、`data/skills-balance-v1.1.json`、`data/balance-config-balance-v1.1.json` 与 `data/validation-report-balance-v1.1.json` 保存历史平衡快照。底板和胶皮数据未调整。
+
 ## 1. 赛前构筑
+
 每名玩家必须选择：
+
 - 1 名球员
 - 1 块底板
 - 1 张正手胶皮
@@ -10,17 +18,23 @@
 底板修正同时作用于正手/反手；胶皮只作用于安装侧。
 
 单侧常驻值：
+
 ```text
 constant(side, skill) = clamp(playerBase + bladeModifier + rubberModifier, 1, 15)
 ```
+
 项目基础战斗值：
+
 ```text
 projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 ```
+
 比赛操作层不选择正手/反手。
 
 ## 2. 15 组攻防能力
+
 ### 发球阶段
+
 - 发球落点 ↔ 落点预判
 - 发球速度 ↔ 接发反应
 - 发球旋转 ↔ 旋转判断
@@ -28,6 +42,7 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 - 发球欺骗 ↔ 发球识别
 
 ### 反制阶段
+
 - 摆短 ↔ 短球控制
 - 劈长 ↔ 长球启动
 - 拧拉 ↔ 防拧拉
@@ -35,6 +50,7 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 - 接发变化 ↔ 二板应变
 
 ### 相持阶段
+
 - 拉冲 ↔ 抗拉冲
 - 相持 ↔ 相持防守
 - 变线 ↔ 线路预判
@@ -44,7 +60,9 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 完整 ID 见 `data/skills.json`。
 
 ## 3. 每一分流程
+
 ### 3.1 发球阶段
+
 - 本分发球方：10 点，只能分给 5 个发球进攻项目，单项最多 +4。
 - 接球方：10 点，只能分给对应 5 个发球防守项目，单项最多 +4。
 - 双方秘密分配并锁定；锁定后仍不向对方公开分配。
@@ -54,6 +72,7 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 - `Δ >= 5`：进攻方得分；`Δ <= -5`：防守方得分；否则进入反制。
 
 ### 3.2 反制阶段
+
 - 原接球方成为进攻方：10 点，只能加 5 个反制进攻项目，单项最多 +4。
 - 原发球方成为防守方：10 点，只能加 5 个反制防守项目，单项最多 +4。
 - 双方重新秘密分配，本阶段点数与发球阶段完全独立。
@@ -61,6 +80,7 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 - 揭晓对应攻防项；绝对差达到 5 立即得分，否则进入相持。
 
 ### 3.3 相持阶段
+
 - 双方各 15 点。
 - 每名玩家可在本阶段 5 个进攻项目 + 5 个防守项目中自由分配，单项最多 +3。
 - 双方一次性秘密分配并锁定。
@@ -72,32 +92,39 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 - 最多 5 轮。
 
 5 轮仍未直接结束：
+
 1. 比较累计优势；
 2. 若累计优势 = 0，比较正优势轮数；
 3. 仍相同，比较单轮最大优势；
 4. 仍完全相同，第 5 轮防守方得分。
 
 ## 4. 隐藏信息规则
+
 加点前，双方都能看到：
+
 - 双方当前配装（MVP 公开）
 - 每个能力的项目基础战斗值
 - 当前谁已锁定
 - 已经发生过的比较与已揭晓数字
 
 绝不能看到：
+
 - 对方尚未发生比较的临时点分配
 - 对方当前阶段完整 allocation 对象
 
 当某项发生比较时，只揭晓该次涉及的攻防两项临时点和最终值。其他未触发项目继续隐藏。
 
 ## 5. 比赛计分
+
 - 一局 11 分，必须领先 2 分。
 - 0:0 到 9:9：每名玩家连续发 2 分后换发。
 - 10:10 后：每分交换发球权。
 - 默认 BO3；房间可选 BO1/BO3/BO5。
 
 ## 6. 发球轮换实现要求
+
 不要用“比分是偶数”之类脆弱判断。规则引擎应保存/推导：
+
 - initialServerPlayerId
 - pointsPlayedInCurrentGame
 - isDeuce
@@ -105,11 +132,14 @@ projectBase(skill) = (constant(forehand, skill) + constant(backhand, skill)) / 2
 普通阶段按 `floor(pointsPlayed / 2) % 2` 切换；进入 deuce 后按每分切换，同时保证从 10:10 后的下一分开始轮换正确。必须有单测覆盖 9:9、10:9、10:10、11:10、11:11 等边界。
 
 ## 7. 球员/装备数据
+
 不要从本文件复制数值进代码。权威数据在：
+
 - `data/players.json`
 - `data/blades.json`
 - `data/rubbers.json`
 - `data/balance-config.json`
 
 ## 8. AI 公平性
+
 AI 只能读取真人在同一时刻可读的公开信息。困难 AI 也禁止访问未揭晓 allocation。

@@ -41,6 +41,9 @@ importers:
       '@fastify/cors':
         specifier: ^11.1.0
         version: 11.3.0
+      '@paddle-tactics/ai':
+        specifier: workspace:*
+        version: link:../../packages/ai
       '@paddle-tactics/game-core':
         specifier: workspace:*
         version: link:../../packages/game-core
@@ -87,6 +90,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@paddle-tactics/ai':
+        specifier: workspace:*
+        version: link:../../packages/ai
       '@paddle-tactics/game-core':
         specifier: workspace:*
         version: link:../../packages/game-core
@@ -119,10 +125,20 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
-  packages/ai: {}
-
-  packages/game-core:
+  packages/ai:
     dependencies:
+      '@paddle-tactics/game-core':
+        specifier: workspace:*
+        version: link:../game-core
+      '@paddle-tactics/game-data':
+        specifier: workspace:*
+        version: link:../game-data
+
+  packages/balance-simulator:
+    dependencies:
+      '@paddle-tactics/game-core':
+        specifier: workspace:*
+        version: link:../game-core
       '@paddle-tactics/game-data':
         specifier: workspace:*
         version: link:../game-data
@@ -134,11 +150,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
-  packages/balance-simulator:
+  packages/game-core:
     dependencies:
-      '@paddle-tactics/game-core':
-        specifier: workspace:*
-        version: link:../game-core
       '@paddle-tactics/game-data':
         specifier: workspace:*
         version: link:../game-data

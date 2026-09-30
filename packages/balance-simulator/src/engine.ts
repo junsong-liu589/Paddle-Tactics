@@ -68,6 +68,16 @@ export type ResourceMetrics = {
   reserveAtCounter: number[];
   reserveAtRally: number[];
   rallyBudget: number[];
+  rallyAttackSpend: number[];
+  rallyDefenseSpend: number[];
+  efficiency: Array<{
+    stage: "service" | "receive";
+    role: "attack" | "defense";
+    remaining: number;
+    pointWon: boolean | null;
+    gameWon: boolean | null;
+    matchWon: boolean | null;
+  }>;
   defenseConcentration: number[];
   rallyAttackAllocation: Record<string, number>;
   rallyAttackUsage: Record<string, number>;
@@ -92,6 +102,8 @@ export type MatchSetup = {
   policyB: BotPolicy;
   firstServerA: boolean;
   random: Random;
+  /** Simulation-only multiplier applied when reserve crosses a stage boundary. */
+  carryReward?: { serviceToCounter: number; counterToRally: number };
 };
 
 type OutcomeCounters = Omit<
@@ -114,8 +126,25 @@ function command(
   state: MatchState,
   playerId: PlayerId,
   payload: Parameters<typeof applyCommand>[2],
+  carryReward?: MatchSetup["carryReward"],
 ): MatchState {
-  return applyCommand(state, playerId, payload).state;
+  const previousStage = state.currentPoint.stage;
+  const pointNumber = state.currentPoint.number;
+  const next = applyCommand(state, playerId, payload).state;
+  if (carryReward && next.currentPoint.number === pointNumber) {
+    const multiplier =
+      previousStage === "service" && next.currentPoint.stage === "receive"
+        ? carryReward.serviceToCounter
+        : previousStage === "receive" && next.currentPoint.stage === "rally"
+          ? carryReward.counterToRally
+          : 1;
+    if (multiplier !== 1)
+      for (const id of next.playerOrder)
+        next.reservePoints[id] = Math.floor(
+          next.reservePoints[id]! * multiplier,
+        );
+  }
+  return next;
 }
 
 function bump(record: Record<string, number>, key: string, amount = 1): void {
@@ -201,6 +230,9 @@ function runReducerMatch(
     reserveAtCounter: [],
     reserveAtRally: [],
     rallyBudget: [],
+    rallyAttackSpend: [],
+    rallyDefenseSpend: [],
+    efficiency: [],
     defenseConcentration: [],
     rallyAttackAllocation: {},
     rallyAttackUsage: {},
@@ -211,6 +243,17 @@ function runReducerMatch(
   const firstRallyAttackerByPoint = new Map<number, PlayerId>();
   const lastRallyAttackerByPoint = new Map<number, PlayerId>();
   let maxActions = 0;
+  const matchEfficiency: Array<{
+    pointNumber: number;
+    stage: "service" | "receive";
+    role: "attack" | "defense";
+    playerId: PlayerId;
+    remaining: number;
+  }> = [];
+  const applyMatchCommand = (
+    playerId: PlayerId,
+    payload: Parameters<typeof applyCommand>[2],
+  ) => command(state, playerId, payload, setup.carryReward);
   while (state.status === "ACTIVE") {
     if (++maxActions > 20000)
       throw new Error("Core match exceeded action guard");
@@ -292,13 +335,13 @@ function runReducerMatch(
             }
           }
         }
-        state = command(state, playerId, {
+        state = applyMatchCommand(playerId, {
           type: "ALLOCATE",
           expectedVersion: state.version,
           stage,
           allocations: allocation,
         });
-        state = command(state, playerId, {
+        state = applyMatchCommand(playerId, {
           type: "LOCK_ALLOCATION",
           expectedVersion: state.version,
           stage,
@@ -332,20 +375,51 @@ function runReducerMatch(
         }
       }
       if (candidateV4 && stage === "rally") {
+        let rallyAttackSpend = 0;
+        let rallyDefenseSpend = 0;
         for (const playerId of [playerA, playerB]) {
           const allocation = state.currentPoint.allocations[playerId] ?? {};
           for (const [key, value] of Object.entries(allocation)) {
             if (key.endsWith(".attack")) {
+              rallyAttackSpend += value;
               bump(resourceMetrics.rallyAttackAllocation, key, value);
               bump(resourceMetrics.rallyAttackUsage, key, Number(value > 0));
-            }
+            } else rallyDefenseSpend += value;
           }
         }
+        resourceMetrics.rallyAttackSpend.push(rallyAttackSpend);
+        resourceMetrics.rallyDefenseSpend.push(rallyDefenseSpend);
       }
     } else if (state.phase.endsWith("_SELECTING")) {
       let attackRankCategory: string | null = null;
       const stage = state.currentPoint.stage;
       const attackerId = state.currentPoint.attackerPlayerId;
+      if (candidateV4 && stage !== "rally") {
+        for (const playerId of [playerA, playerB]) {
+          const allocation = state.currentPoint.allocations[playerId] ?? {};
+          const spent = Object.values(allocation).reduce(
+            (sum, value) => sum + value,
+            0,
+          );
+          const attacking = playerId === attackerId;
+          const available =
+            (stage === "service"
+              ? attacking
+                ? candidateV4.serviceAttackBudget
+                : candidateV4.serviceDefenseBudget
+              : attacking
+                ? candidateV4.counterAttackBudget
+                : candidateV4.counterDefenseBudget) +
+            state.reservePoints[playerId]!;
+          matchEfficiency.push({
+            pointNumber: state.currentPoint.number,
+            stage,
+            role: attacking ? "attack" : "defense",
+            playerId,
+            remaining: available - spent,
+          });
+        }
+      }
       const policy = attackerId === playerA ? policyA : policyB;
       const pairId = choosePair(
         policy,
@@ -371,7 +445,7 @@ function runReducerMatch(
         else counters.attackOffTop3Choices += 1;
       }
       const previousHistoryLength = state.history.length;
-      state = command(state, attackerId, {
+      state = applyMatchCommand(attackerId, {
         type: "CHOOSE_ATTACK",
         expectedVersion: state.version,
         pairId,
@@ -480,7 +554,7 @@ function runReducerMatch(
       }
     } else if (state.phase === "POINT_END" || state.phase === "GAME_END") {
       const before = state.history.length;
-      state = command(state, playerA, {
+      state = applyMatchCommand(playerA, {
         type: "ADVANCE",
         expectedVersion: state.version,
       });
@@ -489,6 +563,24 @@ function runReducerMatch(
           counters.rallyTieBreaks += 1;
       }
     } else throw new Error(`Unexpected core phase ${state.phase}`);
+  }
+  const pointWinnerByNumber = new Map<number, PlayerId>();
+  for (const item of state.history)
+    if (item.type === "POINT_ENDED")
+      pointWinnerByNumber.set(item.pointNumber, item.winnerPlayerId);
+  for (const item of matchEfficiency) {
+    const pointWinner = pointWinnerByNumber.get(item.pointNumber);
+    const completed = state.winnerPlayerId !== null;
+    const won = state.winnerPlayerId === item.playerId;
+    resourceMetrics.efficiency.push({
+      stage: item.stage,
+      role: item.role,
+      remaining: item.remaining,
+      pointWon:
+        pointWinner === undefined ? null : pointWinner === item.playerId,
+      gameWon: completed ? won : null,
+      matchWon: completed ? won : null,
+    });
   }
   return {
     ...buildOutcome(state, policyA, policyB, counters, setup.firstServerA),

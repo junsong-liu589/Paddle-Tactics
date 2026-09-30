@@ -1,0 +1,58 @@
+{
+  "version": "balance_v1.1",
+  "constantStatMin": 1,
+  "constantStatMax": 15,
+  "temporaryStatsMayExceedConstantCap": true,
+  "projectBattleValueFormula": "(forehandConstant + backhandConstant) / 2",
+  "actualComparisonFormula": "projectBattleValue + stageTemporaryPoints",
+  "service": {
+    "budget": 10,
+    "perItemCap": 4,
+    "threshold": 5
+  },
+  "receive": {
+    "budget": 10,
+    "perItemCap": 4,
+    "threshold": 5
+  },
+  "rally": {
+    "budget": 15,
+    "perItemCap": 3,
+    "threshold": 4,
+    "maxRounds": 5
+  },
+  "scoring": {
+    "pointsToWinGame": 11,
+    "winBy": 2,
+    "serveRotationBeforeDeuce": 2,
+    "serveRotationAtDeuce": 1,
+    "defaultBestOf": 3,
+    "allowedBestOf": [
+      1,
+      3,
+      5
+    ]
+  },
+  "rallyTieBreak": [
+    "cumulativeAdvantage",
+    "positiveAdvantageRoundCount",
+    "largestSingleRoundAdvantage",
+    "fifthRoundDefenderWins"
+  ],
+  "playerTiers": {
+    "480": [
+      "ma-long",
+      "fan-zhendong",
+      "zhang-jike"
+    ],
+    "460": [
+      "xu-xin",
+      "wang-chuqin"
+    ],
+    "440": [
+      "lin-gaoyuan",
+      "tomokazu-harimoto",
+      "truls-moregard"
+    ]
+  }
+}

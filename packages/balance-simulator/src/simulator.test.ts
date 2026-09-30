@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
+  allocationSkillKey,
   createMatch,
   derivePublicView,
+  DEFAULT_CANDIDATE_V4_SETTINGS,
   resolveBattleComparison,
   resolveGamePoint,
   resolveRallyTieBreak,
@@ -91,6 +93,46 @@ describe("balance simulator", () => {
     });
     expect(first).toEqual(second);
     expect(["A", "B", null]).toContain(first.winner);
+  });
+
+  it("simulates Rally attack points per ability within the shared V4 budget", () => {
+    const state = createMatch({
+      id: "sim-rally-allocation",
+      bestOf: 1,
+      firstServerPlayerId: "A",
+      playerA: { id: "A", loadout },
+      playerB: { id: "B", loadout: { ...loadout } },
+      catalog,
+      candidateV4: DEFAULT_CANDIDATE_V4_SETTINGS,
+    });
+    state.phase = "RALLY_ALLOCATING";
+    state.currentPoint.stage = "rally";
+    state.reservePoints.A = 20;
+    state.rules.explorationEpsilon = 0;
+    const view = derivePublicView(state, "A");
+    const allocation = allocateForCore(
+      "SpendAllBot",
+      view,
+      catalog,
+      "rally",
+      new Map(),
+      seededRandom(6),
+    );
+    const total = Object.values(allocation).reduce(
+      (sum, value) => sum + value,
+      0,
+    );
+    const attackSpend = Object.entries(allocation)
+      .filter(([key]) => key.endsWith(".attack"))
+      .reduce((sum, [, value]) => sum + value, 0);
+    expect(view.availableBudget).toBe(40);
+    expect(total).toBeLessThanOrEqual(view.availableBudget);
+    expect(attackSpend).toBeGreaterThan(4);
+    for (const pair of catalog.skills.stages.rally.pairs) {
+      expect(
+        allocation[allocationSkillKey(pair.id, "attack")],
+      ).toBeLessThanOrEqual(4);
+    }
   });
 
   it("runs V4 resource policies deterministically with legal carry budgets", () => {

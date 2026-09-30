@@ -1,0 +1,105 @@
+{
+  "version": "balance_v1.1",
+  "stages": {
+    "service": {
+      "label": "发球阶段",
+      "budget": 10,
+      "perItemCap": 4,
+      "directWinThreshold": 5,
+      "pairs": [
+        {
+          "id": "service_placement",
+          "attackName": "发球落点",
+          "defenseName": "落点预判"
+        },
+        {
+          "id": "service_speed",
+          "attackName": "发球速度",
+          "defenseName": "接发反应"
+        },
+        {
+          "id": "service_spin",
+          "attackName": "发球旋转",
+          "defenseName": "旋转判断"
+        },
+        {
+          "id": "service_variation",
+          "attackName": "发球变化",
+          "defenseName": "接发适应"
+        },
+        {
+          "id": "service_deception",
+          "attackName": "发球欺骗",
+          "defenseName": "发球识别"
+        }
+      ]
+    },
+    "receive": {
+      "label": "反制阶段",
+      "budget": 10,
+      "perItemCap": 4,
+      "directWinThreshold": 5,
+      "pairs": [
+        {
+          "id": "short_push",
+          "attackName": "摆短",
+          "defenseName": "短球控制"
+        },
+        {
+          "id": "deep_push",
+          "attackName": "劈长",
+          "defenseName": "长球启动"
+        },
+        {
+          "id": "flick",
+          "attackName": "拧拉",
+          "defenseName": "防拧拉"
+        },
+        {
+          "id": "flip",
+          "attackName": "挑打",
+          "defenseName": "防挑打"
+        },
+        {
+          "id": "receive_variation",
+          "attackName": "接发变化",
+          "defenseName": "二板应变"
+        }
+      ]
+    },
+    "rally": {
+      "label": "相持阶段",
+      "budget": 15,
+      "perItemCap": 3,
+      "directWinThreshold": 4,
+      "maxRounds": 5,
+      "pairs": [
+        {
+          "id": "loop_drive",
+          "attackName": "拉冲",
+          "defenseName": "抗拉冲"
+        },
+        {
+          "id": "rally_exchange",
+          "attackName": "相持",
+          "defenseName": "相持防守"
+        },
+        {
+          "id": "line_change",
+          "attackName": "变线",
+          "defenseName": "线路预判"
+        },
+        {
+          "id": "counterattack",
+          "attackName": "防守反击",
+          "defenseName": "二次压制"
+        },
+        {
+          "id": "continuous_attack",
+          "attackName": "连续进攻",
+          "defenseName": "连续防守"
+        }
+      ]
+    }
+  }
+}

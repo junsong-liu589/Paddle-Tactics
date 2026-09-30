@@ -1,9 +1,13 @@
 node_modules/
 dist/
 coverage/
+test-results/
+playwright-report/
 .env
 .env.*
 !.env.example
+!.env.production.example
 apps/server/src/generated/
 .turbo/
 *.tsbuildinfo
+reports/candidate-v4-player-refresh/candidate-v4-player-refresh/

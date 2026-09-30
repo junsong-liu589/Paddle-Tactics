@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react";
 import type { DomainEvent, MatchPublicView } from "@paddle-tactics/game-core";
-import { fetchCatalog, getSandboxView } from "../lib/api.js";
+import { fetchCatalog } from "../lib/api.js";
 import type { PublicCatalog } from "../lib/api.js";
+import { getLocalMatchView } from "../lib/local-game.js";
 
-type Props = { matchId: string; navigate: (path: string) => void };
+type Props = {
+  matchId: string;
+  navigate: (path: string) => void;
+  isAi: boolean;
+};
 
-export function ResultPage({ matchId, navigate }: Props) {
+export function ResultPage({ matchId, navigate, isAi }: Props) {
   const [view, setView] = useState<MatchPublicView | null>(null);
   const [catalog, setCatalog] = useState<PublicCatalog | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
-    void Promise.all([getSandboxView(matchId, "A"), fetchCatalog()])
-      .then(([nextView, nextCatalog]) => {
+    void Promise.all([getLocalMatchView(matchId, "A"), fetchCatalog()])
+      .then(([match, nextCatalog]) => {
         if (!active) return;
-        setView(nextView);
+        setView(match.view);
         setCatalog(nextCatalog);
       })
       .catch((cause: unknown) =>
@@ -101,7 +106,7 @@ export function ResultPage({ matchId, navigate }: Props) {
         </div>
         <button
           className="button button-primary"
-          onClick={() => navigate("/setup")}
+          onClick={() => navigate(isAi ? "/setup/ai" : "/setup")}
         >
           再开一场 ↗
         </button>
@@ -156,8 +161,19 @@ export function ResultPage({ matchId, navigate }: Props) {
                                   ? "反制"
                                   : `相持 R${event.round}`}{" "}
                               · {pair?.attackName}:{" "}
-                              <b>{event.attack.actual.toFixed(1)}</b> vs{" "}
-                              <b>{event.defense.actual.toFixed(1)}</b>
+                              <b>
+                                {name(event.attackerPlayerId)} 攻击：基础{" "}
+                                {event.attack.base.toFixed(1)} + 加点{" "}
+                                {event.attack.temporary} ={" "}
+                                {event.attack.actual.toFixed(1)}
+                              </b>{" "}
+                              vs{" "}
+                              <b>
+                                {name(event.defenderPlayerId)} 防守：基础{" "}
+                                {event.defense.base.toFixed(1)} + 加点{" "}
+                                {event.defense.temporary} ={" "}
+                                {event.defense.actual.toFixed(1)}
+                              </b>
                             </span>
                           );
                         })}
@@ -184,7 +200,7 @@ function reasonText(reason: string): string {
     service_direct: "发球直接得分",
     receive_direct: "反制直接得分",
     rally_direct: "相持直接得分",
-    rally_tie_break: "五轮相持累计优势决胜",
+    rally_tie_break: "六轮相持累计优势决胜",
   };
   return labels[reason] ?? reason;
 }

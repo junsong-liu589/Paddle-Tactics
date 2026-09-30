@@ -521,7 +521,7 @@ export const DEFAULT_CANDIDATE_V4_SETTINGS: CandidateV4Settings = {
   counterThreshold: 5,
   defenderVisibleTopK: 3,
   rallyThreshold: 4,
-  rallyMaxComparisons: 4,
+  rallyMaxComparisons: 6,
   carryRatePercent: 100,
   explorationEpsilon: 0.05,
 };
@@ -622,7 +622,7 @@ function validateCandidateV4Settings(settings: CandidateV4Settings): void {
     integerValues.some((value) => !Number.isInteger(value) || value < 0) ||
     settings.attackCap > 4 ||
     settings.defenderVisibleTopK > 5 ||
-    settings.rallyMaxComparisons !== 4 ||
+    settings.rallyMaxComparisons !== 6 ||
     settings.carryRatePercent > 100 ||
     !Number.isFinite(settings.explorationEpsilon) ||
     settings.explorationEpsilon < 0 ||
@@ -681,7 +681,7 @@ function advanceToRallyRound(state: MatchState, emitted: DomainEvent[]): void {
   );
 }
 
-/** Four V4 attack margins are compared symmetrically; exact ties alternate by point number. */
+/** Up to six V4 attack margins are compared symmetrically; exact ties alternate by point number. */
 export function resolveCandidateV4RallyTieBreak(
   advantages: number[],
   playerOrder: [PlayerId, PlayerId],

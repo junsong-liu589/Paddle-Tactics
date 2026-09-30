@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "ma-long",
+    "name": "马龙",
+    "style": "全能控制 / 正手终结 / 变化应对",
+    "baseTotal": 480,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 8
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 9
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 8
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 8
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 8
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 9
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 7
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      }
+    }
+  },
+  {
+    "id": "fan-zhendong",
+    "name": "樊振东",
+    "style": "强对抗 / 反手压制 / 正手爆发",
+    "baseTotal": 480,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 7
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 7
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      }
+    }
+  },
+  {
+    "id": "zhang-jike",
+    "name": "张继科",
+    "style": "反手拧拉 / 接发抢攻 / 爆发两面攻",
+    "baseTotal": 480,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 9
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 9
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      }
+    }
+  },
+  {
+    "id": "xu-xin",
+    "name": "许昕",
+    "style": "正手旋转 / 台内控制 / 中远台拉冲",
+    "baseTotal": 460,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 7
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 7
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 8
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 8
+        }
+      }
+    }
+  },
+  {
+    "id": "lin-gaoyuan",
+    "name": "林高远",
+    "style": "反手速度 / 接发变化 / 近台连续",
+    "baseTotal": 440,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 6
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 6
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 10
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 6
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 6
+        }
+      }
+    }
+  },
+  {
+    "id": "wang-chuqin",
+    "name": "王楚钦",
+    "style": "发球速度 / 两面先手 / 强势前三板",
+    "baseTotal": 460,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 6
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 10
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 7
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      }
+    }
+  },
+  {
+    "id": "tomokazu-harimoto",
+    "name": "张本智和",
+    "style": "反手近台 / 接发反应 / 快速相持",
+    "baseTotal": 440,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 10
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 10
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 8
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 10
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 8,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 8,
+          "backhand": 7
+        }
+      }
+    }
+  },
+  {
+    "id": "truls-moregard",
+    "name": "莫雷加德",
+    "style": "变化创造 / 线路控制 / 防反欺骗",
+    "baseTotal": 440,
+    "stats": {
+      "service_placement": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "service_speed": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "service_spin": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "service_variation": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 9
+        }
+      },
+      "service_deception": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 10
+        }
+      },
+      "short_push": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 6
+        }
+      },
+      "deep_push": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "flick": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "flip": {
+        "attack": {
+          "forehand": 7,
+          "backhand": 9
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 9
+        }
+      },
+      "receive_variation": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 8
+        }
+      },
+      "loop_drive": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      },
+      "rally_exchange": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 7
+        },
+        "defense": {
+          "forehand": 7,
+          "backhand": 7
+        }
+      },
+      "line_change": {
+        "attack": {
+          "forehand": 10,
+          "backhand": 10
+        },
+        "defense": {
+          "forehand": 10,
+          "backhand": 10
+        }
+      },
+      "counterattack": {
+        "attack": {
+          "forehand": 9,
+          "backhand": 8
+        },
+        "defense": {
+          "forehand": 9,
+          "backhand": 8
+        }
+      },
+      "continuous_attack": {
+        "attack": {
+          "forehand": 6,
+          "backhand": 6
+        },
+        "defense": {
+          "forehand": 6,
+          "backhand": 6
+        }
+      }
+    }
+  }
+]

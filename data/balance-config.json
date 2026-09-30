@@ -1,5 +1,5 @@
 {
-  "version": "balance_v1.1",
+  "version": "candidate_v4.1",
   "constantStatMin": 1,
   "constantStatMax": 15,
   "temporaryStatsMayExceedConstantCap": true,

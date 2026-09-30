@@ -95,6 +95,11 @@ function assertCatalogConsistency(catalog: GameCatalog): void {
     issues,
   );
   uniqueIds(
+    catalog.players.map((item) => item.style),
+    "player styles",
+    issues,
+  );
+  uniqueIds(
     catalog.blades.map((item) => item.id),
     "blades",
     issues,
@@ -204,6 +209,23 @@ function assertCatalogConsistency(catalog: GameCatalog): void {
       issues.push(
         `player ${player.id} baseTotal is ${player.baseTotal}, but stats sum to ${computedTotal}`,
       );
+    }
+    for (const [stageId, stage] of stageEntries) {
+      for (const side of ["forehand", "backhand"] as const) {
+        const values = stage.pairs.flatMap((pair) => [
+          player.stats[pair.id]!.attack[side],
+          player.stats[pair.id]!.defense[side],
+        ]);
+        if (
+          values.filter((value) => value === 10).length > 1 ||
+          values.filter((value) => value === 9).length > 1 ||
+          values.some((value) => value > 8 && value !== 9 && value !== 10)
+        ) {
+          issues.push(
+            `player ${player.id} ${stageId}/${side} exceeds the Candidate V4 peak profile (at most one 10 and one 9; all others at most 8)`,
+          );
+        }
+      }
     }
   }
 
