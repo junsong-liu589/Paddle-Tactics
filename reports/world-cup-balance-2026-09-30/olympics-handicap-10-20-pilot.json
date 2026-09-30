@@ -1,0 +1,141 @@
+{
+  "seed": 20260930,
+  "policyName": "10-20",
+  "policy": {
+    "atTwoZero": 10,
+    "atThreeZero": 20
+  },
+  "strategy": "wide-varied",
+  "scope": "pilot",
+  "repetitions": 2,
+  "results": [
+    {
+      "matchup": "超级种子 vs 强力挑战者",
+      "baseline": {
+        "series": 8,
+        "games": 32,
+        "winsA": 8,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 8
+        }
+      },
+      "results": {
+        "series": 8,
+        "games": 34,
+        "winsA": 8,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 6,
+          "5": 2
+        }
+      }
+    },
+    {
+      "matchup": "冠军级种子 vs 世界顶尖级",
+      "baseline": {
+        "series": 8,
+        "games": 32,
+        "winsA": 8,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 8
+        }
+      },
+      "results": {
+        "series": 8,
+        "games": 35,
+        "winsA": 8,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 5,
+          "5": 3
+        }
+      }
+    },
+    {
+      "matchup": "Tier 1 同档",
+      "baseline": {
+        "series": 1,
+        "games": 4,
+        "winsA": 0,
+        "winsB": 1,
+        "gameCounts": {
+          "4": 1
+        }
+      },
+      "results": {
+        "series": 1,
+        "games": 4,
+        "winsA": 0,
+        "winsB": 1,
+        "gameCounts": {
+          "4": 1
+        }
+      }
+    },
+    {
+      "matchup": "Tier 2 同档",
+      "baseline": {
+        "series": 1,
+        "games": 4,
+        "winsA": 1,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 1
+        }
+      },
+      "results": {
+        "series": 1,
+        "games": 4,
+        "winsA": 1,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 1
+        }
+      }
+    },
+    {
+      "matchup": "Tier 3 同档",
+      "baseline": {
+        "series": 1,
+        "games": 4,
+        "winsA": 0,
+        "winsB": 1,
+        "gameCounts": {
+          "4": 1
+        }
+      },
+      "results": {
+        "series": 1,
+        "games": 5,
+        "winsA": 0,
+        "winsB": 1,
+        "gameCounts": {
+          "5": 1
+        }
+      }
+    },
+    {
+      "matchup": "Tier 4 同档",
+      "baseline": {
+        "series": 1,
+        "games": 4,
+        "winsA": 1,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 1
+        }
+      },
+      "results": {
+        "series": 1,
+        "games": 4,
+        "winsA": 1,
+        "winsB": 0,
+        "gameCounts": {
+          "4": 1
+        }
+      }
+    }
+  ]
+}

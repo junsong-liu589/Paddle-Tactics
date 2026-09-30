@@ -4,6 +4,7 @@ import { fetchCatalog } from "../lib/api.js";
 import type { PublicCatalog, SandboxSetup } from "../lib/api.js";
 import { createLocalAiMatch, createLocalMatch } from "../lib/local-game.js";
 import { PlayerAvatar } from "../components/PlayerAvatar.js";
+import { PlayerShowcase } from "../components/PlayerShowcase.js";
 
 type Seat = "A" | "B";
 type GearChoice = Omit<Loadout, "playerId">;
@@ -69,6 +70,7 @@ function PlayerSetupCard({
           <p>{player.style}</p>
         </div>
       </div>
+      <PlayerShowcase loadout={setup} catalog={catalog} compact />
       <div className="select-grid">
         <label className="field field-wide">
           球员

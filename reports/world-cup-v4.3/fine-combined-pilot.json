@@ -1,0 +1,91 @@
+{
+  "seed": 20261001,
+  "mode": "fine-combined",
+  "candidates": [
+    [
+      "signature0.12",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.12
+      }
+    ],
+    [
+      "signature0.15",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.15
+      }
+    ],
+    [
+      "signature0.18",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.18
+      }
+    ]
+  ],
+  "results": [
+    {
+      "policy": "signature0.12",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 9,
+      "harimotoGames": 159,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 0,
+      "gameCounts": {
+        "5": 17,
+        "6": 3,
+        "7": 8
+      }
+    },
+    {
+      "policy": "signature0.15",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 15,
+      "harimotoGames": 148,
+      "harimotoLowGames": 1,
+      "harimotoZeroGames": 0,
+      "sweeps": 1,
+      "gameCounts": {
+        "4": 1,
+        "5": 22,
+        "6": 1,
+        "7": 4
+      }
+    },
+    {
+      "policy": "signature0.18",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 15,
+      "harimotoGames": 148,
+      "harimotoLowGames": 1,
+      "harimotoZeroGames": 0,
+      "sweeps": 1,
+      "gameCounts": {
+        "4": 1,
+        "5": 22,
+        "6": 1,
+        "7": 4
+      }
+    }
+  ]
+}

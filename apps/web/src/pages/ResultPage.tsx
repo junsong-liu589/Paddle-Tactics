@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { DomainEvent, MatchPublicView } from "@paddle-tactics/game-core";
-import { fetchCatalog } from "../lib/api.js";
+import { fetchCatalog, fetchOlympicsCatalog } from "../lib/api.js";
 import type { PublicCatalog } from "../lib/api.js";
 import { getLocalMatchView } from "../lib/local-game.js";
 
@@ -8,16 +8,27 @@ type Props = {
   matchId: string;
   navigate: (path: string) => void;
   isAi: boolean;
+  cupId?: string | undefined;
+  isOlympics?: boolean;
 };
 
-export function ResultPage({ matchId, navigate, isAi }: Props) {
+export function ResultPage({
+  matchId,
+  navigate,
+  isAi,
+  cupId,
+  isOlympics = false,
+}: Props) {
   const [view, setView] = useState<MatchPublicView | null>(null);
   const [catalog, setCatalog] = useState<PublicCatalog | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
-    void Promise.all([getLocalMatchView(matchId, "A"), fetchCatalog()])
+    void Promise.all([
+      getLocalMatchView(matchId, "A"),
+      isOlympics ? fetchOlympicsCatalog() : fetchCatalog(),
+    ])
       .then(([match, nextCatalog]) => {
         if (!active) return;
         setView(match.view);
@@ -29,7 +40,7 @@ export function ResultPage({ matchId, navigate, isAi }: Props) {
     return () => {
       active = false;
     };
-  }, [matchId]);
+  }, [matchId, isOlympics]);
 
   if (error)
     return (
@@ -76,8 +87,17 @@ export function ResultPage({ matchId, navigate, isAi }: Props) {
 
   return (
     <main className="content-page result-page">
-      <button className="back-link" onClick={() => navigate("/play")}>
-        ← 返回对局方式
+      <button
+        className="back-link"
+        onClick={() =>
+          navigate(
+            cupId
+              ? `/${isOlympics ? "olympics" : "world-cup"}?id=${encodeURIComponent(cupId)}`
+              : "/play",
+          )
+        }
+      >
+        {cupId ? `← 返回${isOlympics ? "奥运会" : "世界杯"}` : "← 返回对局方式"}
       </button>
       <section className="result-hero">
         <span className="eyebrow">
@@ -106,9 +126,19 @@ export function ResultPage({ matchId, navigate, isAi }: Props) {
         </div>
         <button
           className="button button-primary"
-          onClick={() => navigate(isAi ? "/setup/ai" : "/setup")}
+          onClick={() =>
+            navigate(
+              cupId
+                ? `/${isOlympics ? "olympics" : "world-cup"}?id=${encodeURIComponent(cupId)}`
+                : isAi
+                  ? "/setup/ai"
+                  : "/setup",
+            )
+          }
         >
-          再开一场 ↗
+          {cupId
+            ? `返回${isOlympics ? "奥运会" : "世界杯"}继续赛事 ↗`
+            : "再开一场 ↗"}
         </button>
       </section>
 

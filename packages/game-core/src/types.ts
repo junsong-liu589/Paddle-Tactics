@@ -197,7 +197,7 @@ export type MatchState = {
   version: number;
   status: "ACTIVE" | "COMPLETED";
   phase: MatchPhase;
-  bestOf: 1 | 3 | 5;
+  bestOf: 1 | 3 | 5 | 7;
   winnerPlayerId: PlayerId | null;
   playerOrder: [PlayerId, PlayerId];
   players: Record<PlayerId, InternalPlayer>;
@@ -228,7 +228,7 @@ export type MatchPublicView = {
   version: number;
   status: MatchState["status"];
   phase: MatchPhase;
-  bestOf: 1 | 3 | 5;
+  bestOf: 1 | 3 | 5 | 7;
   winnerPlayerId: PlayerId | null;
   playerOrder: [PlayerId, PlayerId];
   gamesWon: Record<PlayerId, number>;
@@ -277,4 +277,6 @@ export type CreateMatchInput = {
   catalog: GameRulesCatalog;
   candidateV3?: CandidateV3Settings;
   candidateV4?: CandidateV4Settings;
+  /** BO7 is reserved for local tournament matches; network modes remain BO1/3/5. */
+  allowBestOfSeven?: boolean;
 };

@@ -59,6 +59,8 @@ PR 必须跑：
 
 网页试玩版只包含本地 AI 对战和同屏双人；浏览器内复用 `game-core` 与 `ai`，不请求 `/api`、不连接 Socket.IO，也不要求 PostgreSQL。单独开发时运行 `corepack pnpm web:dev`；发布构建运行 `corepack pnpm web:build`，上传 `apps/web/dist`。根目录 `apps/web/public/_redirects` 提供前端 history 路由回退。
 
+世界杯模拟同样完全在浏览器运行；签位和赛果保存在本机 `localStorage`，不需要账号、常驻服务或按用户计费的 API。人物 WebP 作为静态文件随站点构建。静态版本不提供跨设备同步或实时远程联机；部署平台免费额度和条款以服务商当期政策为准。
+
 当前 Cloudflare Pages 预览网址：https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/。该链接已在浏览器中打开验证。它跟随当前开发分支的静态预览部署；不能用于远程房间联机。在线房间服务端仍需要独立的常驻主机和数据库部署。
 
 Cloudflare Pages 等静态站点托管服务可提供平台子域名；部署前应查看服务商当期免费额度和使用条款。自定义域名、动态函数或新增在线功能可能产生额外要求/费用。网页试玩版的进行中比赛只存在当前标签页的内存中，刷新或关闭后无法恢复。

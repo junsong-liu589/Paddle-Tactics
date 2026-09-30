@@ -1,0 +1,30 @@
+[
+  {
+    "favorite": "ma-long",
+    "opponent": "fan-zhendong",
+    "matches": 8,
+    "baselineWins": 4,
+    "supportedWins": 5
+  },
+  {
+    "favorite": "wang-chuqin",
+    "opponent": "ma-lin",
+    "matches": 8,
+    "baselineWins": 0,
+    "supportedWins": 0
+  },
+  {
+    "favorite": "tomokazu-harimoto",
+    "opponent": "lin-gaoyuan",
+    "matches": 8,
+    "baselineWins": 0,
+    "supportedWins": 4
+  },
+  {
+    "favorite": "zhang-jike",
+    "opponent": "wang-hao",
+    "matches": 8,
+    "baselineWins": 4,
+    "supportedWins": 7
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "seed": 20261001,
+  "mode": "harimoto",
+  "candidates": [
+    [
+      "baseline",
+      null
+    ],
+    [
+      "base1-gap1",
+      {
+        "harimotoBaseBonus": 1,
+        "harimotoGapBonus": 1,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 0,
+        "atThreeZero": 0,
+        "spread": "ten"
+      }
+    ],
+    [
+      "base2-gap1",
+      {
+        "harimotoBaseBonus": 2,
+        "harimotoGapBonus": 1,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 0,
+        "atThreeZero": 0,
+        "spread": "ten"
+      }
+    ],
+    [
+      "base3-gap1",
+      {
+        "harimotoBaseBonus": 3,
+        "harimotoGapBonus": 1,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 0,
+        "atThreeZero": 0,
+        "spread": "ten"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "policy": "baseline",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 0,
+      "harimotoGames": 115,
+      "harimotoLowGames": 71,
+      "harimotoZeroGames": 21,
+      "sweeps": 26,
+      "gameCounts": {
+        "4": 26,
+        "5": 1,
+        "6": 1
+      }
+    },
+    {
+      "policy": "base1-gap1",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 15,
+      "harimotoGames": 134,
+      "harimotoLowGames": 1,
+      "harimotoZeroGames": 0,
+      "sweeps": 17,
+      "gameCounts": {
+        "4": 17,
+        "5": 4,
+        "6": 3,
+        "7": 4
+      }
+    },
+    {
+      "policy": "base2-gap1",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 28,
+      "harimotoGames": 113,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 27,
+      "gameCounts": {
+        "4": 27,
+        "5": 1
+      }
+    },
+    {
+      "policy": "base3-gap1",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 28,
+      "harimotoGames": 112,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 28,
+      "gameCounts": {
+        "4": 28
+      }
+    }
+  ]
+}

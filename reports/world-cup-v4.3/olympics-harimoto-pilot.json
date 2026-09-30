@@ -1,0 +1,290 @@
+[
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 0,
+    "newTotal": 440,
+    "matches": 30,
+    "wins": 2,
+    "sweeps": 27,
+    "games": 123,
+    "lowScoreGames": 49,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 0,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 0,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 0,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 0,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 0,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 0,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 20,
+    "newTotal": 460,
+    "matches": 30,
+    "wins": 2,
+    "sweeps": 25,
+    "games": 127,
+    "lowScoreGames": 39,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 0,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 0,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 0,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 0,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 0,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 0,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 30,
+    "newTotal": 470,
+    "matches": 30,
+    "wins": 24,
+    "sweeps": 27,
+    "games": 124,
+    "lowScoreGames": 2,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 2,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 2,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 2,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 2,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 2,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 2,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 40,
+    "newTotal": 480,
+    "matches": 30,
+    "wins": 5,
+    "sweeps": 21,
+    "games": 139,
+    "lowScoreGames": 26,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 0,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 0,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 0,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 0,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 0,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 2,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 1,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  }
+]

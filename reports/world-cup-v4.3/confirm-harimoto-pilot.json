@@ -1,0 +1,116 @@
+{
+  "seed": 20261001,
+  "mode": "confirm-harimoto",
+  "candidates": [
+    [
+      "confirm-0",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.12
+      }
+    ],
+    [
+      "confirm-1",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.12
+      }
+    ],
+    [
+      "confirm-2",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.12
+      }
+    ],
+    [
+      "confirm-3",
+      {
+        "harimotoBaseBonus": 0.93,
+        "harimotoGapBonus": 2,
+        "harimotoGapThreshold": 5,
+        "atTwoZero": 30,
+        "atThreeZero": 60,
+        "spread": "ten",
+        "harimotoSignatureBonus": 0.12
+      }
+    ]
+  ],
+  "results": [
+    {
+      "policy": "confirm-0",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 9,
+      "harimotoGames": 159,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 0,
+      "gameCounts": {
+        "5": 17,
+        "6": 3,
+        "7": 8
+      }
+    },
+    {
+      "policy": "confirm-1",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 10,
+      "harimotoGames": 154,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 0,
+      "gameCounts": {
+        "5": 17,
+        "6": 8,
+        "7": 3
+      }
+    },
+    {
+      "policy": "confirm-2",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 9,
+      "harimotoGames": 155,
+      "harimotoLowGames": 0,
+      "harimotoZeroGames": 0,
+      "sweeps": 0,
+      "gameCounts": {
+        "5": 16,
+        "6": 9,
+        "7": 3
+      }
+    },
+    {
+      "policy": "confirm-3",
+      "series": 28,
+      "harimotoSeries": 28,
+      "harimotoWins": 8,
+      "harimotoGames": 160,
+      "harimotoLowGames": 1,
+      "harimotoZeroGames": 0,
+      "sweeps": 0,
+      "gameCounts": {
+        "5": 15,
+        "6": 6,
+        "7": 7
+      }
+    }
+  ]
+}

@@ -8,6 +8,9 @@ import type {
 import type { SkillCatalog } from "@paddle-tactics/game-data";
 
 export type AiDifficulty = "easy" | "normal" | "hard";
+/** Experimental allocation profiles; they never change game rules or budgets. */
+export type AiStrategyVariant =
+  "current" | "balanced" | "aggressive" | "balanced-varied" | "wide-varied";
 export type AiCatalog = Pick<SkillCatalog, "stages">;
 
 export type AiDecisionInput = {
@@ -15,6 +18,7 @@ export type AiDecisionInput = {
   skills: AiCatalog;
   difficulty: AiDifficulty;
   seed: number;
+  strategy?: AiStrategyVariant;
 };
 type ComparisonEvent = Extract<DomainEvent, { type: "COMPARISON_REVEALED" }>;
 
@@ -128,8 +132,21 @@ function chooseRanked<T>(
   const random = seededRandom(input.seed);
   if (input.difficulty === "easy")
     return ranked[Math.floor(random() * ranked.length)]!;
-  if (ranked.length > 1 && random() < EPSILON[input.difficulty]) {
-    const topCount = Math.min(2, ranked.length);
+  const explorationRate =
+    input.strategy === "wide-varied"
+      ? 0.65
+      : input.strategy === "balanced-varied"
+        ? 0.35
+        : EPSILON[input.difficulty];
+  if (ranked.length > 1 && random() < explorationRate) {
+    const topCount = Math.min(
+      input.strategy === "wide-varied"
+        ? 4
+        : input.strategy === "balanced-varied"
+          ? 3
+          : 2,
+      ranked.length,
+    );
     return ranked[Math.floor(random() * topCount)]!;
   }
   const best = score(ranked[0]!);
@@ -205,7 +222,9 @@ function allocateFocusedAttack(
     input.difficulty === "easy"
       ? Math.floor(random() * Math.min(5, input.view.availableBudget + 1))
       : input.difficulty === "normal"
-        ? Math.min(2, need)
+        ? input.strategy && input.strategy !== "current"
+          ? Math.min(4, need, input.view.availableBudget)
+          : Math.min(2, need)
         : need === 0
           ? 0
           : Math.min(4, input.view.availableBudget);
@@ -241,7 +260,9 @@ function allocateFocusedDefense(
       ? randomSpend
       : input.difficulty === "hard"
         ? budget
-        : Math.min(3, usefulSpend);
+        : input.strategy && input.strategy !== "current"
+          ? Math.min(budget, usefulSpend)
+          : Math.min(3, usefulSpend);
   allocation[allocationSkillKey(target.pair.id, "defense")] = Math.max(
     0,
     Math.min(budget, spend),
@@ -250,6 +271,46 @@ function allocateFocusedDefense(
 
 function allocateRally(input: AiDecisionInput, allocation: Allocation) {
   const attackOrder = rankedAttackPairs(input, "rally");
+  if (input.strategy && input.strategy !== "current") {
+    const budget = input.view.availableBudget;
+    const share = input.strategy === "aggressive" ? 0.55 : 0.4;
+    let attackRemaining = Math.min(
+      attackOrder.length * 4,
+      Math.floor(budget * share),
+    );
+    for (const { pair } of attackOrder) {
+      if (attackRemaining <= 0) break;
+      const points = Math.min(4, attackRemaining);
+      allocation[allocationSkillKey(pair.id, "attack")] = points;
+      attackRemaining -= points;
+    }
+    const defenseRemaining =
+      budget -
+      (Math.min(attackOrder.length * 4, Math.floor(budget * share)) -
+        attackRemaining);
+    const defenseOrder = rankedDefensePairs(input, "rally");
+    const defensePoints = Math.max(0, defenseRemaining);
+    const leadingCount = Math.min(2, defenseOrder.length);
+    const leadingShare = Math.floor(defensePoints * 0.65);
+    let allocated = 0;
+    for (let index = 0; index < leadingCount; index += 1) {
+      const points =
+        index === leadingCount - 1
+          ? leadingShare - allocated
+          : Math.floor(leadingShare / leadingCount);
+      allocation[allocationSkillKey(defenseOrder[index]!.pair.id, "defense")] =
+        points;
+      allocated += points;
+    }
+    let remainder = defensePoints - allocated;
+    for (const { pair } of defenseOrder) {
+      if (remainder <= 0) break;
+      const key = allocationSkillKey(pair.id, "defense");
+      allocation[key] = (allocation[key] ?? 0) + 1;
+      remainder -= 1;
+    }
+    return;
+  }
   const choices =
     input.difficulty === "easy"
       ? shuffleWithSeed(attackOrder, input.seed + 1)
@@ -336,6 +397,20 @@ export function chooseAiAttack(input: AiDecisionInput): string {
     if (fundedPair) return fundedPair;
   }
   const ranked = rankedAttackPairs(input, stage);
+  if (
+    stage === "rally" &&
+    input.strategy &&
+    input.strategy !== "current" &&
+    input.view.self.allocation
+  ) {
+    const funded = new Set(
+      Object.entries(input.view.self.allocation)
+        .filter(([key, points]) => key.endsWith(".attack") && points > 0)
+        .map(([key]) => key.split(".")[0]),
+    );
+    const bestFunded = ranked.find((entry) => funded.has(entry.pair.id));
+    if (bestFunded) return bestFunded.pair.id;
+  }
   const history = ourAttackHistory(input, stage);
   if (history.length && input.difficulty === "hard") {
     const leastUsed = ranked

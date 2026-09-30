@@ -1,0 +1,1218 @@
+{
+  "seed": 20260930,
+  "strategy": "balanced-varied",
+  "scope": "all",
+  "repetitionsPerPair": 10,
+  "report": {
+    "超级种子 vs 强力挑战者": {
+      "aWins": 601,
+      "bWins": 39,
+      "seriesCount": 640,
+      "averageGames": 4.23,
+      "series": 640
+    },
+    "冠军级种子 vs 世界顶尖级": {
+      "aWins": 379,
+      "bWins": 261,
+      "seriesCount": 640,
+      "averageGames": 4.61,
+      "series": 640
+    },
+    "ma-long vs fan-zhendong": {
+      "aWins": 9,
+      "bWins": 1,
+      "seriesCount": 10,
+      "averageGames": 5.2,
+      "series": 10
+    },
+    "ma-long vs zhang-jike": {
+      "aWins": 7,
+      "bWins": 3,
+      "seriesCount": 10,
+      "averageGames": 4.8,
+      "series": 10
+    },
+    "ma-long vs wang-chuqin": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "ma-long vs ma-lin": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.7,
+      "series": 10
+    },
+    "ma-long vs wang-liqin": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 5.5,
+      "series": 10
+    },
+    "ma-long vs wang-hao": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.4,
+      "series": 10
+    },
+    "ma-long vs timo-boll": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "fan-zhendong vs zhang-jike": {
+      "aWins": 8,
+      "bWins": 2,
+      "seriesCount": 10,
+      "averageGames": 6,
+      "series": 10
+    },
+    "fan-zhendong vs wang-chuqin": {
+      "aWins": 8,
+      "bWins": 2,
+      "seriesCount": 10,
+      "averageGames": 5.5,
+      "series": 10
+    },
+    "fan-zhendong vs ma-lin": {
+      "aWins": 7,
+      "bWins": 3,
+      "seriesCount": 10,
+      "averageGames": 5,
+      "series": 10
+    },
+    "fan-zhendong vs wang-liqin": {
+      "aWins": 5,
+      "bWins": 5,
+      "seriesCount": 10,
+      "averageGames": 6,
+      "series": 10
+    },
+    "fan-zhendong vs wang-hao": {
+      "aWins": 1,
+      "bWins": 9,
+      "seriesCount": 10,
+      "averageGames": 5.1,
+      "series": 10
+    },
+    "fan-zhendong vs timo-boll": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "zhang-jike vs wang-chuqin": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.4,
+      "series": 10
+    },
+    "zhang-jike vs ma-lin": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "zhang-jike vs wang-liqin": {
+      "aWins": 6,
+      "bWins": 4,
+      "seriesCount": 10,
+      "averageGames": 5.2,
+      "series": 10
+    },
+    "zhang-jike vs wang-hao": {
+      "aWins": 8,
+      "bWins": 2,
+      "seriesCount": 10,
+      "averageGames": 4.8,
+      "series": 10
+    },
+    "zhang-jike vs timo-boll": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "wang-chuqin vs ma-lin": {
+      "aWins": 7,
+      "bWins": 3,
+      "seriesCount": 10,
+      "averageGames": 6,
+      "series": 10
+    },
+    "wang-chuqin vs wang-liqin": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "wang-chuqin vs wang-hao": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.3,
+      "series": 10
+    },
+    "wang-chuqin vs timo-boll": {
+      "aWins": 5,
+      "bWins": 5,
+      "seriesCount": 10,
+      "averageGames": 5.3,
+      "series": 10
+    },
+    "ma-lin vs wang-liqin": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "ma-lin vs wang-hao": {
+      "aWins": 9,
+      "bWins": 1,
+      "seriesCount": 10,
+      "averageGames": 4.6,
+      "series": 10
+    },
+    "ma-lin vs timo-boll": {
+      "aWins": 8,
+      "bWins": 2,
+      "seriesCount": 10,
+      "averageGames": 5.6,
+      "series": 10
+    },
+    "wang-liqin vs wang-hao": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "wang-liqin vs timo-boll": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "wang-hao vs timo-boll": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 5,
+      "series": 10
+    },
+    "jun-mizutani vs xu-xin": {
+      "aWins": 1,
+      "bWins": 9,
+      "seriesCount": 10,
+      "averageGames": 4.8,
+      "series": 10
+    },
+    "jun-mizutani vs vladimir-samsonov": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "jun-mizutani vs ryu-seung-min": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "jun-mizutani vs dimitrij-ovtcharov": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "jun-mizutani vs hugo-calderano": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "jun-mizutani vs truls-moregard": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "jun-mizutani vs felix-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "xu-xin vs vladimir-samsonov": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "xu-xin vs ryu-seung-min": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "xu-xin vs dimitrij-ovtcharov": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.6,
+      "series": 10
+    },
+    "xu-xin vs hugo-calderano": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "xu-xin vs truls-moregard": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "xu-xin vs felix-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "vladimir-samsonov vs ryu-seung-min": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "vladimir-samsonov vs dimitrij-ovtcharov": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.8,
+      "series": 10
+    },
+    "vladimir-samsonov vs hugo-calderano": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "vladimir-samsonov vs truls-moregard": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "vladimir-samsonov vs felix-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "ryu-seung-min vs dimitrij-ovtcharov": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 5.1,
+      "series": 10
+    },
+    "ryu-seung-min vs hugo-calderano": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "ryu-seung-min vs truls-moregard": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "ryu-seung-min vs felix-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "dimitrij-ovtcharov vs hugo-calderano": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "dimitrij-ovtcharov vs truls-moregard": {
+      "aWins": 6,
+      "bWins": 4,
+      "seriesCount": 10,
+      "averageGames": 5.6,
+      "series": 10
+    },
+    "dimitrij-ovtcharov vs felix-lebrun": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "hugo-calderano vs truls-moregard": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "hugo-calderano vs felix-lebrun": {
+      "aWins": 5,
+      "bWins": 5,
+      "seriesCount": 10,
+      "averageGames": 4.3,
+      "series": 10
+    },
+    "truls-moregard vs felix-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "lin-shidong vs kristian-karlsson": {
+      "aWins": 9,
+      "bWins": 1,
+      "seriesCount": 10,
+      "averageGames": 5.5,
+      "series": 10
+    },
+    "lin-shidong vs tomokazu-harimoto": {
+      "aWins": 1,
+      "bWins": 9,
+      "seriesCount": 10,
+      "averageGames": 5.1,
+      "series": 10
+    },
+    "lin-shidong vs joo-sae-hyuk": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "lin-shidong vs lin-yun-ju": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.8,
+      "series": 10
+    },
+    "lin-shidong vs liang-jingkun": {
+      "aWins": 3,
+      "bWins": 7,
+      "seriesCount": 10,
+      "averageGames": 5.7,
+      "series": 10
+    },
+    "lin-shidong vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "lin-shidong vs fang-bo": {
+      "aWins": 9,
+      "bWins": 1,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "kristian-karlsson vs tomokazu-harimoto": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "kristian-karlsson vs joo-sae-hyuk": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "kristian-karlsson vs lin-yun-ju": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "kristian-karlsson vs liang-jingkun": {
+      "aWins": 2,
+      "bWins": 8,
+      "seriesCount": 10,
+      "averageGames": 5.6,
+      "series": 10
+    },
+    "kristian-karlsson vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "kristian-karlsson vs fang-bo": {
+      "aWins": 8,
+      "bWins": 2,
+      "seriesCount": 10,
+      "averageGames": 5.6,
+      "series": 10
+    },
+    "tomokazu-harimoto vs joo-sae-hyuk": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "tomokazu-harimoto vs lin-yun-ju": {
+      "aWins": 6,
+      "bWins": 4,
+      "seriesCount": 10,
+      "averageGames": 5.3,
+      "series": 10
+    },
+    "tomokazu-harimoto vs liang-jingkun": {
+      "aWins": 7,
+      "bWins": 3,
+      "seriesCount": 10,
+      "averageGames": 5.5,
+      "series": 10
+    },
+    "tomokazu-harimoto vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "tomokazu-harimoto vs fang-bo": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "joo-sae-hyuk vs lin-yun-ju": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "joo-sae-hyuk vs liang-jingkun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "joo-sae-hyuk vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "joo-sae-hyuk vs fang-bo": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "lin-yun-ju vs liang-jingkun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "lin-yun-ju vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "lin-yun-ju vs fang-bo": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "liang-jingkun vs lin-gaoyuan": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "liang-jingkun vs fang-bo": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 5.2,
+      "series": 10
+    },
+    "lin-gaoyuan vs fang-bo": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "chuang-chih-yuan vs sora-matsushima": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "chuang-chih-yuan vs dang-qiu": {
+      "aWins": 9,
+      "bWins": 1,
+      "seriesCount": 10,
+      "averageGames": 5.1,
+      "series": 10
+    },
+    "chuang-chih-yuan vs patrick-franziska": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "chuang-chih-yuan vs alexis-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "chuang-chih-yuan vs koki-niwa": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "chuang-chih-yuan vs anton-kallberg": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "chuang-chih-yuan vs maharu-yoshimura": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "sora-matsushima vs dang-qiu": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.1,
+      "series": 10
+    },
+    "sora-matsushima vs patrick-franziska": {
+      "aWins": 2,
+      "bWins": 8,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "sora-matsushima vs alexis-lebrun": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "sora-matsushima vs koki-niwa": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "sora-matsushima vs anton-kallberg": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "sora-matsushima vs maharu-yoshimura": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 5.3,
+      "series": 10
+    },
+    "dang-qiu vs patrick-franziska": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "dang-qiu vs alexis-lebrun": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 5.1,
+      "series": 10
+    },
+    "dang-qiu vs koki-niwa": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "dang-qiu vs anton-kallberg": {
+      "aWins": 5,
+      "bWins": 5,
+      "seriesCount": 10,
+      "averageGames": 5.4,
+      "series": 10
+    },
+    "dang-qiu vs maharu-yoshimura": {
+      "aWins": 3,
+      "bWins": 7,
+      "seriesCount": 10,
+      "averageGames": 5.6,
+      "series": 10
+    },
+    "patrick-franziska vs alexis-lebrun": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "patrick-franziska vs koki-niwa": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4.2,
+      "series": 10
+    },
+    "patrick-franziska vs anton-kallberg": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "patrick-franziska vs maharu-yoshimura": {
+      "aWins": 2,
+      "bWins": 8,
+      "seriesCount": 10,
+      "averageGames": 5,
+      "series": 10
+    },
+    "alexis-lebrun vs koki-niwa": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "alexis-lebrun vs anton-kallberg": {
+      "aWins": 0,
+      "bWins": 10,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "alexis-lebrun vs maharu-yoshimura": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.5,
+      "series": 10
+    },
+    "koki-niwa vs anton-kallberg": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4.4,
+      "series": 10
+    },
+    "koki-niwa vs maharu-yoshimura": {
+      "aWins": 10,
+      "bWins": 0,
+      "seriesCount": 10,
+      "averageGames": 4,
+      "series": 10
+    },
+    "anton-kallberg vs maharu-yoshimura": {
+      "aWins": 2,
+      "bWins": 8,
+      "seriesCount": 10,
+      "averageGames": 5.4,
+      "series": 10
+    }
+  },
+  "failedSameTierPairs": [
+    {
+      "label": "ma-long vs wang-chuqin",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "ma-long vs ma-lin",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "ma-long vs wang-liqin",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "ma-long vs wang-hao",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "ma-long vs timo-boll",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "fan-zhendong vs timo-boll",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "zhang-jike vs wang-chuqin",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "zhang-jike vs ma-lin",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "zhang-jike vs timo-boll",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "wang-chuqin vs wang-liqin",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "wang-chuqin vs wang-hao",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "ma-lin vs wang-liqin",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "wang-liqin vs wang-hao",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "wang-liqin vs timo-boll",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "wang-hao vs timo-boll",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "jun-mizutani vs vladimir-samsonov",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "jun-mizutani vs ryu-seung-min",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "jun-mizutani vs dimitrij-ovtcharov",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "jun-mizutani vs hugo-calderano",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "jun-mizutani vs truls-moregard",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "jun-mizutani vs felix-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "xu-xin vs vladimir-samsonov",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "xu-xin vs ryu-seung-min",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "xu-xin vs dimitrij-ovtcharov",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "xu-xin vs hugo-calderano",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "xu-xin vs truls-moregard",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "xu-xin vs felix-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "vladimir-samsonov vs ryu-seung-min",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "vladimir-samsonov vs dimitrij-ovtcharov",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "vladimir-samsonov vs hugo-calderano",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "vladimir-samsonov vs truls-moregard",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "vladimir-samsonov vs felix-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "ryu-seung-min vs dimitrij-ovtcharov",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "ryu-seung-min vs hugo-calderano",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "ryu-seung-min vs truls-moregard",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "ryu-seung-min vs felix-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "dimitrij-ovtcharov vs hugo-calderano",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "dimitrij-ovtcharov vs felix-lebrun",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "hugo-calderano vs truls-moregard",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "truls-moregard vs felix-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "lin-shidong vs joo-sae-hyuk",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "lin-shidong vs lin-yun-ju",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "lin-shidong vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "kristian-karlsson vs tomokazu-harimoto",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "kristian-karlsson vs joo-sae-hyuk",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "kristian-karlsson vs lin-yun-ju",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "kristian-karlsson vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "tomokazu-harimoto vs joo-sae-hyuk",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "tomokazu-harimoto vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "tomokazu-harimoto vs fang-bo",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "joo-sae-hyuk vs lin-yun-ju",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "joo-sae-hyuk vs liang-jingkun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "joo-sae-hyuk vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "joo-sae-hyuk vs fang-bo",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "lin-yun-ju vs liang-jingkun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "lin-yun-ju vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "lin-yun-ju vs fang-bo",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "liang-jingkun vs lin-gaoyuan",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "liang-jingkun vs fang-bo",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "lin-gaoyuan vs fang-bo",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs sora-matsushima",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs patrick-franziska",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs alexis-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs koki-niwa",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs anton-kallberg",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "chuang-chih-yuan vs maharu-yoshimura",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "sora-matsushima vs dang-qiu",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "sora-matsushima vs alexis-lebrun",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "sora-matsushima vs koki-niwa",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "sora-matsushima vs anton-kallberg",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "sora-matsushima vs maharu-yoshimura",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "dang-qiu vs patrick-franziska",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "dang-qiu vs alexis-lebrun",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "dang-qiu vs koki-niwa",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "patrick-franziska vs alexis-lebrun",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "patrick-franziska vs koki-niwa",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "patrick-franziska vs anton-kallberg",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "alexis-lebrun vs koki-niwa",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "alexis-lebrun vs anton-kallberg",
+      "aWins": 0,
+      "bWins": 10
+    },
+    {
+      "label": "alexis-lebrun vs maharu-yoshimura",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "koki-niwa vs anton-kallberg",
+      "aWins": 10,
+      "bWins": 0
+    },
+    {
+      "label": "koki-niwa vs maharu-yoshimura",
+      "aWins": 10,
+      "bWins": 0
+    }
+  ]
+}

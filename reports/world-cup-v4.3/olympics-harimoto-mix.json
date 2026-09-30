@@ -1,0 +1,239 @@
+[
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 30,
+    "profile": "mix2",
+    "newTotal": 470,
+    "loadout": {
+      "playerId": "tomokazu-harimoto",
+      "bladeId": "w968",
+      "forehandRubberId": "tenergy-05",
+      "backhandRubberId": "tenergy-05"
+    },
+    "matches": 30,
+    "wins": 24,
+    "sweeps": 28,
+    "games": 123,
+    "lowScoreGames": 2,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 2,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 2,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 2,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 2,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 2,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 2,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 30,
+    "profile": "mix3",
+    "newTotal": 470,
+    "loadout": {
+      "playerId": "tomokazu-harimoto",
+      "bladeId": "w968",
+      "forehandRubberId": "tenergy-05",
+      "backhandRubberId": "tenergy-05"
+    },
+    "matches": 30,
+    "wins": 24,
+    "sweeps": 28,
+    "games": 123,
+    "lowScoreGames": 2,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 2,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 2,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 2,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 2,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 2,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 2,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "tomokazu-harimoto",
+    "delta": 30,
+    "profile": "mix4",
+    "newTotal": 470,
+    "loadout": {
+      "playerId": "tomokazu-harimoto",
+      "bladeId": "lin-gaoyuan-alc",
+      "forehandRubberId": "tenergy-05",
+      "backhandRubberId": "tenergy-05"
+    },
+    "matches": 30,
+    "wins": 4,
+    "sweeps": 23,
+    "games": 130,
+    "lowScoreGames": 35,
+    "opponents": {
+      "jun-mizutani": {
+        "wins": 0,
+        "matches": 2
+      },
+      "xu-xin": {
+        "wins": 0,
+        "matches": 2
+      },
+      "vladimir-samsonov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "ryu-seung-min": {
+        "wins": 0,
+        "matches": 2
+      },
+      "dimitrij-ovtcharov": {
+        "wins": 0,
+        "matches": 2
+      },
+      "hugo-calderano": {
+        "wins": 0,
+        "matches": 2
+      },
+      "truls-moregard": {
+        "wins": 0,
+        "matches": 2
+      },
+      "felix-lebrun": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-shidong": {
+        "wins": 0,
+        "matches": 2
+      },
+      "kristian-karlsson": {
+        "wins": 0,
+        "matches": 2
+      },
+      "joo-sae-hyuk": {
+        "wins": 0,
+        "matches": 2
+      },
+      "lin-yun-ju": {
+        "wins": 2,
+        "matches": 2
+      },
+      "liang-jingkun": {
+        "wins": 2,
+        "matches": 2
+      },
+      "lin-gaoyuan": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fang-bo": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  }
+]

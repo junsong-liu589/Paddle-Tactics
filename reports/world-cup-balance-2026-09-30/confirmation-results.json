@@ -1,0 +1,3585 @@
+[
+  {
+    "candidate": "signature-plus-one",
+    "strategy": "balanced-varied",
+    "matches": 1344,
+    "games": 6549,
+    "closeGameRate": 0.7912658421132998,
+    "meanLoserScore": 6.392273629561765,
+    "shutoutRate": 0.021377309512902735,
+    "onePointLossRate": 0.046571995724538094,
+    "loserAtMostFourRate": 0.2794319743472286,
+    "deuceRate": 0.12475187051458238,
+    "meanMatchLength": 4.872767857142857,
+    "sweepRate": 0.5245535714285714,
+    "fiveOrSixGameSeriesRate": 0.34970238095238093,
+    "sevenGameSeriesRate": 0.12574404761904762,
+    "meanSameTierWinRateDistanceFrom50Pct": 0.27976190476190477,
+    "tierWinRates": {
+      "440": 0.36507936507936506,
+      "460": 0.5580357142857143,
+      "480": 0.5962301587301587
+    },
+    "score": 0.5605831417828239,
+    "playerSeries": {
+      "ma-long": {
+        "matches": 336,
+        "wins": 186,
+        "gameWins": 896
+      },
+      "fan-zhendong": {
+        "matches": 336,
+        "wins": 268,
+        "gameWins": 1193
+      },
+      "zhang-jike": {
+        "matches": 336,
+        "wins": 147,
+        "gameWins": 894
+      },
+      "xu-xin": {
+        "matches": 336,
+        "wins": 216,
+        "gameWins": 911
+      },
+      "lin-gaoyuan": {
+        "matches": 336,
+        "wins": 162,
+        "gameWins": 822
+      },
+      "wang-chuqin": {
+        "matches": 336,
+        "wins": 159,
+        "gameWins": 718
+      },
+      "tomokazu-harimoto": {
+        "matches": 336,
+        "wins": 49,
+        "gameWins": 301
+      },
+      "truls-moregard": {
+        "matches": 336,
+        "wins": 157,
+        "gameWins": 814
+      }
+    },
+    "playerPairs": {
+      "ma-long__fan-zhendong": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 120,
+        "gameWinsB": 156,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 6,
+          "5": 23,
+          "6": 23,
+          "7": 46,
+          "8": 44,
+          "9": 67,
+          "10": 22,
+          "11": 9,
+          "12": 8,
+          "13": 6,
+          "14": 2,
+          "15": 2,
+          "16": 2,
+          "18": 1,
+          "19": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 9,
+          "7": 17,
+          "sweep": 7
+        }
+      },
+      "ma-long__zhang-jike": {
+        "matches": 48,
+        "winsA": 21,
+        "winsB": 27,
+        "gameWinsA": 119,
+        "gameWinsB": 149,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "2": 5,
+          "3": 15,
+          "4": 20,
+          "5": 28,
+          "6": 30,
+          "7": 31,
+          "8": 54,
+          "9": 42,
+          "10": 20,
+          "11": 11,
+          "12": 3,
+          "13": 5,
+          "14": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 14,
+          "6": 19,
+          "7": 8,
+          "sweep": 7
+        }
+      },
+      "ma-long__xu-xin": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 27,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 12,
+          "3": 21,
+          "4": 24,
+          "5": 32,
+          "6": 22,
+          "7": 29,
+          "8": 29,
+          "9": 24,
+          "10": 8,
+          "11": 5,
+          "12": 3,
+          "13": 1,
+          "16": 1,
+          "22": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 30,
+          "5": 10,
+          "6": 7,
+          "7": 1,
+          "sweep": 30
+        }
+      },
+      "ma-long__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 5,
+          "3": 18,
+          "4": 14,
+          "5": 38,
+          "6": 32,
+          "7": 35,
+          "8": 25,
+          "9": 16,
+          "10": 1,
+          "11": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "ma-long__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 4,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 17,
+          "2": 25,
+          "3": 27,
+          "4": 33,
+          "5": 25,
+          "6": 23,
+          "7": 17,
+          "8": 13,
+          "9": 5,
+          "10": 5,
+          "11": 2,
+          "12": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 44,
+          "5": 4,
+          "sweep": 44
+        }
+      },
+      "ma-long__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 15,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 22,
+          "2": 22,
+          "3": 25,
+          "4": 25,
+          "5": 26,
+          "6": 20,
+          "7": 14,
+          "8": 20,
+          "9": 16,
+          "10": 7,
+          "11": 2,
+          "12": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 35,
+          "5": 11,
+          "6": 2,
+          "sweep": 35
+        }
+      },
+      "ma-long__truls-moregard": {
+        "matches": 48,
+        "winsA": 1,
+        "winsB": 47,
+        "gameWinsA": 54,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 6,
+          "3": 14,
+          "4": 19,
+          "5": 28,
+          "6": 33,
+          "7": 47,
+          "8": 30,
+          "9": 29,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 2,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 15,
+          "6": 10,
+          "7": 5,
+          "sweep": 18
+        }
+      },
+      "fan-zhendong__zhang-jike": {
+        "matches": 48,
+        "winsA": 40,
+        "winsB": 8,
+        "gameWinsA": 171,
+        "gameWinsB": 101,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 7,
+          "3": 14,
+          "4": 17,
+          "5": 25,
+          "6": 40,
+          "7": 34,
+          "8": 37,
+          "9": 55,
+          "10": 17,
+          "11": 8,
+          "12": 9,
+          "13": 2,
+          "14": 1,
+          "15": 2,
+          "17": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 9,
+          "5": 11,
+          "6": 15,
+          "7": 13,
+          "sweep": 9
+        }
+      },
+      "fan-zhendong__xu-xin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 19,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 17,
+          "3": 24,
+          "4": 24,
+          "5": 22,
+          "6": 23,
+          "7": 23,
+          "8": 36,
+          "9": 15,
+          "10": 8,
+          "11": 7,
+          "12": 3,
+          "14": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 13,
+          "6": 3,
+          "sweep": 32
+        }
+      },
+      "fan-zhendong__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 41,
+        "winsB": 7,
+        "gameWinsA": 177,
+        "gameWinsB": 98,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 11,
+          "5": 35,
+          "6": 29,
+          "7": 49,
+          "8": 27,
+          "9": 52,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 9,
+          "14": 5,
+          "15": 3,
+          "16": 1,
+          "17": 2,
+          "18": 3,
+          "20": 3,
+          "21": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 10,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "fan-zhendong__wang-chuqin": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 121,
+        "gameWinsB": 154,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 1,
+          "3": 6,
+          "4": 6,
+          "5": 16,
+          "6": 32,
+          "7": 36,
+          "8": 33,
+          "9": 71,
+          "10": 14,
+          "11": 18,
+          "12": 9,
+          "13": 13,
+          "14": 7,
+          "15": 4,
+          "16": 2,
+          "17": 1,
+          "18": 2,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 9,
+          "5": 9,
+          "6": 16,
+          "7": 14,
+          "sweep": 9
+        }
+      },
+      "fan-zhendong__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 11,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 11,
+          "2": 24,
+          "3": 26,
+          "4": 25,
+          "5": 22,
+          "6": 22,
+          "7": 25,
+          "8": 16,
+          "9": 16,
+          "10": 8,
+          "11": 2,
+          "12": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 37,
+          "5": 11,
+          "sweep": 37
+        }
+      },
+      "fan-zhendong__truls-moregard": {
+        "matches": 48,
+        "winsA": 43,
+        "winsB": 5,
+        "gameWinsA": 184,
+        "gameWinsB": 54,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 8,
+          "3": 14,
+          "4": 20,
+          "5": 20,
+          "6": 30,
+          "7": 32,
+          "8": 35,
+          "9": 42,
+          "10": 16,
+          "11": 9,
+          "12": 3,
+          "13": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 20,
+          "5": 16,
+          "6": 6,
+          "7": 6,
+          "sweep": 20
+        }
+      },
+      "zhang-jike__xu-xin": {
+        "matches": 48,
+        "winsA": 24,
+        "winsB": 24,
+        "gameWinsA": 136,
+        "gameWinsB": 121,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 5,
+          "3": 15,
+          "4": 9,
+          "5": 22,
+          "6": 32,
+          "7": 47,
+          "8": 42,
+          "9": 40,
+          "10": 23,
+          "11": 9,
+          "12": 7,
+          "13": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 13,
+          "5": 13,
+          "6": 14,
+          "7": 8,
+          "sweep": 13
+        }
+      },
+      "zhang-jike__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 46,
+        "winsB": 2,
+        "gameWinsA": 188,
+        "gameWinsB": 51,
+        "setLossScoreHistogram": {
+          "2": 7,
+          "3": 6,
+          "4": 7,
+          "5": 20,
+          "6": 22,
+          "7": 42,
+          "8": 43,
+          "9": 48,
+          "10": 16,
+          "11": 12,
+          "12": 4,
+          "13": 3,
+          "14": 3,
+          "15": 3,
+          "16": 1,
+          "17": 1,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 17,
+          "5": 20,
+          "6": 6,
+          "7": 5,
+          "sweep": 17
+        }
+      },
+      "zhang-jike__wang-chuqin": {
+        "matches": 48,
+        "winsA": 6,
+        "winsB": 42,
+        "gameWinsA": 82,
+        "gameWinsB": 179,
+        "setLossScoreHistogram": {
+          "1": 4,
+          "2": 9,
+          "3": 13,
+          "4": 15,
+          "5": 31,
+          "6": 39,
+          "7": 37,
+          "8": 36,
+          "9": 46,
+          "10": 16,
+          "11": 8,
+          "12": 3,
+          "14": 1,
+          "15": 1,
+          "16": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 13,
+          "5": 9,
+          "6": 18,
+          "7": 8,
+          "sweep": 13
+        }
+      },
+      "zhang-jike__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 16,
+        "winsB": 32,
+        "gameWinsA": 114,
+        "gameWinsB": 161,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "2": 6,
+          "3": 17,
+          "4": 13,
+          "5": 30,
+          "6": 39,
+          "7": 43,
+          "8": 40,
+          "9": 44,
+          "10": 23,
+          "11": 4,
+          "12": 9,
+          "13": 4,
+          "14": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 6,
+          "5": 15,
+          "6": 13,
+          "7": 14,
+          "sweep": 6
+        }
+      },
+      "zhang-jike__truls-moregard": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 124,
+        "gameWinsB": 149,
+        "setLossScoreHistogram": {
+          "1": 4,
+          "2": 5,
+          "3": 9,
+          "4": 11,
+          "5": 29,
+          "6": 34,
+          "7": 43,
+          "8": 45,
+          "9": 49,
+          "10": 27,
+          "11": 11,
+          "12": 3,
+          "13": 1,
+          "17": 1,
+          "22": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 10,
+          "5": 11,
+          "6": 11,
+          "7": 16,
+          "sweep": 10
+        }
+      },
+      "xu-xin__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 3,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 15,
+          "2": 36,
+          "3": 37,
+          "4": 27,
+          "5": 26,
+          "6": 22,
+          "7": 12,
+          "8": 8,
+          "9": 5,
+          "10": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 45,
+          "5": 3,
+          "sweep": 45
+        }
+      },
+      "xu-xin__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 9,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 6,
+          "2": 14,
+          "3": 30,
+          "4": 24,
+          "5": 32,
+          "6": 23,
+          "7": 26,
+          "8": 14,
+          "9": 17,
+          "10": 5,
+          "12": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 41,
+          "5": 5,
+          "6": 2,
+          "sweep": 41
+        }
+      },
+      "xu-xin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 26,
+          "1": 49,
+          "2": 57,
+          "3": 25,
+          "4": 18,
+          "5": 14,
+          "6": 2,
+          "8": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "xu-xin__truls-moregard": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 34,
+          "1": 52,
+          "2": 33,
+          "3": 33,
+          "4": 13,
+          "5": 15,
+          "6": 6,
+          "7": 3,
+          "8": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 2,
+        "setLossScoreHistogram": {
+          "0": 18,
+          "1": 34,
+          "2": 37,
+          "3": 36,
+          "4": 25,
+          "5": 18,
+          "6": 10,
+          "7": 4,
+          "8": 6,
+          "9": 3,
+          "10": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 46,
+          "5": 2,
+          "sweep": 46
+        }
+      },
+      "lin-gaoyuan__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 36,
+          "1": 56,
+          "2": 60,
+          "3": 21,
+          "4": 12,
+          "5": 5,
+          "6": 1,
+          "7": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__truls-moregard": {
+        "matches": 48,
+        "winsA": 9,
+        "winsB": 39,
+        "gameWinsA": 97,
+        "gameWinsB": 180,
+        "setLossScoreHistogram": {
+          "3": 1,
+          "5": 10,
+          "6": 35,
+          "7": 54,
+          "8": 47,
+          "9": 60,
+          "10": 15,
+          "11": 8,
+          "12": 8,
+          "13": 8,
+          "14": 8,
+          "15": 3,
+          "16": 1,
+          "17": 4,
+          "18": 5,
+          "19": 1,
+          "20": 2,
+          "21": 3,
+          "23": 2,
+          "24": 1,
+          "27": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 13,
+          "6": 12,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "wang-chuqin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 47,
+        "winsB": 1,
+        "gameWinsA": 191,
+        "gameWinsB": 26,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "2": 8,
+          "3": 12,
+          "4": 22,
+          "5": 33,
+          "6": 20,
+          "7": 31,
+          "8": 28,
+          "9": 28,
+          "10": 15,
+          "11": 8,
+          "12": 5,
+          "13": 4,
+          "14": 1,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 28,
+          "5": 16,
+          "6": 3,
+          "7": 1,
+          "sweep": 28
+        }
+      },
+      "wang-chuqin__truls-moregard": {
+        "matches": 48,
+        "winsA": 42,
+        "winsB": 6,
+        "gameWinsA": 179,
+        "gameWinsB": 82,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 1,
+          "3": 10,
+          "4": 9,
+          "5": 21,
+          "6": 26,
+          "7": 49,
+          "8": 50,
+          "9": 48,
+          "10": 17,
+          "11": 10,
+          "12": 8,
+          "13": 1,
+          "14": 3,
+          "15": 2,
+          "16": 1,
+          "18": 1,
+          "23": 1,
+          "29": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 14,
+          "5": 11,
+          "6": 11,
+          "7": 12,
+          "sweep": 14
+        }
+      },
+      "tomokazu-harimoto__truls-moregard": {
+        "matches": 48,
+        "winsA": 16,
+        "winsB": 32,
+        "gameWinsA": 88,
+        "gameWinsB": 161,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 4,
+          "3": 11,
+          "4": 14,
+          "5": 33,
+          "6": 40,
+          "7": 38,
+          "8": 31,
+          "9": 34,
+          "10": 20,
+          "11": 7,
+          "12": 6,
+          "13": 1,
+          "14": 4,
+          "15": 2,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 12,
+          "6": 9,
+          "7": 9,
+          "sweep": 18
+        }
+      }
+    }
+  },
+  {
+    "candidate": "harimoto-plus-one-only",
+    "strategy": "balanced-varied",
+    "matches": 1344,
+    "games": 6486,
+    "closeGameRate": 0.79386370644465,
+    "meanLoserScore": 6.456675917360469,
+    "shutoutRate": 0.021739130434782608,
+    "onePointLossRate": 0.04579093432007401,
+    "loserAtMostFourRate": 0.2802960222016651,
+    "deuceRate": 0.13043478260869565,
+    "meanMatchLength": 4.825892857142857,
+    "sweepRate": 0.5498511904761905,
+    "fiveOrSixGameSeriesRate": 0.32961309523809523,
+    "sevenGameSeriesRate": 0.12053571428571429,
+    "meanSameTierWinRateDistanceFrom50Pct": 0.26785714285714285,
+    "tierWinRates": {
+      "440": 0.36607142857142855,
+      "460": 0.5788690476190477,
+      "480": 0.5813492063492064
+    },
+    "score": 0.5537352567067529,
+    "playerSeries": {
+      "ma-long": {
+        "matches": 336,
+        "wins": 184,
+        "gameWins": 900
+      },
+      "fan-zhendong": {
+        "matches": 336,
+        "wins": 242,
+        "gameWins": 1129
+      },
+      "zhang-jike": {
+        "matches": 336,
+        "wins": 160,
+        "gameWins": 893
+      },
+      "xu-xin": {
+        "matches": 336,
+        "wins": 238,
+        "gameWins": 978
+      },
+      "lin-gaoyuan": {
+        "matches": 336,
+        "wins": 160,
+        "gameWins": 771
+      },
+      "wang-chuqin": {
+        "matches": 336,
+        "wins": 151,
+        "gameWins": 706
+      },
+      "tomokazu-harimoto": {
+        "matches": 336,
+        "wins": 53,
+        "gameWins": 301
+      },
+      "truls-moregard": {
+        "matches": 336,
+        "wins": 156,
+        "gameWins": 808
+      }
+    },
+    "playerPairs": {
+      "ma-long__fan-zhendong": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 120,
+        "gameWinsB": 156,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 6,
+          "5": 23,
+          "6": 23,
+          "7": 46,
+          "8": 44,
+          "9": 67,
+          "10": 22,
+          "11": 9,
+          "12": 8,
+          "13": 6,
+          "14": 2,
+          "15": 2,
+          "16": 2,
+          "18": 1,
+          "19": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 9,
+          "7": 17,
+          "sweep": 7
+        }
+      },
+      "ma-long__zhang-jike": {
+        "matches": 48,
+        "winsA": 19,
+        "winsB": 29,
+        "gameWinsA": 123,
+        "gameWinsB": 152,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "3": 13,
+          "4": 10,
+          "5": 28,
+          "6": 29,
+          "7": 41,
+          "8": 55,
+          "9": 54,
+          "10": 22,
+          "11": 10,
+          "12": 6,
+          "13": 3,
+          "14": 1,
+          "16": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 6,
+          "5": 17,
+          "6": 9,
+          "7": 16,
+          "sweep": 6
+        }
+      },
+      "ma-long__xu-xin": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 27,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 12,
+          "3": 21,
+          "4": 24,
+          "5": 32,
+          "6": 22,
+          "7": 29,
+          "8": 29,
+          "9": 24,
+          "10": 8,
+          "11": 5,
+          "12": 3,
+          "13": 1,
+          "16": 1,
+          "22": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 30,
+          "5": 10,
+          "6": 7,
+          "7": 1,
+          "sweep": 30
+        }
+      },
+      "ma-long__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 5,
+          "3": 18,
+          "4": 14,
+          "5": 38,
+          "6": 32,
+          "7": 35,
+          "8": 25,
+          "9": 16,
+          "10": 1,
+          "11": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "ma-long__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 4,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 17,
+          "2": 25,
+          "3": 27,
+          "4": 33,
+          "5": 25,
+          "6": 23,
+          "7": 17,
+          "8": 13,
+          "9": 5,
+          "10": 5,
+          "11": 2,
+          "12": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 44,
+          "5": 4,
+          "sweep": 44
+        }
+      },
+      "ma-long__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 15,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 22,
+          "2": 22,
+          "3": 25,
+          "4": 25,
+          "5": 26,
+          "6": 20,
+          "7": 14,
+          "8": 20,
+          "9": 16,
+          "10": 7,
+          "11": 2,
+          "12": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 35,
+          "5": 11,
+          "6": 2,
+          "sweep": 35
+        }
+      },
+      "ma-long__truls-moregard": {
+        "matches": 48,
+        "winsA": 1,
+        "winsB": 47,
+        "gameWinsA": 54,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 6,
+          "3": 14,
+          "4": 19,
+          "5": 28,
+          "6": 33,
+          "7": 47,
+          "8": 30,
+          "9": 29,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 2,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 15,
+          "6": 10,
+          "7": 5,
+          "sweep": 18
+        }
+      },
+      "fan-zhendong__zhang-jike": {
+        "matches": 48,
+        "winsA": 14,
+        "winsB": 34,
+        "gameWinsA": 107,
+        "gameWinsB": 160,
+        "setLossScoreHistogram": {
+          "2": 2,
+          "3": 13,
+          "4": 18,
+          "5": 19,
+          "6": 29,
+          "7": 46,
+          "8": 38,
+          "9": 49,
+          "10": 24,
+          "11": 14,
+          "12": 4,
+          "13": 5,
+          "14": 2,
+          "15": 2,
+          "16": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 8,
+          "5": 16,
+          "6": 13,
+          "7": 11,
+          "sweep": 8
+        }
+      },
+      "fan-zhendong__xu-xin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 19,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 17,
+          "3": 24,
+          "4": 24,
+          "5": 22,
+          "6": 23,
+          "7": 23,
+          "8": 36,
+          "9": 15,
+          "10": 8,
+          "11": 7,
+          "12": 3,
+          "14": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 13,
+          "6": 3,
+          "sweep": 32
+        }
+      },
+      "fan-zhendong__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 41,
+        "winsB": 7,
+        "gameWinsA": 177,
+        "gameWinsB": 98,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 11,
+          "5": 35,
+          "6": 29,
+          "7": 49,
+          "8": 27,
+          "9": 52,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 9,
+          "14": 5,
+          "15": 3,
+          "16": 1,
+          "17": 2,
+          "18": 3,
+          "20": 3,
+          "21": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 10,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "fan-zhendong__wang-chuqin": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 121,
+        "gameWinsB": 154,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 1,
+          "3": 6,
+          "4": 6,
+          "5": 16,
+          "6": 32,
+          "7": 36,
+          "8": 33,
+          "9": 71,
+          "10": 14,
+          "11": 18,
+          "12": 9,
+          "13": 13,
+          "14": 7,
+          "15": 4,
+          "16": 2,
+          "17": 1,
+          "18": 2,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 9,
+          "5": 9,
+          "6": 16,
+          "7": 14,
+          "sweep": 9
+        }
+      },
+      "fan-zhendong__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 11,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 11,
+          "2": 24,
+          "3": 26,
+          "4": 25,
+          "5": 22,
+          "6": 22,
+          "7": 25,
+          "8": 16,
+          "9": 16,
+          "10": 8,
+          "11": 2,
+          "12": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 37,
+          "5": 11,
+          "sweep": 37
+        }
+      },
+      "fan-zhendong__truls-moregard": {
+        "matches": 48,
+        "winsA": 43,
+        "winsB": 5,
+        "gameWinsA": 184,
+        "gameWinsB": 54,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 8,
+          "3": 14,
+          "4": 20,
+          "5": 20,
+          "6": 30,
+          "7": 32,
+          "8": 35,
+          "9": 42,
+          "10": 16,
+          "11": 9,
+          "12": 3,
+          "13": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 20,
+          "5": 16,
+          "6": 6,
+          "7": 6,
+          "sweep": 20
+        }
+      },
+      "zhang-jike__xu-xin": {
+        "matches": 48,
+        "winsA": 2,
+        "winsB": 46,
+        "gameWinsA": 59,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 7,
+          "3": 22,
+          "4": 27,
+          "5": 31,
+          "6": 25,
+          "7": 37,
+          "8": 38,
+          "9": 31,
+          "10": 8,
+          "11": 8,
+          "12": 4,
+          "13": 5,
+          "14": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 17,
+          "5": 12,
+          "6": 14,
+          "7": 5,
+          "sweep": 17
+        }
+      },
+      "zhang-jike__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "2": 2,
+          "3": 4,
+          "4": 5,
+          "5": 11,
+          "6": 21,
+          "7": 49,
+          "8": 33,
+          "9": 30,
+          "10": 7,
+          "11": 6,
+          "12": 3,
+          "13": 3,
+          "15": 3,
+          "16": 3,
+          "18": 1,
+          "19": 2,
+          "20": 1,
+          "21": 1,
+          "22": 1,
+          "23": 1,
+          "25": 1,
+          "27": 1,
+          "30": 1,
+          "31": 1,
+          "34": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "zhang-jike__wang-chuqin": {
+        "matches": 48,
+        "winsA": 14,
+        "winsB": 34,
+        "gameWinsA": 120,
+        "gameWinsB": 167,
+        "setLossScoreHistogram": {
+          "2": 6,
+          "3": 8,
+          "4": 15,
+          "5": 15,
+          "6": 32,
+          "7": 36,
+          "8": 43,
+          "9": 75,
+          "10": 19,
+          "11": 15,
+          "12": 6,
+          "13": 9,
+          "14": 5,
+          "15": 1,
+          "17": 1,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 3,
+          "5": 12,
+          "6": 16,
+          "7": 17,
+          "sweep": 3
+        }
+      },
+      "zhang-jike__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 12,
+        "winsB": 36,
+        "gameWinsA": 88,
+        "gameWinsB": 161,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 4,
+          "3": 12,
+          "4": 21,
+          "5": 32,
+          "6": 35,
+          "7": 43,
+          "8": 31,
+          "9": 33,
+          "10": 12,
+          "11": 10,
+          "12": 6,
+          "13": 3,
+          "14": 2,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 19,
+          "5": 10,
+          "6": 10,
+          "7": 9,
+          "sweep": 19
+        }
+      },
+      "zhang-jike__truls-moregard": {
+        "matches": 48,
+        "winsA": 21,
+        "winsB": 27,
+        "gameWinsA": 122,
+        "gameWinsB": 143,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "2": 6,
+          "3": 11,
+          "4": 14,
+          "5": 23,
+          "6": 34,
+          "7": 33,
+          "8": 45,
+          "9": 35,
+          "10": 37,
+          "11": 11,
+          "12": 7,
+          "13": 7,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 8,
+          "5": 14,
+          "6": 19,
+          "7": 7,
+          "sweep": 8
+        }
+      },
+      "xu-xin__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 3,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 15,
+          "2": 36,
+          "3": 37,
+          "4": 27,
+          "5": 26,
+          "6": 22,
+          "7": 12,
+          "8": 8,
+          "9": 5,
+          "10": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 45,
+          "5": 3,
+          "sweep": 45
+        }
+      },
+      "xu-xin__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 9,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 6,
+          "2": 14,
+          "3": 30,
+          "4": 24,
+          "5": 32,
+          "6": 23,
+          "7": 26,
+          "8": 14,
+          "9": 17,
+          "10": 5,
+          "12": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 41,
+          "5": 5,
+          "6": 2,
+          "sweep": 41
+        }
+      },
+      "xu-xin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 26,
+          "1": 49,
+          "2": 57,
+          "3": 25,
+          "4": 18,
+          "5": 14,
+          "6": 2,
+          "8": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "xu-xin__truls-moregard": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 34,
+          "1": 52,
+          "2": 33,
+          "3": 33,
+          "4": 13,
+          "5": 15,
+          "6": 6,
+          "7": 3,
+          "8": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 2,
+        "setLossScoreHistogram": {
+          "0": 18,
+          "1": 34,
+          "2": 37,
+          "3": 36,
+          "4": 25,
+          "5": 18,
+          "6": 10,
+          "7": 4,
+          "8": 6,
+          "9": 3,
+          "10": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 46,
+          "5": 2,
+          "sweep": 46
+        }
+      },
+      "lin-gaoyuan__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 36,
+          "1": 56,
+          "2": 60,
+          "3": 21,
+          "4": 12,
+          "5": 5,
+          "6": 1,
+          "7": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__truls-moregard": {
+        "matches": 48,
+        "winsA": 9,
+        "winsB": 39,
+        "gameWinsA": 97,
+        "gameWinsB": 180,
+        "setLossScoreHistogram": {
+          "3": 1,
+          "5": 10,
+          "6": 35,
+          "7": 54,
+          "8": 47,
+          "9": 60,
+          "10": 15,
+          "11": 8,
+          "12": 8,
+          "13": 8,
+          "14": 8,
+          "15": 3,
+          "16": 1,
+          "17": 4,
+          "18": 5,
+          "19": 1,
+          "20": 2,
+          "21": 3,
+          "23": 2,
+          "24": 1,
+          "27": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 13,
+          "6": 12,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "wang-chuqin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 47,
+        "winsB": 1,
+        "gameWinsA": 191,
+        "gameWinsB": 26,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "2": 8,
+          "3": 12,
+          "4": 22,
+          "5": 33,
+          "6": 20,
+          "7": 31,
+          "8": 28,
+          "9": 28,
+          "10": 15,
+          "11": 8,
+          "12": 5,
+          "13": 4,
+          "14": 1,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 28,
+          "5": 16,
+          "6": 3,
+          "7": 1,
+          "sweep": 28
+        }
+      },
+      "wang-chuqin__truls-moregard": {
+        "matches": 48,
+        "winsA": 42,
+        "winsB": 6,
+        "gameWinsA": 179,
+        "gameWinsB": 82,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 1,
+          "3": 10,
+          "4": 9,
+          "5": 21,
+          "6": 26,
+          "7": 49,
+          "8": 50,
+          "9": 48,
+          "10": 17,
+          "11": 10,
+          "12": 8,
+          "13": 1,
+          "14": 3,
+          "15": 2,
+          "16": 1,
+          "18": 1,
+          "23": 1,
+          "29": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 14,
+          "5": 11,
+          "6": 11,
+          "7": 12,
+          "sweep": 14
+        }
+      },
+      "tomokazu-harimoto__truls-moregard": {
+        "matches": 48,
+        "winsA": 16,
+        "winsB": 32,
+        "gameWinsA": 88,
+        "gameWinsB": 161,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 4,
+          "3": 11,
+          "4": 14,
+          "5": 33,
+          "6": 40,
+          "7": 38,
+          "8": 31,
+          "9": 34,
+          "10": 20,
+          "11": 7,
+          "12": 6,
+          "13": 1,
+          "14": 4,
+          "15": 2,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 12,
+          "6": 9,
+          "7": 9,
+          "sweep": 18
+        }
+      }
+    }
+  },
+  {
+    "candidate": "harimoto-plus-one-zhang-defense-plus-one",
+    "strategy": "balanced-varied",
+    "matches": 1344,
+    "games": 6256,
+    "closeGameRate": 0.7517583120204604,
+    "meanLoserScore": 6.341592071611253,
+    "shutoutRate": 0.02477621483375959,
+    "onePointLossRate": 0.05370843989769821,
+    "loserAtMostFourRate": 0.33008312020460356,
+    "deuceRate": 0.11652813299232737,
+    "meanMatchLength": 4.654761904761905,
+    "sweepRate": 0.6197916666666666,
+    "fiveOrSixGameSeriesRate": 0.2961309523809524,
+    "sevenGameSeriesRate": 0.08407738095238096,
+    "meanSameTierWinRateDistanceFrom50Pct": 0.3630952380952381,
+    "tierWinRates": {
+      "440": 0.39880952380952384,
+      "460": 0.48214285714285715,
+      "480": 0.6130952380952381
+    },
+    "score": 0.4961923600962124,
+    "playerSeries": {
+      "ma-long": {
+        "matches": 336,
+        "wins": 213,
+        "gameWins": 969
+      },
+      "fan-zhendong": {
+        "matches": 336,
+        "wins": 275,
+        "gameWins": 1210
+      },
+      "zhang-jike": {
+        "matches": 336,
+        "wins": 130,
+        "gameWins": 692
+      },
+      "xu-xin": {
+        "matches": 336,
+        "wins": 192,
+        "gameWins": 801
+      },
+      "lin-gaoyuan": {
+        "matches": 336,
+        "wins": 208,
+        "gameWins": 963
+      },
+      "wang-chuqin": {
+        "matches": 336,
+        "wins": 132,
+        "gameWins": 606
+      },
+      "tomokazu-harimoto": {
+        "matches": 336,
+        "wins": 64,
+        "gameWins": 328
+      },
+      "truls-moregard": {
+        "matches": 336,
+        "wins": 130,
+        "gameWins": 687
+      }
+    },
+    "playerPairs": {
+      "ma-long__fan-zhendong": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 120,
+        "gameWinsB": 156,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 6,
+          "5": 23,
+          "6": 23,
+          "7": 46,
+          "8": 44,
+          "9": 67,
+          "10": 22,
+          "11": 9,
+          "12": 8,
+          "13": 6,
+          "14": 2,
+          "15": 2,
+          "16": 2,
+          "18": 1,
+          "19": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 9,
+          "7": 17,
+          "sweep": 7
+        }
+      },
+      "ma-long__zhang-jike": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 28,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 5,
+          "2": 6,
+          "3": 16,
+          "4": 22,
+          "5": 25,
+          "6": 27,
+          "7": 29,
+          "8": 34,
+          "9": 34,
+          "10": 4,
+          "11": 2,
+          "12": 4,
+          "13": 2,
+          "14": 3,
+          "15": 2,
+          "16": 1,
+          "17": 1,
+          "19": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 28,
+          "5": 14,
+          "6": 4,
+          "7": 2,
+          "sweep": 28
+        }
+      },
+      "ma-long__xu-xin": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 27,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 12,
+          "3": 21,
+          "4": 24,
+          "5": 32,
+          "6": 22,
+          "7": 29,
+          "8": 29,
+          "9": 24,
+          "10": 8,
+          "11": 5,
+          "12": 3,
+          "13": 1,
+          "16": 1,
+          "22": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 30,
+          "5": 10,
+          "6": 7,
+          "7": 1,
+          "sweep": 30
+        }
+      },
+      "ma-long__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 5,
+          "3": 18,
+          "4": 14,
+          "5": 38,
+          "6": 32,
+          "7": 35,
+          "8": 25,
+          "9": 16,
+          "10": 1,
+          "11": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "ma-long__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 4,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 17,
+          "2": 25,
+          "3": 27,
+          "4": 33,
+          "5": 25,
+          "6": 23,
+          "7": 17,
+          "8": 13,
+          "9": 5,
+          "10": 5,
+          "11": 2,
+          "12": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 44,
+          "5": 4,
+          "sweep": 44
+        }
+      },
+      "ma-long__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 15,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 22,
+          "2": 22,
+          "3": 25,
+          "4": 25,
+          "5": 26,
+          "6": 20,
+          "7": 14,
+          "8": 20,
+          "9": 16,
+          "10": 7,
+          "11": 2,
+          "12": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 35,
+          "5": 11,
+          "6": 2,
+          "sweep": 35
+        }
+      },
+      "ma-long__truls-moregard": {
+        "matches": 48,
+        "winsA": 1,
+        "winsB": 47,
+        "gameWinsA": 54,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 6,
+          "3": 14,
+          "4": 19,
+          "5": 28,
+          "6": 33,
+          "7": 47,
+          "8": 30,
+          "9": 29,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 2,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 15,
+          "6": 10,
+          "7": 5,
+          "sweep": 18
+        }
+      },
+      "fan-zhendong__zhang-jike": {
+        "matches": 48,
+        "winsA": 47,
+        "winsB": 1,
+        "gameWinsA": 188,
+        "gameWinsB": 44,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 8,
+          "2": 18,
+          "3": 26,
+          "4": 23,
+          "5": 27,
+          "6": 32,
+          "7": 31,
+          "8": 26,
+          "9": 27,
+          "10": 10,
+          "11": 1,
+          "12": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 22,
+          "5": 14,
+          "6": 10,
+          "7": 2,
+          "sweep": 22
+        }
+      },
+      "fan-zhendong__xu-xin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 19,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 17,
+          "3": 24,
+          "4": 24,
+          "5": 22,
+          "6": 23,
+          "7": 23,
+          "8": 36,
+          "9": 15,
+          "10": 8,
+          "11": 7,
+          "12": 3,
+          "14": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 13,
+          "6": 3,
+          "sweep": 32
+        }
+      },
+      "fan-zhendong__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 41,
+        "winsB": 7,
+        "gameWinsA": 177,
+        "gameWinsB": 98,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 11,
+          "5": 35,
+          "6": 29,
+          "7": 49,
+          "8": 27,
+          "9": 52,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 9,
+          "14": 5,
+          "15": 3,
+          "16": 1,
+          "17": 2,
+          "18": 3,
+          "20": 3,
+          "21": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 10,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "fan-zhendong__wang-chuqin": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 121,
+        "gameWinsB": 154,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 1,
+          "3": 6,
+          "4": 6,
+          "5": 16,
+          "6": 32,
+          "7": 36,
+          "8": 33,
+          "9": 71,
+          "10": 14,
+          "11": 18,
+          "12": 9,
+          "13": 13,
+          "14": 7,
+          "15": 4,
+          "16": 2,
+          "17": 1,
+          "18": 2,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 9,
+          "5": 9,
+          "6": 16,
+          "7": 14,
+          "sweep": 9
+        }
+      },
+      "fan-zhendong__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 11,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 11,
+          "2": 24,
+          "3": 26,
+          "4": 25,
+          "5": 22,
+          "6": 22,
+          "7": 25,
+          "8": 16,
+          "9": 16,
+          "10": 8,
+          "11": 2,
+          "12": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 37,
+          "5": 11,
+          "sweep": 37
+        }
+      },
+      "fan-zhendong__truls-moregard": {
+        "matches": 48,
+        "winsA": 43,
+        "winsB": 5,
+        "gameWinsA": 184,
+        "gameWinsB": 54,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 8,
+          "3": 14,
+          "4": 20,
+          "5": 20,
+          "6": 30,
+          "7": 32,
+          "8": 35,
+          "9": 42,
+          "10": 16,
+          "11": 9,
+          "12": 3,
+          "13": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 20,
+          "5": 16,
+          "6": 6,
+          "7": 6,
+          "sweep": 20
+        }
+      },
+      "zhang-jike__xu-xin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 11,
+        "setLossScoreHistogram": {
+          "0": 3,
+          "1": 11,
+          "2": 31,
+          "3": 33,
+          "4": 26,
+          "5": 29,
+          "6": 22,
+          "7": 20,
+          "8": 18,
+          "9": 7,
+          "10": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 38,
+          "5": 9,
+          "6": 1,
+          "sweep": 38
+        }
+      },
+      "zhang-jike__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 0,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "6": 6,
+          "7": 36,
+          "8": 17,
+          "9": 33,
+          "10": 4,
+          "11": 8,
+          "12": 5,
+          "13": 3,
+          "14": 1,
+          "15": 6,
+          "16": 6,
+          "17": 5,
+          "18": 7,
+          "19": 3,
+          "20": 3,
+          "21": 1,
+          "22": 2,
+          "23": 3,
+          "24": 4,
+          "25": 1,
+          "26": 3,
+          "27": 4,
+          "28": 2,
+          "29": 2,
+          "30": 1,
+          "31": 1,
+          "33": 2,
+          "34": 3,
+          "35": 2,
+          "36": 3,
+          "37": 1,
+          "41": 1,
+          "44": 1,
+          "45": 1,
+          "47": 1,
+          "48": 1,
+          "53": 1,
+          "60": 1,
+          "61": 1,
+          "63": 2,
+          "81": 1,
+          "87": 1,
+          "99": 1,
+          "108": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "zhang-jike__wang-chuqin": {
+        "matches": 48,
+        "winsA": 33,
+        "winsB": 15,
+        "gameWinsA": 159,
+        "gameWinsB": 67,
+        "setLossScoreHistogram": {
+          "0": 6,
+          "1": 10,
+          "2": 21,
+          "3": 25,
+          "4": 30,
+          "5": 22,
+          "6": 33,
+          "7": 26,
+          "8": 21,
+          "9": 19,
+          "10": 6,
+          "11": 3,
+          "12": 2,
+          "13": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 4,
+          "6": 6,
+          "7": 6,
+          "sweep": 32
+        }
+      },
+      "zhang-jike__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 1,
+        "winsB": 47,
+        "gameWinsA": 78,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 9,
+          "2": 32,
+          "3": 44,
+          "4": 32,
+          "5": 39,
+          "6": 31,
+          "7": 26,
+          "8": 20,
+          "9": 20,
+          "10": 6,
+          "11": 2,
+          "12": 1,
+          "13": 1,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 3,
+          "5": 20,
+          "6": 21,
+          "7": 4,
+          "sweep": 3
+        }
+      },
+      "zhang-jike__truls-moregard": {
+        "matches": 48,
+        "winsA": 47,
+        "winsB": 1,
+        "gameWinsA": 191,
+        "gameWinsB": 22,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 7,
+          "3": 14,
+          "4": 8,
+          "5": 24,
+          "6": 29,
+          "7": 36,
+          "8": 22,
+          "9": 31,
+          "10": 11,
+          "11": 8,
+          "12": 2,
+          "13": 6,
+          "14": 2,
+          "15": 2,
+          "16": 2,
+          "18": 1,
+          "19": 1,
+          "21": 1,
+          "29": 1,
+          "36": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 13,
+          "6": 1,
+          "7": 2,
+          "sweep": 32
+        }
+      },
+      "xu-xin__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 3,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 15,
+          "2": 36,
+          "3": 37,
+          "4": 27,
+          "5": 26,
+          "6": 22,
+          "7": 12,
+          "8": 8,
+          "9": 5,
+          "10": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 45,
+          "5": 3,
+          "sweep": 45
+        }
+      },
+      "xu-xin__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 9,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 6,
+          "2": 14,
+          "3": 30,
+          "4": 24,
+          "5": 32,
+          "6": 23,
+          "7": 26,
+          "8": 14,
+          "9": 17,
+          "10": 5,
+          "12": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 41,
+          "5": 5,
+          "6": 2,
+          "sweep": 41
+        }
+      },
+      "xu-xin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 26,
+          "1": 49,
+          "2": 57,
+          "3": 25,
+          "4": 18,
+          "5": 14,
+          "6": 2,
+          "8": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "xu-xin__truls-moregard": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 34,
+          "1": 52,
+          "2": 33,
+          "3": 33,
+          "4": 13,
+          "5": 15,
+          "6": 6,
+          "7": 3,
+          "8": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 2,
+        "setLossScoreHistogram": {
+          "0": 18,
+          "1": 34,
+          "2": 37,
+          "3": 36,
+          "4": 25,
+          "5": 18,
+          "6": 10,
+          "7": 4,
+          "8": 6,
+          "9": 3,
+          "10": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 46,
+          "5": 2,
+          "sweep": 46
+        }
+      },
+      "lin-gaoyuan__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 36,
+          "1": 56,
+          "2": 60,
+          "3": 21,
+          "4": 12,
+          "5": 5,
+          "6": 1,
+          "7": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__truls-moregard": {
+        "matches": 48,
+        "winsA": 9,
+        "winsB": 39,
+        "gameWinsA": 97,
+        "gameWinsB": 180,
+        "setLossScoreHistogram": {
+          "3": 1,
+          "5": 10,
+          "6": 35,
+          "7": 54,
+          "8": 47,
+          "9": 60,
+          "10": 15,
+          "11": 8,
+          "12": 8,
+          "13": 8,
+          "14": 8,
+          "15": 3,
+          "16": 1,
+          "17": 4,
+          "18": 5,
+          "19": 1,
+          "20": 2,
+          "21": 3,
+          "23": 2,
+          "24": 1,
+          "27": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 13,
+          "6": 12,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "wang-chuqin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 47,
+        "winsB": 1,
+        "gameWinsA": 191,
+        "gameWinsB": 26,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "2": 8,
+          "3": 12,
+          "4": 22,
+          "5": 33,
+          "6": 20,
+          "7": 31,
+          "8": 28,
+          "9": 28,
+          "10": 15,
+          "11": 8,
+          "12": 5,
+          "13": 4,
+          "14": 1,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 28,
+          "5": 16,
+          "6": 3,
+          "7": 1,
+          "sweep": 28
+        }
+      },
+      "wang-chuqin__truls-moregard": {
+        "matches": 48,
+        "winsA": 42,
+        "winsB": 6,
+        "gameWinsA": 179,
+        "gameWinsB": 82,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 1,
+          "3": 10,
+          "4": 9,
+          "5": 21,
+          "6": 26,
+          "7": 49,
+          "8": 50,
+          "9": 48,
+          "10": 17,
+          "11": 10,
+          "12": 8,
+          "13": 1,
+          "14": 3,
+          "15": 2,
+          "16": 1,
+          "18": 1,
+          "23": 1,
+          "29": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 14,
+          "5": 11,
+          "6": 11,
+          "7": 12,
+          "sweep": 14
+        }
+      },
+      "tomokazu-harimoto__truls-moregard": {
+        "matches": 48,
+        "winsA": 16,
+        "winsB": 32,
+        "gameWinsA": 88,
+        "gameWinsB": 161,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 4,
+          "3": 11,
+          "4": 14,
+          "5": 33,
+          "6": 40,
+          "7": 38,
+          "8": 31,
+          "9": 34,
+          "10": 20,
+          "11": 7,
+          "12": 6,
+          "13": 1,
+          "14": 4,
+          "15": 2,
+          "16": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 12,
+          "6": 9,
+          "7": 9,
+          "sweep": 18
+        }
+      }
+    }
+  },
+  {
+    "candidate": "baseline",
+    "strategy": "balanced-varied",
+    "matches": 1344,
+    "games": 6325,
+    "closeGameRate": 0.7043478260869566,
+    "meanLoserScore": 5.831146245059289,
+    "shutoutRate": 0.05865612648221344,
+    "onePointLossRate": 0.07636363636363637,
+    "loserAtMostFourRate": 0.37138339920948615,
+    "deuceRate": 0.1133596837944664,
+    "meanMatchLength": 4.706101190476191,
+    "sweepRate": 0.6235119047619048,
+    "fiveOrSixGameSeriesRate": 0.2700892857142857,
+    "sevenGameSeriesRate": 0.10639880952380952,
+    "meanSameTierWinRateDistanceFrom50Pct": 0.3154761904761904,
+    "tierWinRates": {
+      "440": 0.32936507936507936,
+      "460": 0.5803571428571429,
+      "480": 0.6170634920634921
+    },
+    "score": 0.47620555124223607,
+    "playerSeries": {
+      "ma-long": {
+        "matches": 336,
+        "wins": 184,
+        "gameWins": 900
+      },
+      "fan-zhendong": {
+        "matches": 336,
+        "wins": 242,
+        "gameWins": 1129
+      },
+      "zhang-jike": {
+        "matches": 336,
+        "wins": 196,
+        "gameWins": 997
+      },
+      "xu-xin": {
+        "matches": 336,
+        "wins": 238,
+        "gameWins": 978
+      },
+      "lin-gaoyuan": {
+        "matches": 336,
+        "wins": 160,
+        "gameWins": 771
+      },
+      "wang-chuqin": {
+        "matches": 336,
+        "wins": 152,
+        "gameWins": 707
+      },
+      "tomokazu-harimoto": {
+        "matches": 336,
+        "wins": 0,
+        "gameWins": 4
+      },
+      "truls-moregard": {
+        "matches": 336,
+        "wins": 172,
+        "gameWins": 839
+      }
+    },
+    "playerPairs": {
+      "ma-long__fan-zhendong": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 120,
+        "gameWinsB": 156,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 6,
+          "5": 23,
+          "6": 23,
+          "7": 46,
+          "8": 44,
+          "9": 67,
+          "10": 22,
+          "11": 9,
+          "12": 8,
+          "13": 6,
+          "14": 2,
+          "15": 2,
+          "16": 2,
+          "18": 1,
+          "19": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 9,
+          "7": 17,
+          "sweep": 7
+        }
+      },
+      "ma-long__zhang-jike": {
+        "matches": 48,
+        "winsA": 19,
+        "winsB": 29,
+        "gameWinsA": 123,
+        "gameWinsB": 152,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "3": 13,
+          "4": 10,
+          "5": 28,
+          "6": 29,
+          "7": 41,
+          "8": 55,
+          "9": 54,
+          "10": 22,
+          "11": 10,
+          "12": 6,
+          "13": 3,
+          "14": 1,
+          "16": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 6,
+          "5": 17,
+          "6": 9,
+          "7": 16,
+          "sweep": 6
+        }
+      },
+      "ma-long__xu-xin": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 27,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 12,
+          "3": 21,
+          "4": 24,
+          "5": 32,
+          "6": 22,
+          "7": 29,
+          "8": 29,
+          "9": 24,
+          "10": 8,
+          "11": 5,
+          "12": 3,
+          "13": 1,
+          "16": 1,
+          "22": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 30,
+          "5": 10,
+          "6": 7,
+          "7": 1,
+          "sweep": 30
+        }
+      },
+      "ma-long__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 5,
+          "3": 18,
+          "4": 14,
+          "5": 38,
+          "6": 32,
+          "7": 35,
+          "8": 25,
+          "9": 16,
+          "10": 1,
+          "11": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "ma-long__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 4,
+        "setLossScoreHistogram": {
+          "0": 2,
+          "1": 17,
+          "2": 25,
+          "3": 27,
+          "4": 33,
+          "5": 25,
+          "6": 23,
+          "7": 17,
+          "8": 13,
+          "9": 5,
+          "10": 5,
+          "11": 2,
+          "12": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 44,
+          "5": 4,
+          "sweep": 44
+        }
+      },
+      "ma-long__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 37,
+          "1": 42,
+          "2": 42,
+          "3": 30,
+          "4": 20,
+          "5": 15,
+          "6": 5,
+          "7": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "ma-long__truls-moregard": {
+        "matches": 48,
+        "winsA": 1,
+        "winsB": 47,
+        "gameWinsA": 54,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 6,
+          "3": 14,
+          "4": 19,
+          "5": 28,
+          "6": 33,
+          "7": 47,
+          "8": 30,
+          "9": 29,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 2,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 18,
+          "5": 15,
+          "6": 10,
+          "7": 5,
+          "sweep": 18
+        }
+      },
+      "fan-zhendong__zhang-jike": {
+        "matches": 48,
+        "winsA": 14,
+        "winsB": 34,
+        "gameWinsA": 107,
+        "gameWinsB": 160,
+        "setLossScoreHistogram": {
+          "2": 2,
+          "3": 13,
+          "4": 18,
+          "5": 19,
+          "6": 29,
+          "7": 46,
+          "8": 38,
+          "9": 49,
+          "10": 24,
+          "11": 14,
+          "12": 4,
+          "13": 5,
+          "14": 2,
+          "15": 2,
+          "16": 1,
+          "18": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 8,
+          "5": 16,
+          "6": 13,
+          "7": 11,
+          "sweep": 8
+        }
+      },
+      "fan-zhendong__xu-xin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 19,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 6,
+          "2": 17,
+          "3": 24,
+          "4": 24,
+          "5": 22,
+          "6": 23,
+          "7": 23,
+          "8": 36,
+          "9": 15,
+          "10": 8,
+          "11": 7,
+          "12": 3,
+          "14": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 32,
+          "5": 13,
+          "6": 3,
+          "sweep": 32
+        }
+      },
+      "fan-zhendong__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 41,
+        "winsB": 7,
+        "gameWinsA": 177,
+        "gameWinsB": 98,
+        "setLossScoreHistogram": {
+          "2": 3,
+          "3": 11,
+          "4": 11,
+          "5": 35,
+          "6": 29,
+          "7": 49,
+          "8": 27,
+          "9": 52,
+          "10": 16,
+          "11": 8,
+          "12": 7,
+          "13": 9,
+          "14": 5,
+          "15": 3,
+          "16": 1,
+          "17": 2,
+          "18": 3,
+          "20": 3,
+          "21": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 15,
+          "6": 10,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "fan-zhendong__wang-chuqin": {
+        "matches": 48,
+        "winsA": 20,
+        "winsB": 28,
+        "gameWinsA": 121,
+        "gameWinsB": 154,
+        "setLossScoreHistogram": {
+          "1": 3,
+          "2": 1,
+          "3": 6,
+          "4": 6,
+          "5": 16,
+          "6": 32,
+          "7": 36,
+          "8": 33,
+          "9": 71,
+          "10": 14,
+          "11": 18,
+          "12": 9,
+          "13": 13,
+          "14": 7,
+          "15": 4,
+          "16": 2,
+          "17": 1,
+          "18": 2,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 9,
+          "5": 9,
+          "6": 16,
+          "7": 14,
+          "sweep": 9
+        }
+      },
+      "fan-zhendong__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 25,
+          "1": 45,
+          "2": 27,
+          "3": 43,
+          "4": 28,
+          "5": 14,
+          "6": 8,
+          "7": 1,
+          "8": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "fan-zhendong__truls-moregard": {
+        "matches": 48,
+        "winsA": 43,
+        "winsB": 5,
+        "gameWinsA": 184,
+        "gameWinsB": 54,
+        "setLossScoreHistogram": {
+          "0": 1,
+          "1": 3,
+          "2": 8,
+          "3": 14,
+          "4": 20,
+          "5": 20,
+          "6": 30,
+          "7": 32,
+          "8": 35,
+          "9": 42,
+          "10": 16,
+          "11": 9,
+          "12": 3,
+          "13": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 20,
+          "5": 16,
+          "6": 6,
+          "7": 6,
+          "sweep": 20
+        }
+      },
+      "zhang-jike__xu-xin": {
+        "matches": 48,
+        "winsA": 2,
+        "winsB": 46,
+        "gameWinsA": 59,
+        "gameWinsB": 188,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 7,
+          "3": 22,
+          "4": 27,
+          "5": 31,
+          "6": 25,
+          "7": 37,
+          "8": 38,
+          "9": 31,
+          "10": 8,
+          "11": 8,
+          "12": 4,
+          "13": 5,
+          "14": 1,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 17,
+          "5": 12,
+          "6": 14,
+          "7": 5,
+          "sweep": 17
+        }
+      },
+      "zhang-jike__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "2": 2,
+          "3": 4,
+          "4": 5,
+          "5": 11,
+          "6": 21,
+          "7": 49,
+          "8": 33,
+          "9": 30,
+          "10": 7,
+          "11": 6,
+          "12": 3,
+          "13": 3,
+          "15": 3,
+          "16": 3,
+          "18": 1,
+          "19": 2,
+          "20": 1,
+          "21": 1,
+          "22": 1,
+          "23": 1,
+          "25": 1,
+          "27": 1,
+          "30": 1,
+          "31": 1,
+          "34": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "zhang-jike__wang-chuqin": {
+        "matches": 48,
+        "winsA": 14,
+        "winsB": 34,
+        "gameWinsA": 120,
+        "gameWinsB": 167,
+        "setLossScoreHistogram": {
+          "2": 6,
+          "3": 8,
+          "4": 15,
+          "5": 15,
+          "6": 32,
+          "7": 36,
+          "8": 43,
+          "9": 75,
+          "10": 19,
+          "11": 15,
+          "12": 6,
+          "13": 9,
+          "14": 5,
+          "15": 1,
+          "17": 1,
+          "20": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 3,
+          "5": 12,
+          "6": 16,
+          "7": 17,
+          "sweep": 3
+        }
+      },
+      "zhang-jike__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 89,
+          "1": 63,
+          "2": 23,
+          "3": 15,
+          "4": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "zhang-jike__truls-moregard": {
+        "matches": 48,
+        "winsA": 21,
+        "winsB": 27,
+        "gameWinsA": 122,
+        "gameWinsB": 143,
+        "setLossScoreHistogram": {
+          "1": 1,
+          "2": 6,
+          "3": 11,
+          "4": 14,
+          "5": 23,
+          "6": 34,
+          "7": 33,
+          "8": 45,
+          "9": 35,
+          "10": 37,
+          "11": 11,
+          "12": 7,
+          "13": 7,
+          "15": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 8,
+          "5": 14,
+          "6": 19,
+          "7": 7,
+          "sweep": 8
+        }
+      },
+      "xu-xin__lin-gaoyuan": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 3,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 15,
+          "2": 36,
+          "3": 37,
+          "4": 27,
+          "5": 26,
+          "6": 22,
+          "7": 12,
+          "8": 8,
+          "9": 5,
+          "10": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 45,
+          "5": 3,
+          "sweep": 45
+        }
+      },
+      "xu-xin__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 9,
+        "setLossScoreHistogram": {
+          "0": 5,
+          "1": 6,
+          "2": 14,
+          "3": 30,
+          "4": 24,
+          "5": 32,
+          "6": 23,
+          "7": 26,
+          "8": 14,
+          "9": 17,
+          "10": 5,
+          "12": 5
+        },
+        "seriesLengthHistogram": {
+          "4": 41,
+          "5": 5,
+          "6": 2,
+          "sweep": 41
+        }
+      },
+      "xu-xin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 42,
+          "1": 64,
+          "2": 35,
+          "3": 25,
+          "4": 20,
+          "5": 3,
+          "6": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "xu-xin__truls-moregard": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 34,
+          "1": 52,
+          "2": 33,
+          "3": 33,
+          "4": 13,
+          "5": 15,
+          "6": 6,
+          "7": 3,
+          "8": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__wang-chuqin": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 2,
+        "setLossScoreHistogram": {
+          "0": 18,
+          "1": 34,
+          "2": 37,
+          "3": 36,
+          "4": 25,
+          "5": 18,
+          "6": 10,
+          "7": 4,
+          "8": 6,
+          "9": 3,
+          "10": 3
+        },
+        "seriesLengthHistogram": {
+          "4": 46,
+          "5": 2,
+          "sweep": 46
+        }
+      },
+      "lin-gaoyuan__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 0,
+        "setLossScoreHistogram": {
+          "0": 24,
+          "1": 46,
+          "2": 51,
+          "3": 33,
+          "4": 21,
+          "5": 12,
+          "6": 3,
+          "7": 1,
+          "9": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      },
+      "lin-gaoyuan__truls-moregard": {
+        "matches": 48,
+        "winsA": 9,
+        "winsB": 39,
+        "gameWinsA": 97,
+        "gameWinsB": 180,
+        "setLossScoreHistogram": {
+          "3": 1,
+          "5": 10,
+          "6": 35,
+          "7": 54,
+          "8": 47,
+          "9": 60,
+          "10": 15,
+          "11": 8,
+          "12": 8,
+          "13": 8,
+          "14": 8,
+          "15": 3,
+          "16": 1,
+          "17": 4,
+          "18": 5,
+          "19": 1,
+          "20": 2,
+          "21": 3,
+          "23": 2,
+          "24": 1,
+          "27": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 7,
+          "5": 13,
+          "6": 12,
+          "7": 16,
+          "sweep": 7
+        }
+      },
+      "wang-chuqin__tomokazu-harimoto": {
+        "matches": 48,
+        "winsA": 48,
+        "winsB": 0,
+        "gameWinsA": 192,
+        "gameWinsB": 4,
+        "setLossScoreHistogram": {
+          "0": 6,
+          "1": 12,
+          "2": 34,
+          "3": 34,
+          "4": 32,
+          "5": 27,
+          "6": 25,
+          "7": 12,
+          "8": 4,
+          "9": 7,
+          "10": 1,
+          "11": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 44,
+          "5": 4,
+          "sweep": 44
+        }
+      },
+      "wang-chuqin__truls-moregard": {
+        "matches": 48,
+        "winsA": 42,
+        "winsB": 6,
+        "gameWinsA": 179,
+        "gameWinsB": 82,
+        "setLossScoreHistogram": {
+          "1": 2,
+          "2": 1,
+          "3": 10,
+          "4": 9,
+          "5": 21,
+          "6": 26,
+          "7": 49,
+          "8": 50,
+          "9": 48,
+          "10": 17,
+          "11": 10,
+          "12": 8,
+          "13": 1,
+          "14": 3,
+          "15": 2,
+          "16": 1,
+          "18": 1,
+          "23": 1,
+          "29": 1
+        },
+        "seriesLengthHistogram": {
+          "4": 14,
+          "5": 11,
+          "6": 11,
+          "7": 12,
+          "sweep": 14
+        }
+      },
+      "tomokazu-harimoto__truls-moregard": {
+        "matches": 48,
+        "winsA": 0,
+        "winsB": 48,
+        "gameWinsA": 0,
+        "gameWinsB": 192,
+        "setLossScoreHistogram": {
+          "0": 81,
+          "1": 58,
+          "2": 28,
+          "3": 8,
+          "4": 12,
+          "5": 3,
+          "6": 2
+        },
+        "seriesLengthHistogram": {
+          "4": 48,
+          "sweep": 48
+        }
+      }
+    }
+  }
+]

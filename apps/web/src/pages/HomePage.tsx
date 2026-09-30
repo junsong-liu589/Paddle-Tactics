@@ -5,7 +5,12 @@ export function HomePage({ navigate }: Props) {
     <main className="home-page">
       <section className="hero-panel">
         <div className="hero-copy">
-          <span className="eyebrow">PINGPONG TACTICS · CANDIDATE V4</span>
+          <img
+            className="hero-logo"
+            src="/assets/brand/paddle-tactics-logo.png"
+            alt="三位乒乓球员并肩庆祝的游戏标志"
+          />
+          <span className="eyebrow">PADDLE TACTICS · CANDIDATE V4</span>
           <h1>
             每一分，
             <br />
