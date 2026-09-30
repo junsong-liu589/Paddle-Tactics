@@ -13,9 +13,14 @@
 - `docs/08_DEPLOYMENT.md`：本地/CI/部署
 - `docs/09_DATA_CONTRACTS.md`：TS 类型契约建议
 - `docs/10_LEGAL_ASSETS.md`：素材盘点、授权状态和公开仓库前检查
+- `docs/11_WORLD_CUP_AND_PRESENTATION.md`：世界杯模拟、球员展示与表现层设计
+- `docs/12_OLYMPICS_MODE.md`：奥运会 32 人分档抽签及独立名册
+- `docs/13_PROJECT_EVOLUTION_V1_TO_V4_3.md`：v1 到 v4.3 的问题、机制、数值和产品反馈历程
+- `reports/world-cup-v4.3/V4_3_BALANCE_REPORT.md`：v4.3 世界杯、奥运会及已撤回的支持加成实验
 - `data/*.json`：GDD v1.1 权威数值数据
 - `data/*-balance-v1.1.json`、`reports/`：版本化平衡候选和模拟报告
 - `photos/`、`apps/web/public/assets/players/`：球员原始照片与网页头像（公开前须核实授权）
+- `apps/web/public/assets/brand/`：游戏标志照片，已遮去球员姓名（原图授权仍待核实）
 - `prisma/schema.prisma`：数据库初稿
 - `.env.example` / `docker-compose.yml` / `.github/workflows/ci.yml`：可直接沿用的工程模板
 - `docs/乒乓对决_游戏设计文档_v1.1.docx`：原始 GDD 备份

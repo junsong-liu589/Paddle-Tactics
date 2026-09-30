@@ -8,6 +8,7 @@ import { ResultPage } from "./pages/ResultPage.js";
 import { SetupPage } from "./pages/SetupPage.js";
 import { RulesPage } from "./pages/RulesPage.js";
 import { SettingsPage } from "./pages/SettingsPage.js";
+import { WorldCupPage } from "./pages/WorldCupPage.js";
 
 function readBooleanPreference(key: string, fallback: boolean): boolean {
   try {
@@ -20,15 +21,22 @@ function readBooleanPreference(key: string, fallback: boolean): boolean {
 
 function sceneForPath(path: string): "menu" | "setup" | "match" {
   if (path.startsWith("/setup")) return "setup";
-  if (path.startsWith("/match") || path.startsWith("/result")) return "match";
+  if (
+    path.startsWith("/match") ||
+    path.startsWith("/result") ||
+    path.startsWith("/world-cup") ||
+    path.startsWith("/olympics")
+  )
+    return "match";
   return "menu";
 }
 
 export default function App() {
-  const { path, navigate } = useNavigation();
+  const { path, search, navigate } = useNavigation();
   const musicRef = useRef<GameMusicPlayer | null>(null);
   if (musicRef.current === null) musicRef.current = new GameMusicPlayer();
   const music = musicRef.current;
+  const [trackTitle, setTrackTitle] = useState(music.trackTitle);
   const [musicEnabled, setMusicEnabled] = useState(() =>
     readBooleanPreference("paddle-tactics-music-enabled", true),
   );
@@ -45,6 +53,7 @@ export default function App() {
     music.setEnabled(musicEnabled);
     music.setVolume(volume);
     music.setScene(sceneForPath(path));
+    setTrackTitle(music.trackTitle);
     try {
       window.localStorage.setItem(
         "paddle-tactics-music-enabled",
@@ -71,6 +80,8 @@ export default function App() {
   }, [music]);
   const matchRoute = path.match(/^\/match\/([^/]+)(\/ai)?$/);
   const resultRoute = path.match(/^\/result\/([^/]+)(\/ai)?$/);
+  const cupId = new URLSearchParams(search).get("cup") ?? undefined;
+  const isOlympics = new URLSearchParams(search).get("event") === "olympics";
 
   return (
     <>
@@ -78,17 +89,26 @@ export default function App() {
         <button
           className="brand-mark"
           onClick={() => navigate("/")}
-          aria-label="乒乓战术首页"
+          aria-label="乒乓对决首页"
         >
-          <span className="brand-icon">
-            <i />
-          </span>
+          <img
+            className="brand-photo"
+            src="/assets/brand/paddle-tactics-logo.png"
+            alt=""
+          />
           <span>
-            乒乓战术<small>TABLE TENNIS TACTICS</small>
+            乒乓对决<small>PADDLE TACTICS</small>
           </span>
         </button>
         <nav aria-label="主导航">
           <button onClick={() => navigate("/play")}>开始对局</button>
+          <button
+            className="world-cup-nav-link"
+            onClick={() => navigate("/world-cup")}
+          >
+            世界杯
+          </button>
+          <button onClick={() => navigate("/olympics")}>奥运会</button>
           <button onClick={() => navigate("/settings")}>设置</button>
           <span className="header-status">
             <i /> 本地 AI · 同屏双人
@@ -101,6 +121,8 @@ export default function App() {
           matchId={decodeURIComponent(matchRoute[1]!)}
           isAi={Boolean(matchRoute[2])}
           navigate={navigate}
+          cupId={cupId}
+          isOlympics={isOlympics}
         />
       ) : resultRoute ? (
         <ResultPage
@@ -108,7 +130,13 @@ export default function App() {
           matchId={decodeURIComponent(resultRoute[1]!)}
           isAi={Boolean(resultRoute[2])}
           navigate={navigate}
+          cupId={cupId}
+          isOlympics={isOlympics}
         />
+      ) : path === "/world-cup" ? (
+        <WorldCupPage navigate={navigate} />
+      ) : path === "/olympics" ? (
+        <WorldCupPage navigate={navigate} mode="olympics" />
       ) : path === "/play" ? (
         <PlayPage navigate={navigate} />
       ) : path.startsWith("/online") ? (
@@ -122,6 +150,7 @@ export default function App() {
           navigate={navigate}
           musicEnabled={musicEnabled}
           volume={volume}
+          trackTitle={trackTitle}
           onMusicEnabledChange={(enabled) => {
             setMusicEnabled(enabled);
             music.setEnabled(enabled);

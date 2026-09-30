@@ -8,6 +8,8 @@
 
 - 免费网页试玩版已部署到 [Cloudflare Pages](https://feat-phase-5-online-multipla.paddle-tactics.pages.dev/)，可玩浏览器内 AI 和同设备双人。
 - 当前网址是开发分支的预览部署；在线房间服务端尚未部署到公网，因此该网页不支持远程玩家互联。
+- 本次版本更新新增乒乓世界杯本地模拟、球员展示与比赛表现；构建仍输出静态站点，可按原流程上传 `apps/web/dist`。
+- v4.3 赛事平衡及历史决策记录见 [`docs/13_PROJECT_EVOLUTION_V1_TO_V4_3.md`](docs/13_PROJECT_EVOLUTION_V1_TO_V4_3.md) 和 [`v4.3 实验报告`](reports/world-cup-v4.3/V4_3_BALANCE_REPORT.md)。奥运会支持者只高亮签表，不增加数值。
 - 计划将 GitHub 仓库设为 Public 前，先完成 [`docs/10_LEGAL_ASSETS.md`](docs/10_LEGAL_ASSETS.md) 中的许可证和肖像素材检查。仓库目前没有 `LICENSE`，球员照片授权记录也不完整。
 
 ## 1. 核心玩法

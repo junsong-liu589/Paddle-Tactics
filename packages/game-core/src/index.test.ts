@@ -514,6 +514,13 @@ describe("match reducer and hidden state", () => {
   it.each([0, 2, 4, 6] as const)("rejects best-of %i", (bestOf) =>
     expect(() => createMatch(input({ bestOf }))).toThrow(),
   );
+
+  it("allows BO7 only when a tournament explicitly opts in", () => {
+    expect(() => createMatch(input({ bestOf: 7 }))).toThrow();
+    expect(
+      createMatch(input({ bestOf: 7, allowBestOfSeven: true })).bestOf,
+    ).toBe(7);
+  });
   it("rejects empty IDs, duplicate participants and an outsider server", () => {
     expect(() => createMatch(input({ id: "" }))).toThrow();
     expect(() =>

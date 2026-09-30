@@ -1,0 +1,190 @@
+[
+  {
+    "playerId": "ma-lin",
+    "delta": 0,
+    "profile": "low",
+    "newTotal": 480,
+    "loadout": {
+      "playerId": "ma-lin",
+      "bladeId": "xu-xin-blue-label",
+      "forehandRubberId": "hurricane-3",
+      "backhandRubberId": "hurricane-3"
+    },
+    "matches": 14,
+    "wins": 10,
+    "sweeps": 4,
+    "games": 75,
+    "lowScoreGames": 0,
+    "opponents": {
+      "ma-long": {
+        "wins": 2,
+        "matches": 2
+      },
+      "fan-zhendong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "zhang-jike": {
+        "wins": 1,
+        "matches": 2
+      },
+      "wang-chuqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-liqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-hao": {
+        "wins": 0,
+        "matches": 2
+      },
+      "timo-boll": {
+        "wins": 1,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "ma-lin",
+    "delta": -5,
+    "profile": "low",
+    "newTotal": 475,
+    "loadout": {
+      "playerId": "ma-lin",
+      "bladeId": "xu-xin-blue-label",
+      "forehandRubberId": "hurricane-3",
+      "backhandRubberId": "hurricane-3"
+    },
+    "matches": 14,
+    "wins": 9,
+    "sweeps": 7,
+    "games": 69,
+    "lowScoreGames": 1,
+    "opponents": {
+      "ma-long": {
+        "wins": 2,
+        "matches": 2
+      },
+      "fan-zhendong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "zhang-jike": {
+        "wins": 0,
+        "matches": 2
+      },
+      "wang-chuqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-liqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-hao": {
+        "wins": 1,
+        "matches": 2
+      },
+      "timo-boll": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "ma-lin",
+    "delta": -8,
+    "profile": "low",
+    "newTotal": 472,
+    "loadout": {
+      "playerId": "ma-lin",
+      "bladeId": "xu-xin-blue-label",
+      "forehandRubberId": "hurricane-3",
+      "backhandRubberId": "hurricane-3"
+    },
+    "matches": 14,
+    "wins": 7,
+    "sweeps": 5,
+    "games": 71,
+    "lowScoreGames": 0,
+    "opponents": {
+      "ma-long": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fan-zhendong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "zhang-jike": {
+        "wins": 1,
+        "matches": 2
+      },
+      "wang-chuqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-liqin": {
+        "wins": 1,
+        "matches": 2
+      },
+      "wang-hao": {
+        "wins": 1,
+        "matches": 2
+      },
+      "timo-boll": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  },
+  {
+    "playerId": "ma-lin",
+    "delta": -10,
+    "profile": "low",
+    "newTotal": 470,
+    "loadout": {
+      "playerId": "ma-lin",
+      "bladeId": "xu-xin-blue-label",
+      "forehandRubberId": "hurricane-3",
+      "backhandRubberId": "hurricane-3"
+    },
+    "matches": 14,
+    "wins": 7,
+    "sweeps": 5,
+    "games": 71,
+    "lowScoreGames": 0,
+    "opponents": {
+      "ma-long": {
+        "wins": 0,
+        "matches": 2
+      },
+      "fan-zhendong": {
+        "wins": 2,
+        "matches": 2
+      },
+      "zhang-jike": {
+        "wins": 1,
+        "matches": 2
+      },
+      "wang-chuqin": {
+        "wins": 2,
+        "matches": 2
+      },
+      "wang-liqin": {
+        "wins": 1,
+        "matches": 2
+      },
+      "wang-hao": {
+        "wins": 1,
+        "matches": 2
+      },
+      "timo-boll": {
+        "wins": 0,
+        "matches": 2
+      }
+    }
+  }
+]

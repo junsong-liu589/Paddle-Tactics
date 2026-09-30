@@ -799,6 +799,7 @@ export function createMatch(input: CreateMatchInput): MatchState {
     catalog,
     candidateV3,
     candidateV4,
+    allowBestOfSeven = false,
   } = input;
   if (candidateV3 && candidateV4)
     throw new GameRuleError(
@@ -811,7 +812,10 @@ export function createMatch(input: CreateMatchInput): MatchState {
   if (
     !id ||
     !Number.isInteger(bestOf) ||
-    !catalog.balance.scoring.allowedBestOf.includes(bestOf as 1 | 3 | 5) ||
+    !(
+      catalog.balance.scoring.allowedBestOf.includes(bestOf as 1 | 3 | 5) ||
+      (allowBestOfSeven && bestOf === 7)
+    ) ||
     !playerA.id ||
     !playerB.id ||
     playerA.id === playerB.id ||
@@ -845,7 +849,7 @@ export function createMatch(input: CreateMatchInput): MatchState {
     version: 0,
     status: "ACTIVE",
     phase: "SERVICE_ALLOCATING",
-    bestOf: bestOf as 1 | 3 | 5,
+    bestOf: bestOf as 1 | 3 | 5 | 7,
     winnerPlayerId: null,
     playerOrder,
     players: {

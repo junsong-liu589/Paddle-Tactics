@@ -1,0 +1,11 @@
+# Olympics tournament mode
+
+The Olympics mode reuses the local World Cup tournament flow with an isolated 32-player catalog and a seeded four-tier draw. Eight four-player pods each contain one player from each tier. Opening matches pair Tier 1 vs Tier 4 and Tier 2 vs Tier 3. Later rounds advance through the same single-elimination bracket.
+
+The 24 additional roster entries are exclusive to Olympics. Their names, countries, styles, and tier assignments came from the provided roster document. Their skill profiles are generated from existing profiles, then adjusted to the assigned tier totals while preserving the Candidate V4 per-stage/per-side peak limits. Versioned snapshots are stored in `data/olympics-roster-v2.json`, `data/olympics-roster-v3.json`, and `data/olympics-roster-v4.json`; the active catalog uses `data/olympics-roster-v4.3.json`.
+
+Computer series use BO7 local simulation and reveal one game at a time. A player can enter with one selected athlete and loadout; that player's series use the existing BO3 local match. Spectator mode permits a supported player whose bracket route is highlighted. Tournament state is saved in browser local storage, separately from the World Cup. The mode uses no accounts, remote service, or paid AI API.
+
+The v4 profile totals were 480 / 470 / 440 / 410. V4.3 changes only Harimoto's Olympic total from 440 to 470 and Ma Lin's from 480 to 472; their draw tiers and all other players stay unchanged. A supported Olympic player is highlighted in the bracket; the choice does not change any comparison ability or result. The previously explored random 15-ability support bonus was removed before release at the user's request. The World Cup one-game catch-up bonus is not enabled in Olympics. The v4 cross-tier screening and unresolved same-tier 4–0 limitation are recorded in `reports/world-cup-balance-2026-09-30/LATEST_BALANCE_RESULTS.md`; V4.3 targeted experiments are in `reports/world-cup-v4.3/V4_3_BALANCE_REPORT.md`. Simulated percentages are not real-player forecasts.
+
+Player artwork is served from `apps/web/public/assets/characters`. Public redistribution rights for real-player imagery remain unresolved; see `docs/10_LEGAL_ASSETS.md` before public release.

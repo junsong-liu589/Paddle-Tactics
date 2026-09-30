@@ -4,6 +4,7 @@ type Props = {
   navigate: (path: string) => void;
   musicEnabled: boolean;
   volume: number;
+  trackTitle: string;
   onMusicEnabledChange: (enabled: boolean) => void;
   onVolumeChange: (volume: number) => void;
 };
@@ -12,6 +13,7 @@ export function SettingsPage({
   navigate,
   musicEnabled,
   volume,
+  trackTitle,
   onMusicEnabledChange,
   onVolumeChange,
 }: Props) {
@@ -60,6 +62,9 @@ export function SettingsPage({
           <strong>{Math.round(volume * 100)}%</strong>
         </label>
         <div className="music-track-list">
+          <p className="music-now-playing" aria-live="polite">
+            当前曲目：<strong>{trackTitle}</strong>
+          </p>
           <strong>曲目主题 · 共六首</strong>
           {Object.entries(MUSIC_TRACKS).map(([scene, tracks]) => (
             <div key={scene}>

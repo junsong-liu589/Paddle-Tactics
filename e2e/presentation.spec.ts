@@ -26,7 +26,9 @@ test("music settings persist and provide a mute switch", async ({ page }) => {
   const musicSwitch = page.getByRole("checkbox", { name: "背景音乐" });
   await expect(musicSwitch).toBeChecked();
   await expect(page.getByText("赛前热身")).toBeVisible();
-  const tracks = await page.locator(".music-track-list p").allTextContents();
+  const tracks = await page
+    .locator(".music-track-list p:not(.music-now-playing)")
+    .allTextContents();
   expect(tracks.flatMap((scene) => scene.split("　·　"))).toHaveLength(6);
   await musicSwitch.uncheck();
   await expect(page.getByRole("slider", { name: "音乐音量" })).toBeDisabled();

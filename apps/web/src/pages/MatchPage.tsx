@@ -7,17 +7,21 @@ import type {
   MatchPublicView,
   Stage,
 } from "@paddle-tactics/game-core";
-import { fetchCatalog } from "../lib/api.js";
+import { fetchCatalog, fetchOlympicsCatalog } from "../lib/api.js";
 import type { PublicCatalog } from "../lib/api.js";
 import { getLocalMatchView, sendLocalMatchCommand } from "../lib/local-game.js";
 import { BATTLE_FEEDBACK_TIMING_MS } from "../lib/animation-timing.js";
 import { PlayerAvatar } from "../components/PlayerAvatar.js";
+import { CharacterPortrait } from "../components/CharacterPortrait.js";
+import { ActionReplay, actionMotionFor } from "../components/ActionReplay.js";
 
 type Seat = "A" | "B";
 type Props = {
   matchId: string;
   navigate: (path: string) => void;
   isAi: boolean;
+  cupId?: string | undefined;
+  isOlympics?: boolean;
 };
 type ComparisonEvent = Extract<DomainEvent, { type: "COMPARISON_REVEALED" }>;
 type FeedbackState = {
@@ -131,7 +135,13 @@ function nextActor(view: MatchPublicView, actor: Seat): Seat {
   return actor;
 }
 
-export function MatchPage({ matchId, navigate, isAi }: Props) {
+export function MatchPage({
+  matchId,
+  navigate,
+  isAi,
+  cupId,
+  isOlympics = false,
+}: Props) {
   const [catalog, setCatalog] = useState<PublicCatalog | null>(null);
   const [viewerId, setViewerId] = useState<Seat>("A");
   const [view, setView] = useState<MatchPublicView | null>(null);
@@ -145,7 +155,10 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
 
   useEffect(() => {
     let active = true;
-    void Promise.all([fetchCatalog(), getLocalMatchView(matchId, "A")])
+    void Promise.all([
+      isOlympics ? fetchOlympicsCatalog() : fetchCatalog(),
+      getLocalMatchView(matchId, "A"),
+    ])
       .then(([loadedCatalog, match]) => {
         if (!active) return;
         setCatalog(loadedCatalog);
@@ -160,7 +173,7 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
     return () => {
       active = false;
     };
-  }, [matchId]);
+  }, [matchId, isOlympics]);
 
   const stageRules =
     catalog && view ? catalog.skills.stages[view.point.stage] : null;
@@ -235,7 +248,9 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
       },
       fastFeedback
         ? BATTLE_FEEDBACK_TIMING_MS.quick
-        : BATTLE_FEEDBACK_TIMING_MS[feedback.step],
+        : feedback.step === "outcome" && feedback.event.outcome !== "continue"
+          ? BATTLE_FEEDBACK_TIMING_MS.scoreReveal
+          : BATTLE_FEEDBACK_TIMING_MS[feedback.step],
     );
     return () => window.clearTimeout(timer);
   }, [feedback, fastFeedback, showNextActor]);
@@ -491,6 +506,26 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
   const feedbackDefenderName = feedback
     ? seatPlayer(feedback.event.defenderPlayerId as Seat).name
     : "";
+  const scoringReplay =
+    feedback?.step === "outcome" && feedback.event.outcome !== "continue"
+      ? {
+          event: feedback.event,
+          winner:
+            feedback.event.outcome === "attacker_wins"
+              ? seatPlayer(feedback.event.attackerPlayerId as Seat)
+              : seatPlayer(feedback.event.defenderPlayerId as Seat),
+          loser:
+            feedback.event.outcome === "attacker_wins"
+              ? seatPlayer(feedback.event.defenderPlayerId as Seat)
+              : seatPlayer(feedback.event.attackerPlayerId as Seat),
+          winnerRole:
+            feedback.event.outcome === "attacker_wins"
+              ? ("attack" as const)
+              : ("defense" as const),
+          pair: selectedPair,
+          score: `${feedback.nextView.currentGame.score.A ?? 0} : ${feedback.nextView.currentGame.score.B ?? 0}`,
+        }
+      : null;
 
   return (
     <main
@@ -542,6 +577,67 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
           <small>{playerName(catalog, view.playerOrder[1])}</small>
         </div>
       </section>
+
+      {scoringReplay && scoringReplay.pair ? (
+        <ActionReplay
+          key={`point-replay-${scoringReplay.event.seq}`}
+          winnerId={scoringReplay.winner.playerId}
+          winnerName={scoringReplay.winner.name}
+          loserId={scoringReplay.loser.playerId}
+          loserName={scoringReplay.loser.name}
+          winnerRole={scoringReplay.winnerRole}
+          actionName={
+            scoringReplay.winnerRole === "attack"
+              ? scoringReplay.pair.attackName
+              : scoringReplay.pair.defenseName
+          }
+          score={scoringReplay.score}
+          stageName={catalog.skills.stages[scoringReplay.event.stage].label}
+          motion={actionMotionFor(scoringReplay.event.pairId)}
+        />
+      ) : (
+        <section
+          className={`match-character-stage is-${feedback?.event.stage ?? view.point.stage}${feedback ? ` is-${feedback.step}` : ""}`}
+          aria-label="球员攻防表现"
+        >
+          <div
+            className={`match-character-side match-character-left ${playerAView.state}`}
+          >
+            <CharacterPortrait
+              playerId={playerAView.playerId}
+              name={playerAView.name}
+              className="match-character"
+            />
+          </div>
+          <div className="match-action-focus">
+            <span className="action-ball" aria-hidden="true" />
+            <small>
+              {feedback
+                ? (selectedPair?.attackName ?? "攻防比较")
+                : currentStageName}
+            </small>
+            <strong>
+              {feedback
+                ? feedback.step === "outcome"
+                  ? feedback.event.outcome === "attacker_wins"
+                    ? "突破得分"
+                    : "防守成功"
+                  : "对决揭晓"
+                : "准备交锋"}
+            </strong>
+            <span className="action-trail" aria-hidden="true" />
+          </div>
+          <div
+            className={`match-character-side match-character-right ${playerBView.state}`}
+          >
+            <CharacterPortrait
+              playerId={playerBView.playerId}
+              name={playerBView.name}
+              className="match-character"
+            />
+          </div>
+        </section>
+      )}
 
       <section className="match-context">
         <div className={`context-player ${playerAView.state}`}>
@@ -980,7 +1076,11 @@ export function MatchPage({ matchId, navigate, isAi }: Props) {
           <p>"所有比分和已揭晓的攻防对比已记录在本地比赛战报中。"</p>
           <button
             className="button button-primary"
-            onClick={() => navigate(`/result/${matchId}${isAi ? "/ai" : ""}`)}
+            onClick={() =>
+              navigate(
+                `/result/${matchId}${isAi ? "/ai" : ""}${cupId ? `?cup=${encodeURIComponent(cupId)}${isOlympics ? "&event=olympics" : ""}` : ""}`,
+              )
+            }
           >
             查看赛果与逐分记录 ↗
           </button>

@@ -8,3 +8,15 @@ export const playerAssets: Record<string, string> = {
   "tomokazu-harimoto": "/assets/players/tomokazu-harimoto.webp",
   "truls-moregard": "/assets/players/truls-moregard.webp",
 };
+
+export const characterAssets: Record<string, string> = {
+  "ma-long": "/assets/characters/ma-long.webp",
+  "fan-zhendong": "/assets/characters/fan-zhendong.webp",
+  "zhang-jike": "/assets/characters/zhang-jike.webp",
+  "xu-xin": "/assets/characters/xu-xin.webp",
+  "wang-chuqin": "/assets/characters/wang-chuqin.webp",
+  "lin-gaoyuan": "/assets/characters/lin-gaoyuan.webp",
+  "tomokazu-harimoto": "/assets/characters/tomokazu-harimoto.webp",
+  "truls-moregard": "/assets/characters/truls-moregard.webp",
+  "wang-hao": "/assets/characters/wang-hao-v43.png",
+};

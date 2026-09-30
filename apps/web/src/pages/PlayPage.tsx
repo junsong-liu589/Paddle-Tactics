@@ -22,6 +22,28 @@ export function PlayPage({ navigate, unsupportedOnline = false }: Props) {
       <div className="mode-list">
         <button
           className="mode-card mode-active"
+          onClick={() => navigate("/olympics")}
+        >
+          <span className="mode-icon">🥇</span>
+          <span className="mode-copy">
+            <strong>乒乓奥运会</strong>
+            <small>32人四档抽签 · 电脑 BO7 · 真人对 AI BO3 · 本地观战</small>
+          </span>
+          <span className="mode-state">开启赛事 ↗</span>
+        </button>
+        <button
+          className="mode-card mode-active world-cup-mode-card"
+          onClick={() => navigate("/world-cup")}
+        >
+          <span className="mode-icon">🏆</span>
+          <span className="mode-copy">
+            <strong>乒乓世界杯</strong>
+            <small>八人随机抽签 · 亲自参赛或纯观战 · 本地 AI 模拟</small>
+          </span>
+          <span className="mode-state">开启赛事 ↗</span>
+        </button>
+        <button
+          className="mode-card mode-active"
           onClick={() => navigate("/setup")}
         >
           <span className="mode-icon">↔</span>
