@@ -17,7 +17,7 @@
     "format:check": "prettier --check \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,json}\" \"e2e/**/*.ts\" \"e2e-web/**/*.ts\" \"*.{json,js,ts,yaml}\" \".github/**/*.yml\" README.md docs/06_ROADMAP.md docs/08_DEPLOYMENT.md",
     "typecheck": "pnpm db:generate && pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm -r typecheck",
     "test": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core build && pnpm --filter @paddle-tactics/ai build && vitest run",
-    "e2e": "playwright test",
+    "e2e": "pnpm web:build && playwright test --config playwright.config.ts",
     "data:validate": "pnpm --filter @paddle-tactics/game-data validate",
     "simulate:match": "pnpm --filter @paddle-tactics/game-data build && pnpm --filter @paddle-tactics/game-core simulate",
     "balance:run": "pnpm --filter @paddle-tactics/balance-simulator standard",

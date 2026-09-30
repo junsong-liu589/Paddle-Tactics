@@ -1,9 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const webPort = Number(process.env.PLAYWRIGHT_WEB_PORT ?? 5173);
-const serverPort = Number(process.env.PLAYWRIGHT_SERVER_PORT ?? 3002);
 const webOrigin = `http://127.0.0.1:${webPort}`;
-const serverOrigin = `http://127.0.0.1:${serverPort}`;
 
 export default defineConfig({
   testDir: "./e2e",
@@ -24,17 +22,12 @@ export default defineConfig({
     ? {}
     : {
         webServer: {
-          command: "pnpm db:migrate:deploy && pnpm dev",
-          url: `${webOrigin}/api/catalog`,
+          command: `node node_modules/vite/bin/vite.js --host 127.0.0.1 --port ${webPort}`,
+          cwd: "apps/web",
+          url: webOrigin,
           reuseExistingServer: !process.env.CI,
           timeout: 120_000,
-          env: {
-            CI: process.env.CI ?? "true",
-            PORT: String(serverPort),
-            VITE_PORT: String(webPort),
-            WEB_ORIGIN: webOrigin,
-            VITE_SERVER_ORIGIN: serverOrigin,
-          },
+          env: { CI: process.env.CI ?? "true" },
         },
       }),
 });
